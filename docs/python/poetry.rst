@@ -128,6 +128,12 @@ poetry self update 履歴
 .. hint::
   | 更新手順 = 前回同様で復旧
 
+.. hint:: 
+  | 2021-12-18 追記
+  | Windows版 Python3.10.1において、
+  | poetryの依存モジュールがいくつか漏れてるようです。下記コマンドで一次凌ぎ。
+  | > pip install cleo tomlkit poetry.core requests cachecontrol cachy html5lib pkginfo virtualenv lockfile
+  | https://github.com/python-poetry/poetry/issues/553
 
 
 .. |date| date::
