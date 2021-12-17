@@ -19,6 +19,7 @@ Last Updated on 2021-10-26
 ================
 * cd [ipynbファイルのあるフォルダ]
 * poetry config virtualenvs.in-project true
+* poetry config --list
 * poetry init
 * poetry install
 * poetry add jupyter
