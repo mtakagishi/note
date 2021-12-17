@@ -29,6 +29,7 @@ Last Updated on 2021-10-26
 追加モジュールメモ
 ==========================
 numpy pandasも欲しくなるがpython3.9.0では不整合が起きて下記バージョン指定で対応したメモ
+
 * poetry add numpy@^1.19.4 pandas@^1.1.4 matplotlib
 
 pandasメモ
