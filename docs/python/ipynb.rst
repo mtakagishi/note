@@ -48,6 +48,33 @@ csvのformat
   quoting=csv.QUOTE_NONE
 重複行の削除
   df.drop_duplicates()
+カラムに列追加
+  df['name_state'] = df['name'].str.cat(df['state'], sep=' in ')
+カラムのリネーム
+  df_new = df.rename(columns={'A': 'Col_1', 'C': 'Col_3'})
+表の結合
+  print(df_ab.merge(df_ac))
+  print(pd.merge(df_ab, df_ac, on='a'))
+  print(pd.merge(df_ab, df_ac, on='a', how='outer'))
+where句のように一致列で絞り込み
+  print(df['state'] == 'CA')
+like検索っぽくしたい
+  str.contains(): 特定の文字列を含む
+    print(df[df['name'].str.contains('li')])
+  str.endswith(): 特定の文字列で終わる
+  str.startswith(): 特定の文字列で始まる
+  str.match(): 正規表現のパターンに一致する
+省略表示したくないとき
+  pd.set_option('display.max_rows', 500)
+  pd.set_option('display.max_columns', 500)  
+カラム名の一覧取得の省略回避
+  pd.set_option('display.max_seq_items', 500)
+オプションの戻し
+  pd.reset_option('display.max_seq_items')
+IF文みたいに
+  df.loc[df['A'] < 0, 'A'] = -10
+pandasで「小数点以下の切り上げ」できない
+  float計算値をintに変換したものとの差が0以上のもの1プラスする
 
 to_csvで分割::
   
