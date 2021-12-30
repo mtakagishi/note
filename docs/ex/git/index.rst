@@ -42,7 +42,9 @@ gitメモ
   conflict
     競合があるとローカルファイルに競合した箇所が記述されているので手動で直す
   
+日本語PATHの文字化け回避
 
+  git config --global core.quotepath false
 
 
 .. |date| date::
