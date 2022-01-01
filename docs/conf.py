@@ -79,5 +79,5 @@ source_suffix = {
     '.md': 'markdown',
 }
 # sphinx-sitemap
-html_baseurl = 'https://note.mtakagishi.com/'
+html_baseurl = 'https://mtakagishi.com/'
 html_extra_path = ['robots.txt']
