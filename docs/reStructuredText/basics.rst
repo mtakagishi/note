@@ -235,6 +235,27 @@ term4 : classifier one : classifier two
 
   It refers to the section itself, see :ref:`my-reference-label`.
 
+注釈
+=================================
+* 脚注を書きたい場所で [\#name]_ 
+* [\#] で自動連番、[1]のように明示的指定も可能
+
+注釈::
+
+  Lorem ipsum [#]_ dolor sit amet ... [#]_
+
+  .. rubric:: Footnotes
+
+  .. [#] Text of the first footnote.
+  .. [#] Text of the second footnote.
+
+Lorem ipsum [#]_ dolor sit amet ... [#]_
+
+.. rubric:: Footnotes
+
+.. [#] Text of the first footnote.
+.. [#] Text of the second footnote.
+
 
 テーブル
 =================================
