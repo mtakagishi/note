@@ -1,13 +1,14 @@
 ******************************************************
-軽量マークアップ言語reStructuredText
+ドキュメント化（reST）
 ******************************************************
-軽量マークアップ言語のひとつReSTについてのまとめ
+ドキュメント化のための軽量マークアップ言語のひとつreSTructuredTextについてのまとめ
 
 .. toctree::
   :maxdepth: 1
   :glob:
 
   about
+  sphinx/index
   basics
   docstring
-  sphinx/index
+  

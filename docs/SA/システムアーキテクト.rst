@@ -98,10 +98,10 @@ ITストラテジスト（ST)は、「 **経営とITを結びつける戦略家*
 * .. [#] `IPA システムアーキテクト（SA） <https://www.jitec.ipa.go.jp/1_11seido/sa.html>`_ 
 * .. [#] `グランドデザイン とは - コトバンク <http://kotobank.jp/word/%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3>`_ 
 * .. [#] `システム（Wikipedia） <https://ja.wikipedia.org/wiki/システム>`_
-* .. [#] `じゃるじゃるコント「しょぼい新入社員だと思ったらすごい奴」 <https://youtu.be/ypkJWxmKfrM>`_ :
+* .. [#] `じゃるじゃるコント「しょぼい新入社員だと思ったらすごい奴」 <https://youtu.be/ypkJWxmKfrM>`_ 
 * .. [#] `建築学概論［第2回／2020.05.14］ “建築”とは何か [1] <https://medium.com/青井哲人/建築学概論-第2回-建築-とは何か-その1-3ee7f06f166b>`_ 
-* .. [#] `IPA ITストラテジスト（ST） <https://www.jitec.ipa.go.jp/1_11seido/st.html>`_ :
+* .. [#] `IPA ITストラテジスト（ST） <https://www.jitec.ipa.go.jp/1_11seido/st.html>`_ 
 
 
-* .. [#] `IPA プロジェクトマネージャ（PM） <https://www.jitec.ipa.go.jp/1_11seido/pm.html>`_ :
+* .. [#] `IPA プロジェクトマネージャ（PM） <https://www.jitec.ipa.go.jp/1_11seido/pm.html>`_ 
 * .. [#] `IPA システムアーキテクト（SA）シラバス <https://www.jitec.ipa.go.jp/1_13download/syllabus_sa_ver5_0.pdf>`_ 

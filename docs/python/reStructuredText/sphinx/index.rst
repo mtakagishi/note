@@ -7,7 +7,8 @@ Last Updated on 2021-08-14
   :maxdepth: 1
   :glob:
 
-  *
   */index
+  *
+  
 
 .. |date| date::

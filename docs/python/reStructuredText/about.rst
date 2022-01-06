@@ -4,8 +4,8 @@ reStructuredTextについて
 reStructuredTextとは
 --------------------------
 * Pythonベースのドキュメントユーティリティ（Docutils）
-* RST、reST、ReST と略されることもある。
 * 軽量マークアップ言語
+* RST、reST、ReST と略される。拡張子はrst
 * Sphinxでドキュメントジェネレート可能
 
 reStructuredTextの特徴

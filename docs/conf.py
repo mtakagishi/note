@@ -33,7 +33,13 @@ html_last_updated_fmt = '%Y/%m/%d'
 extensions = [
     'sphinx.ext.todo',
     'recommonmark',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
+    'sphinxcontrib.blockdiag',
+    'sphinxcontrib.seqdiag',
+    'sphinxcontrib.actdiag',
+    'sphinxcontrib.nwdiag',
+    'sphinxcontrib.rackdiag',
+    'sphinxcontrib.packetdiag',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -81,3 +87,7 @@ source_suffix = {
 # sphinx-sitemap
 html_baseurl = 'https://mtakagishi.com/'
 html_extra_path = ['robots.txt']
+
+# blockdiag
+blockdiag_html_image_format = 'SVG'
+blockdiag_fontpath = 'docs/_font/ipaexg.ttf'

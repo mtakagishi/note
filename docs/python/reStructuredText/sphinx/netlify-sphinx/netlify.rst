@@ -68,6 +68,6 @@ URLを独自ドメインに変更する
 
 .. [#dns] https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/
 
-.. [#domain]  当サイトはgoogleドメインを利用しています。
+.. [#domain]  当サイトはfreenomで試行後、googleドメインでドメイン取得し直しました。
 
 .. |date| date::
