@@ -1,15 +1,19 @@
 reStructuredTextについて
 ============================================
 
+reStructuredTextとは
+--------------------------
+* Pythonベースのドキュメントユーティリティ（Docutils）
+* RST、reST、ReST と略されることもある。
+* 軽量マークアップ言語
+* Sphinxでドキュメントジェネレート可能
+
 reStructuredTextの特徴
 ---------------------------------
-* マークダウンみたいな記述法のPython版
-* Python製でPythonコミュニティで長年使われている
-* HTMLやPDFなどへ出力可能
-* RST、reST、ReSTなどに略される
-* 役割はマークダウンと同じ。 [#markdown-vs-rst]_
-* Sphinxで使用。Sphinxは設定すればマークダウンも使える
-* docstringでも利用
+* マークダウンとの対比 [#markdown-vs-rst]_
+* Sphinxにより、HTMLやPDFなどへ出力可能
+* Sphinxは設定すればマークダウンも使える　⇒ :doc:`sphinx/markdown` 
+* docstringでも利用 ⇒ :doc:`docstring` 
 
 reStructuredTextに関する参考URL
 ------------------------------------------

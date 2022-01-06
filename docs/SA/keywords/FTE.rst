@@ -7,3 +7,7 @@ FTE
 
 .. rubric:: 関連ワード
 * :doc:`人月` 
+
+.. math ::
+
+  \frac{1}{8 \pi 2}

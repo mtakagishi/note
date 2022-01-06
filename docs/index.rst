@@ -7,5 +7,7 @@ ITノート
   :glob:
   
   SA/index
+  python/index
+  vscode/index
   */index
   about

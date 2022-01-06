@@ -47,7 +47,7 @@ URLを独自ドメインに変更する
 
 ドメイン取得
 -----------------
-無料で取得できる `freenom`_ を使いました。 [#domain]_
+お試し用には無料で取得できる `freenom`_ で十分です。 [#domain]_
 
 ドメインの設定
 --------------------
@@ -68,6 +68,6 @@ URLを独自ドメインに変更する
 
 .. [#dns] https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/
 
-.. [#domain]  有料ドメインについてはググってください。
+.. [#domain]  当サイトはgoogleドメインを利用しています。
 
 .. |date| date::
