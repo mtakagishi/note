@@ -74,6 +74,9 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links.html", "search-field.html"],
     "footer_items": ["copyright"],
 }
+html_sidebars = {
+    "*": ["search-field.html", "sidebar-ethical-ads.html"]
+}
 
 
 [extensions]
