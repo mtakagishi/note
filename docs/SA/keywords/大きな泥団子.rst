@@ -1,7 +1,9 @@
 大きな泥団子
 ==========================================
-* Big ball of mud
+* Big ball of mud として英文で紹介されたシステムの状態
 * 無計画なシステムに見られる杜撰で継ぎはぎだらけ、スパゲッティコードのジャングル
 
 .. rubric:: 関連リンク
-`Big_ball_of_mud(Wikipedia) <https://en.wikipedia.org/wiki/Big_ball_of_mud>`_ 
+* `Big_ball_of_mud(Wikipedia) <https://en.wikipedia.org/wiki/Big_ball_of_mud>`_ 
+* https://japio.or.jp/00yearbook/files/2018book/18_4_03.pdf
+* 
