@@ -39,6 +39,9 @@ Wikipediaのシステムの解説 [#]_ を抜粋。
 * アーキテクトという言葉は、アルケーとテクトで成り立っており、アルケーは根本原理を、テクトは専門家を示す。
 * アーキテクトの意味するところは、根本原理に関する専門家であり、創出に責任を持つ。
 
+.. tip:: 
+  アルケー（万物の根源）に関しては、初期ギリシャ哲学のタレスやデモクリトスの議論まで遡ると胸熱。 [#]_
+
 アーキテクトの役割
 -------------------------------------
 
@@ -93,6 +96,10 @@ ITストラテジスト（ST)は、「 **経営とITを結びつける戦略家*
 * システム化計画立案
 * システムの創出と責任
 
+アーキテクトの語源にさかのぼると尊い
+
+* アルケー（万物の根源）＋テクト（専門家）
+
 .. rubric:: 参考リンク
 
 * .. [#] `IPA システムアーキテクト（SA） <https://www.jitec.ipa.go.jp/1_11seido/sa.html>`_ 
@@ -100,8 +107,11 @@ ITストラテジスト（ST)は、「 **経営とITを結びつける戦略家*
 * .. [#] `システム（Wikipedia） <https://ja.wikipedia.org/wiki/システム>`_
 * .. [#] `じゃるじゃるコント「しょぼい新入社員だと思ったらすごい奴」 <https://youtu.be/ypkJWxmKfrM>`_ 
 * .. [#] `建築学概論［第2回／2020.05.14］ “建築”とは何か [1] <https://medium.com/青井哲人/建築学概論-第2回-建築-とは何か-その1-3ee7f06f166b>`_ 
+* .. [#] `初期ギリシア哲学者の実在観 <https://www.eco.nihon-u.ac.jp/about/magazine/kiyo/pdf/76/76-25-46.pdf>`_ 
 * .. [#] `IPA ITストラテジスト（ST） <https://www.jitec.ipa.go.jp/1_11seido/st.html>`_ 
 
 
 * .. [#] `IPA プロジェクトマネージャ（PM） <https://www.jitec.ipa.go.jp/1_11seido/pm.html>`_ 
 * .. [#] `IPA システムアーキテクト（SA）シラバス <https://www.jitec.ipa.go.jp/1_13download/syllabus_sa_ver5_0.pdf>`_ 
+
+https://www.eco.nihon-u.ac.jp/about/magazine/kiyo/pdf/76/76-25-46.pdf
