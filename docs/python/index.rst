@@ -7,6 +7,11 @@ Python
   :glob:
 
   basic-memo.rst
-  */index
   *
+
+.. toctree::
+  :maxdepth: 2
+  :glob:
+
+  */index
 

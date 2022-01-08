@@ -8,7 +8,6 @@
   :glob:
 
   about
-  sphinx/index
   basics
   docstring
-  
+  *
