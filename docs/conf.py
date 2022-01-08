@@ -93,4 +93,4 @@ html_extra_path = ['robots.txt']
 
 # blockdiag
 blockdiag_html_image_format = 'SVG'
-blockdiag_fontpath = 'docs/_font/ipaexg.ttf'
+blockdiag_fontpath = 'docs/font/ipaexg.ttf'
