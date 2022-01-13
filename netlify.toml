@@ -1,3 +1,4 @@
 [build]
   publish = "docs/_build"
-  command = "sphinx-build docs docs/_build ; cp docs/ads.txt > docs/_build/."
+  command = "sphinx-build docs docs/_build"
+  command = "cp docs/ads.txt > docs/_build/ads.txt"
