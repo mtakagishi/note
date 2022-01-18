@@ -5,7 +5,7 @@
 
 ## URL
 
-* "https://note.mtakagishi.com"
+* "https://mtakagishi.com"
 * "https://jolly-brown-b98547.netlify.app/"
 
 ## poetry準備
