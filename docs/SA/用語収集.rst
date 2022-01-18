@@ -1,0 +1,14 @@
+用語収集
+=================
+システムアーキテクトに関連しそうな用語を収集する。
+
+.. rubric:: 
+.. glossary::
+  :sorted:
+  
+  大きな泥団子(Big_ball_of_mud) : お
+    使い捨てコードの累積でできたシステム [#団子1]_ [#団子2]_
+
+.. rubric:: 関連
+.. [#団子1] `Big_ball_of_mud(Wikipedia) <https://en.wikipedia.org/wiki/Big_ball_of_mud>`_ 
+.. [#団子2] https://japio.or.jp/00yearbook/files/2018book/18_4_03.pdf
