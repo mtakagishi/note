@@ -4,14 +4,26 @@ git
 Last Updated on 2021-04-17
 
 
-初心者向け
+基本コマンド
 =====================================
-
-初心者は、以下3つのコマンドから
 
 :git add .: 変化のあったファイルをすべてステージング（コミット候補）へ
 :git commit -m "message": ローカルでにメッセージをつけてコミット
 :git push: githubにプッシュ
+
+ブランチ関連
+=====================================
+
+:git branch: ローカルブランチの一覧を表示
+:git branch -r: リモートブランチの一覧を表示
+:git branch <新ブランチ>: ブランチを作るが切り替えない
+:git checkout <新ブランチ>: ブランチを作って切り替える
+:git checkout <既存ブランチ>: 既存ブランチに切り替える
+:git diff <別ブランチ> --name-only: <別ブランチ>から変更のあるファイル名だけを表示
+:git rebase <別ブランチ>: <別ブランチ>の最新内容を取り込む
+:git remote prune origin --dry-run: ローカルに残ってしまったリモートブランチの残骸を確認する
+:git remote prune origin: ローカルに残ってしまったリモートブランチの残骸を削除する
+
 
 設定関連
 =====================================
@@ -38,13 +50,8 @@ httpでcloneして後からsshに変更したい場合
 
   git config --global core.autoCRLF false
 
-gitメモ
-  conflict
-    競合があるとローカルファイルに競合した箇所が記述されているので手動で直す
-  
-日本語PATHの文字化け回避
+日本語PATHの文字化け回避::
 
   git config --global core.quotepath false
-
 
 .. |date| date::
