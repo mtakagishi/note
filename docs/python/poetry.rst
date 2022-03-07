@@ -135,5 +135,8 @@ poetry self update 履歴
   | > pip install cleo tomlkit poetry.core requests cachecontrol cachy html5lib pkginfo virtualenv lockfile
   | https://github.com/python-poetry/poetry/issues/553
 
+1.1.13(2022/3/7)
+-------------------------------------------------------
+不調のため再インストール
 
 .. |date| date::
