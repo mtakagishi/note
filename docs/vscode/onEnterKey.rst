@@ -7,11 +7,24 @@ VSCODEに以下のようなエラー::
 
 そして、エンターキーなどが効かなくなる症状
 
-解決
+解決1
 --------
 :kbd:`Ctrl` + :kbd:`Enter` 
 
-というおまじないで動いた。
+というおまじないで効くようになる場合がある
+
+解決2
+------------
+* キーボードショートカットの設定を開く
+
+  * ユーザ設定 →　キーボードショートカット
+
+    または
+
+  * :kbd:`Ctl` + :kbd:`K` → :kbd:`Ctl` + :kbd:`S`
+
+* restructuredtext.editor.listEditingで検索
+* 効かなかったキーの設定を削除
 
 .. rubric:: 参考URL
 https://github.com/vscode-restructuredtext/vscode-restructuredtext/issues/314
