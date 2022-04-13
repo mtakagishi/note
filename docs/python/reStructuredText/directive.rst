@@ -131,6 +131,21 @@ link
 
 `Title <http://link>`_ 
 
+admonition
+------------------------------------
+ディレクティブ表記::
+
+  .. admonition:: lorem30
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae placeat quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. Quidem et fugiat minima saepe atque sed totam quibusdam perspiciatis!
+
+
+レンダリング後:
+
+.. admonition:: lorem30
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae placeat quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. Quidem et fugiat minima saepe atque sed totam quibusdam perspiciatis!
+
 attention
 ------------------------------------
 ディレクティブ表記::
