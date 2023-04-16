@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'IT-Note'
-copyright = '2022, mtakagishi'
+copyright = '2023, mtakagishi'
 author = 'mtakagishi'
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
