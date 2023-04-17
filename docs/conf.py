@@ -89,7 +89,7 @@ source_suffix = {
 }
 # sphinx-sitemap
 html_baseurl = 'https://mtakagishi.com/'
-html_extra_path = ['robots.txt']
+html_extra_path = ['robots.txt', 'ads.txt']
 
 # blockdiag
 blockdiag_html_image_format = 'SVG'
