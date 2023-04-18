@@ -76,19 +76,10 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": ["sphinx-version", "theme-version"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "ads_half_page.html"],
-    "use_edit_page_button": True,
 }
 html_sidebars = {
     "**": ["search-field.html", "list"]
 }
-html_context = {
-    # "github_url": "https://github.com", # or your GitHub Enterprise site
-    "github_user": "mtakagishi",
-    "github_repo": "note",
-    "github_version": "main",
-    "doc_path": "docs",
-}
-
 [extensions]
 todo_include_todos = True
 
