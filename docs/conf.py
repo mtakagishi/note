@@ -63,21 +63,31 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+html_title = project
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_favicon = "_static/favicon.ico"
-# html_logo = "_static/logo.png"
+html_logo = "_static/logo.png"
 html_theme_options = {
     "github_url": "https://github.com/mtakagishi/note",
     "twitter_url": "https://twitter.com/mtakagishi",
     # "google_analytics_id": "UA-183061927-2",
     "navbar_end": ["navbar-icon-links.html", "search-field.html"],
-    "footer_items": ["copyright"],
+    "footer_start": ["copyright"],
+    "footer_end": ["sphinx-version", "theme-version"],
+    "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "ads_half_page.html"],
+    "use_edit_page_button": True,
 }
 html_sidebars = {
-    "*": ["search-field.html", "sidebar-ethical-ads.html"]
+    "**": ["search-field.html", "list"]
 }
-
+html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
+    "github_user": "mtakagishi",
+    "github_repo": "note",
+    "github_version": "main",
+    "doc_path": "docs",
+}
 
 [extensions]
 todo_include_todos = True
