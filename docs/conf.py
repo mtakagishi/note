@@ -77,6 +77,7 @@ html_theme_options = {
     "footer_end": ["sphinx-version", "theme-version"],
     "secondary_sidebar_items": ["page-toc", "edit-this-page", "sourcelink", "ads_half_page.html"],
 }
+
 html_sidebars = {
     "**": ["search-field.html", "list"]
 }
