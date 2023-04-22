@@ -73,9 +73,7 @@ html_theme_options = {
     # "google_analytics_id": "UA-183061927-2",
     "navbar_end": ["navbar-icon-links.html", "search-field.html"],
     "footer_items": ["copyright"],
-}
-html_sidebars = {
-    "**": ["search-field.html", "ads_top_medium_rectangle.html"]
+    "article_footer_items": ["ads_top_medium_rectangle.html", "prev-next.html"],
 }
 
 
