@@ -9,5 +9,6 @@ ITノート
   SA/index
   python/index
   vscode/index
+  gpt/index
   */index
   about
