@@ -44,6 +44,7 @@ extensions = [
     'sphinxcontrib.blockdiag',
     'sphinx_sitemap',
     'sphinxnotes.strike',
+    'sphinx_last_updated_by_git',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,6 +92,8 @@ html_theme_options = {
     "twitter_url": "https://twitter.com/mtakagishi",
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
     "article_footer_items": ["ads_top_medium_rectangle.html", "prev-next.html"],
+    "footer_start": ["copyright", "last-updated.html"],
+    "footer_end": ["sphinx-version", "theme-version"],
 }
 html_theme_options["analytics"] = {
     "google_analytics_id": "G-ZQ74H2ZF8F",
