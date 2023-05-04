@@ -45,6 +45,7 @@ extensions = [
     'sphinx_sitemap',
     'sphinxnotes.strike',
     'sphinx_last_updated_by_git',
+    'sphinx_git',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -89,7 +90,7 @@ html_theme_options = {
         "text": project,
     },
     "github_url": "https://github.com/mtakagishi/note",
-    "twitter_url": "https://twitter.com/mtakagishi",
+    "twitter_url": "https://twitter.com/mtakagishi_note",
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
     "article_footer_items": ["ads_top_medium_rectangle.html", "prev-next.html"],
     "footer_start": ["copyright", "last-updated.html"],

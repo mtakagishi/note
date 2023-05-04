@@ -14,3 +14,8 @@ ITノート
   blog/index
   about_this_site
 
+最近の更新
+--------------
+
+.. git_changelog::
+    :filename_filter: docs/index.rst

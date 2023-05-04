@@ -4,3 +4,4 @@ sphinxcontrib-blockdiag
 sphinx-sitemap
 sphinxnotes-strike
 sphinx-last-updated-by-git
+sphinx-git
