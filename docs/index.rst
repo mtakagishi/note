@@ -3,27 +3,14 @@
 ITノート
 ########################################################
 
-プログラミング
-----------------------------
+プログラミング、ツール、そして日々の学びを共有するためのサイトです。
 
 .. toctree::
-   :maxdepth: 1
+  :maxdepth: 1
+  :glob:
 
-   programming/index
-
-ツール
-----------------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   tools/index
-
-ブログ
-----------------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   blog/index
+  programming/index
+  tools/index
+  blog/index
+  about_this_site
 
