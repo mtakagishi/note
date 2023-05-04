@@ -112,8 +112,5 @@ blockdiagディレクティブ内に記載  詳細 ⇒ [#]_
   }
 
 .. rubric:: 関連リンク
+
 * .. [#] `blockdiag公式ドキュメント <http://blockdiag.com/ja/index.html>`_ 
-
-
-
-

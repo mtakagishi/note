@@ -61,6 +61,7 @@ where句のように一致列で絞り込み
 like検索っぽくしたい
   str.contains(): 特定の文字列を含む
     print(df[df['name'].str.contains('li')])
+
   str.endswith(): 特定の文字列で終わる
   str.startswith(): 特定の文字列で始まる
   str.match(): 正規表現のパターンに一致する

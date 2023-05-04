@@ -165,5 +165,6 @@ poetry shell としておけば、インストールしたパッケージが利�
     I Want To AutoGPT to: tell me a single joke
 
 .. rubric:: 参考URL
+
 * `【完全自動型AI】AutoGPTを徹底解剖！使い方をご紹介 <https://bocek.co.jp/media/service/902/>`_ 
 * `【さよならChatGPT】過去一ヤバい完全自動AI「AutoGPT」のインストール手順と使い方 <https://youtu.be/31eZz-aqY6E>`_ 

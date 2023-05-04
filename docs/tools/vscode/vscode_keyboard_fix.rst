@@ -27,4 +27,5 @@ VSCODEに以下のようなエラー::
 * 効かなかったキーの設定を削除
 
 .. rubric:: 参考URL
+
 https://github.com/vscode-restructuredtext/vscode-restructuredtext/issues/314
