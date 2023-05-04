@@ -1,8 +1,5 @@
-sphinx
 pydata-sphinx-theme
-recommonmark
-sphinx-sitemap
-sphinxcontrib-actdiag
+myst-parser
 sphinxcontrib-blockdiag
-sphinxcontrib-nwdiag
-sphinxcontrib-seqdiag
+sphinx-sitemap
+sphinxnotes-strike

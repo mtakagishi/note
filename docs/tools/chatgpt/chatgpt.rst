@@ -24,7 +24,7 @@ Poetryを使ったAutoGPTのインストール
 
    .. code-block:: bash
 
-      git clone -b v0.2.2 https://github.com/your-repository/autogpt.git
+      git clone -b v0.3.0 https://github.com/Significant-Gravitas/Auto-GPT.git
 
 .. tip:: releaseタグをつけると比較的安定した一式が手に入ります。
 
@@ -42,13 +42,14 @@ Poetryを使ったAutoGPTのインストール
      [tool.poetry]
      name = "your_project_name"
      version = "0.1.0"
-     description = "Your project description"
-     authors = ["Your Name <your.email@example.com>"]
-
+     description = ""
+     authors = ["Your Name <you@example.com>"]
+     
      [tool.poetry.dependencies]
      python = "^3.9"
-     beautifulsoup4 = "*"
+     beautifulsoup4 = ">=4.12.2"
      colorama = "0.4.6"
+     distro = "1.8.0"
      openai = "0.27.2"
      playsound = "1.2.2"
      python-dotenv = "1.0.0"
@@ -59,28 +60,33 @@ Poetryを使ったAutoGPTのインストール
      gTTS = "2.3.1"
      docker = "*"
      duckduckgo-search = "*"
-     # google-api-python-client = {git = "https://github.com/googleapis/google-api-python-client.git"}
+     # google-api-python-client = "*"
      google-api-python-client = {git = "https://github.com/googleapis/google-api-python-client.git", branch = "main"}
      pinecone-client = "2.2.1"
      redis = "*"
-     orjson = "*"
+     orjson = "3.8.10"
      Pillow = "*"
-     selenium = "*"
+     selenium = "4.1.4"
      webdriver-manager = "*"
      jsonschema = "*"
      tweepy = "*"
      click = "*"
+     charset-normalizer = ">=3.1.0"
      spacy = ">=3.0.0,<4.0.0"
-     en_core_web_sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0-py3-none-any.whl"}
+     en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl"}
      
      [tool.poetry.dev-dependencies]
      coverage = "*"
      flake8 = "*"
-     umpy = "*"
+     numpy = "*"
      pre-commit = "*"
      black = "*"
      isort = "*"
      gitpython = "3.1.31"
+     auto-gpt-plugin-template = "*"
+     mkdocs = "*"
+     pymdown-extensions = "*"
+     openapi-python-client = "0.13.4"
      pytest = "*"
      asynctest = "*"
      pytest-asyncio = "*"
@@ -88,10 +94,8 @@ Poetryを使ったAutoGPTのインストール
      pytest-cov = "*"
      pytest-integration = "*"
      pytest-mock = "*"
-     
-     [build-system]
-     requires = ["poetry-core>=1.0.0"]
-     build-backend = "poetry.core.masonry.api"
+     vcrpy = "*"
+     pytest-recording = "*"
 
 .. tip:: バージョンアップに伴い上記内容は変化します。ChatGPTに最新のrequirement.txtの内容を入力しpoetry用に出力させてください。
 .. tip::
@@ -125,6 +129,22 @@ OpenAI APIキーの取得
 
 1. ``cp .env.template .env`` とコマンドを入力してファイルをコピーし、 ``.env`` ファイル内の ``OPENAI_API_KEY=`` という文字列の箇所にAPIキーを引用符やスペースなしで入力します。
 
+Custom Search API の設定
+------------------------------------------------------------------
+
+Google API の APIキー
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. GCPコンソールから、Google API サービスに登録してAPIキーを取得する
+
+2. envファイルの ``GOOGLE_API_KEY=`` という文字列の箇所にAPIキーをセット
+
+CUSTOM SEARCH ENGINE の ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. `検索エンジン <https://programmablesearchengine.google.com/u/0/controlpanel/all>`_ から新しいエンジンを作成
+
+2. envファイルの ``CUSTOM_SEARCH_ENGINE_ID=`` という文字列の箇所にAPIキーをセット
+
 動作確認
 -------------------------------------------------------------
 
@@ -134,9 +154,15 @@ poetry shell としておけば、インストールしたパッケージが利�
     :caption: AutoGPTの起動
     
     poetry shell
-    ./run.bat
+    ./run.sh
 
-.. tip:: auto-gpt.json に関する警告が出る場合は、手動で ``auto-gpt.json`` という空っぽのファイルを作成します。
+
+試しに、 ``tell me a single joke`` と打込んで動作を確認しましょう。
+
+  .. code-block:: bash
+    :caption: テスト用スクリプト
+    
+    I Want To AutoGPT to: tell me a single joke
 
 .. rubric:: 参考URL
 * `【完全自動型AI】AutoGPTを徹底解剖！使い方をご紹介 <https://bocek.co.jp/media/service/902/>`_ 

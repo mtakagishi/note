@@ -1,14 +1,29 @@
+
 ########################################################
 ITノート
 ########################################################
 
+プログラミング
+----------------------------
+
 .. toctree::
-  :maxdepth: 2
-  :glob:
-  
-  SA/index
-  python/index
-  vscode/index
-  gpt/index
-  */index
-  about
+   :maxdepth: 1
+
+   programming/index
+
+ツール
+----------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   tools/index
+
+ブログ
+----------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   blog/index
+

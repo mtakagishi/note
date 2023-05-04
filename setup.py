@@ -15,25 +15,34 @@ class SimpleCommand(Command):
 
 class DocCommand(SimpleCommand):
     def run(self):
-        # subprocess.call(["sphinx-autobuild", "docs", "docs/_build/ja"])
-        subprocess.call(["sphinx-autobuild", "docs", "docs/_build",
-                        "--port", "8001", "--open-browser"])
+        # languages = ['ja', 'en', 'zh', 'es', 'fr', 'hi']
+        languages = ['ja']
+        buildername = "html"
+        sourcedir = "docs"
+        outputdir = "docs/_build/html"
+        for lang in languages:
+            subprocess.call(["sphinx-build", "-b", buildername,
+                            sourcedir, outputdir + "/"+lang+"/", "-D", "language="+lang])
 
 
-# class DocEnglishCommand(SimpleCommand):
-#     def run(self):
-#         subprocess.call(["sphinx-build", "-M", "gettext", "docs", "docs/_build/ja"])
-#         subprocess.call(["sphinx-intl", "update", "-d", "docs/locales",
-#                          "-p", "_build/ja/gettext", "-l", "en"])
-#         subprocess.call(["sphinx-autobuild", "docs",
-#                          "docs/_build/en", "-D", "language=en"])
+class GettextCommand(SimpleCommand):
+    def run(self):
+        os.chdir('docs')
+        # languages = ['ja', 'en', 'zh', 'es', 'fr', 'hi']
+        languages = ['ja']
+        buildername = "gettext"
+        sourcedir = "."
+        outputdir = "_build/gettext"
+        subprocess.call(
+            ["sphinx-build", "-b", buildername, sourcedir, outputdir])
+        for lang in languages:
+            subprocess.call(["sphinx-intl", "update", "-p",
+                            outputdir, "-l", lang])
 
 
 setup(
-    # use_scm_version=True, poetryで使えない。
-    # poetry-dynamic-versioningを検討するか諦める。
     cmdclass={
         "doc": DocCommand,
-        # "doc_en": DocEnglishCommand,
+        "gettext": GettextCommand,
     },
 )

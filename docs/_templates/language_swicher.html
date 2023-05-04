@@ -1,0 +1,9 @@
+  <select name="lang" onchange="location.href=value;">
+    {%- for code, display in support_languages.items() %}
+      <option value="{{ pathto('../' + code + '/', 1) }}{{ pathto(pagename, 0, '.') }}"
+        {%- if code == language %}
+          selected
+        {%- endif %}
+      >{{ display }}</option>
+    {%- endfor %}
+  </select>
