@@ -16,8 +16,6 @@ reStructuredTextの特徴
 ---------------------------------
 * マークダウンとの対比 [#markdown-vs-rst]_
 * Sphinxにより、HTMLやPDFなどへ出力可能
-* Sphinxは設定すればマークダウンも使える　⇒ :doc:`sphinx/markdown` 
-* docstringでも利用 ⇒ :doc:`docstring` 
 
 reStructuredTextに関する参考URL
 ------------------------------------------

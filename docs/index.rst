@@ -6,9 +6,8 @@ ITノート
   :maxdepth: 2
   :glob:
   
-  SA/index
-  python/index
-  vscode/index
-  gpt/index
-  */index
-  about
+  programming/index
+  tools/index
+  skills_certifications/index
+  blog/index
+  about_this_site
