@@ -30,10 +30,8 @@ OpenAIのAPI Keyが必要です。
 --------------
 
 - **Add tests** : 選択したコードからテストコードを生成します。 ＝ ``Implement tests for the following code`` 
-* ``Find bugs``: 選択したコードの問題点を探します。＝ ``Find problems with the following code``
-
+- **Find bugs** : 選択したコードの問題点を探します。＝ ``Find problems with the following code``
 - **Optimize** : 初期値は``Optimize the following code`` 選択したコードの最適化を提案します。
-
 - **Explain**  : 選択したコードの内容を説明します。＝ ``Explain the following code``
 - **Add comments** : 選択したコードにコメントを追加してくれます。＝ ``Add comments for the following code``
 - **Complete code** : 選択したコードを完成させます。＝ ``Complete the following code``
