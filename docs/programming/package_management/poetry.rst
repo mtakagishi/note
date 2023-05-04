@@ -139,4 +139,12 @@ poetry self update 履歴
 -------------------------------------------------------
 不調のため再インストール
 
+1.4.2(2023/05/03)
+------------------------------
+  | %APPDATA%\pypoetry を削除して再インストール
+  | FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。: 'C:\\Users\\masat\\AppData\\Roaming\\Python\\Scripts\\poetry.exe'
+  | というエラーが発生したため該当ファイルを手動で削除し再実行
+  | 再実行しインストール成功
+  | 環境変数のPATHに追加　C:\Users\username\AppData\Roaming\Python\Scripts
+
 .. |date| date::
