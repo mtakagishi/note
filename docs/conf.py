@@ -11,9 +11,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 # import os
-# import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
 
 # -- Project information -----------------------------------------------------
 
@@ -92,7 +90,7 @@ html_theme_options = {
     "github_url": "https://github.com/mtakagishi/note",
     "twitter_url": "https://twitter.com/mtakagishi_note",
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
-    "article_footer_items": ["ads_top_medium_rectangle.html", "prev-next.html"],
+    "article_footer_items": ["ads_parts.html", "prev-next.html"],
     "footer_start": ["copyright", "last-updated.html"],
     "footer_end": ["sphinx-version", "theme-version"],
 }
