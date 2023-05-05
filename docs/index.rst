@@ -6,12 +6,22 @@ ITノート
 プログラミング、ツール、そして日々の学びを共有するためのサイトです。
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
   :glob:
 
   programming/index
   tools/index
+
+.. toctree::
+  :maxdepth: 2
+  :glob:
+
   blog/index
+
+.. toctree::
+  :maxdepth: 1
+  :glob:
+
   about_this_site
 
 .. rubric:: 最終更新
