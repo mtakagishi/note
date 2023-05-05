@@ -10,10 +10,12 @@ Google Analytics
 ------------------
 当サイトではアクセス解析のためにGoogle Analyticsを利用しています。
 
-Google Analyticsでは「Cookie」を使用し、個人を特定する情報を含まずにデータを収集します。Google Analyticsの利用により収集されたデータは、Google社のプライバシーポリシーに基づいて管理されます。
+Google Analyticsでは「Cookie」を使用し個人を特定する情報を含まずにデータを収集します。
+
+Google Analyticsの利用により収集されたデータは、Google社のプライバシーポリシーに基づいて管理されます。
 
 
-`プライバシー ポリシー – ポリシーと規約 – Google <https://policies.google.com/privacy?hl=ja>`_
+`プライバシーポリシー <https://policies.google.com/privacy?hl=ja>`_
 
 免責事項
 =================================
@@ -27,7 +29,11 @@ Google Adsense
 
 The Moneytizer
 -------------------
-当サイトは The Moneytizer の広告プログラムに参加しています。この広告プログラムに参加したい方は紹介リンク経由で5$が付与されます。（ `⇒The Moneytizer紹介リンク <https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9#inscription>`_ ）
+当サイトは「The Moneytizer」の広告プログラムに参加しています。
+
+この広告プログラムに参加したい方は紹介リンク経由で5$が付与されます。
+
+`⇒The Moneytizer紹介リンク <https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9#inscription>`_
 
 お問い合わせ  
 ================================

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/vscode/vscode_installation.rst:3
+msgid "VSCODEをインストールする"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:4
+msgid "Last Updated on 2021-08-15"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:7
+msgid "本家URL"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:9
+msgid "本家からインストーラを使う::"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:9
+msgid "https://code.visualstudio.com/"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:12
+msgid "chocolatey"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:14
+msgid "chocoでパッケージ管理する::"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:14
+msgid "https://community.chocolatey.org/packages/vscode"
+msgstr ""
+
+#: ../../tools/vscode/vscode_installation.rst:17
+msgid "chocolateyのインストール：https://chocolatey.org/install"
+msgstr ""
+

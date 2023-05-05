@@ -7,11 +7,6 @@ sphinxでは、索引ページを作成する機能があります。
 ------------------
 本の巻末で見つけるアルファベット順、50音順に並んだ用語集のようなページのこと。
 
-当サイトの場合
-----------------
-当サイトの索引ページ　⇒　:ref:`genindex`
-
-
 仕組み
 -----------------
 * sphinxがhtmlビルド時に genindex.html を勝手に作ってくれます。
@@ -49,9 +44,7 @@ glossaryディレクティブ::
 * グルーピングの概念がある。漢字などを何らかの50音のカナに集約させれば50音に紐づく索引のように作成は可能。
 
 
-
 * .. [#toctree] `How can i include the genindex in a Sphinx TOC? <https://stackoverflow.com/questions/36235578/how-can-i-include-the-genindex-in-a-sphinx-toc>`_ 
 * .. [#index] `インデックス生成のためのマークアップ <https://www.sphinx-doc.org/ja/master/usage/restructuredtext/directives.html#index-generating-markup>`_ 
 * .. [#kana-text] `【Sphinx拡張】索引と用語集のかな文字対応 <https://qiita.com/koKekkoh/items/4563b63fdb8eaa3ef4f9>`_ 
-
 

@@ -3,7 +3,7 @@ import subprocess
 from setuptools import setup, Command
 import shutil
 
-LANGUAGES = ['ja']  # 'ja', 'en', 'zh', 'es', 'fr', 'hi'
+LANGUAGES = ['ja', 'en']  # 'ja', 'en', 'zh', 'es', 'fr', 'hi'
 
 class SimpleCommand(Command):
     user_options = []

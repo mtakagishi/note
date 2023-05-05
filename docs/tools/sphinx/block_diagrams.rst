@@ -1,35 +1,33 @@
 ***************************************************
-sphinxでブロック図など
+sphinxでフロー図を表現する
 ***************************************************
 
-以下のような図を記入できるようにsphinxを拡張できます。
+フロー図などを作図可能なSphinxの拡張機能
 
 * ブロック図(blockdiag)
 * シーケンス図(seqdiag)
 * アクティビティ図(actdiag)
 * 論理ネットワーク図(nwdiag)
 
-設定
+設定方法
 ==========
 
-必要も追加モジュール
+パッケージインストール
 ---------------------------
 * sphinxcontrib-blockdiag
 * sphinxcontrib-seqdiag
 * sphinxcontrib-actdiag
 * sphinxcontrib-nwdiag
 
-pip、poetry、requrements.txtなど、環境に応じて追加する。
-
-pipの場合::
+pip::
 
   pip install sphinxcontrib-actdiag sphinxcontrib-blockdiag sphinxcontrib-nwdiag sphinxcontrib-seqdiag
 
-poetryの場合::
+poetry::
 
   poetry add sphinxcontrib-actdiag sphinxcontrib-blockdiag sphinxcontrib-nwdiag sphinxcontrib-seqdiag
 
-conf.pyに拡張を記入
+conf.pythのextensions設定
 --------------------------------
 
 .. code-block:: python
@@ -45,8 +43,8 @@ conf.pyに拡張を記入
     'sphinxcontrib.packetdiag',
   ]
 
-HTML化での形式選択
------------------------
+イメージファイル形式選択の指定
+----------------------------------------------
 PNG か SV
 
 .. code-block:: python
@@ -56,11 +54,15 @@ PNG か SV
   # blockdiag
   blockdiag_html_image_format = 'SVG'
 
-日本語対応
+日本語フォント
 ------------------
-日本語に対応するにはフォントファイルが必要。フォントファイルはttf形式。
+日本語文字列を出力可能にするためにフォントファイルttf形式のファイルが必要となる。
 
-今回は`IPAexフォント <https://moji.or.jp/ipafont/>`_ で対応。IPAのライセンスに従い入手したZIPを回答しttfファイルをsphinxが参照できる場所に配置し、conf.pyにpathを指定しておきました。
+`IPAexフォント <https://moji.or.jp/ipafont/>`_
+
+
+conf.pythのfont設定
+--------------------------------
 
 .. code-block:: python
   :caption: conf.py
@@ -69,9 +71,9 @@ PNG か SV
   # blockdiag-font
   blockdiag_fontpath = 'docs/_font/ipaexg.ttf'
 
-基本的な書き方
+書き方のサンプル
 ====================
-blockdiagディレクティブ内に記載  詳細 ⇒ [#]_
+blockdiagディレクティブ内に記載 [#]_
 
 .. code-block:: python
   :linenos:

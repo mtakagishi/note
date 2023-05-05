@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 22:48+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../programming/python/python_installation.rst:3
+msgid "Pythonインストールと基本情報"
+msgstr "Python Installation and Basic Information"
+
+#: ../../programming/python/python_installation.rst
+msgid "更新"
+msgstr "Update"
+
+#: ../../programming/python/python_installation.rst:4
+msgid "2023-05-05"
+msgstr ""
+
+#: ../../programming/python/python_installation.rst:7
+msgid "インストール方法"
+msgstr "Installation Method"
+
+#: ../../programming/python/python_installation.rst:10
+msgid "Pythonのインストール"
+msgstr "Installing Python"
+
+#: ../../programming/python/python_installation.rst:11
+msgid "`公式ページ <https://www.python.org/>`_"
+msgstr "`Official website <https://www.python.org/>`_"
+
+#: ../../programming/python/python_installation.rst:12
+msgid "からダウンロード可能。"
+msgstr "You can download it from there."
+
+#: ../../programming/python/python_installation.rst:14
+msgid "Windowsの場合、Microsoft StoreからPythonを選択できます。"
+msgstr "For Windows, you can select Python from Microsoft Store."
+
+#: ../../programming/python/python_installation.rst:17
+msgid "パッケージ管理"
+msgstr "Package Management"
+
+#: ../../programming/python/python_installation.rst:18
+msgid "下記の種類がありますが、混在すると管理が困難になるため、1つに統一することが望ましいです。私はpoetryに統一しています。"
+msgstr "There are several package management systems available, but it is desirable to unify them into one system in order to avoid difficulties in management. I use poetry for unification."
+
+#: ../../programming/python/python_installation.rst:20
+msgid "pip"
+msgstr ""
+
+#: ../../programming/python/python_installation.rst:22
+msgid "Pythonに付属しているパッケージ管理ツール"
+msgstr "Package management tool included in Python"
+
+#: ../../programming/python/python_installation.rst:23
+msgid "マシン全体で共有することになる"
+msgstr "It will be shared throughout the machine."
+
+#: ../../programming/python/python_installation.rst:25
+msgid "poetry"
+msgstr ""
+
+#: ../../programming/python/python_installation.rst:27
+#: ../../programming/python/python_installation.rst:33
+msgid "仮想環境とパッケージ管理を提供"
+msgstr "Provides virtual environment and package management"
+
+#: ../../programming/python/python_installation.rst:28
+msgid "pyproject.tomlでパッケージ管理"
+msgstr "Package management with pyproject.toml"
+
+#: ../../programming/python/python_installation.rst:29
+msgid "PEPに準拠"
+msgstr "Compliant with PEP"
+
+#: ../../programming/python/python_installation.rst:31
+msgid "pipenv"
+msgstr ""
+
+#: ../../programming/python/python_installation.rst:34
+msgid "pipfileでパッケージ管理する"
+msgstr "Package management with Pipfile"
+
+#: ../../programming/python/python_installation.rst:35
+msgid "pipfileではscript句が便利に使えます"
+msgstr "You can conveniently use the script section in Pipfile"
+
+#: ../../programming/python/python_installation.rst:37
+msgid "conda系"
+msgstr "Conda series"
+
+#: ../../programming/python/python_installation.rst:39
+msgid "Pythonディストリビュータの一角で、anaconda系列のパッケージ管理"
+msgstr "One of the Python distributors, package management for Anaconda series"
+
+#: ../../programming/python/python_installation.rst:40
+msgid "標準ではコンパイルされていないものも手に入る"
+msgstr "You can also get things that are not compiled by default"
+
+#: ../../programming/python/python_installation.rst:41
+msgid "商用利用の場合は有償条項がある"
+msgstr "There are paid terms for commercial use"
+
+#: ../../programming/python/python_installation.rst:44
+msgid "Poetryのインストール"
+msgstr "Installing Poetry"
+
+#: ../../programming/python/python_installation.rst:45
+msgid "インストール方法は公式サイトを参照してください。  `⇒公式サイト <https://python-poetry.org/>`_"
+msgstr "Refer to the official site for installation instructions. `⇒Official site <https://python-poetry.org/>`_"
+
+#: ../../programming/python/python_installation.rst
+msgid "各プロジェクトごとに仮想環境を分離する設定"
+msgstr "Setting to separate virtual environments for each project"
+
+#: ../../programming/python/python_installation.rst
+msgid "poetry config virtualenvs.in-project true"
+msgstr "poetry config virtualenvs.in-project true"
+
+#: ../../programming/python/python_installation.rst:53
+msgid "Python公式ドキュメント"
+msgstr "Python official documentation"
+
+#: ../../programming/python/python_installation.rst:55
+msgid "`公式ドキュメント(日本語) <https://docs.python.org/ja/3/>`_"
+msgstr "`Official documentation <https://docs.python.org/en/3/>`_"
+
+#: ../../programming/python/python_installation.rst:56
+msgid "基本的にドキュメントは充実しているため、まずは公式ドキュメントから始めることをおすすめします。"
+msgstr "Since the documentation is generally well-developed, it is recommended to start with the official documentation."
+
+#: ../../programming/python/python_installation.rst:59
+msgid "言語リファレンス"
+msgstr "Language reference"
+
+#: ../../programming/python/python_installation.rst:61
+msgid "`言語リファレンス <https://docs.python.org/ja/3/reference/index.html>`_"
+msgstr "`Language reference <https://docs.python.org/en/3/reference/index.html>`_"
+
+#: ../../programming/python/python_installation.rst:64
+msgid "標準ライブラリ"
+msgstr "Standard library"
+
+#: ../../programming/python/python_installation.rst:66
+msgid "`標準ライブラリ <https://docs.python.org/ja/3/library/index.html>`_"
+msgstr "`Standard library <https://docs.python.org/en/3/library/index.html>`_"
+
+#: ../../programming/python/python_installation.rst:69
+msgid "素晴らしい Python フレームワーク・ライブラリ・ソフトウェア・リソースの数々"
+msgstr "Numerous great Python frameworks, libraries, software, and resources"
+
+#: ../../programming/python/python_installation.rst:70
+msgid "`Awesome Python <https://qiita.com/hatai/items/34c91d4ee0b54bd7cb8b>`_"
+msgstr ""
+
+#: ../../programming/python/python_installation.rst:73
+msgid "記事"
+msgstr "Article"
+

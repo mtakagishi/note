@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:4
+msgid "Genie AIを使った VSCode上でのChatGPT連携"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:6
+msgid ""
+"「ChatGPT - Genie AI」は、Visual Studio Code (VSCode) "
+"を拡張してChatGPTと連動できるようにします。コーディング中のChatGPTとの連携を効率化できます。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:9
+msgid "要件"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:11
+msgid "OpenAIのAPI Keyが必要です。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:14
+msgid "インストール方法"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:16
+msgid "まず、VSCodeの拡張機能マーケットプレイスから「ChatGPT - Genie AI」を検索し、インストールしてください。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:19
+msgid "使用方法"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:21
+msgid "**Genie AIを開く**: VSCodeのサイドバーの魔法のランプを押すとジーニーの登場です。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:23
+msgid "**質問の投稿**: Genie AIのパネルの入力欄に、質問やコードを入力して送信してください。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:25
+msgid ""
+"**AIによる回答**: 質問を送信すると、AIが適切なコードや情報を提案してくれます。提案されたコードはチャット欄にある ``Copy`` "
+"ボタンでクリップボードにコピーしたり、``Insert`` ボタン でカーソル位置にそのまま挿入することができます。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:27
+msgid "**インラインでの使用**: エディタ内の内容を元に直接質問できます。内容を選択して右クリックで質問を選択してください。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:30
+msgid "初期設定の質問"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:32
+msgid ""
+"**Add tests** : 選択したコードからテストコードを生成します。 ＝ ``Implement tests for the "
+"following code``"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:33
+msgid ""
+"**Find bugs** : 選択したコードの問題点を探します。＝ ``Find problems with the following "
+"code``"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:34
+msgid "**Optimize** : 初期値は``Optimize the following code`` 選択したコードの最適化を提案します。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:35
+msgid "**Explain**  : 選択したコードの内容を説明します。＝ ``Explain the following code``"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:36
+msgid ""
+"**Add comments** : 選択したコードにコメントを追加してくれます。＝ ``Add comments for the "
+"following code``"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:37
+msgid "**Complete code** : 選択したコードを完成させます。＝ ``Complete the following code``"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:38
+msgid "**Ad-hoc prompt** : 選択した内容に対してアドホックにAIに要求するための入力プロンプトが表示されます。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:40
+msgid "初期設定は英文で設定されてます。質問内容は ``Settings`` で変更可能です。必要に応じて母国語の質問文に変更してください。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:43
+msgid "参考URL"
+msgstr ""
+
+#: ../../tools/vscode/vscode_ChatGPT-Genie-AI.rst:44
+msgid "https://github.com/ai-genie/chatgpt-vscode"
+msgstr ""
+

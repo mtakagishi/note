@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-06 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/google_analytics_tag.rst:3
+msgid "SphinxにGoogle Analyticsのタグを埋め込む方法"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:4
+msgid "Last Updated on 2023-05-05"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst
+msgid "pydata_sphinx_themeが前提の記事です。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst
+msgid "アナリティクスはGA4形式とUA形式の新旧2種がありますが、"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst
+msgid "v0.6.2(2021/04/26)以降、両方に対応されてます。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:12
+msgid "一般的な方法"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:13
+msgid "conf.pyに設定可能です。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:14
+msgid "v0.6.2にてGA4形式にも対応されました。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:15
+msgid "最新バージョンではUA形式は対応できなくなりました。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:17
+msgid "conf.py::"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:24
+msgid "別の解決方法"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst
+msgid "pydata_sphinx_themeではv0.6.2より前のバージョンはGA4が対応されていませんでした。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst
+msgid "以下は当時に行った代替策です。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:31
+msgid "layout.htmlをtemplate_path配下に作成。"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:32
+msgid "下記の対応版「layout.html」格納"
+msgstr ""
+
+#: ../../tools/sphinx/google_analytics_tag.rst:34
+msgid "layout.html::"
+msgstr ""
+
+#~ msgid "Last Updated on 2021-08-14"
+#~ msgstr ""
+
+#~ msgid "pydata_sphinx_themeテーマをベースにした記事です。"
+#~ msgstr ""
+
+#~ msgid "conf.pyに設定すればOKです。"
+#~ msgstr ""
+
+#~ msgid "UA-で始まるかG-で始まるかで自動で判断されます。"
+#~ msgstr ""
+
+#~ msgid "v0.6.2より前はGA4が対応されていませんでした。"
+#~ msgstr ""
+
+#~ msgid "以下はtempleteを拡張する方法です。"
+#~ msgstr ""
+
+#~ msgid "\"basic/layout.html\" からの派生テーマなら同じ方法で行けるはずです。"
+#~ msgstr ""
+
+#~ msgid "conf.py の template_path の設定を確認"
+#~ msgstr ""
+
+#~ msgid "layout.htmlを用意し、template_path配下に作成。"
+#~ msgstr ""
+
+#~ msgid "googleアナリティクス設定の「ウェブストリームの詳細」画面を参考に下記のように「layout.html」格納"
+#~ msgstr ""
+

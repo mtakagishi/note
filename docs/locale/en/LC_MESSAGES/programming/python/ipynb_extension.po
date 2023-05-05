@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 22:48+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../programming/python/ipynb_extension.rst:3
+msgid "Python実行環境Jupyterの拡張子ipynbについて"
+msgstr "ipynb extension in Jupyter, Python's execution environment"
+
+#: ../../programming/python/ipynb_extension.rst
+msgid "更新"
+msgstr "Update"
+
+#: ../../programming/python/ipynb_extension.rst:4
+msgid "2023-05-05"
+msgstr ""
+
+#: ../../programming/python/ipynb_extension.rst:7
+msgid "本記事の概要"
+msgstr "Overview of this Article"
+
+#: ../../programming/python/ipynb_extension.rst:8
+msgid "拡張子ipynbはJupyterで使われるファイルで、IPython Notebookが由来です。"
+msgstr "The ipynb extension is a file used in Jupyter and derived from IPython Notebook."
+
+#: ../../programming/python/ipynb_extension.rst:9
+msgid "Poetryを活用してJupyterを起動する手順をまとめました。"
+msgstr "We have summarized the steps to launch Jupyter using Poetry."
+
+#: ../../programming/python/ipynb_extension.rst:12
+msgid "前提環境"
+msgstr "Prerequisites"
+
+#: ../../programming/python/ipynb_extension.rst:13
+msgid "Windows11"
+msgstr "Windows11"
+
+#: ../../programming/python/ipynb_extension.rst:14
+msgid "Pythonインストール済み"
+msgstr "Python installed"
+
+#: ../../programming/python/ipynb_extension.rst:15
+msgid "poetryインストール済み"
+msgstr "Poetry installed"
+
+#: ../../programming/python/ipynb_extension.rst:18
+msgid "Jupyter開始方法"
+msgstr "Starting Jupyter"
+
+#: ../../programming/python/ipynb_extension.rst:19
+msgid "Jupyterがインストールされていない、起動方法が分からないという想定で記載しています。"
+msgstr "Assuming that Jupyter is not installed and the method of starting it is unknown, we have described the steps."
+
+#: ../../programming/python/ipynb_extension.rst:21
+msgid "作業ディレクトリへ移動"
+msgstr "Move to the working directory"
+
+#: ../../programming/python/ipynb_extension.rst:27
+msgid "poetry初期化、プロンプト確認事項は全て[Enter]でOK"
+msgstr "Initialize Poetry and confirm all prompts with [Enter]"
+
+#: ../../programming/python/ipynb_extension.rst:33
+msgid "仮想環境とJupyterのインストール"
+msgstr "Installation of Virtual Environment and Jupyter"
+
+#: ../../programming/python/ipynb_extension.rst:39
+msgid "jupyter起動"
+msgstr "Launch Jupyter"
+
+#: ../../programming/python/ipynb_extension.rst:44
+msgid "成功すると次の画像のようにブラウザが立ち上がります。"
+msgstr "If successful, the browser will launch as shown in the following image:"
+

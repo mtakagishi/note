@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-06 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/directives.rst:2
+msgid "sphinxで使えるディレクティブ集"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:3
+msgid "ディレクティブとはマークアップ言語における一般的なブロックのことです"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:6
+msgid "toctree"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:7
+msgid "Table of contentsの略"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:8
+msgid "toctreeに指定できない文字列"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:10
+msgid "genindex"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:11
+msgid "modindex"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:12
+msgid "search"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:13
+msgid "_(アンダースコア) で始まる名前"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:15 ../../tools/sphinx/directives.rst:67
+#: ../../tools/sphinx/directives.rst:78 ../../tools/sphinx/directives.rst:89
+#: ../../tools/sphinx/directives.rst:104 ../../tools/sphinx/directives.rst:115
+#: ../../tools/sphinx/directives.rst:125 ../../tools/sphinx/directives.rst:135
+#: ../../tools/sphinx/directives.rst:150 ../../tools/sphinx/directives.rst:160
+#: ../../tools/sphinx/directives.rst:171 ../../tools/sphinx/directives.rst:182
+#: ../../tools/sphinx/directives.rst:193 ../../tools/sphinx/directives.rst:204
+#: ../../tools/sphinx/directives.rst:216 ../../tools/sphinx/directives.rst:227
+#: ../../tools/sphinx/directives.rst:238 ../../tools/sphinx/directives.rst:251
+#: ../../tools/sphinx/directives.rst:263 ../../tools/sphinx/directives.rst:273
+#: ../../tools/sphinx/directives.rst:283 ../../tools/sphinx/directives.rst:293
+#: ../../tools/sphinx/directives.rst:303 ../../tools/sphinx/directives.rst:313
+msgid "ディレクティブ::"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:34
+msgid "code-block"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:36
+msgid "例::"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:50
+msgid "出力"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:52
+msgid "サンプル"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:66
+msgid "todo"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:71 ../../tools/sphinx/directives.rst:82
+#: ../../tools/sphinx/directives.rst:95 ../../tools/sphinx/directives.rst:108
+#: ../../tools/sphinx/directives.rst:119 ../../tools/sphinx/directives.rst:129
+#: ../../tools/sphinx/directives.rst:142 ../../tools/sphinx/directives.rst:154
+#: ../../tools/sphinx/directives.rst:164 ../../tools/sphinx/directives.rst:175
+#: ../../tools/sphinx/directives.rst:186 ../../tools/sphinx/directives.rst:197
+#: ../../tools/sphinx/directives.rst:209 ../../tools/sphinx/directives.rst:220
+#: ../../tools/sphinx/directives.rst:231 ../../tools/sphinx/directives.rst:243
+#: ../../tools/sphinx/directives.rst:256 ../../tools/sphinx/directives.rst:267
+#: ../../tools/sphinx/directives.rst:277 ../../tools/sphinx/directives.rst:287
+#: ../../tools/sphinx/directives.rst:297 ../../tools/sphinx/directives.rst:307
+#: ../../tools/sphinx/directives.rst:317
+msgid "レンダリング後:"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:73
+msgid "課題"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:73
+msgid "ディレクティブ紹介例に掲載のTODO"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:77
+msgid "todolist"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:88
+msgid "code"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:103
+msgid "image"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:114
+msgid "figure"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:124
+msgid "link"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:131
+msgid "`Title <http://link>`_"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:134
+msgid "admonition"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:144
+msgid "lorem30"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:146
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae "
+"placeat quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. "
+"Quidem et fugiat minima saepe atque sed totam quibusdam perspiciatis!"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:149 ../../tools/sphinx/directives.rst:156
+msgid "attention"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:159 ../../tools/sphinx/directives.rst:166
+msgid "note"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:170 ../../tools/sphinx/directives.rst:177
+msgid "warning"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:181 ../../tools/sphinx/directives.rst:188
+msgid "error"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:192 ../../tools/sphinx/directives.rst:199
+msgid "hint"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:203 ../../tools/sphinx/directives.rst:211
+msgid "important"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:215 ../../tools/sphinx/directives.rst:222
+msgid "caution"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:226 ../../tools/sphinx/directives.rst:233
+msgid "danger"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:237 ../../tools/sphinx/directives.rst:245
+msgid "tip"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:250 ../../tools/sphinx/directives.rst:260
+msgid "rubric"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:262
+msgid "math"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:269
+msgid ":math:`\\sqrt{16}`"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:272
+msgid "command"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:279
+msgid ":command:`Title`"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:282
+msgid "file"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:289
+msgid ":file:`path`"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:292
+msgid "guilabel"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:299
+msgid ":guilabel:`Title`"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:302
+msgid "key"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:309
+msgid ":kbd:`shortcut`"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:312
+msgid "menu"
+msgstr ""
+
+#: ../../tools/sphinx/directives.rst:319
+msgid ":menuselection:`Title --> Title2`"
+msgstr ""
+
+#~ msgid "ディレクティブとはマークアップ言語における一般的なブロック。"
+#~ msgstr ""
+
+#~ msgid "sphinxによるカスタムディレクティブも含め便利なものをまとめておく。"
+#~ msgstr ""
+
+#~ msgid "利用禁止ドキュメント名"
+#~ msgstr ""
+
+#~ msgid "ディレクティブ表記::"
+#~ msgstr ""
+
+#~ msgid "code-blockディレクティブ例::"
+#~ msgstr ""
+
+#~ msgid "Pythonサンプル"
+#~ msgstr ""
+

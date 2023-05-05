@@ -3,7 +3,7 @@ set -euo pipefail # シェルスクリプトのエラーハンドリング
 
 # 言語ごとにsphinx-buildを実行するループ
 # for lang in ja en zh es fr hi; do
-for lang in ja; do
+for lang in ja en; do
     sphinx-build -b html docs docs/_build/html/${lang} -D language=${lang}
 done
 

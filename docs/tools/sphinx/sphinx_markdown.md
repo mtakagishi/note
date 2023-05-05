@@ -5,13 +5,13 @@ SphinxでMarkdown扱えるように設定する。
 ## 追加インストール
 
 ```bash
-  poetry add --dev recommonmark
+  poetry add myst-parser
 ```
 
 ## conf.py
 
 ```python
-  extensions = ['recommonmark']
+  extensions = ['myst_parser']
   source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
@@ -24,6 +24,3 @@ SphinxでMarkdown扱えるように設定する。
 このページはMarkdownで記述。  
 うまく表示されてるようなのでOK.
 
-## 参考URL
-
-[Sphinx公式](https://www.sphinx-doc.org/ja/master/usage/markdown.html)

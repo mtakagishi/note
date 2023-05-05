@@ -1,23 +1,23 @@
 ==========================================================================================
 SphinxにGoogle Analyticsのタグを埋め込む方法
 ==========================================================================================
-Last Updated on 2021-08-14
+Last Updated on 2023-05-05
 
 .. note:: 
-  | pydata_sphinx_themeテーマをベースにした記事です。
+  | pydata_sphinx_themeが前提の記事です。
   | アナリティクスはGA4形式とUA形式の新旧2種がありますが、
   | v0.6.2(2021/04/26)以降、両方に対応されてます。
 
 一般的な方法
 ====================
-| conf.pyに設定すればOKです。
+| conf.pyに設定可能です。
 | v0.6.2にてGA4形式にも対応されました。
-| UA-で始まるかG-で始まるかで自動で判断されます。
+| 最新バージョンではUA形式は対応できなくなりました。
 
 conf.py:: 
 
-  html_theme_options = {
-      "google_analytics_id": "UA-XXXXXXXXX-N",
+  html_theme_options["analytics"] = {
+      "google_analytics_id": "G-XXXXXXXXXX",
   }
 
 別の解決方法
@@ -25,13 +25,11 @@ conf.py::
 
 .. note:: 
 
-  | v0.6.2より前はGA4が対応されていませんでした。
-  | 以下はtempleteを拡張する方法です。
-  | "basic/layout.html" からの派生テーマなら同じ方法で行けるはずです。
-
-* conf.py の template_path の設定を確認
-* layout.htmlを用意し、template_path配下に作成。
-* googleアナリティクス設定の「ウェブストリームの詳細」画面を参考に下記のように「layout.html」格納
+  | pydata_sphinx_themeではv0.6.2より前のバージョンはGA4が対応されていませんでした。
+  | 以下は当時に行った代替策です。
+  
+* layout.htmlをtemplate_path配下に作成。
+* 下記の対応版「layout.html」格納
 
 layout.html::
 
@@ -49,5 +47,3 @@ layout.html::
   </script>
   {%- endblock %}
 
-
-.. |date| date::

@@ -37,7 +37,7 @@ Poetryを使ったAutoGPTのインストール
 4. ``pyproject.toml`` に次の内容を追記します。
 
    .. code-block:: toml
-     :caption: 追加toml
+     :caption: pyproject.toml
 
      [tool.poetry]
      name = "your_project_name"
@@ -112,11 +112,11 @@ Poetryを使ったAutoGPTのインストール
 OpenAI APIキーの取得
 ----------------------------------------
 
-1. OpenAIのウェブサイトにアクセスします: `https://www.openai.com/ <https://www.openai.com/>`_
+1. `OpenAIへアクセス <https://www.openai.com/>`_
 
-2. 右上の「Sign in」ボタンをクリックして、アカウントにログインします。アカウントがない場合は、「Create an account」をクリックして新しいアカウントを作成してください。
+2. 右上の「Sign in」ボタンをクリックしてアカウントにログインします。アカウントがない場合は「Create an account」をクリックして新しいアカウントを作成してください。
 
-3. ログイン後、ダッシュボードにアクセスします。`https://platform.openai.com/ <https://platform.openai.com/>`_
+3. ログイン後、ダッシュボードにアクセスします。
 
 4. 右上のPersonalから「View API Keys」をクリックします。
 
@@ -141,14 +141,12 @@ Google API の APIキー
 CUSTOM SEARCH ENGINE の ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. `検索エンジン <https://programmablesearchengine.google.com/u/0/controlpanel/all>`_ から新しいエンジンを作成
+1. `検索エンジン作成 <https://programmablesearchengine.google.com/u/0/controlpanel/all>`_
 
-2. envファイルの ``CUSTOM_SEARCH_ENGINE_ID=`` という文字列の箇所にAPIキーをセット
+2. .envファイル ``CUSTOM_SEARCH_ENGINE_ID=`` にAPIキーをセット
 
 動作確認
 -------------------------------------------------------------
-
-poetry shell としておけば、インストールしたパッケージが利用したPython環境として動作可能です。
 
   .. code-block:: bash
     :caption: AutoGPTの起動
@@ -157,7 +155,7 @@ poetry shell としておけば、インストールしたパッケージが利�
     ./run.sh
 
 
-試しに、 ``tell me a single joke`` と打込んで動作を確認しましょう。
+テストとしてゴールに ``tell me a single joke`` と打込んで動作を確認しましょう。
 
   .. code-block:: bash
     :caption: テスト用スクリプト

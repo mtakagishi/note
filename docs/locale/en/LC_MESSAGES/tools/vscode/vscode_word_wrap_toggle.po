@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst:3
+msgid "VSCODEでテキストの折り返しON/OFFを切り替える"
+msgstr ""
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst:4
+msgid "Last Updated on 2021-08-15"
+msgstr ""
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst:6
+msgid ":kbd:`Alt` + :kbd:`Z`"
+msgstr ""
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst
+msgid "VSCODEの表示画面ないでテキストの折り返しをON/OFF手軽に切り替えるショートカットです。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst
+msgid "コーディングの際には、色んな窓を開けながら作業するため、"
+msgstr ""
+
+#: ../../tools/vscode/vscode_word_wrap_toggle.rst
+msgid "意外に重宝するショートカットです。"
+msgstr ""
+

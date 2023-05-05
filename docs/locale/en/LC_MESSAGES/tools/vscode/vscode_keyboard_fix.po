@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:2
+msgid "VSCODEでキーボードが効かなくなった場合の対処方法"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:4
+msgid "VSCODEに以下のようなエラー::"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:8
+msgid "そして、エンターキーなどが効かなくなる症状"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:11
+msgid "解決1"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:12
+msgid ":kbd:`Ctrl` + :kbd:`Enter`"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:14
+msgid "というおまじないで効くようになる場合がある"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:17
+msgid "解決2"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:18
+msgid "キーボードショートカットの設定を開く"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:20
+msgid "ユーザ設定 →　キーボードショートカット"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:22
+msgid "または"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:24
+msgid ":kbd:`Ctl` + :kbd:`K` → :kbd:`Ctl` + :kbd:`S`"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:26
+msgid "restructuredtext.editor.listEditingで検索"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:27
+msgid "効かなかったキーの設定を削除"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:30
+msgid "参考URL"
+msgstr ""
+
+#: ../../tools/vscode/vscode_keyboard_fix.rst:31
+msgid ""
+"https://github.com/vscode-restructuredtext/vscode-"
+"restructuredtext/issues/314"
+msgstr ""
+

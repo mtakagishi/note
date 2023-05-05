@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 22:48+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../programming/python/pandas-tips.rst:4
+msgid "Pandas Tips: 便利な使い方とテクニック"
+msgstr "Pandas Tips: Useful Usage and Techniques"
+
+#: ../../programming/python/pandas-tips.rst:7
+msgid "NAという文字列をNAとして扱う"
+msgstr "Treat the String 'NA' as NA"
+
+#: ../../programming/python/pandas-tips.rst:14
+msgid "Windowsで改行をLFにしたい"
+msgstr "How to Change Line Endings to LF in Windows"
+
+#: ../../programming/python/pandas-tips.rst:21
+msgid "Shift_JISで扱いたい"
+msgstr "How to Handle Data in Shift_JIS Encoding"
+
+#: ../../programming/python/pandas-tips.rst:28
+msgid "CSVのformat"
+msgstr ""
+
+#: ../../programming/python/pandas-tips.rst:38
+msgid "重複行の削除"
+msgstr "Remove Duplicate Rows"
+
+#: ../../programming/python/pandas-tips.rst:45
+msgid "カラムに列追加"
+msgstr "Add a Column to DataFrame"
+
+#: ../../programming/python/pandas-tips.rst:52
+msgid "カラムのリネーム"
+msgstr "Rename Columns in DataFrame"
+
+#: ../../programming/python/pandas-tips.rst:59
+msgid "表の結合"
+msgstr "Merge DataFrames"
+
+#: ../../programming/python/pandas-tips.rst:68
+msgid "where句のように一致列で絞り込み"
+msgstr "Filtering Rows Based on a Column Value Like WHERE Clause"
+
+#: ../../programming/python/pandas-tips.rst:75
+msgid "文字列検索"
+msgstr "String Search in DataFrame"
+
+#: ../../programming/python/pandas-tips.rst:92
+msgid "省略表示の制御"
+msgstr "Control Display of DataFrames"
+
+#: ../../programming/python/pandas-tips.rst:101
+msgid "オプションのリセット"
+msgstr "Reset Options in pandas"
+
+#: ../../programming/python/pandas-tips.rst:108
+msgid "条件に応じた値の変更"
+msgstr "Modify Values Based on Conditions"
+
+#: ../../programming/python/pandas-tips.rst:115
+msgid "小数点以下の切り上げ"
+msgstr "Round Up Decimal Places"
+
+#: ../../programming/python/pandas-tips.rst:122
+msgid "to_csvで分割"
+msgstr "Split Output CSV into Multiple Files"
+

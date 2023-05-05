@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../programming/git/git_configuration.rst:2
+msgid "gitに関するTips集"
+msgstr "Collection of Tips for Git"
+
+#: ../../programming/git/git_configuration.rst
+msgid "更新"
+msgstr "Update"
+
+#: ../../programming/git/git_configuration.rst:3
+msgid "2023-05-05"
+msgstr ""
+
+#: ../../programming/git/git_configuration.rst:6
+msgid "httpでclone後にsshに変更したい"
+msgstr "How to switch from http clone to ssh after cloning"
+
+#: ../../programming/git/git_configuration.rst:7
+msgid "状態確認コマンド::"
+msgstr "Status check command:"
+
+#: ../../programming/git/git_configuration.rst:11
+msgid "変更コマンド::"
+msgstr "Command to switch to ssh:"
+
+#: ../../programming/git/git_configuration.rst:16
+msgid "改行コードワーニング対策"
+msgstr "Dealing with line ending warnings"
+
+#: ../../programming/git/git_configuration.rst:18
+msgid "改行コードのワーニング::"
+msgstr "Line ending warning:"
+
+#: ../../programming/git/git_configuration.rst:23
+msgid "このワーニングを回避するには::"
+msgstr "To avoid this warning:"
+
+#: ../../programming/git/git_configuration.rst:27
+msgid "日本語PATHの文字化け回避::"
+msgstr "Avoiding garbled characters in Japanese paths:"
+
+#: ../../programming/git/git_configuration.rst:33
+msgid "コマンドラインでgithubと連携したい"
+msgstr "How to connect to Github from the command line"
+
+#: ../../programming/git/git_configuration.rst:35
+msgid "キーペアを作成する"
+msgstr "Creating a key pair"
+
+#: ../../programming/git/git_configuration.rst:41
+msgid "githubにログインして公開キーを登録する。次のコマンドでクリップボードに保存できる。"
+msgstr ""
+"Log in to Github and register the public key. The following command can "
+"save it to the clipboard:"
+
+#: ../../programming/git/git_configuration.rst:47
+msgid "sshの設定を修正する"
+msgstr "Modifying ssh settings"
+
+#: ../../programming/git/git_configuration.rst:49
+msgid "~/.ssh/config"
+msgstr ""
+
+#: ../../programming/git/git_configuration.rst:61
+msgid "github連携を確認する"
+msgstr "Checking Github connection"
+
+#: ../../programming/git/git_configuration.rst:68
+msgid "githubコマンドエラー関連"
+msgstr "Github Command Error Related"
+
+#: ../../programming/git/git_configuration.rst:70
+msgid ""
+"`githubのトラブルシューティング <https://docs.github.com/ja/authentication"
+"/troubleshooting-ssh>`_"
+msgstr ""
+"`troubleshooting <https://docs.github.com/en/authentication"
+"/troubleshooting-ssh>`_"
+
+#: ../../programming/git/git_configuration.rst:73
+#, fuzzy
+msgid "``ssh-keygen -R github.com`` というコマンドで直った経験あり"
+msgstr ""
+"Had experience resolving this issue with the command ssh-keygen -R "
+"github.com"
+

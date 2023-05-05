@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/vscode/vscode_overview.rst:3
+msgid "VSCodeについて"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:4
+msgid "Last Updated on 2021-08-28"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:7
+msgid "VSCodeとは"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:8
+msgid "Visual Studio Code のことでマイクロソフトが開発するソースコードエディタ"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:11
+msgid "おすすめの理由"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:12
+msgid "OSSなので費用の心配がない。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:13
+msgid "MITライセンスなのでライセンスに関する制限がゆるい"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:14
+msgid "開発元がマイクロソフト様なので比較的堅い現場でも許可が取りやすい"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:15
+msgid "軽量ながら最低限の機能が揃っているので低スペック環境でも採用しやすい。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:16
+msgid "自動補完機能があり、タイピングを省力化できる。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:17
+msgid "Web開発者向けのemmet機能（省略入力）が秀逸。爆速でコーディングできる。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:18
+msgid "ショートカットキーが豊富。慣れると効率的。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:19
+msgid "同一ワード選択、矩形選択などが標準装備。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:20
+msgid "ターミナルがエディタ内にあるのでアクティブウィンドウの数を抑えられる。"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:21
+msgid "デバッグ用の機能が標準。エラーや出力もエディタ内で完結できる（プログラム言語によっては要プラグイン）"
+msgstr ""
+
+#: ../../tools/vscode/vscode_overview.rst:22
+msgid "プラグインが豊富で、標準不足は拡張を探すと大抵あるので困らない。"
+msgstr ""
+

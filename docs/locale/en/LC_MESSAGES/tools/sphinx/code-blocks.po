@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-06 02:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/code-blocks.rst:2
+msgid "Sphinxでコードブロックを記述する方法"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:4
+msgid "リテラルブロックかcode-blockディレクティブを使う。"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:7
+msgid "リテラルブロック"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:9 ../../tools/sphinx/code-blocks.rst:33
+msgid "例::"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:19 ../../tools/sphinx/code-blocks.rst:47
+msgid "出力"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:21
+msgid "サンプル::"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:31
+msgid "code-block"
+msgstr ""
+
+#: ../../tools/sphinx/code-blocks.rst:49
+msgid "サンプル"
+msgstr ""
+
+#~ msgid "リテラルブロックの場合"
+#~ msgstr ""
+
+#~ msgid "リテラルブロック例::"
+#~ msgstr ""
+
+#~ msgid "Pythonサンプル::"
+#~ msgstr ""
+
+#~ msgid "code-blockの場合"
+#~ msgstr ""
+
+#~ msgid "code-blockディレクティブ例::"
+#~ msgstr ""
+
+#~ msgid "Pythonサンプル"
+#~ msgstr ""
+

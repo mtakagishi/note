@@ -3,12 +3,12 @@ Sphinxでコードブロックを記述する方法
 
 | リテラルブロックかcode-blockディレクティブを使う。
 
-リテラルブロックの場合
+リテラルブロック
 -----------------------------------
 
-リテラルブロック例::
+例::
 
-  Pythonサンプル::
+  サンプル::
 
     def factorial(x):
         if x == 0:
@@ -18,7 +18,7 @@ Sphinxでコードブロックを記述する方法
 
 出力
 
-Pythonサンプル::
+サンプル::
 
   def factorial(x):
       if x == 0:
@@ -27,13 +27,13 @@ Pythonサンプル::
           return x * factorial(x - 1)
 
 
-code-blockの場合
+code-block
 -----------------------------------
 
-code-blockディレクティブ例::
+例::
 
   .. code-block:: python
-    :caption: Pythonサンプル
+    :caption: サンプル
     :linenos:
     :emphasize-lines: 4
     
@@ -47,14 +47,14 @@ code-blockディレクティブ例::
 出力
 
 .. code-block:: python
-  :caption: Pythonサンプル
+  :caption: サンプル
   :linenos:
   :emphasize-lines: 4
   
   def factorial(x):
     if x == 0:
         return 1
-        # ライン強調テスト
+        # 強調
     else:
         return x * factorial(x - 1)
 

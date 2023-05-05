@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../programming/git/git_basics.rst:2
+msgid "gitコマンドの基本"
+msgstr "Introduction to git commands"
+
+#: ../../programming/git/git_basics.rst
+msgid "更新"
+msgstr "Updated"
+
+#: ../../programming/git/git_basics.rst:3
+msgid "2023-05-05"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:6
+msgid "gitコマンドの超基本ルーティン"
+msgstr "Super routine of git command"
+
+#: ../../programming/git/git_basics.rst:9
+msgid "1人管理者なら最低限このルーティンで回せる。"
+msgstr ""
+"When configuration management is performed by one person, at least this "
+"routine can be used."
+
+#: ../../programming/git/git_basics.rst:11
+msgid "``git add .``: 現在位置配下の全ての変更をステージング（コミット候補）へ"
+msgstr "``git add .``: Stage all changes under the current directory"
+
+#: ../../programming/git/git_basics.rst:12
+msgid "``git commit -m \"message\"``: メッセージをつけてローカルコミット"
+msgstr "``git commit -m \"message\"``: local commit with message"
+
+#: ../../programming/git/git_basics.rst:13
+msgid "``git push``: コミット内容をリモート（githubなど）に反映"
+msgstr "``git push``: Push commits to remote (github, etc.)"
+
+#: ../../programming/git/git_basics.rst:17
+msgid "gitブランチ関連のコマンド集"
+msgstr "git command for branch"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:18
+msgid "ローカルブランチの一覧を表示"
+msgstr "Show list of local branches"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch -r"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:19
+msgid "リモートブランチの一覧を表示"
+msgstr "Show list of remote branches"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch -a"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:20
+msgid "全てのブランチの一覧を表示"
+msgstr "show a list of all branches"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch <新ブランチ>"
+msgstr "git branch <new branch>"
+
+#: ../../programming/git/git_basics.rst:21
+msgid "ブランチを作るが切り替えない"
+msgstr "Make a branch, don't switch to it"
+
+#: ../../programming/git/git_basics.rst
+msgid "git checkout -b <新ブランチ>"
+msgstr "git checkout -b <new branch>"
+
+#: ../../programming/git/git_basics.rst:22
+msgid "ブランチを作って切り替える"
+msgstr "create a branch and switch"
+
+#: ../../programming/git/git_basics.rst
+msgid "git checkout <既存ブランチ>"
+msgstr "git checkout <existing branch>"
+
+#: ../../programming/git/git_basics.rst:23
+msgid "既存ブランチに切り替える"
+msgstr "switch to existing branch"
+
+#: ../../programming/git/git_basics.rst
+msgid "git diff <別ブランチ> --name-only"
+msgstr "git diff <another branch> --name-only"
+
+#: ../../programming/git/git_basics.rst:24
+msgid "<別ブランチ>から変更のあるファイル名だけを表示"
+msgstr "Show only filenames with changes from <another branch>"
+
+#: ../../programming/git/git_basics.rst
+msgid "git rebase <別ブランチ>"
+msgstr "git rebase <another branch>"
+
+#: ../../programming/git/git_basics.rst:25
+msgid "<別ブランチ>の最新内容を取り込む"
+msgstr "Rebase with the latest contents of <another branch>"
+
+#: ../../programming/git/git_basics.rst
+msgid "git remote prune origin --dry-run"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:26
+msgid "ローカルに残ってしまったリモートブランチの残骸を確認する"
+msgstr "Check for remnants of remote branches left locally"
+
+#: ../../programming/git/git_basics.rst
+msgid "git remote prune origin"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:27
+msgid "ローカルに残ってしまったリモートブランチの残骸を削除する"
+msgstr "Remove local remnants of remote branches"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch -d <削除ブランチ>"
+msgstr ""
+
+#: ../../programming/git/git_basics.rst:28
+msgid "ローカルブランチを削除"
+msgstr "git branch -d <delete branch>"
+
+#: ../../programming/git/git_basics.rst
+msgid "git branch -D <削除ブランチ>"
+msgstr "git branch -D <delete branch>"
+
+#: ../../programming/git/git_basics.rst:29
+msgid "ローカルブランチを強制削除"
+msgstr "Force delete local branch"
+
+#: ../../programming/git/git_basics.rst:32
+msgid "ブランチ運用の基本ルーティン（Github）"
+msgstr "Basic Routine for Branch Management (Github)"
+
+#: ../../programming/git/git_basics.rst:33
+msgid "ブランチを作成"
+msgstr "Create a Branch"
+
+#: ../../programming/git/git_basics.rst:34
+msgid "ブランチをチェックアウトして変更作業"
+msgstr "Checkout a Branch and Make Changes"
+
+#: ../../programming/git/git_basics.rst:35
+msgid "ローカルで動作確認"
+msgstr "Test Locally"
+
+#: ../../programming/git/git_basics.rst:36
+msgid "Githubでプルリク"
+msgstr "Create a Pull Request on Github"
+
+#: ../../programming/git/git_basics.rst:37
+msgid "サーバ環境で動作確認"
+msgstr "Test on Server Environment"
+
+#: ../../programming/git/git_basics.rst:38
+msgid "問題なければマージ"
+msgstr "Merge if No Issues Found"
+
+#: ../../programming/git/git_basics.rst:39
+msgid "ブランチを削除して終了"
+msgstr "Delete Branch and End"
+
+#: ../../programming/git/git_basics.rst:45
+msgid "別変更のが先に行われた場合のルーティン例"
+msgstr "Example Routine when Another Change is Made First"
+
+#: ../../programming/git/git_basics.rst:43
+#, fuzzy
+msgid "``git fetch`` で最新を取り込み"
+msgstr "Fetch the latest changes with git fetch"
+
+#: ../../programming/git/git_basics.rst:44
+#, fuzzy
+msgid "``git rebase main`` としてmainの差分を先に取り込んで変更作業を継続"
+msgstr ""
+"Incorporate changes from main branch using git rebase main and continue "
+"working on changes."
+
+#: ../../programming/git/git_basics.rst:45
+#, fuzzy
+msgid "conflictしたら修正して ``git rebase –-continue``"
+msgstr "If conflicts arise, fix them and continue with git rebase --continue."
+
+#: ../../programming/git/git_basics.rst:46
+#, fuzzy
+msgid "``git push -f origin ブランチ``"
+msgstr "git push -f origin <branch>."
+
+#: ../../programming/git/git_basics.rst:50
+msgid "参考URL"
+msgstr "Reference URL"
+
+#: ../../programming/git/git_basics.rst:51
+msgid ""
+"`あなたはmerge派？rebase派？綺麗なGitログで実感したメリット "
+"<https://style.biglobe.co.jp/entry/2022/03/22/090000>`_"
+msgstr ""
+
