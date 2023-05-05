@@ -44,3 +44,8 @@ gitブランチ関連のコマンド集
     2. ``git rebase main`` としてmainの差分を先に取り込んで変更作業を継続
     3. conflictしたら修正して ``git rebase –-continue`` 
     4. ``git push -f origin ブランチ``
+
+
+.. rubric:: 参考URL
+
+* `あなたはmerge派？rebase派？綺麗なGitログで実感したメリット <https://style.biglobe.co.jp/entry/2022/03/22/090000>`_ 
