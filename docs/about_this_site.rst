@@ -1,7 +1,7 @@
 ************************************
 About
 ************************************
-Last Updated on 2021-11-05
+Last Updated on 2023-05-05
 
 プライバシーポリシー
 =================================
@@ -34,4 +34,8 @@ The Moneytizer
 `お問い合わせ <https://forms.gle/SpENv7SWz5sUoN9g6>`_ 
 
 
-.. |date| date::
+.. rubric:: 最終更新
+
+.. git_changelog::
+
+`更新詳細 <https://github.com/mtakagishi/note/commits/main>`_ 

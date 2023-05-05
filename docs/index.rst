@@ -24,6 +24,3 @@ ITノート
 
   about_this_site
 
-.. rubric:: 最終更新
-
-.. git_changelog::
