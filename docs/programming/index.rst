@@ -2,10 +2,19 @@
 プログラミング
 ############################################
 
+Python
+-------
+
 .. toctree::
   :maxdepth: 1
   :glob:
   
   python/*
-  package_management/*
+
+git
+-------
+.. toctree::
+  :maxdepth: 1
+  :glob:
+  
   git/*
