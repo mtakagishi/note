@@ -1,33 +1,44 @@
-*********************************************
-拡張子ipynbの開き方
-*********************************************
-Last Updated on 2021-10-26
+*********************************************************
+Python実行環境Jupyterの拡張子ipynbについて
+*********************************************************
 
-* ipynb拡張子は、jupyterのファイルです。
-* jupyterをインストールしてない端末だったり、jupyterファイルであることを忘れているとハマります。
-* ここでは応急処置をまとめました。
+2023年05月05日更新
 
-
-前提
+本記事の概要
 =================
-* pythonとpoetryコマンドが使える状況
-* jupyterがインストールされてない or 開き方がわからない
-* 端末のPython環境をあまり汚したくない
-* とにかくjupyterで開けば何とかなる。
+* 拡張子ipynbはJupyterで使われるファイルで、IPython Notebookが由来です。
+* Poetryを活用してJupyterを起動する手順をまとめました。
 
-手順
-================
-* cd [ipynbファイルのあるフォルダ]
-* poetry config virtualenvs.in-project true
-* poetry config --list
-* poetry init
-* poetry install
-* poetry add jupyter
-* poetry run jupyter notebook
+前提環境
+=================
+* Windows11
+* Pythonインストール済み
+* poetryインストール済み
 
-これで既定のブラウザでjupyterが開くのでipynbが参照できる。
+Jupyter開始方法
+=================
+Jupyterがインストールされていない、起動方法が分からないという想定で記載しています。
 
-Recent Changes
---------------
+.. code-block:: shell
+  :caption: 作業ディレクトリへ移動
+  
+  cd ipynbファイル格納フォルダ
 
-.. git_changelog::
+
+.. code-block:: shell
+  :caption: poetry初期化、プロンプト確認事項は全て[Enter]でOK
+
+  poetry config virtualenvs.in-project true
+  poetry init
+
+.. code-block:: shell
+  :caption: 仮想環境とJupyterのインストール
+
+  poetry install
+  poetry add jupyter
+
+.. code-block:: shell
+  :caption: jupyter起動
+
+  poetry run jupyter notebook
+
