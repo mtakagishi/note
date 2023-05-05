@@ -1,0 +1,63 @@
+/* ページ全体のスタイル */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* リンクのスタイル */
+.link {
+  display: block;
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #008CBA;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.link:hover {
+  background-color: #005F6B;
+}
+/* アイコンのスタイル */
+.icon {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.icon-github {
+  color: #000; /* 黒色 */
+}
+.icon-twitter {
+  color: #1DA1F2; /* Twitterブルー */
+}
+img {
+  height: 50px; /* ロゴ画像の高さを50ピクセルにする */
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+/* フッターのスタイル */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  background-color: #ddd;
+  margin-top: auto;
+  padding: 1rem;
+}
+.footer-link {
+  display: inline-block;
+  margin-left: 1rem;
+}

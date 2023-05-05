@@ -28,6 +28,8 @@ class DocCommand(SimpleCommand):
             "index.html",
             "robots.txt",
             "ads.txt",
+            "style.css",
+            "cmp.js",
         ]
         # staticファイルを個別にコピー
         for file_path in files_to_copy:
