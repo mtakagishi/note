@@ -1,7 +1,7 @@
 ******************************************************
 Poetryを使ったパッケージ管理
 ******************************************************
-Last Updated on 2021-09-19
+:更新: 2023-05-03
 
 仮想環境+パッケージ管理ツール
 
@@ -15,63 +15,27 @@ Last Updated on 2021-09-19
 `公式HPのインストール手順へ <https://python-poetry.org/docs/#installation>`_ 
 
 .. hint::
-  :kbd:`pip install --user poetry`  の利用は非推奨。
+  ``pip install --user poetry``  の利用は非推奨。
   非推奨手順ではself update が利用できない。
-
-2021/04/17実施のインストール記録
----------------------------------------------
-実際にインストールした時のログ
-
-インストールコマンド::
-
-  PS C:\WINDOWS\system32> (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
-  Retrieving Poetry metadata
-  
-  # Welcome to Poetry!
-  
-  This will download and install the latest version of Poetry,
-  a dependency and package manager for Python.
-  
-  It will add the `poetry` command to Poetry's bin directory, located at:
-  
-  %USERPROFILE%\.poetry\bin
-  
-  This path will then be added to your `PATH` environment variable by
-  modifying the `HKEY_CURRENT_USER/Environment/PATH` registry key.
-  
-  You can uninstall at any time by executing this script with the --uninstall option,
-  and these changes will be reverted.
-  
-  Installing version: 1.1.6
-    - Downloading poetry-1.1.6-win32.tar.gz (52.15MB)
-  
-  Poetry (1.1.6) is installed now. Great!
-  
-  To get started you need Poetry's bin directory (%USERPROFILE%\.poetry\bin) in your `PATH`
-  environment variable. Future applications will automatically have the
-  correct environment, but you may need to restart your current shell.
-
-.. hint:: 環境変数などは自動で置き換わる。ターミナルは再起動が必要。
 
 基本コマンド
 =============
 :バージョン確認: poetry --version
-:設定確認: poetry config --list
-:venv分離: poetry config virtualenvs.in-project true
-:新規PKG: poetry new
 :pyproject.toml作成: poetry init
-:pyproject.tomlベースにinstall: poetry installpo
+:PKGをinstall: poetry install
 :依存PKGを最新化: poetry update
 :PKG追加: poetry add [pkg]
-:開発者PKG追加: poetry add --dev [pkg]
+:開発用PKG追加: poetry add --dev [pkg]
 :GITHUBのPKGを追加: poetry add git+https://github.com/repo/pkg.git
 :PKG削除: poetry remove [pkg]
-:poetry自体のupdate: poetry self update
 
 
-基本設定
+venv設定
 ====================
-in-projectはTrueにしておくと該当プロジェクトに閉じた影響範囲でパッケージ管理できるのでオススメです。
+:設定確認: poetry config --list
+:venv分離設定: poetry config virtualenvs.in-project true
+
+in-projectはTrueにしておくと該当プロジェクトに閉じた影響範囲で管理されます。
 
 venv環境を独立するためのconfig確認・設定::
 
@@ -137,14 +101,22 @@ poetry self update 履歴
 
 1.1.13(2022/3/7)
 -------------------------------------------------------
-不調のため再インストール
+.. hint::
+  | 不調のため再インストール
+  | 更新手順 = 前回同様で復旧
+
 
 1.4.2(2023/05/03)
 ------------------------------
+環境::
+
+  Windows 11 Pro 22H2
+  Python 3.11.3
+
+.. hint:: 
+  | %USERPROFILE%.poetry フォルダが見つからない。
   | %APPDATA%\pypoetry を削除して再インストール
-  | FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。: 'C:\\Users\\masat\\AppData\\Roaming\\Python\\Scripts\\poetry.exe'
-  | というエラーが発生したため該当ファイルを手動で削除し再実行
+  | FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。: 'C:\\Users\\username\\AppData\\Roaming\\Python\\Scripts\\poetry.exe'
+  | というエラーが発生。該当ファイルを手動削除し再実行
   | 再実行しインストール成功
   | 環境変数のPATHに追加　C:\Users\username\AppData\Roaming\Python\Scripts
-
-.. |date| date::
