@@ -47,16 +47,16 @@ httpでclone後にsshに変更したい
 - sshの設定を修正する
 
 .. code-block:: sh
-  :caption: ~/.ssh/config::
+  :caption: ~/.ssh/config
   
   Host my.github.com
-  HostName github.com
-  User git
-  Port  22
-  Hostname  github
-  IdentityFile  ~/.ssh/id_ed25519
-  TCPKeepAlive    yes
-  IdentitiesOnly     yes
+      HostName github.com
+      User git
+      Port  22
+      Hostname  github
+      IdentityFile  ~/.ssh/id_ed25519
+      TCPKeepAlive    yes
+      IdentitiesOnly     yes
 
 - github連携を確認する
 
