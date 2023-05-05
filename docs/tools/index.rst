@@ -28,3 +28,12 @@ ChatGPT: AIチャット
   :glob:
   
   chatgpt/*
+
+トレンド、ランキング
+------------------------
+
+.. toctree::
+  :maxdepth: 1
+  :glob:
+  
+  ranking-info/*
