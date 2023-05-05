@@ -42,3 +42,7 @@ Jupyterがインストールされていない、起動方法が分からない�
 
   poetry run jupyter notebook
 
+成功すると次の画像のようにブラウザが立ち上がります。
+
+.. image:: https://pbs.twimg.com/media/FvXB12NaUAIKjPt?format=png&name=small
+
