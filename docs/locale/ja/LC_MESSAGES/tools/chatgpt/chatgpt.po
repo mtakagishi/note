@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-06 01:32+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/chatgpt/chatgpt.rst:4
+msgid "PoetryでAutoGPTインストールとセットアップ"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:6
+msgid "Poetryを使ったAutoGPTのインストールと設定を行いについて説明します。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:9
+msgid "Poetryを使ったAutoGPTのインストール"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:11
+msgid ""
+"まだPoetryをインストールしていない場合は、`Poetryの本家サイト <https://python-"
+"poetry.org/docs/#installation>`_ を参考にインストールしてください。2023/05/02時点では以下となります:"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:13
+msgid "Linux, macOS, Windows (WSL):"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:18
+msgid "Windows (Powershell):"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:23
+msgid "AutoGPTリポジトリをクローンします:"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:29
+msgid "releaseタグをつけると比較的安定した一式が手に入ります。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:31
+msgid "AutoGPTディレクトリに移動します:"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:37
+msgid "``pyproject.toml`` に次の内容を追記します。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:39
+msgid "pyproject.toml"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:100
+msgid "バージョンアップに伴い上記内容は変化します。ChatGPTに最新のrequirement.txtの内容を入力しpoetry用に出力させてください。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:102
+msgid ""
+"``poetry install`` でエラーが発生する場合は、ChatGPTにエラー内容を貼り付けて対処方法を聞いてください。 私の場合は "
+"``CalledProcessError`` が発生しましたが、ChatGPTにエラーを質問すると、google-api-python-"
+"clientのGitリポジトリのデフォルトブランチがmasterではなく、mainであることを解説するとともに正しい記述方法を教えてくれました。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:106
+msgid "必要パッケージをインストールします:"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:113
+msgid "OpenAI APIキーの取得"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:115
+msgid "`OpenAIへアクセス <https://www.openai.com/>`_"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:117
+msgid ""
+"右上の「Sign in」ボタンをクリックしてアカウントにログインします。アカウントがない場合は「Create an "
+"account」をクリックして新しいアカウントを作成してください。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:119
+msgid "ログイン後、ダッシュボードにアクセスします。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:121
+msgid "右上のPersonalから「View API Keys」をクリックします。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:123
+msgid "「API Keys」ページで、「Create new secretkey」ボタンをクリックします。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:125
+msgid "新しいAPIキーが生成され、表示されます。このAPIキーをコピーし、Pythonプロジェクトで使用してください。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:128
+msgid "プロジェクトでのOpenAI APIキーの使用"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:130
+msgid ""
+"``cp .env.template .env`` とコマンドを入力してファイルをコピーし、 ``.env`` ファイル内の "
+"``OPENAI_API_KEY=`` という文字列の箇所にAPIキーを引用符やスペースなしで入力します。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:133
+msgid "Custom Search API の設定"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:136
+msgid "Google API の APIキー"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:137
+msgid "GCPコンソールから、Google API サービスに登録してAPIキーを取得する"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:139
+msgid "envファイルの ``GOOGLE_API_KEY=`` という文字列の箇所にAPIキーをセット"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:142
+msgid "CUSTOM SEARCH ENGINE の ID"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:144
+msgid ""
+"`検索エンジン作成 "
+"<https://programmablesearchengine.google.com/u/0/controlpanel/all>`_"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:146
+msgid ".envファイル ``CUSTOM_SEARCH_ENGINE_ID=`` にAPIキーをセット"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:149
+msgid "動作確認"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:151
+msgid "AutoGPTの起動"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:158
+msgid "テストとしてゴールに ``tell me a single joke`` と打込んで動作を確認しましょう。"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:160
+msgid "テスト用スクリプト"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:166
+msgid "参考URL"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:167
+msgid "`【完全自動型AI】AutoGPTを徹底解剖！使い方をご紹介 <https://bocek.co.jp/media/service/902/>`_"
+msgstr ""
+
+#: ../../tools/chatgpt/chatgpt.rst:168
+msgid ""
+"`【さよならChatGPT】過去一ヤバい完全自動AI「AutoGPT」のインストール手順と使い方 <https://youtu.be/31eZz-"
+"aqY6E>`_"
+msgstr ""
+

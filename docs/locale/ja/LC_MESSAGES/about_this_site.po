@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../about_this_site.rst:3
+msgid "About"
+msgstr ""
+
+#: ../../about_this_site.rst:4
+msgid "Last Updated on 2023-05-05"
+msgstr ""
+
+#: ../../about_this_site.rst:7
+msgid "プライバシーポリシー"
+msgstr ""
+
+#: ../../about_this_site.rst:10
+msgid "Google Analytics"
+msgstr ""
+
+#: ../../about_this_site.rst:11
+msgid "当サイトではアクセス解析のためにGoogle Analyticsを利用しています。"
+msgstr ""
+
+#: ../../about_this_site.rst:13
+msgid "Google Analyticsでは「Cookie」を使用し個人を特定する情報を含まずにデータを収集します。"
+msgstr ""
+
+#: ../../about_this_site.rst:15
+msgid "Google Analyticsの利用により収集されたデータは、Google社のプライバシーポリシーに基づいて管理されます。"
+msgstr ""
+
+#: ../../about_this_site.rst:18
+msgid "`プライバシーポリシー <https://policies.google.com/privacy?hl=ja>`_"
+msgstr ""
+
+#: ../../about_this_site.rst:21
+msgid "免責事項"
+msgstr ""
+
+#: ../../about_this_site.rst:22
+msgid "本サイトはできる限り正しい内容の記載を心がけておりますが、妥当性や正確性等について保証するものではありません。ノートに記録することを目的とする性質上、情報ソースが不明瞭な場合や、情報が古くなっている場合が多々ありますので予めご容赦ください。また、当サイトからのリンクで移動したサイトで提供される情報、サービス等について一切の責任を負いません。"
+msgstr ""
+
+#: ../../about_this_site.rst:25
+msgid "広告表示"
+msgstr ""
+
+#: ../../about_this_site.rst:27
+msgid "Google Adsense"
+msgstr ""
+
+#: ../../about_this_site.rst:28
+msgid "当サイトはGoogleAdsenseに参加しています。"
+msgstr ""
+
+#: ../../about_this_site.rst:31
+msgid "The Moneytizer"
+msgstr ""
+
+#: ../../about_this_site.rst:32
+msgid "当サイトは「The Moneytizer」の広告プログラムに参加しています。"
+msgstr ""
+
+#: ../../about_this_site.rst:34
+msgid "この広告プログラムに参加したい方は紹介リンク経由で5$が付与されます。"
+msgstr ""
+
+#: ../../about_this_site.rst:36
+msgid ""
+"`⇒The Moneytizer紹介リンク "
+"<https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9#inscription>`_"
+msgstr ""
+
+#: ../../about_this_site.rst:39
+msgid "お問い合わせ"
+msgstr ""
+
+#: ../../about_this_site.rst:40
+msgid "`お問い合わせ <https://forms.gle/SpENv7SWz5sUoN9g6>`_"
+msgstr ""
+
+#: ../../about_this_site.rst:44
+msgid "最終更新"
+msgstr ""
+
+#: ../../about_this_site.rst:47
+msgid "`更新詳細 <https://github.com/mtakagishi/note/commits/main>`_"
+msgstr ""
+

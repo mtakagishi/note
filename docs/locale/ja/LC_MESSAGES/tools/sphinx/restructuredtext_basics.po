@@ -1,0 +1,586 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:3
+msgid "reStructuredText基本"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:6
+msgid "reStructuredTextについて"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:8
+msgid "Pythonベースのドキュメントユーティリティ（Docutils）"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:9
+msgid "軽量マークアップ言語"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:10
+msgid "RST、reST、ReST と略される。拡張子はrst"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:11
+msgid "Sphinxでドキュメントジェネレート可能"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:12
+msgid "マークダウンとの対比 [#markdown-vs-rst]_"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:13
+msgid "Sphinxにより、HTMLやPDFなどへ出力可能"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:16
+msgid "reStructuredText参考URL"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:18
+msgid ""
+"https://docutils.sphinx-"
+"users.jp/docutils/docs/ref/rst/restructuredtext.html"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:19
+msgid "https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:20
+msgid "https://devguide.python.org/documenting/#additional-markup-constructs"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:21
+msgid "https://developer.lsst.io/restructuredtext/style.html"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:23
+msgid "https://postd.cc/restructuredtext-vs-markdown-for-technical-documentation/"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:27
+msgid "セクション"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:29
+msgid "rst記述::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:35
+msgid "使用可能な文字：\\= \\- \\` \\: \\' \\\" \\~ \\^ \\_ \\* \\+ \\# \\< \\> `"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:36
+msgid "タイトル文字の下、または上下につける"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:38
+msgid "スタイルガイドによると以下。"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:40
+msgid "\\# 部: オーバーライン付き"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:41
+msgid "\\* 章: オーバーライン付き"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:42
+msgid "\\=, セクション"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:43
+msgid "\\-, サブセクション"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:44
+msgid "\\^, サブサブセクション"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:45
+msgid "\\\", パラグラフ"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:49
+msgid "パラグラフ"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:50
+msgid "文章の塊、段落の塊は、1行以上の空行で区切る。"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:53
+msgid "改行（ラインブロック）"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:54
+msgid "マークダウンの感覚で文末にスペース2つ入れても改行されない。 文頭に | を入れる。"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:57
+msgid "ラインブロック::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:65
+#: ../../tools/sphinx/restructuredtext_basics.rst:103
+msgid "出力結果"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:67
+msgid "Lend us a couple of bob till Thursday."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:68
+msgid "I'm absolutely skint."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:70
+msgid ""
+"But I'm expecting a postal order and I can pay you back as soon as it "
+"comes."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:71
+msgid "Love, Ewan."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:75
+msgid "インラインマークアップ"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:76
+msgid "文章内で利用できる装飾"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:79
+msgid "ボールド"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:80
+msgid "\\*\\*太文字\\*\\* ⇒ **太文字**"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:84
+msgid "コードサンプル"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:85
+msgid "\\`\\`コードサンプル\\`\\` ⇒ ``コードサンプル``"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:88
+msgid "数式"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:89
+msgid "\\:math\\:\\`\\\\sqrt\\{16\\}\\` ⇒ :math:`\\sqrt{16}`"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:92
+msgid "キーボード"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:94
+msgid "\\:kbd\\:\\`shortcut\\` 　⇒　:kbd:`shortcut`"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:98
+msgid "リテラルブロック"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:100
+msgid "リテラルブロック\\:\\:"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:100
+msgid "リテラルブロック内容"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:104
+msgid "リテラルブロック::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:110
+msgid "コードの挿入"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:111
+msgid "リテラルブロックを使う。Sphinxならcodeディレクティブを使うとオプション指定で細かい表現が可能"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:114
+msgid "リテラルブロックの場合"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:116
+msgid "リテラルブロック例::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:126
+msgid "出力"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:128
+msgid "Pythonサンプル::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:138
+msgid "リスト"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:140
+msgid "箇条書き"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:141
+msgid "箇条書き::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:151
+msgid "箇条書き(表示）"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:153
+msgid "this is"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:154
+msgid "a list"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:156
+msgid "with a nested list"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:157
+msgid "and some subitems"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:159
+msgid "and here the parent list continues"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:162
+msgid "番号付き"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:164
+msgid "番号付き::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:171
+msgid "番号付き(表示)"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:173
+#: ../../tools/sphinx/restructuredtext_basics.rst:175
+msgid "This is a numbered list."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:174
+#: ../../tools/sphinx/restructuredtext_basics.rst:176
+msgid "It has two items too."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:179
+msgid "用語"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:181
+msgid "用語::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:197
+msgid "用語(表示)"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:200
+msgid "term1"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:200
+msgid "Definition 1."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:205
+msgid "term2"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:203
+msgid "Definition 2, paragraph 1."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:205
+msgid "Definition 2, paragraph 2."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:208
+msgid "term3"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:-1
+msgid "classifier"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:208
+msgid "Definition 3."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:211
+msgid "term4"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:-1
+msgid "classifier one"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:-1
+msgid "classifier two"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:211
+msgid "Definition 4."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:214
+msgid "項目リスト"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:216
+msgid "項目リスト::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:224
+msgid "項目リスト(表示)"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst
+msgid "fieldname1"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:226
+#: ../../tools/sphinx/restructuredtext_basics.rst:227
+#: ../../tools/sphinx/restructuredtext_basics.rst:228
+#: ../../tools/sphinx/restructuredtext_basics.rst:229
+msgid "Field content"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst
+msgid "fieldname12"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst
+msgid "fieldname123"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst
+msgid "fieldname1234"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:232
+msgid "リンク"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:235
+msgid "外部リンク"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:237
+msgid "外部リンク1::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:241
+msgid "外部リンク2::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:247
+msgid "内部リンク"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:249
+msgid "内部リンク表現::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:261
+#: ../../tools/sphinx/restructuredtext_basics.rst:370
+msgid "注釈"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:262
+msgid "脚注を書きたい場所で [\\#name]_"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:263
+msgid "[\\#] で自動連番、[1]のように明示的指定も可能"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:265
+msgid "注釈::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:274
+msgid "Lorem ipsum [#]_ dolor sit amet ... [#]_"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:277
+msgid "Footnotes"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:278
+msgid "Text of the first footnote."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:279
+msgid "Text of the second footnote."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:283
+msgid "テーブル"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:285
+msgid "Table Fromatter"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:286
+msgid "プレーンテキストでの表の表現は、整形が煩雑になるので、VSCODE利用している場合はプラグインが便利"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:289
+msgid "Table Fromatterのインストール"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:290
+msgid "VSCODE拡張から Table Formatter をインストール"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:293
+msgid "使用方法"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:295
+msgid "変換前の書式はサンプルに記載"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:296
+msgid ":kbd:`Ctrl + Shift + P` から『Table: Format Current』"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:299
+msgid "グリッド"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:300
+#: ../../tools/sphinx/restructuredtext_basics.rst:334
+msgid "Table Fromatter書式::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:310
+#: ../../tools/sphinx/restructuredtext_basics.rst:345
+msgid "フォーマット後::"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:320
+#: ../../tools/sphinx/restructuredtext_basics.rst:357
+msgid "実際の表示"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:323
+msgid "Mon"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:323
+msgid "Tue"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:323
+msgid "Wed"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:323
+msgid "Thu"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:323
+msgid "Fri"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:325
+msgid "田中"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:325
+#: ../../tools/sphinx/restructuredtext_basics.rst:327
+msgid "(^^)"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:325
+#: ../../tools/sphinx/restructuredtext_basics.rst:327
+msgid "('')"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:327
+msgid "鈴木"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:332
+msgid "シンプル"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:360
+msgid "Input"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:360
+msgid "."
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:360
+msgid "Output"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:362
+msgid "A"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:362
+msgid "B"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:362
+msgid "\"A or B\""
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:362
+msgid "A_and_B"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:364
+#: ../../tools/sphinx/restructuredtext_basics.rst:365
+msgid "False"
+msgstr ""
+
+#: ../../tools/sphinx/restructuredtext_basics.rst:365
+msgid "True"
+msgstr ""
+

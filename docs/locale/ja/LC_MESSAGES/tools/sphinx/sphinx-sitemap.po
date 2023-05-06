@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:3
+msgid "Sphinxのsitemapを構築する"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:4
+msgid "Last Updated on 2021-08-20"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:7
+msgid "追加パッケージ"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:8
+msgid "sphinx-sitemap::"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:13
+msgid "conf.pyの設定例"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:15
+msgid "conf.py::"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:25
+msgid "検索エンジンクローラ対応"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:27
+msgid "conf.pyと同じ階層に、robots.txt を配置しておく。"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:29
+msgid "robots.txt::"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:35
+msgid "テスト"
+msgstr ""
+
+#: ../../tools/sphinx/sphinx-sitemap.rst:37
+msgid ""
+"Google Search Console   の場合、以下でテスト可能です。配置したsitemapが許可されているか確認しましょう。 "
+"https://www.google.com/webmasters/tools/robots-testing-tool"
+msgstr ""
+

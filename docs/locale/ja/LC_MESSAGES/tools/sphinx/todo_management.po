@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/todo_management.rst:3
+msgid "SphinxでTODO管理をする方法"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:4
+msgid "Last Updated on 2021-08-14"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:6
+msgid "sphinxで作ったサイトで、書きかけの記事にtodoをマーキングしておいたり、サイト全体のtodoをリスト化することができます。"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:9
+msgid "設定"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:10
+msgid "package::"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:14
+msgid "conf.py::"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:22
+msgid "使い方"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:24
+msgid "todoを書く::"
+msgstr ""
+
+#: ../../tools/sphinx/todo_management.rst:28
+msgid "todoをリストアップする::"
+msgstr ""
+

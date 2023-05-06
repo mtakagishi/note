@@ -50,9 +50,6 @@ class GettextCommand(SimpleCommand):
             ["sphinx-build", "-b", buildername, sourcedir, outputdir])
         # .po抽出
         for lang in LANGUAGES:
-            # デフォルト言語はjaのためスキップする
-            if lang == "ja":
-                continue
             args = ["sphinx-intl", "update", "-p",
                     outputdir, "-l", lang]
             subprocess.call(args)

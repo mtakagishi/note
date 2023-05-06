@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:2
+msgid "プログラミング言語のランキング確認サイト"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst
+msgid "更新"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:3
+msgid "2023-05-05"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:6
+msgid "`TIOBE <https://www.tiobe.com/tiobe-index/>`_"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:6
+msgid "TIOBEという民間組織によるもの。主要な検索サービスの検索Ratingsから算出"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:9
+msgid "`StackOverflow <https://insights.stackoverflow.com/survey>`_"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:9
+msgid "StackOverflowによる開発者向けに行っているサーベイの集計結果"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:11
+msgid ""
+"`IEEE Spectrum2022 <https://spectrum.ieee.org/top-programming-"
+"languages-2022>`_"
+msgstr ""
+
+#: ../../tools/ranking-info/program-lang-ranking.rst:12
+msgid "IEEEによるランキング"
+msgstr ""
+

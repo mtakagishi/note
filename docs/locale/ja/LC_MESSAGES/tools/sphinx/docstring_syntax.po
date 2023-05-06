@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, mtakagishi
+# This file is distributed under the same license as the IT-Note package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IT-Note \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tools/sphinx/docstring_syntax.rst:2
+msgid "Docstringの記法"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:5
+msgid "Docstringとは"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:6
+msgid "Pythonコードの関数などの仕様を記載するための記述"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:7
+msgid "トリプルクオートで囲う"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:8
+msgid "reStructuredText記法で書くことが可能"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:9
+msgid "reStructuredTextスタイル，Numpyスタイル，Googleスタイルの3つ"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:12
+msgid "reStructuredTextスタイル"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:14
+msgid "reStructuredTextスタイル::"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "param path"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:26
+msgid "The path of the file to wrap"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "type path"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:-1
+#: ../../tools/sphinx/docstring_syntax.rst:27
+msgid "str"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "param field_storage"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:28
+msgid "The :class:`FileStorage` instance to wrap"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "type field_storage"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:29
+msgid "FileStorage"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "param temporary"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:30
+msgid "Whether or not to delete the file when the File instance is destructed"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "type temporary"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:32
+#: ../../tools/sphinx/docstring_syntax.rst:80
+msgid "bool"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "returns"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:33
+msgid "A buffered writable file descriptor"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst
+msgid "rtype"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:34
+msgid "BufferedFileStorage"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:37
+msgid "Numpyスタイル"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:39
+msgid "Numpyスタイル::"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:64
+msgid "\"\"\"Example function with types documented in the docstring."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:66
+msgid ""
+"`PEP 484`_ type annotations are supported. If attribute, parameter, and "
+"return types are annotated according to `PEP 484`_, they do not need to "
+"be included in the docstring:"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:71
+msgid "Parameters"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:72
+msgid "param1"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:-1
+msgid "int"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:73
+msgid "The first parameter."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:75
+msgid "param2"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:75
+msgid "The second parameter."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:78
+msgid "Returns"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:80
+msgid "True if successful, False otherwise."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:85
+#: ../../tools/sphinx/docstring_syntax.rst:113
+msgid "\"\"\""
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:89
+msgid "Googleスタイル"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:91
+msgid "Googleスタイル::"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:104
+msgid "\"\"\"Example function with PEP 484 type annotations."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:108
+msgid "Args:"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:107
+msgid "param1: The first parameter. param2: The second parameter."
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:111
+msgid "Returns:"
+msgstr ""
+
+#: ../../tools/sphinx/docstring_syntax.rst:111
+msgid "The return value. True for success, False otherwise."
+msgstr ""
+
