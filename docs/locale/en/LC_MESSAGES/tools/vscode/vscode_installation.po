@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_installation.rst:3
 msgid "VSCODEをインストールする"
-msgstr "Install VSCODE"
+msgstr "Installing VSCode"
 
 #: ../../tools/vscode/vscode_installation.rst:4
 msgid "Last Updated on 2021-08-15"
