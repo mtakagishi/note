@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/ranking-info/program-lang-ranking.rst:2
 msgid "プログラミング言語のランキング確認サイト"
-msgstr "Programming language ranking confirmation site"
+msgstr "Programming Language Ranking Verification Website"
 
 #: ../../tools/ranking-info/program-lang-ranking.rst
 msgid "更新"

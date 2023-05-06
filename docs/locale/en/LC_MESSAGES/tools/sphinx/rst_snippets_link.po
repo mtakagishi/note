@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/sphinx/rst_snippets_link.rst:2
 msgid "スニペット一覧へのリンク"
-msgstr "Link to Snippet List"
+msgstr "Linking to a Snippet List"
 
 #: ../../tools/sphinx/rst_snippets_link.rst:3
 msgid "VSCODE拡張のreStructuredTextにはreST用のスニペットが準備されている。詳細は以下リンクで確認可能"

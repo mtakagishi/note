@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/sphinx/block_diagrams.rst:3
 msgid "sphinxでフロー図を表現する"
-msgstr "Representing flowcharts with Sphinx"
+msgstr "Creating Flowcharts with Sphinx"
 
 #: ../../tools/sphinx/block_diagrams.rst:5
 msgid "フロー図などを作図可能なSphinxの拡張機能"

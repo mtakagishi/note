@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../programming/python/ipynb_extension.rst:3
 msgid "Python実行環境Jupyterの拡張子ipynbについて"
-msgstr "ipynb extension in Jupyter, Python's execution environment"
+msgstr "Using ipynb Extension in Jupyter, Python's Execution Environment"
 
 #: ../../programming/python/ipynb_extension.rst
 msgid "更新"

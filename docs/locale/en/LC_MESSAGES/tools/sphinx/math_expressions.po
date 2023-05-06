@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../tools/sphinx/math_expressions.rst:2
 msgid "sphinxで様々な数式を表現する"
-msgstr "Express various mathematical expressions in sphinx"
+msgstr "Expressing Various Mathematical Formulas in Sphinx"
 
 #: ../../../tools/sphinx/math_expressions.rst:3
 msgid "以下のような複雑な数式を表現できます。 [#]_"

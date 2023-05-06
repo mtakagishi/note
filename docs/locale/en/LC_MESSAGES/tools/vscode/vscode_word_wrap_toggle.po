@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../tools/vscode/vscode_word_wrap_toggle.rst:3
 msgid "VSCodeのディスプレイ表示でテキストの折り返しを切り替えるショートカット"
-msgstr "Shortcut to Toggle Text Wrapping in VSCode Display"
+msgstr "Shortcut for Toggling Text Wrapping in VSCode Display"
 
 #: ../../../tools/vscode/vscode_word_wrap_toggle.rst:4
 msgid "Last Updated on 2021-08-15"

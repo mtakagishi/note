@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:3
 msgid "VSCodeエディタ使用時に選択単語を同時選択"
-msgstr "Selecting Same Words Together When Using VSCode Editor"
+msgstr "Selecting Matching Words Simultaneously in VSCode Editor"
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:4
 msgid "Last Updated on 2021-08-15"
