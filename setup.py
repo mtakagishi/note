@@ -43,7 +43,7 @@ class GettextCommand(SimpleCommand):
         os.chdir('docs')  # カレントディレクトリが重要
         buildername = "gettext"
         sourcedir = "."
-        outputdir = "_build/gettext"
+        outputdir = "_build/_intl/gettext"
 
         # .pot生成
         subprocess.call(
