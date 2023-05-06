@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:3
 msgid "Sphinxのsitemapを構築する"
-msgstr ""
+msgstr "Constructing a sitemap for Sphinx"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:4
 msgid "Last Updated on 2021-08-20"
@@ -29,15 +29,15 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:7
 msgid "追加パッケージ"
-msgstr ""
+msgstr "Additional Packages"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:8
 msgid "sphinx-sitemap::"
-msgstr ""
+msgstr "sphinx-sitemap::"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:13
 msgid "conf.pyの設定例"
-msgstr ""
+msgstr "Example of conf.py configuration"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:15
 msgid "conf.py::"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:25
 msgid "検索エンジンクローラ対応"
-msgstr ""
+msgstr "Search Engine Crawler Support"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:27
 msgid "conf.pyと同じ階層に、robots.txt を配置しておく。"
-msgstr ""
+msgstr "Place robots.txt in the same directory as conf.py."
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:29
 msgid "robots.txt::"
@@ -57,11 +57,11 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:35
 msgid "テスト"
-msgstr ""
+msgstr "test"
 
 #: ../../tools/sphinx/sphinx-sitemap.rst:37
 msgid ""
 "Google Search Console   の場合、以下でテスト可能です。配置したsitemapが許可されているか確認しましょう。 "
 "https://www.google.com/webmasters/tools/robots-testing-tool"
 msgstr ""
-
+"For Google Search Console, you can test here. Make sure your sitemap is allowed. https://www.google.com/webmasters/tools/robots-testing-tool"

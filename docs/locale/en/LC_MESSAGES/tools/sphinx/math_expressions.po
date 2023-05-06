@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-06 02:56+0900\n"
+"POT-Creation-Date: 2023-05-06 19:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/sphinx/math_expressions.rst:2
+#: ../../../tools/sphinx/math_expressions.rst:2
 msgid "sphinxで様々な数式を表現する"
-msgstr ""
+msgstr "Express various mathematical expressions in sphinx"
 
-#: ../../tools/sphinx/math_expressions.rst:3
+#: ../../../tools/sphinx/math_expressions.rst:3
 msgid "以下のような複雑な数式を表現できます。 [#]_"
-msgstr ""
+msgstr "The following complex mathematical expressions can be represented. [#]_"
 
-#: ../../tools/sphinx/math_expressions.rst:5
+#: ../../../tools/sphinx/math_expressions.rst:5
 msgid ""
 "W^{3\\beta}_{\\delta_1 \\rho_1 \\sigma_2} = U^{3\\beta}_{\\delta_1 "
 "\\rho_1} + \\frac{1}{8 \\pi 2} \\int^{\\alpha_2}_{\\alpha_2} d "
@@ -36,11 +36,11 @@ msgid ""
 "\\sigma_2}}\\right]"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:11
+#: ../../../tools/sphinx/math_expressions.rst:11
 msgid "上記数式の記述内容"
-msgstr ""
+msgstr "Description of the above mathematical expressions"
 
-#: ../../tools/sphinx/math_expressions.rst:10
+#: ../../../tools/sphinx/math_expressions.rst:10
 msgid ""
 "W^{3\\\\beta}_{\\\\delta_1 \\\\rho_1 \\\\sigma_2} = "
 "U^{3\\\\beta}_{\\\\delta_1 \\\\rho_1} + \\\\frac{1}{8 \\\\pi 2} "
@@ -50,79 +50,82 @@ msgid ""
 "}{U^{0\\\\beta}_{\\\\rho_1 \\\\sigma_2}}\\\\right]"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:14
+#: ../../../tools/sphinx/math_expressions.rst:14
 msgid "よく使う数式"
-msgstr ""
+msgstr "Frequently used mathematical expressions"
 
-#: ../../tools/sphinx/math_expressions.rst:18
+#: ../../../tools/sphinx/math_expressions.rst:18
 msgid "分数"
-msgstr ""
+msgstr "Fraction"
 
-#: ../../tools/sphinx/math_expressions.rst:18
+#: ../../../tools/sphinx/math_expressions.rst:18
 msgid "frac"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:18
+#: ../../../tools/sphinx/math_expressions.rst:18
+#, fuzzy
 msgid "f(x)=\\\\frac{分子}{分母}"
-msgstr ""
+msgstr "f(x)=\\frac{numerator}{denominator}"
 
-#: ../../tools/sphinx/math_expressions.rst:20
+#: ../../../tools/sphinx/math_expressions.rst:20
 msgid "f(x)=\\frac{分子}{分母}"
-msgstr ""
+msgstr "f(x)=\\frac{numerator}{denominator}"
 
-#: ../../tools/sphinx/math_expressions.rst:25
+#: ../../../tools/sphinx/math_expressions.rst:25
 msgid "累乗"
-msgstr ""
+msgstr "Exponentiation"
 
-#: ../../tools/sphinx/math_expressions.rst:25
+#: ../../../tools/sphinx/math_expressions.rst:25
 msgid "W^{累乗}"
-msgstr ""
+msgstr "W^{exponent}"
 
-#: ../../tools/sphinx/math_expressions.rst:27
+#: ../../../tools/sphinx/math_expressions.rst:27
 msgid ""
 "W^{累乗}\n"
 "\n"
 msgstr ""
+"W^{exponent}\n"
+"\n"
 
-#: ../../tools/sphinx/math_expressions.rst:31
+#: ../../../tools/sphinx/math_expressions.rst:31
 msgid "ダッシュ"
-msgstr ""
+msgstr "prime"
 
-#: ../../tools/sphinx/math_expressions.rst:31
+#: ../../../tools/sphinx/math_expressions.rst:31
 msgid "W^{\\\\prime}"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:33
+#: ../../../tools/sphinx/math_expressions.rst:33
 msgid ""
 "W^{\\prime}\n"
 "\n"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:37
+#: ../../../tools/sphinx/math_expressions.rst:37
 msgid "ギリシャ文字   [#]_"
-msgstr ""
+msgstr "Greek Letters   [#]_"
 
-#: ../../tools/sphinx/math_expressions.rst:37
+#: ../../../tools/sphinx/math_expressions.rst:37
 msgid "\\\\alpha"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:39
+#: ../../../tools/sphinx/math_expressions.rst:39
 msgid ""
 "\\alpha\n"
 "\n"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:43
+#: ../../../tools/sphinx/math_expressions.rst:43
 msgid "関連リンク"
-msgstr ""
+msgstr "Related Links"
 
-#: ../../tools/sphinx/math_expressions.rst:44
+#: ../../../tools/sphinx/math_expressions.rst:44
 msgid ""
 "`Sample Doc Using math <https://matplotlib.org/sampledoc/extensions.html"
 "#using-math>`_"
 msgstr ""
 
-#: ../../tools/sphinx/math_expressions.rst:45
+#: ../../../tools/sphinx/math_expressions.rst:45
 msgid "https://matplotlib.org/2.0.2/users/mathtext.html"
 msgstr ""
 

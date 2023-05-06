@@ -116,7 +116,7 @@ sphinx-autobuildの存在だけでもとても効率的なのだが『poetry add
 
 結論としてはこのコマンドでの実現はムリだった。poetryで指定できる[tool.poetry.scripts]は引数指定ができない。この仕様は変更予定はなく、今後もメインストリームに組み込まれる予定はないし、プラグイン開発待ちだが時間がかかりそう [#task]_
 
-natさんにより、 `poethepoet`_ という暫定パッケージを開発してくれているのでこれを活用する。4文字ふえるが、目指すは下記でのコマンド起動す::
+natさんにより、 `poethepoet`_ という暫定パッケージをを活用する。下記でのコマンドで起動することを目指す::
 
 	poetry run poe doc
 
@@ -162,7 +162,7 @@ setup.pyを整備します。
     )
 
 
-上記setup.pyにより、下記コマンドから実行されるようになる::
+下記コマンドでsetup.pyのコードが実行できる::
 
 	poetry run setup.py doc
 
@@ -176,7 +176,7 @@ pyproject.tomlの整備
 	[tool.poe.tasks]
 	  doc = "python setup.py doc"
 
-ここまで整備すると、以下コマンドでsphinx-autobuildが起動するようになります::
+この作業の結果、次のコマンドでsphinx-autobuildが起動するようになります::
 
 	poetry run poe doc
 
@@ -214,7 +214,7 @@ githubとの連携
 ********************************
 Last Updated on 2021-04-17
 
-特別な対応は特にない。リポジトリを作成してコミットする。
+リポジトリを作成してコミットする。
 
 github準備
 ==============================
@@ -224,7 +224,7 @@ github準備
 
 githubへssh通信する
 ==========================
-コマンドラインから対応できると便利なので対応しておく
+コマンドラインから対応できるようにする設定方法
 
 鍵の生成
 ------------
@@ -298,13 +298,13 @@ netlify連携
 ********************************
 Last Updated on 2021-04-17
 
-netlifyは、githubリポジトリを指定すると、定義したビルドルールに従ってnetlify上の仮想マシンにデプロイして、指定パスをrootとしたサイト公開まで行ってくれます。
+netlifyは、githubリポジトリ連携してnetlify上の仮想マシンにデプロイしサイト公開を可能とする。
 
 netlify連携準備
 ===================
 bulid定義
 -------------------
-指定したリポジトリにあるnetlify.tomlを読み込んでビルドする仕様になってますので以下を用意します。
+指定したリポジトリにあるnetlify.tomlを読み込んでビルドする仕様となっている。
 
 .. code-block:: toml
   :caption: netlify.toml
@@ -314,11 +314,11 @@ bulid定義
     publish = "docs/_build/ja"
     command = "sphinx-build docs/ docs/_build/ja"
 
-publishが公開するフォルダ。commandがビルド時に使われるコマンドです。
+publishは公開するフォルダ、commandがビルド時に使われるコマンドの意味である。
 
 pythonバージョン
 -------------------
-netlifyでデフォルトで立ち上がる仮想環境は 2020年11月現在、Ubuntu 16.04で、Pythonバージョンは2.7がデフォルトです。バージョンを指定する場合、rutime.txtというファイルにバージョン番号だけ記載しておきます。
+netlifyでデフォルトで立ち上がる仮想環境はUbuntu 16.04（2020年11月現在）です。Pythonバージョンは2.7がデフォルトのため変更する必要があります。バージョンを指定するには、rutime.txtというファイルを用意しバージョン番号を記載します。
 
 .. code-block:: shell
   :caption: runtime.txt
@@ -330,7 +330,7 @@ netlifyでデフォルトで立ち上がる仮想環境は 2020年11月現在、
 
 netlify github連携
 ==============================
-netlifyにはgithubアカウントでログイン可能です。ログインしビルド対象のリポジトリ連携します。「New Site from git」から特に迷うことなく連携できます。
+netlifyにはgithubアカウントでログイン可能です。ログインしビルド対象のリポジトリ連携します。「New Site from git」から連携できます。
 
 サイト確認
 ==============
@@ -342,19 +342,19 @@ URLを独自ドメインに変更する
 
 ドメイン取得
 -----------------
-お試し用には無料で取得できる `freenom`_ で十分です。 [#domain]_
+お試し用には無料で取得できる `freenom`_ を使います [#domain]_
 
 ドメインの設定
 --------------------
 公式サイトの「Configure an apex domain」という手順 [#dns]_ を参考に設定します。
 
-ドメインプロバイダからは、netlifyが指定するDNSを設定しておき、netlifyDNS側で、Netlifyレコードという特殊なDNSレコードを設定します。
+ドメインプロバイダからは、netlifyが指定するDNSを設定します。netlifyDNS側ではNetlifyレコードという特殊なDNSレコードを設定します。
 
-あるいは、ドメインプロバイダー側のDNSにAレコードとしてルートをNetlifyのLBのIPを直接指定、CNAMEレコードをwwwからapexサブドメインへ設定しても動作します。
+もう一つの別の方法として、ドメインプロバイダー側のDNSにAレコードとしてルートをNetlifyのLBのIPを直接指定し、CNAMEレコードをwwwからapexサブドメインへ設定する方法もあります。
 
 独自ドメインで確認
 =======================
-設定したURLにアクセスして確認します。httpsまで設定されてれば成功です。上手くいかない場合は、netlifyの管理画面でエラー状況を確認できますので対処しましょう。
+設定したURLにアクセスして確認します。成功するとhttpsでアクセスできます。失敗するとnetlifyの管理画面でエラー状況が表示されます。
 
 .. rubric:: 関連リンク
 
@@ -368,6 +368,3 @@ URLを独自ドメインに変更する
 .. [#dns] https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/
 .. [#domain]  当サイトはfreenomで試行後、googleドメインでドメイン取得し直しました。
 
-
-
-.. |date| date::

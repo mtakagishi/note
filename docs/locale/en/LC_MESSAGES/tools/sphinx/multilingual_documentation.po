@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-05 22:48+0900\n"
+"POT-Creation-Date: 2023-05-06 19:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,99 +19,117 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:2
+#: ../../../tools/sphinx/multilingual_documentation.rst:2
 msgid "Sphinxドキュメントのマルチ言語対応"
-msgstr ""
+msgstr "Multilingual Support for Sphinx Documentation"
 
-#: ../../tools/sphinx/multilingual_documentation.rst
+#: ../../../tools/sphinx/multilingual_documentation.rst
 msgid "更新"
-msgstr ""
+msgstr "Update"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:4
+#: ../../../tools/sphinx/multilingual_documentation.rst:4
 msgid "2023-05-05"
 msgstr ""
 
-#: ../../tools/sphinx/multilingual_documentation.rst:7
+#: ../../../tools/sphinx/multilingual_documentation.rst:7
 msgid "実行環境はWindows10"
-msgstr ""
+msgstr "The execution environment is Windows10"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:10
+#: ../../../tools/sphinx/multilingual_documentation.rst:10
 msgid "1. 必要なパッケージをインストールする"
-msgstr ""
+msgstr "1. Install Required Packages"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:18
+#: ../../../tools/sphinx/multilingual_documentation.rst:18
 msgid "2. Sphinxプロジェクトを作成する"
-msgstr ""
+msgstr "2. Create a Sphinx Project"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:25
+#: ../../../tools/sphinx/multilingual_documentation.rst:25
 msgid "3. conf.pyファイルを開いて、言語とロケールの設定を追加・変更する"
-msgstr ""
+msgstr "3. Open the conf.py File and Add/Modify Language and Locale Settings"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:27
+#: ../../../tools/sphinx/multilingual_documentation.rst:27
 msgid "まず、言語設定を追加して、デフォルトの言語を指定します。例えば、デフォルト言語を日本語に設定する場合、以下のようにします。"
 msgstr ""
+"First, add language settings and specify the default language. For "
+"example, if you want to set Japanese as your default language, do the "
+"following:"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:34
+#: ../../../tools/sphinx/multilingual_documentation.rst:34
 msgid "次に、他の言語の設定を追加します。言語ごとに専用のディレクトリを作成し、その中に翻訳済みのドキュメントを格納します。"
 msgstr ""
+"Next, add settings for other languages. Create dedicated directories for "
+"each language and store translated documents inside them."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:43
+#: ../../../tools/sphinx/multilingual_documentation.rst:43
 msgid "4. デフォルト言語の.potファイルを生成する"
-msgstr ""
+msgstr "4. Generate a .pot File for the Default Language"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:50
+#: ../../../tools/sphinx/multilingual_documentation.rst:50
 msgid "pot は ``Potable Object Template``"
-msgstr ""
+msgstr "pot stands for ``Potable Object Template``"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:54
+#: ../../../tools/sphinx/multilingual_documentation.rst:54
 msgid "5. 生成された.potファイルを、各言語の.poファイルに変換する"
-msgstr ""
+msgstr "5. Convert the Generated .pot File to .po Files for Each Language."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:56
+#: ../../../tools/sphinx/multilingual_documentation.rst:56
 msgid "英語、スペイン語、アラビア語、ドイツ語を対象とする場合は次のように記述します。"
-msgstr ""
+msgstr "If targeting English, Spanish, Arabic and German, describe as follows."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:63
+#: ../../../tools/sphinx/multilingual_documentation.rst:63
 msgid ".po ファイルのPOは``Portable Object``、 .mo ファイルのMOは``Machine Object``"
 msgstr ""
+"The PO in a .po file stands for ``Portable Object``,while MO in a .mo "
+"file stands for ``Machine Object``"
 
-#: ../../tools/sphinx/multilingual_documentation.rst:67
+#: ../../../tools/sphinx/multilingual_documentation.rst:67
 msgid "6. .poファイルを編集して翻訳を追加する"
-msgstr ""
+msgstr "6. Edit the .po file to add translations."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:69
+#: ../../../tools/sphinx/multilingual_documentation.rst:69
 msgid "例えば、``locale/ja/LC_MESSAGES/index.po`` を開いて日本語翻訳を追加します。"
 msgstr ""
+"For example, open ``locale/ja/LC_MESSAGES/index.po`` and add Japanese "
+"translation."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:72
+#: ../../../tools/sphinx/multilingual_documentation.rst:72
 msgid "7. 翻訳済みのドキュメントをビルドする"
-msgstr ""
+msgstr "7. Build translated document."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:83
+#: ../../../tools/sphinx/multilingual_documentation.rst:83
+#, fuzzy
 msgid ""
 "sphinx-build のビルドオプションは ``-M`` と ``-b`` があり、``-b`` を使う。``-M`` "
 "を用いるとoutputフォルダの下に独自にhtmlフォルダが作成されるため同じサイトにデプロイしたい場合には不便。"
 msgstr ""
+"sphinx-build has two build options: ``-M`` and ``-b``, use ``-b``. Using "
+"``-M`` creates a separate html folder under the output folder, which is "
+"inconvenient if you want to deploy it on the same site."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:87
+#: ../../../tools/sphinx/multilingual_documentation.rst:87
 msgid "8. 言語ごとのビルド済みHTMLファイルが ``_build/html`` ディレクトリに格納されていることを確認する"
 msgstr ""
+"8. Make sure the built HTML files for each language are stored in the "
+"``_build/html`` directory."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:89
+#: ../../../tools/sphinx/multilingual_documentation.rst:89
 msgid "これで、Sphinxを使って複数言語に対応するドキュメントが作成できました。言語間のリンクやナビゲーションを追加するには、テンプレートをカスタマイズする必要があります"
 msgstr ""
+"With this, you can create documentation that supports multiple languages "
+"using Sphinx. To add links and navigation between languages, you will "
+"need to customize the templates."
 
-#: ../../tools/sphinx/multilingual_documentation.rst:92
+#: ../../../tools/sphinx/multilingual_documentation.rst:92
 msgid "参考URL"
 msgstr ""
 
-#: ../../tools/sphinx/multilingual_documentation.rst:93
+#: ../../../tools/sphinx/multilingual_documentation.rst:93
 msgid ""
 "`Sphinxドキュメントの国際化対応をやってみた <https://dev.classmethod.jp/articles/sphinx-"
 "i18n/>`_"
 msgstr ""
 
-#: ../../tools/sphinx/multilingual_documentation.rst:94
+#: ../../../tools/sphinx/multilingual_documentation.rst:94
 msgid ""
 "`国際化対応済みのSphinxドキュメントに言語切り替えボタンを実装する <https://dev.classmethod.jp/articles"
 "/implement-sphinx-i18n-switch-button/>`_"

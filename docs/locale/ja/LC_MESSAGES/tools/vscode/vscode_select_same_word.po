@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"POT-Creation-Date: 2023-05-06 22:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -19,40 +19,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/vscode/vscode_select_same_word.rst:3
-msgid "VSCODEで同一単語を選択"
+#: ../../../tools/vscode/vscode_select_same_word.rst:3
+msgid "VSCodeエディタ使用時に選択単語を同時選択"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:4
+#: ../../../tools/vscode/vscode_select_same_word.rst:4
 msgid "Last Updated on 2021-08-15"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:6
+#: ../../../tools/vscode/vscode_select_same_word.rst:6
 msgid "共通の変数名や単語を一括変換したいときに便利"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:9
-msgid "次の単語を同時選択"
+#: ../../../tools/vscode/vscode_select_same_word.rst:9
+msgid "選択している単語について次に出現する単語を同時選択する"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:10
-#: ../../tools/vscode/vscode_select_same_word.rst:17
-msgid "選択したい単語を選択"
-msgstr ""
-
-#: ../../tools/vscode/vscode_select_same_word.rst:11
+#: ../../../tools/vscode/vscode_select_same_word.rst:11
 msgid ":kbd:`Ctrl` + :kbd:`D`"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:14
-msgid "全単語を同時選択"
+#: ../../../tools/vscode/vscode_select_same_word.rst:14
+msgid "選択しているについて文書内の全ての単語を同時選択"
 msgstr ""
 
-#: ../../tools/vscode/vscode_select_same_word.rst:15
-msgid ":kbd:`Ctrl` + :kbd:`D` の連打も良いが一気にやる方法もある"
-msgstr ""
-
-#: ../../tools/vscode/vscode_select_same_word.rst:18
+#: ../../../tools/vscode/vscode_select_same_word.rst:16
 msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`L`"
 msgstr ""
+
+#~ msgid "VSCODEで同一単語を選択"
+#~ msgstr ""
+
+#~ msgid "次の単語を同時選択"
+#~ msgstr ""
+
+#~ msgid "選択したい単語を選択"
+#~ msgstr ""
+
+#~ msgid "全単語を同時選択"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Ctrl` + :kbd:`D` の連打も良いが一気にやる方法もある"
+#~ msgstr ""
 

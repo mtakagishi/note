@@ -21,35 +21,35 @@ msgstr ""
 
 #: ../../tools/sphinx/block_diagrams.rst:3
 msgid "sphinxでフロー図を表現する"
-msgstr ""
+msgstr "Representing flowcharts with Sphinx"
 
 #: ../../tools/sphinx/block_diagrams.rst:5
 msgid "フロー図などを作図可能なSphinxの拡張機能"
-msgstr ""
+msgstr "An extension for Sphinx that enables drawing flowcharts and other diagrams."
 
 #: ../../tools/sphinx/block_diagrams.rst:7
 msgid "ブロック図(blockdiag)"
-msgstr ""
+msgstr "Block diagrams (blockdiag)"
 
 #: ../../tools/sphinx/block_diagrams.rst:8
 msgid "シーケンス図(seqdiag)"
-msgstr ""
+msgstr "Sequence diagrams (seqdiag)"
 
 #: ../../tools/sphinx/block_diagrams.rst:9
 msgid "アクティビティ図(actdiag)"
-msgstr ""
+msgstr "Activity diagrams (actdiag)"
 
 #: ../../tools/sphinx/block_diagrams.rst:10
 msgid "論理ネットワーク図(nwdiag)"
-msgstr ""
+msgstr "Network diagrams (nwdiag)"
 
 #: ../../tools/sphinx/block_diagrams.rst:13
 msgid "設定方法"
-msgstr ""
+msgstr "Configuration method"
 
 #: ../../tools/sphinx/block_diagrams.rst:16
 msgid "パッケージインストール"
-msgstr ""
+msgstr "Package installation"
 
 #: ../../tools/sphinx/block_diagrams.rst:17
 msgid "sphinxcontrib-blockdiag"
@@ -77,7 +77,7 @@ msgstr ""
 
 #: ../../tools/sphinx/block_diagrams.rst:31
 msgid "conf.pythのextensions設定"
-msgstr ""
+msgstr "Extensions settings for conf.py"
 
 #: ../../tools/sphinx/block_diagrams.rst:33
 #: ../../tools/sphinx/block_diagrams.rst:50
@@ -87,7 +87,7 @@ msgstr ""
 
 #: ../../tools/sphinx/block_diagrams.rst:47
 msgid "イメージファイル形式選択の指定"
-msgstr ""
+msgstr "Specifying Image File Format Selection"
 
 #: ../../tools/sphinx/block_diagrams.rst:48
 msgid "PNG か SV"
@@ -95,35 +95,35 @@ msgstr ""
 
 #: ../../tools/sphinx/block_diagrams.rst:58
 msgid "日本語フォント"
-msgstr ""
+msgstr "Japanese Font"
 
 #: ../../tools/sphinx/block_diagrams.rst:59
 msgid "日本語文字列を出力可能にするためにフォントファイルttf形式のファイルが必要となる。"
-msgstr ""
+msgstr "To enable output of Japanese strings, a font file in ttf format is required."
 
 #: ../../tools/sphinx/block_diagrams.rst:61
 msgid "`IPAexフォント <https://moji.or.jp/ipafont/>`_"
-msgstr ""
+msgstr "`IPAex font <https://moji.or.jp/ipafont/>`_"
 
 #: ../../tools/sphinx/block_diagrams.rst:65
 msgid "conf.pythのfont設定"
-msgstr ""
+msgstr "conf.py font setting"
 
 #: ../../tools/sphinx/block_diagrams.rst:75
 msgid "書き方のサンプル"
-msgstr ""
+msgstr "Usage example" 
 
 #: ../../tools/sphinx/block_diagrams.rst:76
 msgid "blockdiagディレクティブ内に記載 [#]_"
-msgstr ""
+msgstr "Described within the blockdiag directive [#]_ "
 
 #: ../../tools/sphinx/block_diagrams.rst:117
 msgid "関連リンク"
-msgstr ""
+msgstr "Related links"
 
 #: ../../tools/sphinx/block_diagrams.rst:118
 msgid "`blockdiag公式ドキュメント <http://blockdiag.com/ja/index.html>`_"
-msgstr ""
+msgstr "`Official Blockdiag Documentation <http://blockdiag.com/en/index.html>`_"
 
 #~ msgid "sphinxでブロック図など"
 #~ msgstr ""

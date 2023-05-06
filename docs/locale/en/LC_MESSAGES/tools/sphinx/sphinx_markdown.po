@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx_markdown.md:1
 msgid "SphinxでMarkdownを扱うには"
-msgstr ""
+msgstr "How to use Markdown in Sphinx"
 
 #: ../../tools/sphinx/sphinx_markdown.md:3
 msgid "SphinxでMarkdown扱えるように設定する。"
-msgstr ""
+msgstr "Configure Sphinx to handle Markdown."
 
 #: ../../tools/sphinx/sphinx_markdown.md:5
 msgid "追加インストール"
-msgstr ""
+msgstr "Additional installation"
 
 #: ../../tools/sphinx/sphinx_markdown.md:11
 msgid "conf.py"
@@ -37,11 +37,11 @@ msgstr ""
 
 #: ../../tools/sphinx/sphinx_markdown.md:22
 msgid "確認"
-msgstr ""
+msgstr "Confirmation"
 
 #: ../../tools/sphinx/sphinx_markdown.md:24
 msgid "このページはMarkdownで記述。   うまく表示されてるようなのでOK."
-msgstr ""
+msgstr "This page is written in Markdown. It seems to be displayed correctly, so it's OK."
 
 #~ msgid "参考URL"
 #~ msgstr ""

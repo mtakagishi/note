@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../tools/sphinx/code-blocks.rst:2
 msgid "Sphinxでコードブロックを記述する方法"
-msgstr ""
+msgstr "How to write code blocks in Sphinx"
 
 #: ../../tools/sphinx/code-blocks.rst:4
 msgid "リテラルブロックかcode-blockディレクティブを使う。"
-msgstr ""
+msgstr "Use either literal block or code-block directive."
 
 #: ../../tools/sphinx/code-blocks.rst:7
 msgid "リテラルブロック"
-msgstr ""
+msgstr "Literal Block"
 
 #: ../../tools/sphinx/code-blocks.rst:9 ../../tools/sphinx/code-blocks.rst:33
 msgid "例::"
-msgstr ""
+msgstr "Example:"
 
 #: ../../tools/sphinx/code-blocks.rst:19 ../../tools/sphinx/code-blocks.rst:47
 msgid "出力"
-msgstr ""
+msgstr "Output"
 
 #: ../../tools/sphinx/code-blocks.rst:21
 msgid "サンプル::"
-msgstr ""
+msgstr "Sample:"
 
 #: ../../tools/sphinx/code-blocks.rst:31
 msgid "code-block"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../tools/sphinx/code-blocks.rst:49
 msgid "サンプル"
-msgstr ""
+msgstr "Sample"
 
 #~ msgid "リテラルブロックの場合"
 #~ msgstr ""

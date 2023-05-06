@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../tools/sphinx/directives.rst:2
 msgid "sphinxで使えるディレクティブ集"
-msgstr ""
+msgstr "Collection of Directives Available in Sphinx"
 
 #: ../../tools/sphinx/directives.rst:3
 msgid "ディレクティブとはマークアップ言語における一般的なブロックのことです"
-msgstr ""
+msgstr "A directive is a common block in markup languages."
 
 #: ../../tools/sphinx/directives.rst:6
 msgid "toctree"
@@ -33,11 +33,11 @@ msgstr ""
 
 #: ../../tools/sphinx/directives.rst:7
 msgid "Table of contentsの略"
-msgstr ""
+msgstr "Abbreviation for Table of Contents"
 
 #: ../../tools/sphinx/directives.rst:8
 msgid "toctreeに指定できない文字列"
-msgstr ""
+msgstr "Strings that cannot be specified in toctree"
 
 #: ../../tools/sphinx/directives.rst:10
 msgid "genindex"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../tools/sphinx/directives.rst:13
 msgid "_(アンダースコア) で始まる名前"
-msgstr ""
+msgstr "Names that start with an underscore (_)"
 
 #: ../../tools/sphinx/directives.rst:15 ../../tools/sphinx/directives.rst:67
 #: ../../tools/sphinx/directives.rst:78 ../../tools/sphinx/directives.rst:89
@@ -68,7 +68,7 @@ msgstr ""
 #: ../../tools/sphinx/directives.rst:283 ../../tools/sphinx/directives.rst:293
 #: ../../tools/sphinx/directives.rst:303 ../../tools/sphinx/directives.rst:313
 msgid "ディレクティブ::"
-msgstr ""
+msgstr "Directive:"
 
 #: ../../tools/sphinx/directives.rst:34
 msgid "code-block"
@@ -76,15 +76,15 @@ msgstr ""
 
 #: ../../tools/sphinx/directives.rst:36
 msgid "例::"
-msgstr ""
+msgstr "Example:"
 
 #: ../../tools/sphinx/directives.rst:50
 msgid "出力"
-msgstr ""
+msgstr "Output"
 
 #: ../../tools/sphinx/directives.rst:52
 msgid "サンプル"
-msgstr ""
+msgstr "Sample"
 
 #: ../../tools/sphinx/directives.rst:66
 msgid "todo"
@@ -103,15 +103,15 @@ msgstr ""
 #: ../../tools/sphinx/directives.rst:297 ../../tools/sphinx/directives.rst:307
 #: ../../tools/sphinx/directives.rst:317
 msgid "レンダリング後:"
-msgstr ""
+msgstr "After rendering:"
 
 #: ../../tools/sphinx/directives.rst:73
 msgid "課題"
-msgstr ""
+msgstr "Task"
 
 #: ../../tools/sphinx/directives.rst:73
 msgid "ディレクティブ紹介例に掲載のTODO"
-msgstr ""
+msgstr "The TODO featured in the directive introduction example"
 
 #: ../../tools/sphinx/directives.rst:77
 msgid "todolist"

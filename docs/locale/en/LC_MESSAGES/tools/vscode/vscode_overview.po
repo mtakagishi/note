@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_overview.rst:3
 msgid "VSCodeについて"
-msgstr ""
+msgstr "About VSCode"
 
 #: ../../tools/vscode/vscode_overview.rst:4
 msgid "Last Updated on 2021-08-28"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_overview.rst:7
 msgid "VSCodeとは"
-msgstr ""
+msgstr "What is VSCode"
 
 #: ../../tools/vscode/vscode_overview.rst:8
 msgid "Visual Studio Code のことでマイクロソフトが開発するソースコードエディタ"
@@ -37,49 +37,49 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_overview.rst:11
 msgid "おすすめの理由"
-msgstr ""
+msgstr "Source code editor developed by Microsoft"
 
 #: ../../tools/vscode/vscode_overview.rst:12
 msgid "OSSなので費用の心配がない。"
-msgstr ""
+msgstr "Being open source, there are no worries about costs."
 
 #: ../../tools/vscode/vscode_overview.rst:13
 msgid "MITライセンスなのでライセンスに関する制限がゆるい"
-msgstr ""
+msgstr "Thanks to the MIT license, restrictions related to licensing are loose."
 
 #: ../../tools/vscode/vscode_overview.rst:14
 msgid "開発元がマイクロソフト様なので比較的堅い現場でも許可が取りやすい"
-msgstr ""
+msgstr "Since it is developed by Microsoft, it is relatively easy to obtain permission even in rigorous workplaces."
 
 #: ../../tools/vscode/vscode_overview.rst:15
 msgid "軽量ながら最低限の機能が揃っているので低スペック環境でも採用しやすい。"
-msgstr ""
+msgstr "Although it is lightweight, it has the minimum required functions, so it is easy to adopt even in low-spec environments."
 
 #: ../../tools/vscode/vscode_overview.rst:16
 msgid "自動補完機能があり、タイピングを省力化できる。"
-msgstr ""
+msgstr "There is an autocomplete feature, which allows to reduce typing effort."
 
 #: ../../tools/vscode/vscode_overview.rst:17
 msgid "Web開発者向けのemmet機能（省略入力）が秀逸。爆速でコーディングできる。"
-msgstr ""
+msgstr "The emmet feature (abbreviated input) for web developers is excellent. You can code at a high speed."
 
 #: ../../tools/vscode/vscode_overview.rst:18
 msgid "ショートカットキーが豊富。慣れると効率的。"
-msgstr ""
+msgstr "There are many keyboard shortcuts. They are efficient once you get used to them."
 
 #: ../../tools/vscode/vscode_overview.rst:19
 msgid "同一ワード選択、矩形選択などが標準装備。"
-msgstr ""
+msgstr "Standard features include selecting the same word or selecting a rectangle."
 
 #: ../../tools/vscode/vscode_overview.rst:20
 msgid "ターミナルがエディタ内にあるのでアクティブウィンドウの数を抑えられる。"
-msgstr ""
+msgstr "Since the terminal is in the editor, it reduces the number of active windows."
 
 #: ../../tools/vscode/vscode_overview.rst:21
 msgid "デバッグ用の機能が標準。エラーや出力もエディタ内で完結できる（プログラム言語によっては要プラグイン）"
-msgstr ""
+msgstr "Debugging functions are standard. Errors and outputs can also be completed within the editor (plug-ins may be required depending on the programming language)."
 
 #: ../../tools/vscode/vscode_overview.rst:22
 msgid "プラグインが豊富で、標準不足は拡張を探すと大抵あるので困らない。"
-msgstr ""
+msgstr "There are many plugins available, so you don't have to worry about the lack of standard features as there is usually an extension available."
 

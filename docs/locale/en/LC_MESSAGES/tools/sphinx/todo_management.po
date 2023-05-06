@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../../tools/sphinx/todo_management.rst:3
 msgid "SphinxでTODO管理をする方法"
-msgstr ""
+msgstr "How to Manage TODOs with Sphinx"
 
 #: ../../tools/sphinx/todo_management.rst:4
 msgid "Last Updated on 2021-08-14"
-msgstr ""
+msgstr "Last Updated on 2021-08-14"
 
 #: ../../tools/sphinx/todo_management.rst:6
 msgid "sphinxで作ったサイトで、書きかけの記事にtodoをマーキングしておいたり、サイト全体のtodoをリスト化することができます。"
-msgstr ""
+msgstr "You can mark todos on incomplete articles built with sphinx, or list all todos on the website."
 
 #: ../../tools/sphinx/todo_management.rst:9
 msgid "設定"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../tools/sphinx/todo_management.rst:10
 msgid "package::"
@@ -45,13 +45,13 @@ msgstr ""
 
 #: ../../tools/sphinx/todo_management.rst:22
 msgid "使い方"
-msgstr ""
+msgstr "Usage"
 
 #: ../../tools/sphinx/todo_management.rst:24
 msgid "todoを書く::"
-msgstr ""
+msgstr "Writing a Todo::"
 
 #: ../../tools/sphinx/todo_management.rst:28
 msgid "todoをリストアップする::"
-msgstr ""
+msgstr "Listing Todos::"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-05 23:16+0900\n"
+"POT-Creation-Date: 2023-05-06 22:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -19,45 +19,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:3
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:3
 msgid "VSCODEで矩形選択する方法"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:4
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:4
 msgid "Last Updated on 2021-08-15"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:7
-msgid "キーボードのみ"
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:7
+msgid "キーボードのみで操作する"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:8
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:8
 msgid ""
 ":kbd:`Ctrl`  +  :kbd:`Alt`  + :kbd:`Shift` + "
 ":kbd:`↑`/:kbd:`↓`/:kbd:`←`/:kbd:`→`"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:11
-msgid "キーボードのみ（2段階)"
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:11
+msgid "キーボードのみで操作する（2Step）"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:12
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:12
 msgid ":kbd:`Ctrl`  +  :kbd:`Alt`  + :kbd:`↑`/:kbd:`↓`"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:14
-msgid "で上下方向の範囲を決めてからの"
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:14
+msgid "まず、上記キー操作で上下方向の範囲を決める。範囲を決定したら愚痴のキー操作で範囲を確定する。"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:16
-msgid ":kbd:`Shift` + :kbd:`←`/:kbd:`→` で範囲選択"
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:16
+msgid ":kbd:`Shift` + :kbd:`←`/:kbd:`→`"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:19
-msgid "マウス使う場合"
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:19
+msgid "マウス使う場合の操作方法"
 msgstr ""
 
-#: ../../tools/vscode/vscode_rectangular_selection.rst:20
+#: ../../../tools/vscode/vscode_rectangular_selection.rst:20
 msgid ":kbd:`Alt`  +  :kbd:`Shift`  +  ドラッグ"
 msgstr ""
+
+#~ msgid "キーボードのみ"
+#~ msgstr ""
+
+#~ msgid "キーボードのみ（2段階)"
+#~ msgstr ""
+
+#~ msgid "で上下方向の範囲を決めてからの"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Shift` + :kbd:`←`/:kbd:`→` で範囲選択"
+#~ msgstr ""
+
+#~ msgid "マウス使う場合"
+#~ msgstr ""
 

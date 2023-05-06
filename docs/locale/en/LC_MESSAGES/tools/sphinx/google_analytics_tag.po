@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/sphinx/google_analytics_tag.rst:3
 msgid "SphinxにGoogle Analyticsのタグを埋め込む方法"
-msgstr ""
+msgstr "How to Embed Google Analytics Tag into Sphinx"
 
 #: ../../tools/sphinx/google_analytics_tag.rst:4
 msgid "Last Updated on 2023-05-05"
@@ -29,31 +29,31 @@ msgstr ""
 
 #: ../../tools/sphinx/google_analytics_tag.rst
 msgid "pydata_sphinx_themeが前提の記事です。"
-msgstr ""
+msgstr "This article assumes pydata_sphinx_theme."
 
 #: ../../tools/sphinx/google_analytics_tag.rst
 msgid "アナリティクスはGA4形式とUA形式の新旧2種がありますが、"
-msgstr ""
+msgstr "There are two types of Analytics: GA4 format and UA format,"
 
 #: ../../tools/sphinx/google_analytics_tag.rst
 msgid "v0.6.2(2021/04/26)以降、両方に対応されてます。"
-msgstr ""
+msgstr "Since v0.6.2 (2021/04/26), both are supported."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:12
 msgid "一般的な方法"
-msgstr ""
+msgstr "General method"
 
 #: ../../tools/sphinx/google_analytics_tag.rst:13
 msgid "conf.pyに設定可能です。"
-msgstr ""
+msgstr "It can be configured in conf.py."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:14
 msgid "v0.6.2にてGA4形式にも対応されました。"
-msgstr ""
+msgstr "Since v0.6.2, it also supports GA4 format."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:15
 msgid "最新バージョンではUA形式は対応できなくなりました。"
-msgstr ""
+msgstr "In the latest version, UA format is no longer supported." 
 
 #: ../../tools/sphinx/google_analytics_tag.rst:17
 msgid "conf.py::"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../tools/sphinx/google_analytics_tag.rst:24
 msgid "別の解決方法"
-msgstr ""
+msgstr "Another solution"
 
 #: ../../tools/sphinx/google_analytics_tag.rst
 msgid "pydata_sphinx_themeではv0.6.2より前のバージョンはGA4が対応されていませんでした。"
@@ -69,15 +69,15 @@ msgstr ""
 
 #: ../../tools/sphinx/google_analytics_tag.rst
 msgid "以下は当時に行った代替策です。"
-msgstr ""
+msgstr "The following is an alternative solution that we implemented at that time."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:31
 msgid "layout.htmlをtemplate_path配下に作成。"
-msgstr ""
+msgstr "Create layout.html under the template_path."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:32
 msgid "下記の対応版「layout.html」格納"
-msgstr ""
+msgstr "Store the corresponding version of 'layout.html' below."
 
 #: ../../tools/sphinx/google_analytics_tag.rst:34
 msgid "layout.html::"

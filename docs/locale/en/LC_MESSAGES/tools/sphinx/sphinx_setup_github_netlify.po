@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 21:01+0900\n"
+"POT-Creation-Date: 2023-05-06 21:17+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,496 +19,566 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:3
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:3
 msgid "Sphinxの立ち上げ（github＋Netlify利用）"
-msgstr ""
+msgstr "Launching Sphinx (using github+Netlify)"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:4
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:4
 msgid "Last Updated on 2021-08-13"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:6
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:6
 msgid "Sphinxを導入し、github/netlify に連携することで簡単に管理できる自前のサイトを構築したので手順をまとめました。"
 msgstr ""
+"I summarized the procedure for building and managing your own site "
+"easily, by introducing Sphinx and collaborating with github/netlify."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:11
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:11
 msgid "環境について"
-msgstr ""
+msgstr "About the environment"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:12
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:12
 msgid "Last Updated on 2021-08-14"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:14
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:14
 msgid "本記事執筆時点の作業環境。"
-msgstr ""
+msgstr "Working environment at the time of writing this article."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:17
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:17
 msgid "OS"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:18
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:18
 msgid "Windows10 1909"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:21
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:21
 msgid "Python"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:22
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:22
 msgid "3.9"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:24
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:34
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:24
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:34
 msgid "cmd::"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:28
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:38
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:28
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:38
 msgid "とすれば、Microsoft Storeからインストールできます。"
-msgstr ""
+msgstr "You can install it from the Microsoft Store."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:31
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:31
 msgid "edtor"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:32
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:32
 msgid "VSCODE 1.50.1"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:42
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:42
 msgid "Python環境の準備"
-msgstr ""
+msgstr "Preparing Python environment"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:43
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:79
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:43
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:79
 msgid "Last Updated on 2021-08-22"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:46
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:46
 msgid "Python仮想環境準備"
-msgstr ""
+msgstr "Preparing Python virtual environment"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:47
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:47
 msgid "Pythonは事前にインストールしておく。今回は、Python環境をキレイに保つために仮想環境で分離。 `poetry`_ を利用しました。"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:49
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:49
 msgid "`インストール手順は本家参照 <https://python-poetry.org/docs/#installation>`_"
 msgstr ""
+"Install Python in advance. This time, I separated it in a virtual "
+"environment to keep the Python environment clean. I used `poetry`_."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:52
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:52
 msgid "pip install poetry は推奨手順ではないので注意"
-msgstr ""
+msgstr "Note that pip install poetry is not a recommended procedure"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:54
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:54
 msgid "venv環境を独立するためのconfig確認・設定::"
-msgstr ""
+msgstr "Configure and Verify config for independent venv environment"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:59
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:59
 msgid "pyproject.tomlの作成::"
-msgstr ""
+msgstr "Creating pyproject.toml"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:63
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:63
 msgid "仮想環境の作成::"
-msgstr ""
+msgstr "Create Virtual Environment"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:67
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:67
 msgid ".venvフォルダが作成され、以後、poetry add コマンドでパッケージを追加できます。"
 msgstr ""
+".venv folder is created and you can add packages using 'poetry add' "
+"command."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:69
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:69
 msgid "Pythonコードも触るかもしれないので下記を念のため追加"
-msgstr ""
+msgstr "I might touch Python code, so adding the following just in case"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:71
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:71
 msgid "poetry add --dev flake8 autopep8 pylint"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:78
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:78
 msgid "Sphinx"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:82
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:82
 msgid "Sphinx初期整備"
-msgstr ""
+msgstr "Setting up Sphinx"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:83
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:83
 msgid "Sphinxパッケージ追加::"
-msgstr ""
+msgstr "Adding Sphinx package:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:87
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:87
 msgid "Sphinx初期化する。フォルダターゲットはdocsとした::"
-msgstr ""
+msgstr "Initialize Sphinx. Set folder target to 'docs':"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:91
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:91
 msgid "docsが初期化されているのでビルドしてみる。"
-msgstr ""
+msgstr "Now that 'docs' has been initialized, let's try building it."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:93
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:93
 msgid "poetry run sphinx-build docs docs/_build/ja"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:95
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:95
 msgid "docs/_build/ja/index.html [#i18n]_ を開くとビルド結果を確認できる"
 msgstr ""
+"You can confirm the build results by opening docs/_build/en/index.html "
+"[#i18n]_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:98
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:98
 msgid "sphinx-autobuildによる効率化"
-msgstr ""
+msgstr "Efficiency with sphinx-autobuild"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:99
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:99
 msgid "sphinx-autobuildを利用すると、ビルドとブラウザ確認を効率化できます"
 msgstr ""
+"Using sphinx-autobuild can improve efficiency for building and browser "
+"checking."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:101
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:101
 msgid "sphinx-autobuild追加::"
-msgstr ""
+msgstr "Adding sphinx-autobuild:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:105
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:105
 msgid "以降、下記コマンドを一度実行すれば、http://127.0.0.1:8000 でページ確認でき、自動ビルド・自動リロードされる。"
 msgstr ""
+"From now on, if you run the following command, you can check pages at "
+"http://127.0.0.1:8000 , and it will be built and reloaded automatically:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:107
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:107
 msgid "poerty run sphinx-autobuild docs docs/_build/ja"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:110
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:110
 msgid "sphinx-autobuild起動の効率化"
-msgstr ""
+msgstr "Efficiency for starting sphinx-autobuild"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:112
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:112
 msgid "起動効率化の方針"
-msgstr ""
+msgstr "Policy for improving startup efficiency"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:113
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:113
 msgid ""
 "sphinx-autobuildの存在だけでもとても効率的なのだが『poetry add sphinx-"
 "autobuild』を打ち込むのは面倒。そこで `2019年に向けてPythonのモダンな開発環境について考える`_ "
 "という記事を参考に下記コマンドで実行する効率化を目指す::"
 msgstr ""
+"The existence of sphinx-autobuild alone is very efficient, but typing "
+"``poetry add sphinx-autobuild'' is troublesome. Aim for efficiency to run"
+" with::"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:117
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:117
 msgid ""
 "結論としてはこのコマンドでの実現はムリだった。poetryで指定できる[tool.poetry.scripts]は引数指定ができない。この仕様は変更予定はなく、今後もメインストリームに組み込まれる予定はないし、プラグイン開発待ちだが時間がかかりそう"
 " [#task]_"
 msgstr ""
+"In conclusion, it was impossible to implement this command. "
+"[tool.poetry.scripts] that can be specified in poetry cannot be specified"
+" as an argument. There are no plans to change this specification, and "
+"there are no plans to incorporate it into the mainstream in the future. "
+"Waiting for plug-in development, but it looks like it will take time "
+"[#task]_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:119
-msgid ""
-"natさんにより、 `poethepoet`_ "
-"という暫定パッケージを開発してくれているのでこれを活用する。4文字ふえるが、目指すは下記でのコマンド起動す::"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:119
+msgid "natさんにより、 `poethepoet`_ という暫定パッケージをを活用する。下記でのコマンドで起動することを目指す::"
+msgstr "Use the provisional package `poethepoet`, created by Nat-san. The goal is to launch using the command below: "
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:123
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:123
 msgid "暫定パッケージを使うことを以外は `2019年に向けてPythonのモダンな開発環境について考える`_ と同一方針。詳細はURLを参照してください。"
-msgstr ""
+msgstr "Apart from using the provisional package, this follows the same policy as `Thinking about a modern Python development environment for 2019`_. Please refer to the URL for details." 
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:125
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:125
 msgid "poethepoetを追加::"
-msgstr ""
+msgstr "Add poethepoet:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:130
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:130
 msgid "setup.pyの整備"
-msgstr ""
+msgstr "Maintenance of setup.py"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:132
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:132
 msgid "setup.pyを整備します。"
-msgstr ""
+msgstr "Maintain setup.py."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:134
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:134
 msgid "setup.py"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:165
-msgid "上記setup.pyにより、下記コマンドから実行されるようになる::"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:165
+msgid "下記コマンドでsetup.pyのコードが実行できる::"
+msgstr "The following command can be used to execute the code of setup.py:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:170
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:170
 msgid "pyproject.tomlの整備"
-msgstr ""
+msgstr "Organizing pyproject.toml"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:172
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:172
 msgid "pyproject.toml"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:179
-msgid "ここまで整備すると、以下コマンドでsphinx-autobuildが起動するようになります::"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:179
+msgid "この作業の結果、次のコマンドでsphinx-autobuildが起動するようになります::"
+msgstr "This will result in sphinx-autobuild being launched with the following command:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:185
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:185
 msgid "テーマ"
-msgstr ""
+msgstr "Theme"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:186
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:186
 msgid "テーマは `pydata-sphinx-theme`_ を採用。 * conf.pyで下記対応可能"
-msgstr ""
+msgstr "The theme adopts `pydata-sphinx-theme`_. The following is applicable in conf.py:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:189
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:189
 msgid "github、twitterへのリンク"
-msgstr ""
+msgstr "Links to Github and Twitter"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:190
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:190
 msgid "navバーの設定"
-msgstr ""
+msgstr "Setting up the nav bar"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:191
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:191
 msgid "Google Analyticsの設定"
-msgstr ""
+msgstr "Configure Google Analytics"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:193
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:193
 msgid "bootstrap4対応"
-msgstr ""
+msgstr "Support for bootstrap4"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:194
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:194
 msgid "Pandas、NumPy、など主要パッケージで採用"
-msgstr ""
+msgstr "Adopted by major packages such as Pandas, NumPy, etc."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:196
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:196
 msgid "pydata-sphinx-themeのインストール::"
-msgstr ""
+msgstr "Installing pydata-sphinx-theme:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:200
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:200
 msgid "conf.pyの整備::"
-msgstr ""
+msgstr "Organizing conf.py:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:204
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:204
 msgid "その他、詳細は `pydata-sphinx-theme`_ を参照"
-msgstr ""
+msgstr "For more details, see `pydata-sphinx-theme`_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:214
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:214
 msgid "githubとの連携"
-msgstr ""
+msgstr "Integration with Github"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:215
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:299
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:215
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:299
 msgid "Last Updated on 2021-04-17"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:217
-msgid "特別な対応は特にない。リポジトリを作成してコミットする。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:217
+msgid "リポジトリを作成してコミットする。"
+msgstr "Create a repository and commit:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:220
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:220
 msgid "github準備"
-msgstr ""
+msgstr "Preparing Github"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:221
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:221
 msgid "アカウント取得"
-msgstr ""
+msgstr "Get an account"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:222
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:222
 msgid "リポジトリ作成：netlify連携のためPublicで作成"
-msgstr ""
+msgstr "Create Repository: Make it public for Netlify Integration"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:223
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:223
 msgid "ソースを反映：git initからpushまでのガイドがgithubサイトにあり"
-msgstr ""
+msgstr "Reflect the source code: Refer to Github's guide from git init to push"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:226
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:226
 msgid "githubへssh通信する"
-msgstr ""
+msgstr "SSH communication to Github"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:227
-msgid "コマンドラインから対応できると便利なので対応しておく"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:227
+msgid "コマンドラインから対応できるようにする設定方法"
+msgstr "How to configure it so that it can be handled from the command line"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:230
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:230
 msgid "鍵の生成"
-msgstr ""
+msgstr "Key generation"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:231
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:231
 msgid "生成コマンド::"
-msgstr ""
+msgstr "Generation command:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:235
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:235
 msgid ".ssh/id_rsa（秘密鍵）/.ssh/id_rsa.pub（公開鍵） が生成される"
-msgstr ""
+msgstr "The following files will be generated: .ssh/id_rsa (private key) / .ssh/id_rsa.pub (public key)"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:238
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:238
 msgid "公開鍵をクリップボードへ"
-msgstr ""
+msgstr "Copy the public key to clipboard"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:239
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:239
 msgid "win::"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:243
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:243
 msgid "mac::"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:248
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:248
 msgid "githubへ登録"
-msgstr ""
+msgstr "Register with Github"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:249
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:249
 msgid "「Add SSH Key」というメニューから、クリップボードの内容を貼り付け"
-msgstr ""
+msgstr "Paste the contents of the clipboard from the \"Add SSH Key\" menu"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:252
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:252
 msgid "githubの.ssh/config"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:254
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:279
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:254
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:279
 msgid "~/.ssh/config::"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:266
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:266
 msgid "github接続確認"
-msgstr ""
+msgstr "Github Connection Check"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:267
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:292
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:267
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:292
 msgid "確認コマンド::"
-msgstr ""
+msgstr "Confirmation command:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:273
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:273
 msgid "(参考)gitlabの場合"
-msgstr ""
+msgstr "(Reference) In case of Gitlab:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:274
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:274
 msgid "netlifyはgitlabも対応している。gitlabの場合のssh接続確認方法。"
-msgstr ""
+msgstr "Netlify also supports Gitlab. Here is the SSH connection confirmation method for Gitlab:"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:277
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:277
 msgid "gitlabの.ssh/config"
-msgstr ""
+msgstr "Gitlab's .ssh/config"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:290
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:290
 msgid "gitlab続確認"
-msgstr ""
+msgstr "Gitlab Connection Check"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:298
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:298
 msgid "netlify連携"
-msgstr ""
+msgstr "Netlify Integration"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:301
-msgid "netlifyは、githubリポジトリを指定すると、定義したビルドルールに従ってnetlify上の仮想マシンにデプロイして、指定パスをrootとしたサイト公開まで行ってくれます。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:301
+msgid "netlifyは、githubリポジトリ連携してnetlify上の仮想マシンにデプロイしサイト公開を可能とする。"
+msgstr "Netlify allows integration with Github repositories, deploys to virtual machines on Netlify and makes it possible to publish the site."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:304
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:304
 msgid "netlify連携準備"
-msgstr ""
+msgstr "Preparing for Netlify integration"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:306
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:306
 msgid "bulid定義"
-msgstr ""
+msgstr "Build definition"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:307
-msgid "指定したリポジトリにあるnetlify.tomlを読み込んでビルドする仕様になってますので以下を用意します。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:307
+msgid "指定したリポジトリにあるnetlify.tomlを読み込んでビルドする仕様となっている。"
+msgstr "It is specified to read netlify.toml in the specified repository and build according to that."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:309
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:309
 msgid "netlify.toml"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:317
-msgid "publishが公開するフォルダ。commandがビルド時に使われるコマンドです。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:317
+msgid "publishは公開するフォルダ、commandがビルド時に使われるコマンドの意味である。"
+msgstr "Publish refers to the folder to be published and command refers to the command used during build."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:320
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:320
 msgid "pythonバージョン"
-msgstr ""
+msgstr "Python version"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:321
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:321
 msgid ""
-"netlifyでデフォルトで立ち上がる仮想環境は 2020年11月現在、Ubuntu "
-"16.04で、Pythonバージョンは2.7がデフォルトです。バージョンを指定する場合、rutime.txtというファイルにバージョン番号だけ記載しておきます。"
+"netlifyでデフォルトで立ち上がる仮想環境はUbuntu "
+"16.04（2020年11月現在）です。Pythonバージョンは2.7がデフォルトのため変更する必要があります。バージョンを指定するには、rutime.txtというファイルを用意しバージョン番号を記載します。"
 msgstr ""
+"The virtual environment that netlify starts up by default is Ubuntu 16.04 (as of November 2020). The default Python version is 2.7, so you need to change it. To specify the version, prepare a file called runtime.txt and use the version Enter the number."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:323
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:323
 msgid "runtime.txt"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:329
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:329
 msgid "なお、Pythonは、2.7、3.5と3.7を選択できます。これ以外のバージョンは指定してもエラーになります。 [#version]_"
-msgstr ""
+msgstr "Note that Python can be selected as versions 2.7, 3.5, and 3.7. Any other version specified will result in an error. [#version]_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:332
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:332
 msgid "netlify github連携"
-msgstr ""
+msgstr "Netlify Github integration"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:333
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:333
 msgid ""
 "netlifyにはgithubアカウントでログイン可能です。ログインしビルド対象のリポジトリ連携します。「New Site from "
-"git」から特に迷うことなく連携できます。"
+"git」から連携できます。"
 msgstr ""
+"You can log in to netlify with your github account. Log in and link to the build target repository. You can link from New Site from git."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:336
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:336
 msgid "サイト確認"
-msgstr ""
+msgstr "Site confirmation"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:337
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:337
 msgid "https://jolly-brown-b98547.netlify.app/ のようなランダムなURLでサイトが公開されます。確認してみましょう"
-msgstr ""
+msgstr "The site is published with a random URL like https://jolly-brown-b98547.netlify.app/. Let's check it."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:340
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:340
 msgid "URLを独自ドメインに変更する"
-msgstr ""
+msgstr "Changing the URL to a custom domain"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:341
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:341
 msgid "ドメインを取得してURLを変更することが可能です。"
-msgstr ""
+msgstr "It is possible to acquire a domain and change the URL."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:344
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:344
 msgid "ドメイン取得"
-msgstr ""
+msgstr "Domain acquisition"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:345
-msgid "お試し用には無料で取得できる `freenom`_ で十分です。 [#domain]_"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:345
+msgid "お試し用には無料で取得できる `freenom`_ を使います [#domain]_"
+msgstr "We will use `freenom`_ which can be obtained for free for trial purposes. [#domain]_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:348
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:348
 msgid "ドメインの設定"
-msgstr ""
+msgstr "Domain Settings"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:349
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:349
 msgid "公式サイトの「Configure an apex domain」という手順 [#dns]_ を参考に設定します。"
-msgstr ""
+msgstr "It is set based on the official website's procedure called \"Configure an apex domain\". [#dns]_"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:351
-msgid "ドメインプロバイダからは、netlifyが指定するDNSを設定しておき、netlifyDNS側で、Netlifyレコードという特殊なDNSレコードを設定します。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:351
+msgid "ドメインプロバイダからは、netlifyが指定するDNSを設定します。netlifyDNS側ではNetlifyレコードという特殊なDNSレコードを設定します。"
+msgstr "The DNS specified by netlify is set by the domain provider. On the netlifyDNS side, a special DNS record called Netlify record is set."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:353
-msgid "あるいは、ドメインプロバイダー側のDNSにAレコードとしてルートをNetlifyのLBのIPを直接指定、CNAMEレコードをwwwからapexサブドメインへ設定しても動作します。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:353
+msgid "もう一つの別の方法として、ドメインプロバイダー側のDNSにAレコードとしてルートをNetlifyのLBのIPを直接指定し、CNAMEレコードをwwwからapexサブドメインへ設定する方法もあります。"
+msgstr "Another alternative is to directly specify the root as Netlify's LB IP in the DNS of the domain provider as an A record, and set a CNAME record from 'www' to the apex subdomain."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:356
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:356
 msgid "独自ドメインで確認"
-msgstr ""
+msgstr "Verify with own domain"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:357
-msgid "設定したURLにアクセスして確認します。httpsまで設定されてれば成功です。上手くいかない場合は、netlifyの管理画面でエラー状況を確認できますので対処しましょう。"
-msgstr ""
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:357
+msgid "設定したURLにアクセスして確認します。成功するとhttpsでアクセスできます。失敗するとnetlifyの管理画面でエラー状況が表示されます。"
+msgstr "Access the configured URL to verify. If successful, access can be done with https. If it fails, error conditions are displayed on netlify's management screen."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:360
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:360
 msgid "関連リンク"
-msgstr ""
+msgstr "Related Links"
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:363
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:363
 msgid ""
 "jaフォルダについて。個人的にi18nを体感するためにjaフォルダとして分離した。英語版は docs/_build/en "
 "にビルドされることを想定。現実には個人ブログで多言語化は考慮不要。"
 msgstr ""
+"About the ja folder. I separated it as a ja folder to personally experience i18n. It is assumed that the English version will be built in docs/_build/en. In reality, it is not necessary to consider multilingualization for personal blogs."
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:364
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:364
 msgid "https://github.com/python-poetry/poetry/pull/591#issuecomment-504762152"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:367
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:367
 msgid "https://github.com/netlify/build-image/blob/xenial/included_software.md"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:368
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:368
 msgid ""
 "https://docs.netlify.com/domains-https/custom-domains/configure-external-"
 "dns/"
 msgstr ""
 
-#: ../../tools/sphinx/sphinx_setup_github_netlify.rst:369
+#: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:369
 msgid "当サイトはfreenomで試行後、googleドメインでドメイン取得し直しました。"
-msgstr ""
+msgstr "After trying with freenom, we have re-purchased the domain with google domain."
+
+#~ msgid ""
+#~ "natさんにより、 `poethepoet`_ "
+#~ "という暫定パッケージを開発してくれているのでこれを活用する。4文字ふえるが、目指すは下記でのコマンド起動す::"
+#~ msgstr ""
+
+#~ msgid "上記setup.pyにより、下記コマンドから実行されるようになる::"
+#~ msgstr ""
+
+#~ msgid "ここまで整備すると、以下コマンドでsphinx-autobuildが起動するようになります::"
+#~ msgstr ""
+
+#~ msgid "特別な対応は特にない。リポジトリを作成してコミットする。"
+#~ msgstr ""
+
+#~ msgid "コマンドラインから対応できると便利なので対応しておく"
+#~ msgstr ""
+
+#~ msgid "netlifyは、githubリポジトリを指定すると、定義したビルドルールに従ってnetlify上の仮想マシンにデプロイして、指定パスをrootとしたサイト公開まで行ってくれます。"
+#~ msgstr ""
+
+#~ msgid "指定したリポジトリにあるnetlify.tomlを読み込んでビルドする仕様になってますので以下を用意します。"
+#~ msgstr ""
+
+#~ msgid "publishが公開するフォルダ。commandがビルド時に使われるコマンドです。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "netlifyでデフォルトで立ち上がる仮想環境は 2020年11月現在、Ubuntu "
+#~ "16.04で、Pythonバージョンは2.7がデフォルトです。バージョンを指定する場合、rutime.txtというファイルにバージョン番号だけ記載しておきます。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "netlifyにはgithubアカウントでログイン可能です。ログインしビルド対象のリポジトリ連携します。「New Site"
+#~ " from git」から特に迷うことなく連携できます。"
+#~ msgstr ""
+
+#~ msgid "お試し用には無料で取得できる `freenom`_ で十分です。 [#domain]_"
+#~ msgstr ""
+
+#~ msgid "ドメインプロバイダからは、netlifyが指定するDNSを設定しておき、netlifyDNS側で、Netlifyレコードという特殊なDNSレコードを設定します。"
+#~ msgstr ""
+
+#~ msgid "あるいは、ドメインプロバイダー側のDNSにAレコードとしてルートをNetlifyのLBのIPを直接指定、CNAMEレコードをwwwからapexサブドメインへ設定しても動作します。"
+#~ msgstr ""
+
+#~ msgid "設定したURLにアクセスして確認します。httpsまで設定されてれば成功です。上手くいかない場合は、netlifyの管理画面でエラー状況を確認できますので対処しましょう。"
+#~ msgstr ""
 

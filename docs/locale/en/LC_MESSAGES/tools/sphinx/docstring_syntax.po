@@ -21,35 +21,35 @@ msgstr ""
 
 #: ../../tools/sphinx/docstring_syntax.rst:2
 msgid "Docstringの記法"
-msgstr ""
+msgstr "Docstring syntax"
 
 #: ../../tools/sphinx/docstring_syntax.rst:5
 msgid "Docstringとは"
-msgstr ""
+msgstr "What is Docstring?"
 
 #: ../../tools/sphinx/docstring_syntax.rst:6
 msgid "Pythonコードの関数などの仕様を記載するための記述"
-msgstr ""
+msgstr "Description used for specifying the details of functions and methods in Python code"
 
 #: ../../tools/sphinx/docstring_syntax.rst:7
 msgid "トリプルクオートで囲う"
-msgstr ""
+msgstr "Enclose within triple quotes"
 
 #: ../../tools/sphinx/docstring_syntax.rst:8
 msgid "reStructuredText記法で書くことが可能"
-msgstr ""
+msgstr "Can be written using reStructuredText format"
 
 #: ../../tools/sphinx/docstring_syntax.rst:9
 msgid "reStructuredTextスタイル，Numpyスタイル，Googleスタイルの3つ"
-msgstr ""
+msgstr "There are three styles: reStructuredText style, Numpy style, and Google style"
 
 #: ../../tools/sphinx/docstring_syntax.rst:12
 msgid "reStructuredTextスタイル"
-msgstr ""
+msgstr "reStructuredText style"
 
 #: ../../tools/sphinx/docstring_syntax.rst:14
 msgid "reStructuredTextスタイル::"
-msgstr ""
+msgstr "reStructuredText style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "param path"
@@ -119,11 +119,11 @@ msgstr ""
 
 #: ../../tools/sphinx/docstring_syntax.rst:37
 msgid "Numpyスタイル"
-msgstr ""
+msgstr "Numpy style"
 
 #: ../../tools/sphinx/docstring_syntax.rst:39
 msgid "Numpyスタイル::"
-msgstr ""
+msgstr "Numpy style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst:64
 msgid "\"\"\"Example function with types documented in the docstring."
@@ -175,11 +175,11 @@ msgstr ""
 
 #: ../../tools/sphinx/docstring_syntax.rst:89
 msgid "Googleスタイル"
-msgstr ""
+msgstr "Google style"
 
 #: ../../tools/sphinx/docstring_syntax.rst:91
 msgid "Googleスタイル::"
-msgstr ""
+msgstr "Google style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst:104
 msgid "\"\"\"Example function with PEP 484 type annotations."

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_installation.rst:3
 msgid "VSCODEをインストールする"
-msgstr ""
+msgstr "Install VSCODE"
 
 #: ../../tools/vscode/vscode_installation.rst:4
 msgid "Last Updated on 2021-08-15"
@@ -29,11 +29,11 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_installation.rst:7
 msgid "本家URL"
-msgstr ""
+msgstr "Official URL"
 
 #: ../../tools/vscode/vscode_installation.rst:9
 msgid "本家からインストーラを使う::"
-msgstr ""
+msgstr "Use the installer from the official website::"
 
 #: ../../tools/vscode/vscode_installation.rst:9
 msgid "https://code.visualstudio.com/"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_installation.rst:14
 msgid "chocoでパッケージ管理する::"
-msgstr ""
+msgstr "Manage with choco package::"
 
 #: ../../tools/vscode/vscode_installation.rst:14
 msgid "https://community.chocolatey.org/packages/vscode"
@@ -53,5 +53,4 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_installation.rst:17
 msgid "chocolateyのインストール：https://chocolatey.org/install"
-msgstr ""
-
+msgstr "Install chocolatey: https://chocolatey.org/install"

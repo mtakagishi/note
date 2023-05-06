@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:2
 msgid "VSCODEでキーボードが効かなくなった場合の対処方法"
-msgstr ""
+msgstr "What to do if the keyboard does not work in VSCODE"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:4
 msgid "VSCODEに以下のようなエラー::"
-msgstr ""
+msgstr "VSCODE shows an error similar to::"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:8
 msgid "そして、エンターキーなどが効かなくなる症状"
-msgstr ""
+msgstr "And symptoms such as the enter key will not work"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:11
 msgid "解決1"
-msgstr ""
+msgstr "solution 1"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:12
 msgid ":kbd:`Ctrl` + :kbd:`Enter`"
@@ -41,23 +41,23 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:14
 msgid "というおまじないで効くようになる場合がある"
-msgstr ""
+msgstr "There are times when it comes to work with a spell called"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:17
 msgid "解決2"
-msgstr ""
+msgstr "solution 2"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:18
 msgid "キーボードショートカットの設定を開く"
-msgstr ""
+msgstr "Open keyboard shortcut settings"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:20
 msgid "ユーザ設定 →　キーボードショートカット"
-msgstr ""
+msgstr "User settings → Keyboard shortcuts"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:22
 msgid "または"
-msgstr ""
+msgstr "or"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:24
 msgid ":kbd:`Ctl` + :kbd:`K` → :kbd:`Ctl` + :kbd:`S`"
@@ -65,15 +65,15 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:26
 msgid "restructuredtext.editor.listEditingで検索"
-msgstr ""
+msgstr "Search with the keyword restructuredtext.editor.listEditing"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:27
 msgid "効かなかったキーの設定を削除"
-msgstr ""
+msgstr "Removed key settings that didn't work"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:30
 msgid "参考URL"
-msgstr ""
+msgstr "Reference URL"
 
 #: ../../tools/vscode/vscode_keyboard_fix.rst:31
 msgid ""

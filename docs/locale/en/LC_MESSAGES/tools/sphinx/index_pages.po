@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-06 02:56+0900\n"
+"POT-Creation-Date: 2023-05-06 19:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,107 +19,138 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../tools/sphinx/index_pages.rst:2
+#: ../../../tools/sphinx/index_pages.rst:2
 msgid "sphinxで索引ページを作成する"
-msgstr ""
+msgstr "Creating Index Pages in Sphinx"
 
-#: ../../tools/sphinx/index_pages.rst:4
+#: ../../../tools/sphinx/index_pages.rst:4
 msgid "sphinxでは、索引ページを作成する機能があります。"
-msgstr ""
+msgstr "Sphinx has a built-in functionality to create index pages."
 
-#: ../../tools/sphinx/index_pages.rst:7
+#: ../../../tools/sphinx/index_pages.rst:7
 msgid "索引ページとは"
-msgstr ""
+msgstr "What are Index Pages?"
 
-#: ../../tools/sphinx/index_pages.rst:8
+#: ../../../tools/sphinx/index_pages.rst:8
 msgid "本の巻末で見つけるアルファベット順、50音順に並んだ用語集のようなページのこと。"
 msgstr ""
+"An index page is a page, often found at the end of a book, containing an "
+"alphabetically ordered list of terms."
 
-#: ../../tools/sphinx/index_pages.rst:11
+#: ../../../tools/sphinx/index_pages.rst:11
 msgid "仕組み"
-msgstr ""
+msgstr "Mechanism"
 
-#: ../../tools/sphinx/index_pages.rst:12
+#: ../../../tools/sphinx/index_pages.rst:12
 msgid "sphinxがhtmlビルド時に genindex.html を勝手に作ってくれます。"
-msgstr ""
+msgstr "During HTML build time, Sphinx automatically creates genindex.html."
 
-#: ../../tools/sphinx/index_pages.rst:13
+#: ../../../tools/sphinx/index_pages.rst:13
 msgid ":kbd:`\\:ref\\:\\`genindex\\`` とすることで索引へのリンクを張ることができます。"
-msgstr ""
+msgstr "You can create links to the index by using :kbd:`\\:ref\\:\\`genindex\\``."
 
-#: ../../tools/sphinx/index_pages.rst:14
+#: ../../../tools/sphinx/index_pages.rst:14
 msgid "各rstページの「indexディレクティブ」「glossaryディレクティブ」から単語を集めて索引化します。"
 msgstr ""
+"Gathers words from the \"index directive\" and the \"glossary directive\""
+" on each rst page and creates an index list."
 
-#: ../../tools/sphinx/index_pages.rst:17
+#: ../../../tools/sphinx/index_pages.rst:17
 msgid "toctree で索引へのリンクさせたい場合は、genindex.rstを作成します [#toctree]_"
 msgstr ""
+"If you want to link to the index using toctree, create genindex.rst "
+"[#toctree]_"
 
-#: ../../tools/sphinx/index_pages.rst:20
+#: ../../../tools/sphinx/index_pages.rst:20
 msgid "indexディレクティブ"
-msgstr ""
+msgstr "Index Directive"
 
-#: ../../tools/sphinx/index_pages.rst:22
+#: ../../../tools/sphinx/index_pages.rst:22
 msgid "indexディレクティブ::"
-msgstr ""
+msgstr "Index Directive::"
 
-#: ../../tools/sphinx/index_pages.rst:26
+#: ../../../tools/sphinx/index_pages.rst:26
 msgid "ページ側に表示はされず、索引に収集されるための印のように使う。"
 msgstr ""
+"Used as a marker that is not displayed on the page, but is instead "
+"collected in the index."
 
-#: ../../tools/sphinx/index_pages.rst:27
+#: ../../../tools/sphinx/index_pages.rst:27
 msgid "複数の単語の索引に紐づけることができる。⇒ [#index]_"
-msgstr ""
+msgstr "It is possible to associate with indexes of multiple words. ⇒ [#index]_"
 
-#: ../../tools/sphinx/index_pages.rst:30
+#: ../../../tools/sphinx/index_pages.rst:30
 msgid "全て最初の文字で分類され、ひらがな、カタカナ、漢字は別文字扱い。日本語としては使いにくい"
 msgstr ""
+"All characters are classified according to their first letter, and "
+"hiragana, katakana, and kanji are treated as separate characters. It is "
+"difficult to use for Japanese."
 
-#: ../../tools/sphinx/index_pages.rst:31
+#: ../../../tools/sphinx/index_pages.rst:31
 msgid ""
 "Sphinx拡張の記事 [#kana-text]_ "
 "で日本語で柔軟な索引が作れるとの情報。試したが、当サイトが環境事情でPython3.7のためコンパイルが通らず、評価できずにいる。"
 msgstr ""
 
-#: ../../tools/sphinx/index_pages.rst:34
+#: ../../../tools/sphinx/index_pages.rst:34
 msgid "glossaryディレクティブ"
-msgstr ""
+msgstr "Glossary Directive"
 
-#: ../../tools/sphinx/index_pages.rst:35
+#: ../../../tools/sphinx/index_pages.rst:35
 msgid "glossaryディレクティブ::"
-msgstr ""
+msgstr "Glossary Directive::"
 
-#: ../../tools/sphinx/index_pages.rst:43
+#: ../../../tools/sphinx/index_pages.rst:43
 msgid "glossaryは用語集として機能する。単なる印であるIndexと違い、ページ側に用語名が表示される。"
 msgstr ""
+"The glossary functions as a collection of terms. Unlike the simple mark "
+"Index, the term name is displayed on the page."
 
-#: ../../tools/sphinx/index_pages.rst:44
+#: ../../../tools/sphinx/index_pages.rst:44
 msgid "グルーピングの概念がある。漢字などを何らかの50音のカナに集約させれば50音に紐づく索引のように作成は可能。"
 msgstr ""
+"There is a concept of grouping. If kanji is condensed into some kana "
+"based on the 50 sounds, it is possible to create an index that is "
+"associated with the 50 sounds."
 
-#: ../../tools/sphinx/index_pages.rst:47
+#: ../../../tools/sphinx/index_pages.rst:47
 msgid ""
 "`How can i include the genindex in a Sphinx TOC? "
 "<https://stackoverflow.com/questions/36235578/how-can-i-include-the-"
 "genindex-in-a-sphinx-toc>`_"
 msgstr ""
 
-#: ../../tools/sphinx/index_pages.rst:48
+#: ../../../tools/sphinx/index_pages.rst:48
 msgid ""
 "`インデックス生成のためのマークアップ <https://www.sphinx-"
 "doc.org/ja/master/usage/restructuredtext/directives.html#index-"
 "generating-markup>`_"
 msgstr ""
+"`Markup for generating indexes <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-"
+"generating-markup>`_"
 
-#: ../../tools/sphinx/index_pages.rst:49
+#: ../../../tools/sphinx/index_pages.rst:49
 msgid ""
 "`【Sphinx拡張】索引と用語集のかな文字対応 "
 "<https://qiita.com/koKekkoh/items/4563b63fdb8eaa3ef4f9>`_"
 msgstr ""
+"`[Sphinx Extension] Kana character correspondence of index and glossary "
+"<https://qiita.com/koKekkoh/items/4563b63fdb8eaa3ef4f9>`_"
 
 #~ msgid "当サイトの場合"
 #~ msgstr ""
 
 #~ msgid "当サイトの索引ページ　⇒　:ref:`genindex`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sphinx extension article [#kana-text]_ "
+#~ "provides information on how to create"
+#~ " flexible indexes in Japanese. However, "
+#~ "I was unable to evaluate it since"
+#~ " our site could not compile it "
+#~ "due to environment-related issues with"
+#~ " Python 3.7."
 #~ msgstr ""
 

@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_default_extension.rst:3
 msgid "VSCODEの新規ファイルのデフォルト拡張子を変更する"
-msgstr ""
+msgstr "Change default extension for new files in VSCODE"
 
 #: ../../tools/vscode/vscode_default_extension.rst:6
 msgid "設定個所"
-msgstr ""
+msgstr "Setting location"
 
 #: ../../tools/vscode/vscode_default_extension.rst:8
 msgid "files.defaultLanguage::"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../tools/vscode/vscode_default_extension.rst:14
 msgid "選択肢例"
-msgstr ""
+msgstr "Choice example"
 
 #: ../../tools/vscode/vscode_default_extension.rst:15
 msgid "\"markdown\""
