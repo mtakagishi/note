@@ -61,3 +61,24 @@ footer {
   display: inline-block;
   margin-left: 1rem;
 }
+/* language */
+.language-switch {
+  display: flex;
+  justify-content: space-between;
+  width: 160px; /* 幅を狭く */
+  margin: 10px 0; /* 上下の余白を追加 */
+}
+
+.language-switch a {
+  padding: 5px 10px; /* パディングを調整 */
+  font-size: 0.8rem; /* テキストサイズを小さく */
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.language-switch a:hover {
+  background-color: #333;
+  color: #fff;
+}
