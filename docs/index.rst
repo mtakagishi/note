@@ -13,12 +13,6 @@ ITノート
   tools/index
 
 .. toctree::
-  :maxdepth: 2
-  :glob:
-
-  blog/index
-
-.. toctree::
   :maxdepth: 1
   :glob:
 
