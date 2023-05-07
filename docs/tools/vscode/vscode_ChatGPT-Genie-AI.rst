@@ -3,6 +3,8 @@
 ランプの魔人-VSCode内でChatGPT連携して作業効率アップ
 ===========================================================
 
+.. image:: https://pbs.twimg.com/media/Fvg91x0aYAEGDXc?format=png&name=900x900
+
 本記事は「ChatGPT - Genie AI」の紹介です。Genieはアラジンに出てくるランプの魔人のこと。Visual Studio Code拡張としてインストールすることでChatGPTと連動を実現します。
 
 要件
