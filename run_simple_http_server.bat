@@ -1,2 +1,2 @@
-python simple_http_server.py
+python simple_http_server.py --open-browser
 pause
