@@ -87,7 +87,7 @@ msgstr "The Moneytizer"
 
 #: ../../about_this_site.rst:32
 msgid "当サイトは「The Moneytizer」の広告プログラムに参加しています。"
-msgstr "This site participates in the "The Moneytizer" advertising program."
+msgstr "This site participates in the The Moneytizer advertising program."
 
 #: ../../about_this_site.rst:34
 msgid "この広告プログラムに参加したい方は紹介リンク経由で5$が付与されます。"

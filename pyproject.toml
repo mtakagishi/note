@@ -21,6 +21,9 @@ sphinx-autobuild = "^2021.3.14"
 autopep8 = "^2.0.2"
 poethepoet = "^0.19.0"
 
+[tool.poetry.group.dev.dependencies]
+translate-po = {git = "https://github.com/mtakagishi/translate-po.git"}
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
