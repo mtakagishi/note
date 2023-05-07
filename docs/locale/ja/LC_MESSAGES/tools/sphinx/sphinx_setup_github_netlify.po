@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-06 21:17+0900\n"
+"POT-Creation-Date: 2023-05-07 11:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -95,7 +95,7 @@ msgid "Pythonは事前にインストールしておく。今回は、Python環�
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:49
-msgid "`インストール手順は本家参照 <https://python-poetry.org/docs/#installation>`_"
+msgid "`インストール手順 <https://python-poetry.org/docs/#installation>`_"
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:52
@@ -183,20 +183,17 @@ msgid "起動効率化の方針"
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:113
-msgid ""
-"sphinx-autobuildの存在だけでもとても効率的なのだが『poetry add sphinx-"
-"autobuild』を打ち込むのは面倒。そこで `2019年に向けてPythonのモダンな開発環境について考える`_ "
-"という記事を参考に下記コマンドで実行する効率化を目指す::"
+msgid "`2019年に向けてPythonのモダンな開発環境について考える`_ という記事を参考に実行コマンドを効率化する::"
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:117
 msgid ""
-"結論としてはこのコマンドでの実現はムリだった。poetryで指定できる[tool.poetry.scripts]は引数指定ができない。この仕様は変更予定はなく、今後もメインストリームに組み込まれる予定はないし、プラグイン開発待ちだが時間がかかりそう"
-" [#task]_"
+"該当記事のコマンドでの実現は失敗した。理由はpoetryで指定できる[tool.poetry.scripts]は引数指定ができないためである。 "
+"[#task]_"
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:119
-msgid "natさんにより、 `poethepoet`_ という暫定パッケージをを活用する。下記でのコマンドで起動することを目指す::"
+msgid "そこで代替パッケージとして `poethepoet`_ を活用する::"
 msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:123
@@ -556,5 +553,22 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "設定したURLにアクセスして確認します。httpsまで設定されてれば成功です。上手くいかない場合は、netlifyの管理画面でエラー状況を確認できますので対処しましょう。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "sphinx-autobuildの存在だけでもとても効率的なのだが『poetry add "
+#~ "sphinx-autobuild』を打ち込むのは面倒。そこで "
+#~ "`2019年に向けてPythonのモダンな開発環境について考える`_ という記事を参考に下記コマンドで実行する効率化を目指す::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "結論としてはこのコマンドでの実現はムリだった。poetryで指定できる[tool.poetry.scripts]は引数指定ができない。この仕様は変更予定はなく、今後もメインストリームに組み込まれる予定はないし、プラグイン開発待ちだが時間がかかりそう"
+#~ " [#task]_"
+#~ msgstr ""
+
+#~ msgid "natさんにより、 `poethepoet`_ という暫定パッケージをを活用する。下記でのコマンドで起動することを目指す::"
+#~ msgstr ""
+
+#~ msgid "`インストール手順は本家参照 <https://python-poetry.org/docs/#installation>`_"
 #~ msgstr ""
 

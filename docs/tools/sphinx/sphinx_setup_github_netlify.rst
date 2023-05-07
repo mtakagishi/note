@@ -46,7 +46,7 @@ Python仮想環境準備
 ===========================
 Pythonは事前にインストールしておく。今回は、Python環境をキレイに保つために仮想環境で分離。 `poetry`_ を利用しました。
 
-`インストール手順は本家参照 <https://python-poetry.org/docs/#installation>`_ 
+`インストール手順 <https://python-poetry.org/docs/#installation>`_ 
 
 .. hint::
   pip install poetry は推奨手順ではないので注意
@@ -110,13 +110,13 @@ sphinx-autobuild起動の効率化
 ======================================
 起動効率化の方針
 ------------------------
-sphinx-autobuildの存在だけでもとても効率的なのだが『poetry add sphinx-autobuild』を打ち込むのは面倒。そこで `2019年に向けてPythonのモダンな開発環境について考える`_ という記事を参考に下記コマンドで実行する効率化を目指す::
+`2019年に向けてPythonのモダンな開発環境について考える`_ という記事を参考に実行コマンドを効率化する::
 
 	poetry run doc //NG
 
-結論としてはこのコマンドでの実現はムリだった。poetryで指定できる[tool.poetry.scripts]は引数指定ができない。この仕様は変更予定はなく、今後もメインストリームに組み込まれる予定はないし、プラグイン開発待ちだが時間がかかりそう [#task]_
+該当記事のコマンドでの実現は失敗した。理由はpoetryで指定できる[tool.poetry.scripts]は引数指定ができないためである。 [#task]_
 
-natさんにより、 `poethepoet`_ という暫定パッケージをを活用する。下記でのコマンドで起動することを目指す::
+そこで代替パッケージとして `poethepoet`_ を活用する::
 
 	poetry run poe doc
 
