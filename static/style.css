@@ -1,5 +1,6 @@
 /* ページ全体のスタイル */
 html, body {
+  font-size: 18px; /* フォントサイズを大きくする */
   height: 100%;
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ main {
 /* アイコンのスタイル */
 .icon {
   font-size: 2rem;
-  margin: 1rem;
+  margin: 1.5rem; /* アイコンの間隔を大きくする */
 }
 .icon-github {
   color: #000; /* 黒色 */
@@ -70,7 +71,7 @@ footer {
 }
 
 .language-switch a {
-  padding: 5px 10px; /* パディングを調整 */
+  padding: 10px 20px; /* パディングを大きくする */
   font-size: 0.8rem; /* テキストサイズを小さく */
   background-color: #f2f2f2;
   border-radius: 5px;
