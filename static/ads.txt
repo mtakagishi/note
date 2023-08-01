@@ -1,3 +1,4 @@
+google.com, pub-0605738724688387, DIRECT, f08c47fec0942fa0
 themoneytizer.com,102694,DIRECT
 smartadserver.com,1097,DIRECT
 loopme.com,s-2411,RESELLER,6c8d5f95897a5a3b
@@ -1292,4 +1293,3 @@ brightcom.com,29559,RESELLER
 google.com,pub-4125454196932019,RESELLER,f08c47fec0942fa0
 yeahmobi.com,113772,RESELLER
 e-planning.net,949b688810cb7439,RESELLER,c1ba615865ed87b2
-google.com, pub-0605738724688387, DIRECT, f08c47fec0942fa0
