@@ -2,37 +2,34 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Netlify Status](https://api.netlify.com/api/v1/badges/cf669616-af9c-424e-bd66-d00fe89e9420/deploy-status)](https://app.netlify.com/sites/jolly-brown-b98547/deploys)
 
-
 ## URL
 
-* "https://mtakagishi.com"
-* "https://jolly-brown-b98547.netlify.app/"
+- "https://mtakagishi.com"
+- "https://jolly-brown-b98547.netlify.app/"
 
-## poetry準備
+## poetry 準備
 
-[poetryは推奨方法でインストール](https://python-poetry.org/docs/#installation)
+[poetry は推奨方法でインストール](https://python-poetry.org/docs/#installation)
 
 ## install
 
-``` bash
-poetry config --list
-poetry config virtualenvs.in-project true
+```bash
 poetry install
 ```
 
 ## sphinx build
 
-``` bash
+```bash
 sphinx-build docs/ docs/_build
 ```
 
 ## sphinx-autobuild
 
-``` bash
+```bash
 poetry run poe doc
 ```
 
-## VSCODEのターミナルをgit bashへ
+## VSCODE のターミナルを git bash へ
 
 `terminal.integrated.shell.windows` に "C:\\Program Files\\Git\\bin\\bash.exe" を設定
 
