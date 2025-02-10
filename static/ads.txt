@@ -584,7 +584,3 @@ themediagrid.com, B8N9YH, RESELLER, 35d5010d7789b49d
 gumgum.com, 15835, RESELLER, ffdef49475d318a9
 33across.com, 001Pg00000LoMyvIAF, RESELLER, bbea06d9c4d2853c
 richaudience.com, x1vKpaGD9I, RESELLER
-rubiconproject.com,26800,RESELLER,0bfd66d529a55807
-adform.com,2926,RESELLER
-improvedigital.com,2106,RESELLER
-smartadserver.com,4288,RESELLER
