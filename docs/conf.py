@@ -16,7 +16,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'IT-Note'
-copyright = '2023, mtakagishi'
+copyright = '2025, mtakagishi'
 author = 'mtakagishi'
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
@@ -90,7 +90,7 @@ html_theme_options = {
     "github_url": "https://github.com/mtakagishi/note",
     "twitter_url": "https://twitter.com/mtakagishi_note",
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
-    "article_footer_items": ["ads_parts.html", "prev-next.html"],
+    "article_footer_items": ["ads_google.html","ads_themoneytizer.html", "prev-next.html"],
     "footer_start": ["copyright", "last-updated.html"],
     "footer_end": ["sphinx-version", "theme-version"],
 }
