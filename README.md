@@ -23,15 +23,35 @@ port:デフォは8000。
 ビルド済みなら、`run_simple_http_server.bat` でOK
 
 ## サイト維持メモ
-### 記事
-- タイトル直後 `Last Updated on yyyy-mm-dd` は手動。※ファイルタイムスタンプは不安定にて自動化断念
+### 記事テンプレ
+```
+============================
+タイトル
+============================
+:投稿日: 2025-MM-DD
+:タグ: keyword1, keyword2
+
+概要
+====
+
+ここに簡単な導入・目的など
+
+本編
+====
+
+学び・気づき
+============
+
+```
+
 ### 英語化
 - poファイル生成
 `poegry run poe gettext`
 - Google翻訳
 `poetry run python .\translate-po-ja-en.py` {フィアルPATH}
-- 手作業
-`docs/locale/en/LC_MESSAGES` 配下を参照
+- 手作業翻訳
+  - 画面を目視確認。
+  - 翻訳漏れを発見したら `docs/locale/en/LC_MESSAGES` 配下を更新
 
 ## その他Tips
 ### VSCODE のターミナルを git bash へ
