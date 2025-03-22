@@ -1,0 +1,69 @@
+==============================
+2025-03-22_サイト更新再開にあたり
+==============================
+
+:投稿日: 2025-03-22
+:タグ: Sphinx, ドキュメント, ブログ運用, テンプレート
+
+概略
+====
+
+久しぶりにサイトの更新を再開するにあたって行ったことのまとめ
+
+対応メモ
+================
+
+英語化手順
+----------
+
+  英語翻訳のsphinx記事としての手順を失念しがちなのでドキュメント化を強化
+
+  `README <https://github.com/mtakagishi/note>`_ 
+
+Google広告の自動広告OFF
+---------------------------------
+
+Google Adsense自動広告の表示過多。自動広告は全てOFFへ。
+
+トップページ整備
+-----------------
+
+  見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。
+
+ブログ記事効率化
+------------------
+
+VSCodeスニペットの整備
+
+.. code-block:: json
+
+  "Sphinx Blog Template": {
+    "prefix": "mt-blog",
+    "body": [
+      "============================",
+      "${1:${TM_FILENAME_BASE}}",
+      "============================",
+      ":投稿日: ${2:${CURRENT_YEAR}}-${3:${CURRENT_MONTH}}-${4:${CURRENT_DATE}}",
+      ":タグ: ${5:keyword1}, ",
+      "",
+      "概要",
+      "====",
+      "",
+      "${6:ここに簡単な導入・目的など}",
+    ],
+    "description": "Sphinxブログテンプレート"
+  },
+
+次ステップ
+==========
+
+ablogで便利とのウワサの検証、しかし `poetry add ablog` にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。
+
+.. code-block:: 
+  
+  The current project's supported Python range (>=3.8,<4.0) is not compatible with some of the required packages Python requirement:
+  - ablog requires Python >=3.10, so it will not be satisfied for Python >=3.8,<3.10
+  
+  Because ablog (0.11.12) requires Python >=3.10
+   and no versions of ablog match >0.11.12,<0.12.0, ablog is forbidden.
+  So, because itnote depends on ablog (^0.11.12), version solving failed.

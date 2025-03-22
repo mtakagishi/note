@@ -15,7 +15,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'IT-Note'
+project = 'mtakagishi'
 copyright = '2025, mtakagishi'
 author = 'mtakagishi'
 
