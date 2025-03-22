@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-06 01:10+0900\n"
+"POT-Creation-Date: 2025-03-22 11:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,270 +17,288 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.17.0\n"
 
-#: ../../programming/python/python_poetry.rst:3
+#: ../../../programming/python/python_poetry.rst:3
 msgid "Poetryを使ったパッケージ管理"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "更新"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:4
-msgid "2023-05-03"
+#: ../../../programming/python/python_poetry.rst:4
+msgid "2024-01-03"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:6
+#: ../../../programming/python/python_poetry.rst:6
 msgid "仮想環境+パッケージ管理ツール"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:8
+#: ../../../programming/python/python_poetry.rst:8
 msgid "`公式サイト <https://python-poetry.org/>`_"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:11
+#: ../../../programming/python/python_poetry.rst:11
 msgid "インストール"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:13
+#: ../../../programming/python/python_poetry.rst:13
 msgid "公式HPにインストールコマンドがあるのでターミナルから実行します。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:15
+#: ../../../programming/python/python_poetry.rst:15
 msgid "`公式HPのインストール手順へ <https://python-poetry.org/docs/#installation>`_"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:18
-msgid "``pip install --user poetry``  の利用は非推奨。 非推奨手順ではself update が利用できない。"
+#: ../../../programming/python/python_poetry.rst:18
+msgid ""
+"pipx でのインストールが推奨に切り替わりました。 "
+"Windowsの方でPowershellコマンドでインストールして来た方、pipxでの管理への切替をおすすめします。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:22
+#: ../../../programming/python/python_poetry.rst:22
 msgid "基本コマンド"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "バージョン確認"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:23
+#: ../../../programming/python/python_poetry.rst:23
 msgid "poetry --version"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "pyproject.toml作成"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:24
+#: ../../../programming/python/python_poetry.rst:24
 msgid "poetry init"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "PKGをinstall"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:25
+#: ../../../programming/python/python_poetry.rst:25
 msgid "poetry install"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "依存PKGを最新化"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:26
+#: ../../../programming/python/python_poetry.rst:26
 msgid "poetry update"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "PKG追加"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:27
+#: ../../../programming/python/python_poetry.rst:27
 msgid "poetry add [pkg]"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "開発用PKG追加"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:28
+#: ../../../programming/python/python_poetry.rst:28
 msgid "poetry add --dev [pkg]"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "GITHUBのPKGを追加"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:29
+#: ../../../programming/python/python_poetry.rst:29
 msgid "poetry add git+https://github.com/repo/pkg.git"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "PKG削除"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:30
+#: ../../../programming/python/python_poetry.rst:30
 msgid "poetry remove [pkg]"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:34
+#: ../../../programming/python/python_poetry.rst:34
 msgid "venv設定"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "設定確認"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:35
+#: ../../../programming/python/python_poetry.rst:35
 msgid "poetry config --list"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "venv分離設定"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:36
+#: ../../../programming/python/python_poetry.rst:36
 msgid "poetry config virtualenvs.in-project true"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:38
-msgid "in-projectはTrueにしておくと該当プロジェクトに閉じた影響範囲で管理されます。"
+#: ../../../programming/python/python_poetry.rst:38
+msgid ""
+"in-"
+"projectはTrueにしておくと該当プロジェクトに閉じた影響範囲で管理されます。--localオプションをつけると、poetry.tomlに記録されてgit管理できるようになります。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:40
+#: ../../../programming/python/python_poetry.rst:40
 msgid "venv環境を独立するためのconfig確認・設定::"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:46
+#: ../../../programming/python/python_poetry.rst:46
 msgid "poetry self update 履歴"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:47
+#: ../../../programming/python/python_poetry.rst:47
 msgid ""
-"非推奨インストール方法ではself updateがNG。 しかし推奨インストールでもself updateがerrorとなった。 "
-"そこで対処法のメモを記録しておく。"
+"Windows版では、度々self updateがNGになります。pipx版になったことで改善が期待できそうです。 "
+"以下は、Powershellコマンドでインストールしていた時代の過去の対処法のメモです。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:51
-#: ../../programming/python/python_poetry.rst:110
+#: ../../../programming/python/python_poetry.rst:50
+#: ../../../programming/python/python_poetry.rst:109
 msgid "環境::"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:57
+#: ../../../programming/python/python_poetry.rst:56
 msgid "1.1.6⇒1.1.7(2021/08/14)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "ModuleNotFoundError: No module named 'msgpack.exceptions'"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "更新手順"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:64
+#: ../../../programming/python/python_poetry.rst:63
 msgid "%USERPROFILE%\\.poetry フォルダを削除"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:65
+#: ../../../programming/python/python_poetry.rst:64
 msgid "推奨手順のインストールを実行"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:67
+#: ../../../programming/python/python_poetry.rst:66
 msgid ""
 "(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-"
 "poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:70
+#: ../../../programming/python/python_poetry.rst:69
 msgid "1.1.7⇒1.1.8(2021/08/22)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "ModuleNotFoundError: No module named 'crashtest.inspector'"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "更新手順 = 前回同様で復旧"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "issue修正待ちです。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "https://github.com/python-poetry/poetry/issues/2681"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:82
+#: ../../../programming/python/python_poetry.rst:81
 msgid "1.1.8⇒1.1.9(2021/09/19)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:87
+#: ../../../programming/python/python_poetry.rst:86
 msgid "1.1.9⇒1.1.11(2021/11/2)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:89
+#: ../../../programming/python/python_poetry.rst:88
 msgid "$ ModuleNotFoundError: No module named 'cleo'"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "2021-12-18 追記"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "Windows版 Python3.10.1において、"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "poetryの依存モジュールがいくつか漏れてるようです。下記コマンドで一次凌ぎ。"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid ""
 "> pip install cleo tomlkit poetry.core requests cachecontrol cachy "
 "html5lib pkginfo virtualenv lockfile"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "https://github.com/python-poetry/poetry/issues/553"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:102
+#: ../../../programming/python/python_poetry.rst:101
 msgid "1.1.13(2022/3/7)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "不調のため再インストール"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:109
+#: ../../../programming/python/python_poetry.rst:108
 msgid "1.4.2(2023/05/03)"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "%USERPROFILE%.poetry は存在せず従来手順から変更"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "%APPDATA%\\pypoetry が存在するのでこのフォルダを削除する"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst:120
+#: ../../../programming/python/python_poetry.rst:119
 msgid ""
 "FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。: "
 "'C:\\\\Users\\\\username\\\\AppData\\\\Roaming\\\\Python\\\\Scripts\\\\poetry.exe'"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "このエラーが追加で発生。該当ファイルを手動削除し再実行"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "再実行しインストール成功"
 msgstr ""
 
-#: ../../programming/python/python_poetry.rst
+#: ../../../programming/python/python_poetry.rst
 msgid "最後に環境変数のPATHに追加　C:\\Users\\username\\AppData\\Roaming\\Python\\Scripts"
 msgstr ""
+
+#~ msgid "2023-05-03"
+#~ msgstr ""
+
+#~ msgid "``pip install --user poetry``  の利用は非推奨。 非推奨手順ではself update が利用できない。"
+#~ msgstr ""
+
+#~ msgid "in-projectはTrueにしておくと該当プロジェクトに閉じた影響範囲で管理されます。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "非推奨インストール方法ではself updateがNG。 しかし推奨インストールでもself "
+#~ "updateがerrorとなった。 そこで対処法のメモを記録しておく。"
+#~ msgstr ""
 
