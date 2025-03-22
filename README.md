@@ -7,50 +7,47 @@
 - "https://mtakagishi.com"
 - "https://jolly-brown-b98547.netlify.app/"
 
-## poetry 準備
+## サイト趣旨
 
-[poetry は推奨方法でインストール](https://python-poetry.org/docs/#installation)
+- IT関連の技術の記録
 
-## install
-
+## localhostでの参照方法
 ```bash
+git clone https://github.com/mtakagishi/note.git
+cd note
 poetry install
-```
-
-## sphinx build
-
-```bash
-sphinx-build docs/ docs/_build
-```
-
-## sphinx-autobuild
-
-```bash
 poetry run poe doc
+python simple_http_server.py -p {port} --open-browser
 ```
+port:デフォは8000。
+ビルド済みなら、`run_simple_http_server.bat` でOK
 
-## VSCODE のターミナルを git bash へ
+## サイト維持メモ
+### 記事
+- タイトル直後 `Last Updated on yyyy-mm-dd` は手動。※ファイルタイムスタンプは不安定にて自動化断念
+### 英語化
+- poファイル生成
+`poegry run poe gettext`
+- Google翻訳
+`poetry run python .\translate-po-ja-en.py` {フィアルPATH}
+- 手作業
+`docs/locale/en/LC_MESSAGES` 配下を参照
 
+## その他Tips
+### VSCODE のターミナルを git bash へ
 `terminal.integrated.shell.windows` に "C:\\Program Files\\Git\\bin\\bash.exe" を設定
 
-## proxy
-
-### pip
-
+### pip in proxy
 ```ini:$HOME/pip/pip.ini
  [global]
 proxy = [user:passwd@]http://proxy:port
 ```
-
-### shell
-
+### shell in proxy
 ```bash
 export HTTP_PROXY="http://proxy:port"
 export HTTPS_PROXY="http://proxy:port"
 ```
-
-### git
-
+### git in proxy
 ```bash
 git config --global http.proxy http://proxy:port
 git config --global https.proxy http://proxy:port
