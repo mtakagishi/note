@@ -90,7 +90,7 @@ html_theme_options = {
     "github_url": "https://github.com/mtakagishi/note",
     "twitter_url": "https://twitter.com/mtakagishi_note",
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
-    "article_footer_items": ["ads_google.html","ads_themoneytizer.html", "prev-next.html"],
+    "article_footer_items": ["ads_google.html","ads_themoneytizer.html"],
     "footer_start": ["copyright", "last-updated.html"],
     "footer_end": ["sphinx-version", "theme-version"],
 }
