@@ -65,14 +65,14 @@ footer {
 /* language */
 .language-switch {
   display: flex;
-  justify-content: space-between;
-  width: 160px; /* 幅を狭く */
-  margin: 10px 0; /* 上下の余白を追加 */
+  justify-content: flex-start; /* 左寄せ */
+  gap: 20px; /* ← この値で感覚を調整 */
+  margin: 10px 0;
 }
 
 .language-switch a {
-  padding: 10px 20px; /* パディングを大きくする */
-  font-size: 0.8rem; /* テキストサイズを小さく */
+  padding: 8px 16px;
+  font-size: 0.9rem;
   background-color: #f2f2f2;
   border-radius: 5px;
   text-decoration: none;
