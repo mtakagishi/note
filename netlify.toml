@@ -8,8 +8,10 @@ from = "/"
 to = "/ja/"
 status = 302
 conditions = { Language = ["ja"] }
+force = true
 
 [[redirects]]
 from = "/"
 to = "/en/"
 status = 302
+force = true
