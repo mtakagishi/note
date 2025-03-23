@@ -1,9 +1,1 @@
-Pillow
-pydata-sphinx-theme
-myst-parser
-sphinxcontrib-blockdiag
-sphinx-sitemap
-sphinxnotes-strike
-sphinx-last-updated-by-git
-sphinx-git
 poetry

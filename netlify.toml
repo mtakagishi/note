@@ -1,7 +1,7 @@
 [build]
 environment = { PYTHON_VERSION = "3.13" }
 # command = "bash ./build.sh"
-command = "poetry install --no-dev && poetry run poe doc"
+command = "poetry install && poetry run poe doc"
 publish = "docs/_build/html"
 
 [[redirects]]
