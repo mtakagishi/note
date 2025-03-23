@@ -1,21 +1,9 @@
 [build]
 environment = { PYTHON_VERSION = "3.13" }
+# command = "bash ./build.sh"
 command = "poetry install --no-root && poetry run poe doc"
 publish = "docs/_build/html"
 
-[[redirects]]
-from = "/"
-to = "/en/"
-status = 302
-conditions = { Language = ["en"] }
-
-[[redirects]]
-from = "/"
-to = "/ja/"
-status = 302
-conditions = { Language = ["ja"] }
-
-# fallback: その他の言語は日本語へ
 [[redirects]]
 from = "/"
 to = "/ja/"
