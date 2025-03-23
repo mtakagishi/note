@@ -9,7 +9,6 @@ to = "/ja/"
 status = 302
 conditions = { Language = ["ja"] }
 
-# fallback: その他の言語は英語へ
 [[redirects]]
 from = "/"
 to = "/en/"
