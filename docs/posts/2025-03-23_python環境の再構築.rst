@@ -6,7 +6,13 @@
 
 概要
 ====
-- 2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境にする
+
+2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境に再構築を行った際の対応のまとめ
+
+実現したいこと
+================
+
+local環境も、netlify環境もpython3.13ベースで動作させたい。現状はバージョン不一致でかつnetlify側が3.8縛り。
 
 修正前の動作環境
 ================
@@ -46,7 +52,6 @@ pipx整備
 
 .. code-block:: bash
   :caption: pipx整備
-  :linenos:
   
   python -m pip install --upgrade pip
   python -m pip install --user pipx
@@ -57,7 +62,6 @@ poetry整備
 
 .. code-block:: bash
   :caption: poetry整備
-  :linenos:
   
   pipx install poetry
 
@@ -101,16 +105,51 @@ netlify.toml修正
 .. code-block:: toml
   :caption: netlify.toml
   :linenos:
-  :emphasize-lines: 2
   
   [build]
   environment = { PYTHON_VERSION = "3.13" }
-  command = "poetry install --no-root && poetry run poe doc"
-  publish = "docs/_build/html"
 
 netlify確認
 ------------------
 ``git push`` を実行。デプロイ結果を確認する。
+
+バージョンの統一について
+========================
+
+対応方針
+------------
+
+ビルド手段をpoetryに統一する。
+
+requirement.txtの修正
+------------------------
+
+修正前::
+
+  Pillow==9.5
+  pydata-sphinx-theme
+  myst-parser
+  sphinxcontrib-blockdiag
+  sphinx-sitemap
+  sphinxnotes-strike
+  sphinx-last-updated-by-git
+  sphinx-git
+
+修正後::
+
+  poetry
+
+netlify.tomlの修正
+---------------------------------
+
+修正前::
+
+  command = "bash ./build.sh"
+
+修正後::
+  
+  command = "poetry install --no-root && poetry run poe doc"
+
 
 その他のエラー
 ========================
