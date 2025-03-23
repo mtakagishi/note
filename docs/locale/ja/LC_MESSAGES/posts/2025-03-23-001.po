@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-23 22:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../posts/2025-03-23-001.rst:3
+msgid "2025-03-23 python環境の再構築"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:4
+msgid "2025-03-23"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "タグ"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:5
+msgid "Python, 環境構築"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:8
+msgid "概要"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:10
+msgid "2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境に再構築を行った際の対応のまとめ"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:13
+msgid "実現したいこと"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:15
+msgid "local環境も、netlify環境もpython3.13ベースで動作させたい。現状はバージョン不一致でかつnetlify側が3.8縛り。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:18
+msgid "修正前の動作環境"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "ローカルPC"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:20
+msgid "Python3.10ベースで動作、python3.10で動作"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "netlify"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:22
+msgid "Ubuntu Focal 20.04 、Python3.8で動作"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:25
+msgid "ローカル環境の整備"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:28
+msgid "python3.10のアンインストール"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:30
+msgid "過去にインストーラで入れてたものを削除。今後はMicrosoft Storeに統一。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:33
+msgid "後のpipxやpoetryでPATHエラーになる場合がある"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:35
+msgid "主なエラー内容"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:36
+msgid ""
+"Fatal error in launcher: Unable to create process using "
+"'C:\\\\Python\\\\Python310\\\\python.exe'"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:37
+msgid "No Python at 'C:\\\\Python\\\\Python310\\\\python.exe'"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:39
+msgid "対策として以下を確認、予め削除しておく。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:40
+msgid "%HOMEPATH%\\\\APPDATA\\\\Roaming\\\\Python"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:41
+msgid "%HOMEPATH%\\\\APPDATA\\\\Local\\\\pipx"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:42
+msgid "%HOMEPATH%\\\\APPDATA\\\\Local\\\\poetry"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:45
+msgid "python3.13のインストール"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:47
+msgid "Microsoft Storeからpython3.13を選択して入手"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:51 ../../../posts/2025-03-23-001.rst:53
+msgid "pipx整備"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:61 ../../../posts/2025-03-23-001.rst:63
+msgid "poetry整備"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:70
+msgid "pyproject.toml修正"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "修正前"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:73
+msgid "python = \"^3.10\""
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "修正後"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:75
+msgid "python = \"^3.13\""
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:78
+msgid "確認"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:80
+msgid "ローカルビルドしてサイトを確認"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:83
+msgid "netlify対応"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:86
+msgid "netlify側のOSイメージの最新化"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:88
+msgid "Ubuntu Focal 20.04の場合、Python3.13に未対応のため、イメージを最新化する。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "設定箇所"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "netlify のWeb管理画面"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "> Site configuration"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "> Build & deploy settings"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst
+msgid "> Build image selection"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:96
+msgid "Ubuntu Focal 20.04"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:98
+msgid "Ubuntu Noble 24.04"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:101
+msgid "netlify.toml修正"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:103
+msgid ""
+"`参考：How to use configurable Python versions <https://www.netlify.com/blog"
+"/announcing-configurable-python-versions-in-netlify-builds/>`_"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:105
+msgid "netlify.toml"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:113
+msgid "netlify確認"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:114
+msgid "``git push`` を実行。デプロイ結果を確認する。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:117
+msgid "バージョンの統一について"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:120
+msgid "対応方針"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:122
+msgid "ビルド手段をpoetryに統一する。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:125
+msgid "requirement.txtの修正"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:127 ../../../posts/2025-03-23-001.rst:145
+msgid "修正前::"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:138 ../../../posts/2025-03-23-001.rst:149
+msgid "修正後::"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:143
+msgid "netlify.tomlの修正"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:155
+msgid "その他のエラー"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:158
+msgid "blockdiag + Pillow（画像描画）"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:160
+msgid "発生エラー::"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:161
+msgid "'FreeTypeFont' object has no attribute 'getsize'"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:163
+msgid "経緯::"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:164
+msgid ""
+"``Pillow = \"==9.5.0\"`` が Python3.13対応でエラーとなる。 ``Pillow = \"^10.0\"`` "
+"へ修正したが、blockdiag がPillowの最新に対応していない。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:167
+msgid "暫定対策："
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:168
+msgid "blockdiag についてはメンテも停止の様子にて断念。利用ページは削除。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:170
+msgid "今後に向けて："
+msgstr ""
+
+#: ../../../posts/2025-03-23-001.rst:171
+msgid "代替として、graphviz の活用などを模索"
+msgstr ""
+
+#~ msgid "2025-03-23_python環境の再構築"
+#~ msgstr ""
+

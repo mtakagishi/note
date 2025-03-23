@@ -1,0 +1,100 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishiReport-Msgid-Bugs-To:POT-Creation-"
+"Date:2025-03-23 19:58+0900PO-Revision-Date:YEAR-MO-DA HO:MI+ZONELast-"
+"Translator:FULL NAME <EMAIL@ADDRESS>Language:enLanguage-Team:en "
+"<LL@li.org>Plural-Forms:nplurals=2; plural=(n != 1);MIME-Version:1"
+".0Content-Type:text/plain; charset=utf-8Content-Transfer-Encoding"
+":8bitGenerated-By:Babel 2.17.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-23 22:25+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../posts/2025-03-22-001.rst:3
+msgid "2025-03-22 サイト更新再開にあたり"
+msgstr "2025-03-22 Resuming Site Updates"
+
+#: ../../../posts/2025-03-22-001.rst
+msgid "投稿日"
+msgstr "Posted on"
+
+#: ../../../posts/2025-03-22-001.rst:5
+msgid "2025-03-22"
+msgstr "2025-03-22"
+
+#: ../../../posts/2025-03-22-001.rst
+msgid "タグ"
+msgstr "tags"
+
+#: ../../../posts/2025-03-22-001.rst:6
+msgid "Sphinx, ドキュメント, ブログ運用, テンプレート"
+msgstr "Sphinx, Documentation, Blog Operation, Template"
+
+#: ../../../posts/2025-03-22-001.rst:9
+msgid "概要"
+msgstr "Overview"
+
+#: ../../../posts/2025-03-22-001.rst:11
+msgid "久しぶりにサイトの更新を再開するにあたって行ったことのまとめ"
+msgstr "Summary of the steps I took to resume updating my site after a long break"
+
+#: ../../../posts/2025-03-22-001.rst:14
+msgid "対応メモ"
+msgstr "Response notes"
+
+#: ../../../posts/2025-03-22-001.rst:17
+msgid "英語化手順の整理"
+msgstr "English translation procedure"
+
+#: ../../../posts/2025-03-22-001.rst:19
+msgid "英語翻訳のsphinx記事としての手順を失念しがちなのでドキュメント化を強化"
+msgstr "Since I often forget the steps for writing English-translated Sphinx articles, I decided to improve the documentation."
+
+
+#: ../../../posts/2025-03-22-001.rst:21
+msgid "`README <https://github.com/mtakagishi/note>`_"
+msgstr "`README <https://github.com/mtakagishi/note>`_"
+
+#: ../../../posts/2025-03-22-001.rst:24
+msgid "Google広告の自動広告OFF"
+msgstr "Automatic Google Ads OFF"
+
+#: ../../../posts/2025-03-22-001.rst:26
+msgid "Google Adsense自動広告の表示過多。自動広告は全てOFFへ。"
+msgstr "Too many automatic Google AdSense ads were being displayed, so I turned them all off."
+
+#: ../../../posts/2025-03-22-001.rst:29
+msgid "トップページ整備"
+msgstr "Home page maintenance"
+
+#: ../../../posts/2025-03-22-001.rst:31
+msgid "見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。"
+msgstr "I reviewed the CSS to improve the appearance, but in the end, I decided to set up an automatic redirect from the homepage to /ja."
+
+
+#: ../../../posts/2025-03-22-001.rst:34
+msgid "ブログ記事効率化"
+msgstr "Streamlining Blog Posts"
+
+#: ../../../posts/2025-03-22-001.rst:36
+msgid "VSCodeスニペットの整備"
+msgstr "Organizing VSCode Snippets"
+
+#: ../../../posts/2025-03-22-001.rst:58
+msgid "次ステップ"
+msgstr "Next step"
+
+#: ../../../posts/2025-03-22-001.rst:60
+msgid ""
+"ablogで便利とのウワサの検証、しかし `poetry add ablog` "
+"にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。"
+msgstr "I tried to verify the rumor that ablog is useful, but encountered an error with `poetry add ablog`, so I gave up for now. Next, I'll update to the latest Python version."
+
+

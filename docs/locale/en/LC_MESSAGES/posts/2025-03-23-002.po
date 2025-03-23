@@ -1,0 +1,110 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishiReport-Msgid-Bugs-To:POT-Creation-"
+"Date:2025-03-23 19:58+0900PO-Revision-Date:YEAR-MO-DA HO:MI+ZONELast-"
+"Translator:FULL NAME <EMAIL@ADDRESS>Language:enLanguage-Team:en "
+"<LL@li.org>Plural-Forms:nplurals=2; plural=(n != 1);MIME-Version:1"
+".0Content-Type:text/plain; charset=utf-8Content-Transfer-Encoding"
+":8bitGenerated-By:Babel 2.17.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-23 22:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../posts/2025-03-23-002.rst:3
+msgid "2025-03-23 netlifyで302リダイレクト"
+msgstr "2025-03-23 Setting Up a 302 Redirect on Netlify"
+
+#: ../../../posts/2025-03-23-002.rst
+msgid "投稿日"
+msgstr "Posted on"
+
+#: ../../../posts/2025-03-23-002.rst:4
+msgid "2025-03-23"
+msgstr "2025-03-23"
+
+#: ../../../posts/2025-03-23-002.rst
+msgid "タグ"
+msgstr "tags"
+
+#: ../../../posts/2025-03-23-002.rst:5
+msgid "netlify, ブログ運用"
+msgstr "Netlify, Blog Management"
+
+#: ../../../posts/2025-03-23-002.rst:8
+msgid "概要"
+msgstr "Overview"
+
+#: ../../../posts/2025-03-23-002.rst:9
+msgid "netlifyで302リダイレクトを実現する方法をまとめた。"
+msgstr "This post summarizes how to implement 302 redirects on Netlify."
+
+#: ../../../posts/2025-03-23-002.rst:12
+msgid "実現したいこと"
+msgstr "What I want to achieve"
+
+#: ../../../posts/2025-03-23-002.rst:14
+msgid "https://mtakagishi.com/ にアクセスした際に、"
+msgstr "When you visit https://mtakagishi.com/,"
+
+#: ../../../posts/2025-03-23-002.rst
+msgid "日本語ユーザ"
+msgstr "Japanese User"
+
+#: ../../../posts/2025-03-23-002.rst:15
+msgid "/ja へ 302リダイレクトし日本語ページが初期表示される"
+msgstr "Redirect to /ja with a 302 status so that the Japanese page is shown by default."
+
+#: ../../../posts/2025-03-23-002.rst
+msgid "日本語以外"
+msgstr "Other than Japanese"
+
+#: ../../../posts/2025-03-23-002.rst:16
+msgid "/en へ 302リダイレクトし英語ページが初期表示される"
+msgstr "Redirect to /en with a 302 status so that the English page is shown by default."
+
+#: ../../../posts/2025-03-23-002.rst:19
+msgid "netlify仕様"
+msgstr "netlify specification"
+
+#: ../../../posts/2025-03-23-002.rst:20
+msgid "設定方法は ``_redirects`` の配置か ``netlify.toml`` の記載"
+msgstr "You can configure redirects by using either a ``_redirects`` file or a ``netlify.toml`` file."
+
+#: ../../../posts/2025-03-23-002.rst:21
+#, python-brace-format
+msgid "ブラウザの言語で分岐可能。``conditions = { Language = [\"ja\"] }`` のように使う"
+msgstr "You can branch redirects based on the browser's language. For example: ``conditions = { Language = [\"ja\"] }``"
+
+#: ../../../posts/2025-03-23-002.rst:22
+msgid "複数のルーティング設定可能で上から解釈される。"
+msgstr "You can define multiple routing rules, which are interpreted in order from top to bottom."
+
+#: ../../../posts/2025-03-23-002.rst:23
+msgid "from の直下に index.html が存在する場合はリダイレクトされない。リダイレクトする場合はforce=trueが必要"
+msgstr "If an index.html file exists at the target path, the redirect won’t work unless you add `force = true`."
+
+#: ../../../posts/2025-03-23-002.rst:26
+msgid "nelify.tomlの設定例"
+msgstr "Example of netlify.toml configuration"
+
+#: ../../../posts/2025-03-23-002.rst:28
+msgid "netlify.toml"
+msgstr "netlify.toml"
+
+#: ../../../posts/2025-03-23-002.rst:46
+msgid "参考URL"
+msgstr "Reference URL"
+
+#: ../../../posts/2025-03-23-002.rst:47
+msgid "`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_"
+msgstr ""
+"`netlify related documentation "
+"<https://docs.netlify.com/routing/redirects/>`_"
+
