@@ -6,14 +6,14 @@
 
 概要
 ====
-- 2023年整備のsphinx+netlify環境(python3.8)をpython3.13環境にする
+- 2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境にする
 
 修正前の動作環境
 ================
 :ローカルPC:
-  Python3.10ベースで動作
+  Python3.10ベースで動作、python3.10で動作
 :netlify:
-  Ubuntu Focal 20.04 ベースの環境で動作
+  Ubuntu Focal 20.04 、Python3.8で動作
 
 ローカル環境の整備
 ====================
@@ -112,3 +112,21 @@ netlify確認
 ------------------
 ``git push`` を実行。デプロイ結果を確認する。
 
+その他のエラー
+========================
+
+blockdiag + Pillow（画像描画）
+-------------------------------------------
+
+発生エラー::
+  'FreeTypeFont' object has no attribute 'getsize'
+
+経緯::
+  ``Pillow = "==9.5.0"`` が Python3.13対応でエラーとなる。
+  ``Pillow = "^10.0"`` へ修正したが、blockdiag がPillowの最新に対応していない。
+
+暫定対策：
+  blockdiag についてはメンテも停止の様子にて断念。利用ページは削除。
+
+今後に向けて：
+  代替として、graphviz の活用などを模索
