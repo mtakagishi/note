@@ -13,5 +13,4 @@ cp static/robots.txt docs/_build/html/
 cp static/ads.txt docs/_build/html/
 cp static/style.css docs/_build/html/
 cp static/cmp.js docs/_build/html/
-cp static/_redirects docs/_build/html/
 cp docs/_build/html/ja/sitemap.xml docs/_build/html/
