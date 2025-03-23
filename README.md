@@ -27,7 +27,7 @@ port:デフォは8000。
 - poファイル生成
 `poegry run poe gettext`
 - Google翻訳
-`poetry run python .\translate-po-ja-en.py` {フィアルPATH}
+`poetry run python .\translate-po-ja-en.py` {ファイルPATH}
 - 手作業翻訳
   - 画面を目視確認。
   - 翻訳漏れを発見したら `docs/locale/en/LC_MESSAGES` 配下を更新
