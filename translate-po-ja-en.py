@@ -1,6 +1,7 @@
 import os
 import sys
 from translate_po.main import run
+import asyncio
 
 def clean_path(path_str):
     """ダブルクォートやシングルクォートを取り除いて正規化"""
@@ -28,7 +29,7 @@ def main():
 
     translated = untranslated  # 上書き翻訳
 
-    run(fro=from_lang, to=to_lang, src=untranslated, dest=translated)
+    asyncio.run(run(fro=from_lang, to=to_lang, src=untranslated, dest=translated))
 
 if __name__ == "__main__":
     main()
