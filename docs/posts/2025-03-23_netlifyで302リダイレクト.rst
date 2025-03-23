@@ -1,0 +1,47 @@
+========================================================
+2025-03-23_netlifyで302リダイレクト
+========================================================
+:投稿日: 2025-03-23
+:タグ: netlify, ブログ運用
+
+概要
+====
+netlifyで302リダイレクトを実現する方法をまとめた。
+
+実現したいこと
+================
+
+https://mtakagishi.com/ にアクセスした際に、
+  :日本語ユーザ: /ja へ 302リダイレクトし日本語ページが初期表示される
+  :日本語以外: /en へ 302リダイレクトし英語ページが初期表示される
+
+netlify仕様
+========================
+- 設定方法は ``_redirects`` の配置か ``netlify.toml`` の記載
+- ブラウザの言語で分岐可能。``conditions = { Language = ["ja"] }`` のように使う
+- 複数のルーティング設定可能で上から解釈される。
+- from の直下に index.html が存在する場合はリダイレクトされない。リダイレクトする場合はforce=trueが必要
+
+nelify.tomlの設定例
+========================
+
+.. code-block:: toml
+  :caption: netlify.toml
+  
+  [[redirects]]
+  from = "/"
+  to = "/ja/"
+  status = 302
+  conditions = { Language = ["ja"] }
+  force = true
+
+  [[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
+
+参考URL
+================
+`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_ 
