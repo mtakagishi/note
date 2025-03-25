@@ -1,6 +1,6 @@
 .. post:: 2025-03-23
-  :tags: netlify, ブログ運用
-  :category: 開発メモ
+  :tags: Netlify,302リダイレクト
+  :category: ネットワーク
   :author: mtakagishi
   :language: ja
 
