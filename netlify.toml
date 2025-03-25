@@ -1,6 +1,6 @@
 [build]
 environment = { PYTHON_VERSION = "3.13" }
-command = "poetry install --no-root && poetry run poe doc"
+command = "poetry install --no-root && poetry show && poetry run poe doc"
 publish = "docs/_build/html"
 
 [[redirects]]
