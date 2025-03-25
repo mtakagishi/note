@@ -10,7 +10,7 @@ mtakagishi's note
   :maxdepth: 1
   :glob:
 
-  posts/index
+  blog/index
 
 .. toctree::
   :maxdepth: 1
