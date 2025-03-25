@@ -1,16 +1,12 @@
 .. post:: 2025-03-22
   :tags: Sphinx, blog
-  :category: サイト運営
+  :category: サイト管理
   :author: mtakagishi
   :language: ja
 
 ==================================
 サイト更新再開にあたり
 ==================================
-
-概要
-====
-
 
 久しぶりにサイトの更新を再開するにあたって行ったことのまとめ
 
@@ -71,3 +67,8 @@ ablogで便利とのウワサの検証、しかし `poetry add ablog` にて以�
   Because ablog (0.11.12) requires Python >=3.10
   and no versions of ablog match >0.11.12,<0.12.0, ablog is forbidden.
   So, because itnote depends on ablog (^0.11.12), version solving failed.
+
+.. rubric:: 記事情報
+
+:投稿日: 2025-03-22
+:投稿者: mtakagishi
