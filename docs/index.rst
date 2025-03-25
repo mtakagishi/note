@@ -1,18 +1,16 @@
+.. meta::
+  :description: mtakagishi's note
+  :keywords: web, it, python, programming
 
 ================================
-mtakagishiの技術メモ置き場
+mtakagishi's note
 ================================
 
-ブログ
-----------
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :glob:
 
   posts/index
-
-技術メモ
-----------
 
 .. toctree::
   :maxdepth: 1
@@ -26,4 +24,6 @@ mtakagishiの技術メモ置き場
   :glob:
 
   about_this_site
+
+
 

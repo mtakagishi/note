@@ -1,12 +1,16 @@
-==================================
-2025-03-22 サイト更新再開にあたり
-==================================
+.. post:: 2025-03-22
+  :tags: Sphinx, blog
+  :category: blog
+  :author: mtakagishi
+  :language: ja
 
-:投稿日: 2025-03-22
-:タグ: Sphinx, ドキュメント, ブログ運用, テンプレート
+==================================
+サイト更新再開にあたり
+==================================
 
 概要
 ====
+
 
 久しぶりにサイトの更新を再開するにあたって行ったことのまとめ
 
@@ -65,5 +69,5 @@ ablogで便利とのウワサの検証、しかし `poetry add ablog` にて以�
   - ablog requires Python >=3.10, so it will not be satisfied for Python >=3.8,<3.10
   
   Because ablog (0.11.12) requires Python >=3.10
-   and no versions of ablog match >0.11.12,<0.12.0, ablog is forbidden.
+  and no versions of ablog match >0.11.12,<0.12.0, ablog is forbidden.
   So, because itnote depends on ablog (^0.11.12), version solving failed.

@@ -39,11 +39,12 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'myst_parser',  # For Markdown support
-    'sphinxcontrib.blockdiag',
+    # 'sphinxcontrib.blockdiag',
     'sphinx_sitemap',
     'sphinxnotes.strike',
     'sphinx_last_updated_by_git',
     'sphinx_git',
+    'ablog',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -87,15 +88,38 @@ html_theme_options = {
     "logo": {
         "text": project,
     },
-    "github_url": "https://github.com/mtakagishi/note",
-    "twitter_url": "https://twitter.com/mtakagishi_note",
+    "icon_links": [
+        {
+            "name": "X",
+            "url": "https://x.com/mtakagishi_note",
+            "icon": "fa-brands fa-x-twitter",
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/mtakagishi/note",
+            "icon": "fa-brands fa-github",
+        },
+    ],
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
     "article_footer_items": ["ads_google.html","ads_themoneytizer.html"],
     "footer_start": ["copyright", "last-updated.html"],
     "footer_end": ["sphinx-version", "theme-version"],
+    # https://ablog.readthedocs.io/en/stable/manual/templates-themes.html#blog-sidebars
+    "secondary_sidebar_items": {
+      "**": [
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
+      ],
+    },
 }
 html_theme_options["analytics"] = {
     "google_analytics_id": "G-ZQ74H2ZF8F",
+}
+
+html_sidebars = {
+    "posts/index": [],
 }
 
 [extensions]
@@ -111,5 +135,13 @@ html_baseurl = 'https://mtakagishi.com/'
 # html_extra_path = ['robots.txt', 'ads.txt']
 
 # blockdiag
-blockdiag_html_image_format = 'SVG'
-blockdiag_fontpath = 'docs/_font/ipaexg.ttf'
+# blockdiag_html_image_format = 'SVG'
+# blockdiag_fontpath = 'docs/_font/ipaexg.ttf'
+
+# ablog
+# 必須設定（カスタマイズ可能）
+blog_title = "My Blog"
+blog_path = "posts"  # すでにある posts/ を使うならここに一致
+fontawesome_included = True  # 必要ならアイコン表示に使用
+post_redirect_refresh = 1
+datetime_format = '%Y-%m-%d'

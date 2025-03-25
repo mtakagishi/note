@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mtakagishi \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 22:25+0900\n"
+"POT-Creation-Date: 2025-03-25 02:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -20,78 +20,62 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../posts/2025-03-22-001.rst:3
-msgid "2025-03-22 サイト更新再開にあたり"
-msgstr ""
-
-#: ../../../posts/2025-03-22-001.rst
-msgid "投稿日"
-msgstr ""
-
-#: ../../../posts/2025-03-22-001.rst:5
-msgid "2025-03-22"
-msgstr ""
-
-#: ../../../posts/2025-03-22-001.rst
-msgid "タグ"
-msgstr ""
-
-#: ../../../posts/2025-03-22-001.rst:6
-msgid "Sphinx, ドキュメント, ブログ運用, テンプレート"
-msgstr ""
-
-#: ../../../posts/2025-03-22-001.rst:9
-msgid "概要"
+msgid "サイト更新再開にあたり"
 msgstr ""
 
 #: ../../../posts/2025-03-22-001.rst:11
+msgid "概要"
+msgstr ""
+
+#: ../../../posts/2025-03-22-001.rst:13
 msgid "久しぶりにサイトの更新を再開するにあたって行ったことのまとめ"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:14
+#: ../../../posts/2025-03-22-001.rst:16
 msgid "対応メモ"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:17
+#: ../../../posts/2025-03-22-001.rst:19
 msgid "英語化手順の整理"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:19
+#: ../../../posts/2025-03-22-001.rst:21
 msgid "英語翻訳のsphinx記事としての手順を失念しがちなのでドキュメント化を強化"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:21
+#: ../../../posts/2025-03-22-001.rst:23
 msgid "`README <https://github.com/mtakagishi/note>`_"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:24
+#: ../../../posts/2025-03-22-001.rst:26
 msgid "Google広告の自動広告OFF"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:26
+#: ../../../posts/2025-03-22-001.rst:28
 msgid "Google Adsense自動広告の表示過多。自動広告は全てOFFへ。"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:29
+#: ../../../posts/2025-03-22-001.rst:31
 msgid "トップページ整備"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:31
+#: ../../../posts/2025-03-22-001.rst:33
 msgid "見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:34
+#: ../../../posts/2025-03-22-001.rst:36
 msgid "ブログ記事効率化"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:36
+#: ../../../posts/2025-03-22-001.rst:38
 msgid "VSCodeスニペットの整備"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:58
+#: ../../../posts/2025-03-22-001.rst:60
 msgid "次ステップ"
 msgstr ""
 
-#: ../../../posts/2025-03-22-001.rst:60
+#: ../../../posts/2025-03-22-001.rst:62
 msgid ""
 "ablogで便利とのウワサの検証、しかし `poetry add ablog` "
 "にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。"
@@ -104,5 +88,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "英語化手順"
+#~ msgstr ""
+
+#~ msgid "2025-03-22 サイト更新再開にあたり"
+#~ msgstr ""
+
+#~ msgid "投稿日"
+#~ msgstr ""
+
+#~ msgid "2025-03-22"
+#~ msgstr ""
+
+#~ msgid "タグ"
+#~ msgstr ""
+
+#~ msgid "Sphinx, ドキュメント, ブログ運用, テンプレート"
 #~ msgstr ""
 

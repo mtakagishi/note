@@ -8,7 +8,7 @@ msgstr ""
 ".0Content-Type:text/plain; charset=utf-8Content-Transfer-Encoding"
 ":8bitGenerated-By:Babel 2.17.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-23 22:10+0900\n"
+"POT-Creation-Date: 2025-03-25 02:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,30 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../posts/2025-03-23-001.rst:3
-msgid "2025-03-23 python環境の再構築"
-msgstr "2025-03-23 Rebuilding My Python Environment"
-
-#: ../../../posts/2025-03-23-001.rst
-msgid "投稿日"
-msgstr "Posted on"
-
-#: ../../../posts/2025-03-23-001.rst:4
-msgid "2025-03-23"
-msgstr "2025-03-23"
-
-#: ../../../posts/2025-03-23-001.rst
-msgid "タグ"
-msgstr "tags"
-
-#: ../../../posts/2025-03-23-001.rst:5
-msgid "Python, 環境構築"
+msgid "python環境の再構築"
 msgstr "Python, Building an Environment"
 
-#: ../../../posts/2025-03-23-001.rst:8
+#: ../../../posts/2025-03-23-001.rst:11
 msgid "概要"
 msgstr "Overview"
 
-#: ../../../posts/2025-03-23-001.rst:10
-msgid "2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境に再構築を行った際の対応のまとめ"
-msgstr "Summary of the process of rebuilding the 2023 Sphinx + Netlify environment from Python 3.8 to 3.13"
-
 #: ../../../posts/2025-03-23-001.rst:13
+msgid "2023年整備のsphinx+netlify環境にてpython3.8からpython3.13環境に再構築を行った際の対応のまとめ"
+msgstr ""
+"Summary of the process of rebuilding the 2023 Sphinx + Netlify "
+"environment from Python 3.8 to 3.13"
+
+#: ../../../posts/2025-03-23-001.rst:16
 msgid "実現したいこと"
 msgstr "What I want to achieve"
 
-#: ../../../posts/2025-03-23-001.rst:15
-msgid "local環境も、netlify環境もpython3.13ベースで動作させたい。現状はバージョン不一致でかつnetlify側が3.8縛り。"
-msgstr "I want both the local and Netlify environments to run on Python 3.13. Currently, the versions are inconsistent, and Netlify is stuck on 3.8."
-
-
 #: ../../../posts/2025-03-23-001.rst:18
+msgid "local環境も、netlify環境もpython3.13ベースで動作させたい。現状はバージョン不一致でかつnetlify側が3.8縛り。"
+msgstr ""
+"I want both the local and Netlify environments to run on Python 3.13. "
+"Currently, the versions are inconsistent, and Netlify is stuck on 3.8."
+
+#: ../../../posts/2025-03-23-001.rst:21
 msgid "修正前の動作環境"
 msgstr "Operating environment before modification"
 
@@ -62,7 +49,7 @@ msgstr "Operating environment before modification"
 msgid "ローカルPC"
 msgstr "Local PC"
 
-#: ../../../posts/2025-03-23-001.rst:20
+#: ../../../posts/2025-03-23-001.rst:23
 msgid "Python3.10ベースで動作、python3.10で動作"
 msgstr "Works based on Python3.10, works with python3.10"
 
@@ -70,33 +57,33 @@ msgstr "Works based on Python3.10, works with python3.10"
 msgid "netlify"
 msgstr "Value tify"
 
-#: ../../../posts/2025-03-23-001.rst:22
+#: ../../../posts/2025-03-23-001.rst:25
 msgid "Ubuntu Focal 20.04 、Python3.8で動作"
 msgstr "Works with Ubuntu Focal 20.04, Python3.8"
 
-#: ../../../posts/2025-03-23-001.rst:25
+#: ../../../posts/2025-03-23-001.rst:28
 msgid "ローカル環境の整備"
 msgstr "Development of the local environment"
 
-#: ../../../posts/2025-03-23-001.rst:28
+#: ../../../posts/2025-03-23-001.rst:31
 msgid "python3.10のアンインストール"
 msgstr "Uninstall python3.10"
 
-#: ../../../posts/2025-03-23-001.rst:30
-msgid "過去にインストーラで入れてたものを削除。今後はMicrosoft Storeに統一。"
-msgstr "Removed the versions previously installed via installer. From now on, I’ll stick to using the Microsoft Store."
-
-
 #: ../../../posts/2025-03-23-001.rst:33
+msgid "過去にインストーラで入れてたものを削除。今後はMicrosoft Storeに統一。"
+msgstr ""
+"Removed the versions previously installed via installer. From now on, "
+"I’ll stick to using the Microsoft Store."
+
+#: ../../../posts/2025-03-23-001.rst:36
 msgid "後のpipxやpoetryでPATHエラーになる場合がある"
 msgstr "Path errors may occur later with pipx or Poetry"
 
-
-#: ../../../posts/2025-03-23-001.rst:35
+#: ../../../posts/2025-03-23-001.rst:38
 msgid "主なエラー内容"
 msgstr "Main error details"
 
-#: ../../../posts/2025-03-23-001.rst:36
+#: ../../../posts/2025-03-23-001.rst:39
 msgid ""
 "Fatal error in launcher: Unable to create process using "
 "'C:\\\\Python\\\\Python310\\\\python.exe'"
@@ -104,43 +91,43 @@ msgstr ""
 "Fatal error in launcher: Unable to create process using "
 "'C:\\\\Python\\\\Python310\\\\python.exe'"
 
-#: ../../../posts/2025-03-23-001.rst:37
+#: ../../../posts/2025-03-23-001.rst:40
 msgid "No Python at 'C:\\\\Python\\\\Python310\\\\python.exe'"
 msgstr "No Python at 'C:\\\\Python\\\\Python310\\\\python.exe'"
 
-#: ../../../posts/2025-03-23-001.rst:39
+#: ../../../posts/2025-03-23-001.rst:42
 msgid "対策として以下を確認、予め削除しておく。"
 msgstr "As a countermeasure, check the following and delete it in advance."
 
-#: ../../../posts/2025-03-23-001.rst:40
+#: ../../../posts/2025-03-23-001.rst:43
 msgid "%HOMEPATH%\\\\APPDATA\\\\Roaming\\\\Python"
 msgstr "%HOMEPATH%\\\\APPDATA\\\\Roaming\\\\Python"
 
-#: ../../../posts/2025-03-23-001.rst:41
+#: ../../../posts/2025-03-23-001.rst:44
 msgid "%HOMEPATH%\\\\APPDATA\\\\Local\\\\pipx"
 msgstr "%HOMEPATH%\\\\APPDATA\\\\Local\\\\pipx"
 
-#: ../../../posts/2025-03-23-001.rst:42
+#: ../../../posts/2025-03-23-001.rst:45
 msgid "%HOMEPATH%\\\\APPDATA\\\\Local\\\\poetry"
 msgstr "%HOMEPATH%\\\\APPDATA\\\\Local\\\\poetry"
 
-#: ../../../posts/2025-03-23-001.rst:45
+#: ../../../posts/2025-03-23-001.rst:48
 msgid "python3.13のインストール"
 msgstr "Installing python3.13"
 
-#: ../../../posts/2025-03-23-001.rst:47
+#: ../../../posts/2025-03-23-001.rst:50
 msgid "Microsoft Storeからpython3.13を選択して入手"
 msgstr "Select python3.13 from the Microsoft Store to get it"
 
-#: ../../../posts/2025-03-23-001.rst:51 ../../../posts/2025-03-23-001.rst:53
+#: ../../../posts/2025-03-23-001.rst:54 ../../../posts/2025-03-23-001.rst:56
 msgid "pipx整備"
 msgstr "pipx maintenance"
 
-#: ../../../posts/2025-03-23-001.rst:61 ../../../posts/2025-03-23-001.rst:63
+#: ../../../posts/2025-03-23-001.rst:64 ../../../posts/2025-03-23-001.rst:66
 msgid "poetry整備"
 msgstr "Poetry maintenance"
 
-#: ../../../posts/2025-03-23-001.rst:70
+#: ../../../posts/2025-03-23-001.rst:73
 msgid "pyproject.toml修正"
 msgstr "pyproject.toml edit"
 
@@ -148,7 +135,7 @@ msgstr "pyproject.toml edit"
 msgid "修正前"
 msgstr "Before revision"
 
-#: ../../../posts/2025-03-23-001.rst:73
+#: ../../../posts/2025-03-23-001.rst:76
 msgid "python = \"^3.10\""
 msgstr "pyton = \"^3.10\""
 
@@ -156,29 +143,31 @@ msgstr "pyton = \"^3.10\""
 msgid "修正後"
 msgstr "After correction"
 
-#: ../../../posts/2025-03-23-001.rst:75
+#: ../../../posts/2025-03-23-001.rst:78
 msgid "python = \"^3.13\""
 msgstr "pyton = \"^3.13\""
 
-#: ../../../posts/2025-03-23-001.rst:78
+#: ../../../posts/2025-03-23-001.rst:81
 msgid "確認"
 msgstr "confirmation"
 
-#: ../../../posts/2025-03-23-001.rst:80
+#: ../../../posts/2025-03-23-001.rst:83
 msgid "ローカルビルドしてサイトを確認"
 msgstr "Build locally and check the site"
 
-#: ../../../posts/2025-03-23-001.rst:83
+#: ../../../posts/2025-03-23-001.rst:86
 msgid "netlify対応"
 msgstr "Netlify compatible"
 
-#: ../../../posts/2025-03-23-001.rst:86
+#: ../../../posts/2025-03-23-001.rst:89
 msgid "netlify側のOSイメージの最新化"
 msgstr "Updated OS image on netlify side"
 
-#: ../../../posts/2025-03-23-001.rst:88
+#: ../../../posts/2025-03-23-001.rst:91
 msgid "Ubuntu Focal 20.04の場合、Python3.13に未対応のため、イメージを最新化する。"
-msgstr "Since Ubuntu Focal 20.04 does not support Python 3.13, I updated the OS image."
+msgstr ""
+"Since Ubuntu Focal 20.04 does not support Python 3.13, I updated the OS "
+"image."
 
 #: ../../../posts/2025-03-23-001.rst
 msgid "設定箇所"
@@ -200,19 +189,19 @@ msgstr "> Bluff & Py Sechin GS"
 msgid "> Build image selection"
 msgstr "> Part LD Image Seyc Earth temperature"
 
-#: ../../../posts/2025-03-23-001.rst:96
+#: ../../../posts/2025-03-23-001.rst:99
 msgid "Ubuntu Focal 20.04"
 msgstr "Ubuntsu Foca L 20.04"
 
-#: ../../../posts/2025-03-23-001.rst:98
+#: ../../../posts/2025-03-23-001.rst:101
 msgid "Ubuntu Noble 24.04"
 msgstr "Ubuntsu's b 24.04"
 
-#: ../../../posts/2025-03-23-001.rst:101
+#: ../../../posts/2025-03-23-001.rst:104
 msgid "netlify.toml修正"
 msgstr "netlify.toml fix"
 
-#: ../../../posts/2025-03-23-001.rst:103
+#: ../../../posts/2025-03-23-001.rst:106
 msgid ""
 "`参考：How to use configurable Python versions <https://www.netlify.com/blog"
 "/announcing-configurable-python-versions-in-netlify-builds/>`_"
@@ -221,88 +210,102 @@ msgstr ""
 "<https://www.netlify.com/blog/announcing-configurable-python-versions-in-"
 "netlify-builds/>`_"
 
-#: ../../../posts/2025-03-23-001.rst:105
+#: ../../../posts/2025-03-23-001.rst:108
 msgid "netlify.toml"
 msgstr "Value tify. and ml"
 
-#: ../../../posts/2025-03-23-001.rst:113
+#: ../../../posts/2025-03-23-001.rst:116
 msgid "netlify確認"
 msgstr "netlify"
 
-#: ../../../posts/2025-03-23-001.rst:114
+#: ../../../posts/2025-03-23-001.rst:117
 msgid "``git push`` を実行。デプロイ結果を確認する。"
 msgstr "Run ``git push``. Check the deployment results."
 
-#: ../../../posts/2025-03-23-001.rst:117
+#: ../../../posts/2025-03-23-001.rst:120
 msgid "バージョンの統一について"
 msgstr "About version unification"
 
-#: ../../../posts/2025-03-23-001.rst:120
+#: ../../../posts/2025-03-23-001.rst:123
 msgid "対応方針"
 msgstr "Response policy"
 
-#: ../../../posts/2025-03-23-001.rst:122
+#: ../../../posts/2025-03-23-001.rst:125
 msgid "ビルド手段をpoetryに統一する。"
 msgstr "Unify the build method to poetry."
 
-#: ../../../posts/2025-03-23-001.rst:125
+#: ../../../posts/2025-03-23-001.rst:128
 msgid "requirement.txtの修正"
 msgstr "Modification of requirement.txt"
 
-#: ../../../posts/2025-03-23-001.rst:127 ../../../posts/2025-03-23-001.rst:145
+#: ../../../posts/2025-03-23-001.rst:130 ../../../posts/2025-03-23-001.rst:148
 msgid "修正前::"
 msgstr "Before revision::"
 
-#: ../../../posts/2025-03-23-001.rst:138 ../../../posts/2025-03-23-001.rst:149
+#: ../../../posts/2025-03-23-001.rst:141 ../../../posts/2025-03-23-001.rst:152
 msgid "修正後::"
 msgstr "After correction::"
 
-#: ../../../posts/2025-03-23-001.rst:143
+#: ../../../posts/2025-03-23-001.rst:146
 msgid "netlify.tomlの修正"
 msgstr "netlify.toml fix"
 
-#: ../../../posts/2025-03-23-001.rst:155
+#: ../../../posts/2025-03-23-001.rst:158
 msgid "その他のエラー"
 msgstr "Other errors"
 
-#: ../../../posts/2025-03-23-001.rst:158
+#: ../../../posts/2025-03-23-001.rst:161
 msgid "blockdiag + Pillow（画像描画）"
 msgstr "blockdiag + Pillow (image drawing)"
 
-#: ../../../posts/2025-03-23-001.rst:160
+#: ../../../posts/2025-03-23-001.rst:163
 msgid "発生エラー::"
 msgstr "Error occurring::"
 
-#: ../../../posts/2025-03-23-001.rst:161
+#: ../../../posts/2025-03-23-001.rst:164
 msgid "'FreeTypeFont' object has no attribute 'getsize'"
 msgstr "'F-Illustrated Ty Pephon' Obje CT' is s'Otto ribs 'Moon'"
 
-#: ../../../posts/2025-03-23-001.rst:163
+#: ../../../posts/2025-03-23-001.rst:166
 msgid "経緯::"
 msgstr "background::"
 
-#: ../../../posts/2025-03-23-001.rst:164
+#: ../../../posts/2025-03-23-001.rst:167
 msgid ""
 "``Pillow = \"==9.5.0\"`` が Python3.13対応でエラーとなる。 ``Pillow = \"^10.0\"`` "
 "へ修正したが、blockdiag がPillowの最新に対応していない。"
 msgstr ""
-"``Pillow = \"==9.5.0\"`` causes an error with Python 3.13. I updated it to ``Pillow = \"^10.0\"``, but blockdiag doesn’t support the latest version of Pillow."
+"``Pillow = \"==9.5.0\"`` causes an error with Python 3.13. I updated it "
+"to ``Pillow = \"^10.0\"``, but blockdiag doesn’t support the latest "
+"version of Pillow."
 
-#: ../../../posts/2025-03-23-001.rst:167
+#: ../../../posts/2025-03-23-001.rst:170
 msgid "暫定対策："
 msgstr "Temporary measures:"
 
-#: ../../../posts/2025-03-23-001.rst:168
+#: ../../../posts/2025-03-23-001.rst:171
 msgid "blockdiag についてはメンテも停止の様子にて断念。利用ページは削除。"
 msgstr ""
 "Regarding blockdiag, maintenance was also suspended, so I gave up. The "
 "use page has been deleted."
 
-#: ../../../posts/2025-03-23-001.rst:170
+#: ../../../posts/2025-03-23-001.rst:173
 msgid "今後に向けて："
 msgstr "Future:"
 
-#: ../../../posts/2025-03-23-001.rst:171
+#: ../../../posts/2025-03-23-001.rst:174
 msgid "代替として、graphviz の活用などを模索"
 msgstr "Exploring alternatives like using Graphviz."
+
+#~ msgid "2025-03-23 python環境の再構築"
+#~ msgstr "2025-03-23 Rebuilding My Python Environment"
+
+#~ msgid "投稿日"
+#~ msgstr "Posted on"
+
+#~ msgid "2025-03-23"
+#~ msgstr "2025-03-23"
+
+#~ msgid "タグ"
+#~ msgstr "tags"
 

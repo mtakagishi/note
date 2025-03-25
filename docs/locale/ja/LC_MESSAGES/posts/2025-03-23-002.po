@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mtakagishi \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 22:10+0900\n"
+"POT-Creation-Date: 2025-03-25 02:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -20,38 +20,22 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../posts/2025-03-23-002.rst:3
-msgid "2025-03-23 netlifyで302リダイレクト"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst
-msgid "投稿日"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst:4
-msgid "2025-03-23"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst
-msgid "タグ"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst:5
-msgid "netlify, ブログ運用"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst:8
-msgid "概要"
-msgstr ""
-
-#: ../../../posts/2025-03-23-002.rst:9
-msgid "netlifyで302リダイレクトを実現する方法をまとめた。"
+msgid "netlifyで302リダイレクト"
 msgstr ""
 
 #: ../../../posts/2025-03-23-002.rst:12
+msgid "概要"
+msgstr ""
+
+#: ../../../posts/2025-03-23-002.rst:13
+msgid "netlifyで302リダイレクトを実現する方法をまとめた。"
+msgstr ""
+
+#: ../../../posts/2025-03-23-002.rst:16
 msgid "実現したいこと"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:14
+#: ../../../posts/2025-03-23-002.rst:18
 msgid "https://mtakagishi.com/ にアクセスした際に、"
 msgstr ""
 
@@ -59,7 +43,7 @@ msgstr ""
 msgid "日本語ユーザ"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:15
+#: ../../../posts/2025-03-23-002.rst:19
 msgid "/ja へ 302リダイレクトし日本語ページが初期表示される"
 msgstr ""
 
@@ -67,47 +51,62 @@ msgstr ""
 msgid "日本語以外"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:16
+#: ../../../posts/2025-03-23-002.rst:20
 msgid "/en へ 302リダイレクトし英語ページが初期表示される"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:19
+#: ../../../posts/2025-03-23-002.rst:23
 msgid "netlify仕様"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:20
+#: ../../../posts/2025-03-23-002.rst:24
 msgid "設定方法は ``_redirects`` の配置か ``netlify.toml`` の記載"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:21
+#: ../../../posts/2025-03-23-002.rst:25
 #, python-brace-format
 msgid "ブラウザの言語で分岐可能。``conditions = { Language = [\"ja\"] }`` のように使う"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:22
+#: ../../../posts/2025-03-23-002.rst:26
 msgid "複数のルーティング設定可能で上から解釈される。"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:23
+#: ../../../posts/2025-03-23-002.rst:27
 msgid "from の直下に index.html が存在する場合はリダイレクトされない。リダイレクトする場合はforce=trueが必要"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:26
+#: ../../../posts/2025-03-23-002.rst:30
 msgid "nelify.tomlの設定例"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:28
+#: ../../../posts/2025-03-23-002.rst:32
 msgid "netlify.toml"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:46
+#: ../../../posts/2025-03-23-002.rst:50
 msgid "参考URL"
 msgstr ""
 
-#: ../../../posts/2025-03-23-002.rst:47
+#: ../../../posts/2025-03-23-002.rst:51
 msgid "`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_"
 msgstr ""
 
 #~ msgid "2025-03-23_netlifyで302リダイレクト"
+#~ msgstr ""
+
+#~ msgid "2025-03-23 netlifyで302リダイレクト"
+#~ msgstr ""
+
+#~ msgid "投稿日"
+#~ msgstr ""
+
+#~ msgid "2025-03-23"
+#~ msgstr ""
+
+#~ msgid "タグ"
+#~ msgstr ""
+
+#~ msgid "netlify, ブログ運用"
 #~ msgstr ""
 

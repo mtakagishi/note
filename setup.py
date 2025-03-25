@@ -21,6 +21,7 @@ class DocCommand(SimpleCommand):
         sourcedir = "docs"
         outputdir = "docs/_build/html"
         for lang in LANGUAGES:
+            # args = ["sphinx-build","-vvv", "-b", buildername,
             args = ["sphinx-build", "-b", buildername,
                     sourcedir, f"{outputdir}/{lang}", "-D", f"language={lang}"]
             subprocess.call(args)
