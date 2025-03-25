@@ -141,7 +141,7 @@ html_baseurl = 'https://mtakagishi.com/'
 # ablog
 # 必須設定（カスタマイズ可能）
 blog_title = "My Blog"
-blog_path = "posts"  # すでにある posts/ を使うならここに一致
+blog_path = "blog"  # すでにある posts/ を使うならここに一致
 fontawesome_included = True  # 必要ならアイコン表示に使用
 post_redirect_refresh = 1
 datetime_format = '%Y-%m-%d'
