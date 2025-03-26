@@ -9,7 +9,7 @@ mtakagishi's note
 .. toctree::
   :maxdepth: 1
 
-  ./blog/index
+  blog/index.rst
 
 .. toctree::
   :maxdepth: 1
