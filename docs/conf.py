@@ -119,7 +119,7 @@ html_theme_options["analytics"] = {
 }
 
 html_sidebars = {
-    "posts/index": [],
+    "blog/index": [],
 }
 
 [extensions]
@@ -143,6 +143,6 @@ html_baseurl = 'https://mtakagishi.com/'
 blog_path = "blog/posts"
 fontawesome_included = True  # 必要ならアイコン表示に使用
 post_redirect_refresh = 1
-datetime_format = '%Y-%m-%d'
-post_date_format = '%Y-%m-%d'
-post_date_format_short = '%m-%d'
+datetime_format = '%Y/%m/%d'
+post_date_format = '%Y/%m/%d'
+post_date_format_short = '%m/%d'
