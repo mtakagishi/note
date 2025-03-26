@@ -8,7 +8,6 @@ mtakagishi's note
 
 .. toctree::
   :maxdepth: 1
-  :glob:
 
   blog/index
 
