@@ -146,3 +146,4 @@ post_redirect_refresh = 1
 datetime_format = '%Y/%m/%d'
 post_date_format = '%Y/%m/%d'
 post_date_format_short = '%m/%d'
+blog_future = True
