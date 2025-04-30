@@ -1,4 +1,4 @@
-.. post:: 2025-03-29
+.. post:: 2025-04-01
   :tags: ablog,sphinx,netlify
   :category: サイト管理
   :author: mtakagishi
@@ -13,6 +13,14 @@
 Ablogとは
 ========================
 sphinxの拡張機能で、ブログのような形式で記事を管理できる。カテゴリやタグを設定しておけば、それに基づいて記事一覧を生成してくれるのが便利。
+
+Ablogでできるようになること
+------------------------
+- カテゴリやタグで記事を分類
+- 記事一覧の自動生成
+- 自動アーカイブ
+- サイドバーサポート
+- ドラフト記事の作成
 
 Ablogのインストール
 ========================
@@ -64,10 +72,13 @@ Ablogはビルド時に自動でアーカイブ実行される。以下のよう
   - :ref:`タグ一覧 <blog-tags>`
   - :ref:`カテゴリ一覧 <blog-categories>`
   - :ref:`アーカイブ <blog-archives>`
-  	
-  `公式ページ（Cross-referencing Blog Pages） <https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-pages.html>`_ 
 
-サイドバー
+.. rubric:: 参考URL
+
+`公式ページ（Cross-referencing Blog Pages） <https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-pages.html>`_ 
+
+
+サイドバーサポート
 ------------------------
 
 サイドバーには、タグ一覧やカテゴリ一覧、アーカイブへのリンクを設置することができる。当サイトの場合、secondary_sidebar_itemsに以下のように設定している。
@@ -86,16 +97,22 @@ Ablogはビルド時に自動でアーカイブ実行される。以下のよう
     },
   }
 
+.. rubric:: 参考URL
 
-  `公式ページ（Templating and Themes Support） <https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_ 
+`公式ページ（Templating and Themes Support） <https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_ 
+
+ドラフト記事の作成
+------------------------
+
+記事のdate属性を未来日にしておけば、その記事はドラフト扱い。ビルド時には表示されない。sphinxは静的ページなので、未来日にビルドし直す必要がある。
 
 
 所感
 ========================
 
-Sphinxの機能を拡張するAblogは、ブログ運用には非常に便利。記事の管理や一覧表示、アーカイブの自動生成など、ブログ運用に必要な機能が揃っている。また記事に未来日を指定すると自動でドラフト扱いとしてビルド対象から除外されて公開されない機能も便利。
+日々の勉強メモを残せるように継続の基盤にしたいという思いは達成できそう。カテゴリやタグの整理自動や、ドラフト記事の作成などは重宝しそう。折角の機会なので、これを機にブログを継続していきたい。
 
 .. rubric:: 記事情報
 
-:投稿日: 2025-03-27
+:投稿日: 2025-04-01
 :投稿者: mtakagishi

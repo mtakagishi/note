@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../blog/posts/2025-03-22-001.rst:9
+msgid "サイト更新再開にあたり"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:11
+msgid "久しぶりにサイトの更新を再開するにあたって行ったことのまとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:14
+msgid "対応メモ"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:17
+msgid "英語化手順の整理"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:19
+msgid "英語翻訳のsphinx記事としての手順を失念しがちなのでドキュメント化を強化"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:21
+msgid "`README <https://github.com/mtakagishi/note>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:24
+msgid "Google広告の自動広告OFF"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:26
+msgid "Google Adsense自動広告の表示過多。自動広告は全てOFFへ。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:29
+msgid "トップページ整備"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:31
+msgid "見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:34
+msgid "ブログ記事効率化"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:36
+msgid "VSCodeスニペットの整備"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:58
+msgid "次ステップ"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:60
+msgid ""
+"ablogで便利とのウワサの検証、しかし `poetry add ablog` "
+"にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:72
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:73
+msgid "2025-03-22"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst
+msgid "投稿者"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-22-001.rst:74
+msgid "mtakagishi"
+msgstr ""
+

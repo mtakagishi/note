@@ -20,7 +20,7 @@ poetry run poe doc
 python simple_http_server.py -p {port} --open-browser
 ```
 port:デフォは8000。
-ビルド済みなら、`run_simple_http_server.bat` でOK
+ビルド済みなら、`run_simple_http_server.bat`
 
 ## サイト維持メモ
 ### 英語化

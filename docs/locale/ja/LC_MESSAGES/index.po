@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 22:48+0900\n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -19,21 +19,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../index.rst:4
-msgid "mtakagishiの技術メモ置き場"
+#: ../../../index.rst:-1 ../../../index.rst:7
+msgid "mtakagishi's note"
 msgstr ""
 
-#: ../../../index.rst:7
-msgid "ブログ"
-msgstr ""
-
-#: ../../../index.rst:15
-msgid "技術メモ"
+#: ../../../index.rst:-1
+msgid "web, it, python, programming"
 msgstr ""
 
 #~ msgid "ITノート"
 #~ msgstr ""
 
 #~ msgid "プログラミング、ツール、そして日々の学びを共有するためのサイトです。"
+#~ msgstr ""
+
+#~ msgid "mtakagishiの技術メモ置き場"
+#~ msgstr ""
+
+#~ msgid "ブログ"
+#~ msgstr ""
+
+#~ msgid "技術メモ"
 #~ msgstr ""
 

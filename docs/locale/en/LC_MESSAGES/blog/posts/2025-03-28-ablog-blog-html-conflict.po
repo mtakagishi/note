@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:9
+msgid "ablogで\"/blog.html\"と\"/blog/index.html\"が同時に生成されてしまう問題と対処法"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:11
+msgid ""
+"ablog を使ってブログサイトを構築していたところ、ビルド後の出力で ``/blog.html`` と ``/blog/index.html``"
+" の両方が生成されてしまい、URLの扱いやリンクの挙動で混乱する場面がありました。本記事ではその原因と対処法についてまとめておきます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:14
+msgid "問題の発生状況"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:16
+msgid "以下のような構成で Sphinx + ablog を使っていました："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:18
+msgid "``blog/index.rst`` を作成し、自作のブログトップページを定義"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:19
+msgid "``conf.py`` の設定は ``blog_path=blog`` (デフォルト値)"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:21
+msgid "この状態でビルドすると、以下の2つの HTML ファイルが生成されます："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:23
+msgid "``/blog.html`` （ablog が自動生成する全記事一覧ページ）"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:24
+msgid "``/blog/index.html`` （自分で作成した ``blog/index.rst`` のビルド結果）"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:26
+msgid "その結果、以下のような衝突が起きてしまいました："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:28
+msgid "``toctree`` のリンク先が ``/blog`` か ``/blog/index.html`` かで揺れる"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:29
+msgid "Netlify 上で ``/blog`` にアクセスすると ``/blog.html`` が優先される"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:32
+msgid "原因と仕様"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:34
+msgid ""
+"ablog はデフォルトで ``blog_path = \"blog\"`` の設定となっており、 この場合、自動的に "
+"``/blog.html`` を全記事一覧ページとして生成します。 一方で ``blog/index.rst`` を作ると、それは "
+"``/blog/index.html`` になります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:38
+msgid "つまり、``/blog.html`` と ``/blog/index.html`` が**別物として**同時に存在してしまうのです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:41
+msgid "対処法"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:43
+msgid ""
+"自分の ``blog/index.rst`` を維持したまま、ablog の出力と衝突しないようにするには ``conf.py`` にて "
+"``blog_path`` の値を変更するのが有効です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:46
+msgid "たとえば、以下のように設定します："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:52
+msgid "これにより："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:54
+msgid "ablog が生成する全記事一覧ページ → ``/blog/posts.html``"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:55
+msgid "自作の ``blog/index.rst`` → ``/blog/index.html``"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:57
+msgid "と、役割が分離され、衝突や混乱がなくなります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:60
+msgid "補足：Netlify でのURL優先順"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:62
+msgid ""
+"Netlify では ``/blog`` にアクセスした場合、``/blog.html`` を優先して表示します（静的ファイルベースのルール）。 "
+"したがって netlifyのリダイレクト設定を使った誘導という手もできなくはないが、フォルダ構成を正したほうがスマート："
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:65
+msgid "_redirects"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:72
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:74
+msgid "ablog は ``blog_path`` の設定により自動出力先が決まる"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:75
+msgid "``blog/index.rst`` を作るなら ``blog_path`` を別にするのが安全"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:76
+msgid "静的出力では ``/blog`` が ``/blog.html`` と扱われる点にも注意"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:80
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:81
+msgid "2025-03-27"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst
+msgid "投稿者"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-28-ablog-blog-html-conflict.rst:82
+msgid "mtakagishi"
+msgstr ""
+

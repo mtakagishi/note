@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mtakagishi \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 22:48+0900\n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -19,7 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../posts/index.rst:3
+#: ../../../blog/index.rst:3
 msgid "ブログ"
+msgstr ""
+
+#: ../../../blog/index.rst:10
+msgid ":ref:`タグ一覧 <blog-tags>`"
+msgstr ""
+
+#: ../../../blog/index.rst:11
+msgid ":ref:`カテゴリ一覧 <blog-categories>`"
+msgstr ""
+
+#: ../../../blog/index.rst:12
+msgid ":ref:`アーカイブ <blog-archives>`"
 msgstr ""
 

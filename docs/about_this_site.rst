@@ -33,8 +33,6 @@ The Moneytizer
 -------------------
 当サイトは「The Moneytizer」の広告プログラムに参加しています。
 
-この広告プログラムに参加したい方は下記リンク経由で5$が付与されます。
-
 `⇒The Moneytizer <https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9>`_
 
 お問い合わせ  

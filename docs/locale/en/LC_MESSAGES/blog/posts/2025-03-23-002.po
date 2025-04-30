@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../blog/posts/2025-03-23-002.rst:9
+msgid "netlifyで302リダイレクト"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:11
+msgid "netlifyで302リダイレクトを実現する方法をまとめた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:14
+msgid "実現したいこと"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:16
+msgid "https://mtakagishi.com/ にアクセスした際に、"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst
+msgid "日本語ユーザ"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:17
+msgid "/ja へ 302リダイレクトし日本語ページが初期表示される"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst
+msgid "日本語以外"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:18
+msgid "/en へ 302リダイレクトし英語ページが初期表示される"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:21
+msgid "netlify仕様"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:22
+msgid "設定方法は ``_redirects`` の配置か ``netlify.toml`` の記載"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:23
+#, python-brace-format
+msgid "ブラウザの言語で分岐可能。``conditions = { Language = [\"ja\"] }`` のように使う"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:24
+msgid "複数のルーティング設定可能で上から解釈される。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:25
+msgid "from の直下に index.html が存在する場合はリダイレクトされない。リダイレクトする場合はforce=trueが必要"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:28
+msgid "nelify.tomlの設定例"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:30
+msgid "netlify.toml"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:48
+msgid "参考URL"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:49
+msgid "`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:52
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:53
+msgid "2025-03-23"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst
+msgid "投稿者"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-23-002.rst:54
+msgid "mtakagishi"
+msgstr ""
+

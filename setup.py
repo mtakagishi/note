@@ -22,7 +22,7 @@ class DocCommand(SimpleCommand):
         outputdir = "docs/_build/html"
         for lang in LANGUAGES:
             # args = ["sphinx-build","-vvv", "-b", buildername,
-            args = ["sphinx-build", "-b", buildername,
+            args = ["sphinx-build", "-E", "-a", "-b", buildername,
                     sourcedir, f"{outputdir}/{lang}", "-D", f"language={lang}"]
             subprocess.call(args)
         files_to_copy = [

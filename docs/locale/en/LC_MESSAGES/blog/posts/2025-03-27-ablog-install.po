@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-27 21:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:9
+msgid "ブログ運用にAblogを活用する"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:11
+msgid "純粋なSphinxの機能よりも、もう少しブログっぽく運用したい場合にAblogを活用すると便利"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:14
+msgid "Ablogとは"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:15
+msgid "sphinxの拡張機能で、ブログのような形式で記事を管理できる。カテゴリやタグを設定しておけば、それに基づいて記事一覧を生成してくれるのが便利。"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:18
+msgid "Ablogのインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:19
+msgid "pipやposetry addでインストールできる"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:22
+msgid "Ablogの基本設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:23
+msgid "conf.pyに設定を追加する"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:25
+msgid "conf.py"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:34
+msgid "Ablogの記事作成"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:36
+msgid "blogフォルダを作成し、その中に記事を作成する"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:38
+msgid "blog/2025-03-27-new-post.rst"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:55
+msgid "使い方"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:58
+msgid "所感"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:63
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:64
+msgid "2025-03-27"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst
+msgid "投稿者"
+msgstr ""
+
+#: ../../../blog/posts/2025-03-27-ablog-install.rst:65
+msgid "mtakagishi"
+msgstr ""
+
