@@ -52,6 +52,7 @@ rootユーザでの初期作業
 .. code-block:: bash
 
    sudo apt install -y language-pack-ja
+   sudo locale-gen ja_JP.UTF-8   
    sudo update-locale LANG=ja_JP.UTF-8
    source /etc/default/locale
 
