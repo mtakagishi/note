@@ -26,6 +26,7 @@ autopep8 = "^2.0.2"
 translate-po = { git = "https://github.com/mtakagishi/translate-po.git" }
 doc8 = "^1.1.2"
 esbonio = "^0.16.5"
+rstcheck = "^6.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -34,3 +35,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poe.tasks]
 doc = "python setup.py doc"
 gettext = "python setup.py gettext"
+
+[tool.doc8]
+max-line-length = 120
+ignore = ["D001", "D004"]
