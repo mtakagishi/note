@@ -1,5 +1,5 @@
 [build]
-command = "poetry install --no-root && env | sort && poetry show && poetry run poe doc"
+command = "timedatectl set-timezone Asia/Tokyo && poetry install --no-root && env | sort && poetry show && poetry run poe doc"
 publish = "docs/_build/html"
 
 [build.environment]
