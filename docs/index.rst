@@ -6,6 +6,15 @@
 mtakagishi's note
 ================================
 
+Recent Posts
+================================
+.. postlist:: 5
+   :date: %Y/%m/%d
+   :format: ({date}) {title}
+   :expand: Read more ...
+
+Contents
+================================
 .. toctree::
   :maxdepth: 1
   :glob:
