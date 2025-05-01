@@ -1,5 +1,5 @@
 [build]
-command = "timedatectl set-timezone Asia/Tokyo && poetry install --no-root && env | sort && poetry show && poetry run poe doc"
+command = "poetry install --no-root && env | sort && poetry show && poetry run poe doc"
 publish = "docs/_build/html"
 
 [build.environment]
@@ -7,6 +7,7 @@ PYTHON_VERSION = "3.13"
 LANG = "ja_JP.UTF-8"
 LANGUAGE = "ja_JP:ja"
 LC_ALL = "ja_JP.UTF-8"
+TZ = "Asia/Tokyo"
 
 [[redirects]]
 from = "/"
