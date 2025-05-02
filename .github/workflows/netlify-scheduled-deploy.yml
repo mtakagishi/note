@@ -1,0 +1,15 @@
+name: Netlify Scheduled Deploy
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # JST 0:00（= UTC 15:00）
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  trigger-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify Build via Secret
+        run: |
+          curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
+          echo "Triggered Netlify build successfully."
