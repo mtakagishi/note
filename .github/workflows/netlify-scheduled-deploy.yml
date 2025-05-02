@@ -1,9 +1,9 @@
 name: Netlify Scheduled Deploy
 
 on:
-  schedule:
+  workflow_dispatch:     # Manual trigger
+  schedule:              # Scheduled trigger
     - cron: '0 15 * * *' # JST 0:00（= UTC 15:00）
-  workflow_dispatch: # 手動実行も可能
 
 jobs:
   trigger-netlify:
