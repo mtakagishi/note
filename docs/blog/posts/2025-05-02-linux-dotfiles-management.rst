@@ -122,7 +122,7 @@ Git の基本設定 (初回のみ)
 
    git clone --bare git@github.com:<YOUR-USER>/dotfiles.git $HOME/.dotfiles
    alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-   dot checkout
+   dot checkout --force
    dot config --local status.showUntrackedFiles no
 
 .. warning:: ``dot checkout`` で既存ファイルと衝突した場合は上書きされます。
