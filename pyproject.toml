@@ -1,3 +1,15 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.doc8]
+max-line-length = 120
+ignore = ["D001", "D004"]
+
+[tool.poe.tasks]
+doc = "python setup.py doc"
+gettext = "python setup.py gettext"
+
 [tool.poetry]
 name = "ITNote"
 version = "0.1.0"
@@ -6,7 +18,7 @@ authors = ["mtakagishi <mtakagishi+github@gimail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.13"
+python = "^3.12"
 sphinx = "^7.0"
 pydata-sphinx-theme = "^0.16.0"
 myst-parser = "^4.0.0"
@@ -23,19 +35,8 @@ ablog = "^0.11.12"
 [tool.poetry.group.dev.dependencies]
 sphinx-autobuild = "^2021.3.14"
 autopep8 = "^2.0.2"
-translate-po = { git = "https://github.com/mtakagishi/translate-po.git" }
+translate-po = {git = "https://github.com/mtakagishi/translate-po.git"}
 doc8 = "^1.1.2"
 esbonio = "^0.16.5"
 rstcheck = "^6.2.4"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poe.tasks]
-doc = "python setup.py doc"
-gettext = "python setup.py gettext"
-
-[tool.doc8]
-max-line-length = 120
-ignore = ["D001", "D004"]
+pre-commit = "^4.2.0"
