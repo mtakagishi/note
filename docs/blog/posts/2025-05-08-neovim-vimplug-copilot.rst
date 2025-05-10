@@ -1,5 +1,5 @@
 .. post:: 2025-05-08
-   :tags: Neovim, vim-plug, Copilot, 補完, 開発環境
+   :tags: neovim,vim-plugin, vim-plug, Copilot, 補完, 開発環境
    :category: Neovim設定
    :author: mtakagishi
    :language: ja
@@ -135,7 +135,7 @@ GitHub Copilot の導入とセットアップ
    let g:copilot_no_tab_map = v:true
    imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 
-.. attention:: 
+.. attention::
   この設定を適用する場合は、Copilot の補完受け入れキーを `<C-J>` したことを忘れないようにしましょう。
 
 まとめ

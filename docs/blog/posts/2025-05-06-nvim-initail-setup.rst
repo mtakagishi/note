@@ -1,5 +1,5 @@
 .. post:: 2025-05-06
-   :tags: nvim, 初期設定, linux, editor, setup, dev-environment, sudoedit
+   :tags: neovim, 初期設定, linux, dev-environment, sudoedit
    :category: 開発環境
    :language: ja
    :author: mtakagishi
@@ -87,13 +87,13 @@ nvim の設定ファイル置き場は下記です。初期では手動でフォ
 -----------------------
 
 .. code-block:: bash
-  
+
   # ~/.bashrc または ~/.zshrc に追加
   alias vim='nvim'
   alias view='nvim -R'
   alias vimdiff='nvim -d'
 
-.. note:: 
+.. note::
    `vim` や `view` のエイリアスを設定することで、nvim をより快適に利用できます。
    ただし、ここでは、`vi` だけはオリジナルのままにしておきます。純粋に `vi` を使いたいときもあるからです。
 

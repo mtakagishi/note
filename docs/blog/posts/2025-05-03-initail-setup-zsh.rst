@@ -1,5 +1,5 @@
 .. post:: 2025-05-03
-   :tags: zsh, starship, linux, shell, setup
+   :tags: zsh, starship, linux, shell
    :category: シェル環境
    :language: ja
    :author: mtakagishi
@@ -17,25 +17,25 @@ zsh + starship で始めるモダンシェル環境セットアップ
 はじめに
 ========
 
-クラウドの VM や WSL、Raspberry Pi──どんな Linux を入手しても最初は ``bash`` が標準です。  
-もちろんそのままでも作業はできますが、zshは拡張性にもすぐれ、MacOSのデフォルトログインシェルに採用されるなど、今後は主流になる可能性を秘めています。  
+クラウドの VM や WSL、Raspberry Pi──どんな Linux を入手しても最初は ``bash`` が標準です。
+もちろんそのままでも作業はできますが、zshは拡張性にもすぐれ、MacOSのデフォルトログインシェルに採用されるなど、今後は主流になる可能性を秘めています。
 さらに **starship** を組み合わせれば、情報量の多いプロンプトを極小コストで表示でき、どんな言語スタックでも一貫した開発体験が得られます。
 
 本記事では **「最短 30 分で *使える* zsh 環境」** を目標に、
 
-* zsh の導入とログインシェル変更  
-* 必須 & 人気のプラグイン／設定 (.zshrc)  
-* starship の概要とインストール  
-* 最低限知っておきたい starship のカスタマイズポイント  
+* zsh の導入とログインシェル変更
+* 必須 & 人気のプラグイン／設定 (.zshrc)
+* starship の概要とインストール
+* 最低限知っておきたい starship のカスタマイズポイント
 
-をまとめます。  
+をまとめます。
 **コピペで動くコマンド** を中心に書いているので、作業ログ代わりにどうぞ。
 
 前提条件
 ========
 
-* Linux (Debian/Ubuntu 系を例にしますが、Fedora/Arch でも読み替え可)  
-* sudo 権限を持つユーザーでログイン済み  
+* Linux (Debian/Ubuntu 系を例にしますが、Fedora/Arch でも読み替え可)
+* sudo 権限を持つユーザーでログイン済み
 * ネットワーク接続
 
 **Tip:** 既存の ``.bashrc`` に独自エイリアスがある場合は終盤で zsh に移植します。忘れずバックアップを取っておきましょう。
@@ -66,7 +66,7 @@ Step 1 ─ zsh を導入し、ログインシェルに設定
 
    反映には再ログインが必要です。SSH セッションなら ``exit`` →再接続で OK。
 
-3. **初回起動ウィザードはスキップ**  
+3. **初回起動ウィザードはスキップ**
    ``zsh`` を初めて起動すると設定ウィザードが走りますが、ここでは **(q) quit** を選択してスキップします。
 
 Step 2 ─ zsh設定ファイル .zshrc
@@ -129,7 +129,7 @@ starship は Rust 製の高速プロンプト。git ブランチ、言語バー�
    .. code-block:: bash
 
       echo -e "\ufb00 \ufb13 \ue0b0 \uf09b"
-  
+
    ﬀ や ﬓ などのアイコンが表示されれば成功です。全てが?が表示される場合は、フォントが正しくインストールされていません。
 
 3. **設定ファイルを作成**
@@ -141,7 +141,7 @@ starship は Rust 製の高速プロンプト。git ブランチ、言語バー�
       mkdir -p ~/.config && touch ~/.config/starship.toml
 
 
-   starship.tomlに以下を書き込みます。 `最新はこちらを確認 <https://starship.rs/config/>`_ 
+   starship.tomlに以下を書き込みます。 `最新はこちらを確認 <https://starship.rs/config/>`_
 
    .. code-block:: toml
 
@@ -159,7 +159,7 @@ starship は Rust 製の高速プロンプト。git ブランチ、言語バー�
       [package]
       disabled = true"
 
-4. **シェルへ組み込み**  
+4. **シェルへ組み込み**
 
    ``.zshrc`` の最後に ``eval "$(starship init zsh)"`` を追記します。
 
@@ -184,8 +184,8 @@ starship は Rust 製の高速プロンプト。git ブランチ、言語バー�
 
 .. rubric:: 参考リンク
 
-* zsh 公式ドキュメント — https://zsh.sourceforge.io/  
-* starship スターターガイド — https://starship.rs/guide/  
+* zsh 公式ドキュメント — https://zsh.sourceforge.io/
+* starship スターターガイド — https://starship.rs/guide/
 
 .. rubric:: 記事情報
 

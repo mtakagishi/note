@@ -1,5 +1,5 @@
 .. post:: 2025-05-09
-   :tags: Windows, WSL, Terminal, 開発環境, コンソール
+   :tags: Windows, WSL, terminal, 開発環境
    :category: 開発環境構築
    :language: ja
    :title: Windows Terminal + WSL メモ
@@ -35,8 +35,8 @@ WSL のインストール
 * `Ctrl + ,` で GUI 設定画面を表示し、右上の「設定ファイルを開く」
 * `Ctrl + Shift,` で JSON 設定ファイルを直接編集
 
-.. note:: 
-  開始ディレクトリが ``%USERPROFILE%`` 
+.. note::
+  開始ディレクトリが ``%USERPROFILE%``
 
 
 Windows ↔ Linux 間のファイルアクセス

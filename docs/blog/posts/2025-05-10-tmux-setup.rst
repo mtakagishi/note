@@ -1,5 +1,5 @@
 .. post:: 2025-05-10
-   :tags: linux, tmux, terminal, dev-environment
+   :tags: linux, tmux, terminal, dev-environment, cheat-sheet
    :category: 開発環境
    :language: ja
    :title: tmux 導入メモ

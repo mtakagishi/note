@@ -1,5 +1,5 @@
 .. post:: 2025-05-11
-   :tags: zsh, plugin, dotfiles, shell
+   :tags: zsh, zsh-plugin, dotfiles, shell
    :category: terminal
    :author: MASATO TAKAGISHI
    :language: ja

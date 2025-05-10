@@ -1,5 +1,5 @@
 .. post:: 2025-05-01
-  :tags: linux, setup, メンテナンス, 初期設定
+  :tags: linux, メンテナンス, 初期設定
   :category: 環境構築
   :author: mtakagishi
   :language: ja
@@ -52,7 +52,7 @@ rootユーザでの初期作業
 .. code-block:: bash
 
    sudo apt install -y language-pack-ja
-   sudo locale-gen ja_JP.UTF-8   
+   sudo locale-gen ja_JP.UTF-8
    sudo update-locale LANG=ja_JP.UTF-8
    source /etc/default/locale
 
