@@ -1,5 +1,5 @@
 .. post:: 2025-03-23
-  :tags: Netlify,302リダイレクト
+  :tags: netlify,302リダイレクト
   :category: ネットワーク
   :author: mtakagishi
   :language: ja
@@ -29,7 +29,7 @@ nelify.tomlの設定例
 
 .. code-block:: toml
   :caption: netlify.toml
-  
+
   [[redirects]]
   from = "/"
   to = "/ja/"
@@ -46,7 +46,7 @@ nelify.tomlの設定例
 
 参考URL
 ================
-`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_ 
+`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_
 
 .. rubric:: 記事情報
 

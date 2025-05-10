@@ -10,7 +10,7 @@ repos:
     hooks:
       - id: rstcheck
         args:
-          - --ignore-directives=post,postlist,note,warning,admonition,sidebar,tip,hint,important,caution,danger,error,attention,seealso
+          - --ignore-directives=post,postlist,note,warning,admonition,sidebar,tip,hint,important,caution,danger,error,attention,seealso,code-block
 
   - repo: https://github.com/PyCQA/doc8
     rev: v1.1.2
