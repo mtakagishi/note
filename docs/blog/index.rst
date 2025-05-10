@@ -2,7 +2,7 @@
 ブログ
 ============
 
-.. postlist:: 5
+.. postlist:: 30
    :date: %Y/%m/%d
    :format: {title} ({date})
    :excerpts:
