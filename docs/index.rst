@@ -8,7 +8,7 @@ mtakagishi's note
 
 Recent Posts
 ================================
-.. postlist:: 5
+.. postlist:: 30
    :date: %Y/%m/%d
    :format: ({date}) {title}
    :expand: Read more ...
@@ -33,6 +33,3 @@ Contents
   :glob:
 
   about_this_site
-
-
-
