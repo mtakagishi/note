@@ -1,0 +1,147 @@
+.. post:: 2025-05-17
+   :tags: pre-commit, lint, formatter, config, python, yaml
+   :category: dev-environment
+   :author: mtakagishi
+   :language: ja
+
+pre-commit フックのテンプレート集：構文・フォーマット・セキュリティまで網羅
+==================================================================================
+
+本記事では、Git のコミット前に自動実行できる `pre-commit` のフックを幅広く網羅し、設定例（テンプレート）として紹介します。
+「まずはすべて入れて、不要なものを削る」戦略に最適です。
+
+.. contents::
+   :local:
+   :depth: 2
+
+YAML 設定ファイルの例
+----------------------
+
+以下は、`.pre-commit-config.yaml` に記述するテンプレートです。
+
+.. code-block:: yaml
+
+   repos:
+     # 基本チェック
+     - repo: https://github.com/pre-commit/pre-commit-hooks
+       rev: v4.5.0
+       hooks:
+         - id: end-of-file-fixer
+         - id: trailing-whitespace
+         - id: check-yaml
+         - id: check-json
+
+     # Python用フォーマッタ／Lint
+     - repo: https://github.com/psf/black
+       rev: 24.3.0
+       hooks:
+         - id: black
+
+     - repo: https://github.com/pre-commit/mirrors-isort
+       rev: v5.12.0
+       hooks:
+         - id: isort
+
+     - repo: https://github.com/pycqa/flake8
+       rev: 6.1.0
+       hooks:
+         - id: flake8
+
+     - repo: https://github.com/asottile/pyupgrade
+       rev: v3.15.0
+       hooks:
+         - id: pyupgrade
+           args: ["--py310-plus"]
+
+     # reStructuredText / Markdown チェック
+     - repo: https://github.com/myint/rstcheck
+       rev: v6.2.4
+       hooks:
+         - id: rstcheck
+
+     - repo: https://github.com/ducu37/markdownlint
+       rev: v0.0.5
+       hooks:
+         - id: markdownlint
+
+     - repo: https://github.com/PyCQA/doc8
+       rev: 1.1.2
+       hooks:
+         - id: doc8
+
+     # YAML / TOML
+     - repo: https://github.com/pre-commit/mirrors-yamllint
+       rev: v1.32.0
+       hooks:
+         - id: yamllint
+
+     - repo: https://github.com/pappasam/toml-sort
+       rev: 0.22.1
+       hooks:
+         - id: toml-sort
+           args: ["--all", "--write"]
+
+     # セキュリティチェック
+     - repo: https://github.com/PyCQA/bandit
+       rev: 1.7.6
+       hooks:
+         - id: bandit
+           args: ["-ll", "-r", "src"]
+
+     - repo: https://github.com/zricethezav/gitleaks
+       rev: v8.18.1
+       hooks:
+         - id: gitleaks
+
+     # Shellスクリプト
+     - repo: https://github.com/koalaman/shellcheck-precommit
+       rev: v0.9.0
+       hooks:
+         - id: shellcheck
+
+     # スペルチェック
+     - repo: https://github.com/lucasdemarchi/codespell
+       rev: v2.2.6
+       hooks:
+         - id: codespell
+
+     # Terraform / Docker (optional)
+     - repo: https://github.com/antonbabenko/pre-commit-terraform
+       rev: v1.79.0
+       hooks:
+         - id: terraform_fmt
+         - id: terraform_validate
+
+     - repo: https://github.com/hadolint/hadolint
+       rev: v2.12.0
+       hooks:
+         - id: hadolint
+
+補足：pyproject.toml での設定統合
+----------------------------------
+
+多くのツールは `pyproject.toml` に統一的に設定できます：
+
+.. code-block:: toml
+
+   [tool.black]
+   line-length = 88
+
+   [tool.flake8]
+   max-line-length = 88
+   max-complexity = 10
+   extend-ignore = ["E203", "W503"]
+
+   [tool.doc8]
+   ignore = ["D001", "D002"]
+
+   [tool.rstcheck]
+   report_level = "WARNING"
+
+
+このテンプレートをベースに、必要な項目だけを選び、実プロジェクトに合わせてカスタマイズしてみてください。
+
+.. rubric :: 記事情報
+
+:投稿日: 2025-05-17
+:著者: mtakagishi
