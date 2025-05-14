@@ -170,4 +170,4 @@ SSHでの接続に備えて、`.ssh/authorized_keys` に公開鍵を配置しま
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-01
-:投稿者: mtakagishi
+:著者: mtakagishi

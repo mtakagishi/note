@@ -132,4 +132,4 @@ Windows Terminal 上での効率的な操作は、日々の作業効率を大き
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-13
-:投稿者: mtakagishi
+:著者: mtakagishi

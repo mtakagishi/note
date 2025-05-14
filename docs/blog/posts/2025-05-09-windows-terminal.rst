@@ -91,4 +91,4 @@ Windows Terminal ＋ WSLで今のところは十分だと思います。
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-09
-:投稿者: mtakagishi
+:著者: mtakagishi

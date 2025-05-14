@@ -51,4 +51,4 @@ nelify.tomlの設定例
 .. rubric:: 記事情報
 
 :投稿日: 2025-03-23
-:投稿者: mtakagishi
+:著者: mtakagishi

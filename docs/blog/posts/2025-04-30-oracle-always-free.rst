@@ -22,13 +22,13 @@ Oracle Cloud Free Tierで無料インスタンスを作成し、WindowsからSSH
 目的
 ====
 
-- 無料で Ubuntu 24.04 環境を手に入れる  
-- Windows から SSH で接続できることを確認する  
+- 無料で Ubuntu 24.04 環境を手に入れる
+- Windows から SSH で接続できることを確認する
 
 前提
 ====
 
-- Oracle Cloud アカウント（Free Tier）を保持している  
+- Oracle Cloud アカウント（Free Tier）を保持している
 
 新規インスタンス作成
 ====================
@@ -36,15 +36,15 @@ Oracle Cloud Free Tierで無料インスタンスを作成し、WindowsからSSH
 Basic Information
 -----------------
 
-- **Name** : ``oracle-private``  
-- **Image**: *Canonical Ubuntu 24.04 Minimal*  
-- **Shape**: VM.Standard.A1.Flex (OCPU = 1, Memory = 1 GB)  
+- **Name** : ``oracle-private``
+- **Image**: *Canonical Ubuntu 24.04 Minimal*
+- **Shape**: VM.Standard.A1.Flex (OCPU = 1, Memory = 1 GB)
 - **Always Free–eligible** という表記があることを確認
 
 Networking & SSH
 ----------------
 
-#. *Add SSH keys* で **Generate SSH key pair** を選択  
+#. *Add SSH keys* で **Generate SSH key pair** を選択
 #. ローカルに ``ssh-key-{日付}.key`` (秘密鍵) と ``ssh-key-{日付}.key.pub`` (公開鍵) を保存
 #. .ssh フォルダに ``ssh-key-{日付}.key`` を移動し、パーミッションを変更
 
@@ -85,8 +85,8 @@ Windows からの SSH 接続
 まとめ
 ======
 
-- Oracle Cloud **Always Free** を使えば 10 分ほどでパーソナル Linux サーバを構築できる  
-- SSH 鍵のパーミッション設定に注意  
+- Oracle Cloud **Always Free** を使えば 10 分ほどでパーソナル Linux サーバを構築できる
+- SSH 鍵のパーミッション設定に注意
 - これでどこからでも同じ開発環境にアクセス可能。今後は Tmux の設定を深掘り予定 🚀
 
 参考リンク
@@ -98,4 +98,4 @@ Windows からの SSH 接続
 .. rubric:: 記事情報
 
 :投稿日: 2025-04-01
-:投稿者: mtakagishi
+:著者: mtakagishi

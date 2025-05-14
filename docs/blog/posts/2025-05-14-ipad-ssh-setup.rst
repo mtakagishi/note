@@ -89,4 +89,4 @@ iSH + OpenSSH を使えば、iPad上でも軽快なターミナル環境が手�
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-14
-:投稿者: mtakagishi
+:著者: mtakagishi

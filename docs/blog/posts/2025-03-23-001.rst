@@ -53,7 +53,7 @@ pipx整備
 
 .. code-block:: bash
   :caption: pipx整備
-  
+
   python -m pip install --upgrade pip
   python -m pip install --user pipx
   python -m pipx ensurepath
@@ -63,7 +63,7 @@ poetry整備
 
 .. code-block:: bash
   :caption: poetry整備
-  
+
   pipx install poetry
 
 
@@ -101,12 +101,12 @@ Ubuntu Focal 20.04の場合、Python3.13に未対応のため、イメージを�
 netlify.toml修正
 ----------------------------
 
-`参考：How to use configurable Python versions <https://www.netlify.com/blog/announcing-configurable-python-versions-in-netlify-builds/>`_ 
+`参考：How to use configurable Python versions <https://www.netlify.com/blog/announcing-configurable-python-versions-in-netlify-builds/>`_
 
 .. code-block:: toml
   :caption: netlify.toml
   :linenos:
-  
+
   [build]
   environment = { PYTHON_VERSION = "3.13" }
 
@@ -148,7 +148,7 @@ netlify.tomlの修正
   command = "bash ./build.sh"
 
 修正後::
-  
+
   command = "poetry install --no-root && poetry run poe doc"
 
 
@@ -161,7 +161,7 @@ blockdiag + Pillow（画像描画）
 発生エラー:
   'FreeTypeFont' object has no attribute 'getsize'
 
-経緯:  
+経緯:
   ``Pillow = "==9.5.0"`` が Python3.13対応でエラーとなる。
   ``Pillow = "^10.0"`` へ修正したが、blockdiag がPillowの最新に対応していない。
 
@@ -174,4 +174,4 @@ blockdiag + Pillow（画像描画）
 .. rubric:: 記事情報
 
 :投稿日: 2025-03-23
-:投稿者: mtakagishi
+:著者: mtakagishi

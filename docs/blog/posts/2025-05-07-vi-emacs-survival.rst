@@ -93,4 +93,4 @@ Emacs ― 迷ったら *C-g* でキャンセル
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-07
-:投稿者: mtakagishi
+:著者: mtakagishi

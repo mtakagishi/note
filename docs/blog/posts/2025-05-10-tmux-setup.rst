@@ -101,4 +101,4 @@ linux環境でセッションが切れても再開できる仕掛けであるtmu
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-10
-:投稿者: mtakagishi
+:著者: mtakagishi

@@ -89,4 +89,4 @@ PowerShell または コマンドプロンプトで以下を実行：
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-12
-:投稿者: mtakagishi
+:著者: mtakagishi

@@ -102,4 +102,4 @@ iPad独自の操作もあります。Globeキー（地球儀キー）と組み�
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-15
-:投稿者: mtakagishi
+:著者: mtakagishi

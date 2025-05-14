@@ -49,7 +49,7 @@ Linux新環境で手早く自分専用の環境を立ち上げる手順と考え
 
   * dotfilesはBare-repo方式で管理、育成の都度gitへpush
   * セットアップ手順はinstall.shにまとめる。育成の都度編集しgitへpush
- 
+
 ------------------------------------------------------------------
 CI による品質維持
 ------------------------------------------------------------------
@@ -92,12 +92,12 @@ README.mdに、CIのバッジを追加して、視覚的に確認できるよう
 参考リンク
 ===========
 
-* `ArchWiki 「Dotfiles — bare-repo 方式」 <https://wiki.archlinux.jp/index.php/ドットファイル>`_ 
-* `The bare minimum to keep dot files in git（Liv Blog） <https://liv.pink/post/2022-04-27-the-bare-minimum-to-keep-dot-files-in-git/>`_ 
-* `dotfiles CI の具体例（ashishb/dotfiles） <https://github.com/ashishb/dotfiles>`_ 
-* `dotload — install.sh <https://github.com/cli-stuff/dotload>`_ 
+* `ArchWiki 「Dotfiles — bare-repo 方式」 <https://wiki.archlinux.jp/index.php/ドットファイル>`_
+* `The bare minimum to keep dot files in git（Liv Blog） <https://liv.pink/post/2022-04-27-the-bare-minimum-to-keep-dot-files-in-git/>`_
+* `dotfiles CI の具体例（ashishb/dotfiles） <https://github.com/ashishb/dotfiles>`_
+* `dotload — install.sh <https://github.com/cli-stuff/dotload>`_
 
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-04
-:投稿者: mtakagishi
+:著者: mtakagishi

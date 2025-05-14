@@ -3,7 +3,7 @@
    :category: 環境構築
    :author: mtakagishi
    :language: ja
-   
+
 
 =====================================================================
 Bare‑repo方式ではじめる Linux dotfiles 管理
@@ -162,7 +162,7 @@ dotfiles管理マネージャへの移行を検討すると学習コストも分
 
 なお、現状の私のリポジトリURLは以下です。育成中ですが興味があれば覗いてみてください。
 
-* `mtakagishi's dotfiles <https://github.com/mtakagishi/dotfiles>`_ 
+* `mtakagishi's dotfiles <https://github.com/mtakagishi/dotfiles>`_
 
 
 参考リンク
@@ -173,4 +173,4 @@ dotfiles管理マネージャへの移行を検討すると学習コストも分
 .. rubric:: 記事情報
 
 :投稿日: 2025-05-02
-:投稿者: mtakagishi
+:著者: mtakagishi

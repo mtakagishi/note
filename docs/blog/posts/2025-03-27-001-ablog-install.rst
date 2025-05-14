@@ -24,7 +24,7 @@ Ablogでできるようになること
 
 Ablogのインストール
 ========================
-pipやposetry addでインストールし、conf.pyを少しいじればすぐ使える。`詳細は公式ドキュメント参照 <https://ablog.readthedocs.io>`_ 
+pipやposetry addでインストールし、conf.pyを少しいじればすぐ使える。`詳細は公式ドキュメント参照 <https://ablog.readthedocs.io>`_
 
 
 記事作成
@@ -75,7 +75,7 @@ Ablogはビルド時に自動でアーカイブ実行される。以下のよう
 
 .. rubric:: 参考URL
 
-`公式ページ（Cross-referencing Blog Pages） <https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-pages.html>`_ 
+`公式ページ（Cross-referencing Blog Pages） <https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-pages.html>`_
 
 
 サイドバーサポート
@@ -99,7 +99,7 @@ Ablogはビルド時に自動でアーカイブ実行される。以下のよう
 
 .. rubric:: 参考URL
 
-`公式ページ（Templating and Themes Support） <https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_ 
+`公式ページ（Templating and Themes Support） <https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_
 
 ドラフト記事の作成
 ------------------------
@@ -115,4 +115,4 @@ Ablogはビルド時に自動でアーカイブ実行される。以下のよう
 .. rubric:: 記事情報
 
 :投稿日: 2025-04-01
-:投稿者: mtakagishi
+:著者: mtakagishi
