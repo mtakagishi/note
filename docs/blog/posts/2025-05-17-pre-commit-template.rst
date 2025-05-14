@@ -4,11 +4,11 @@
    :author: mtakagishi
    :language: ja
 
-pre-commit フックのテンプレート集：構文・フォーマット・セキュリティまで網羅
+pre-commit フックの設定網羅テンプレート
 ==================================================================================
 
-本記事では、Git のコミット前に自動実行できる `pre-commit` のフックを幅広く網羅し、設定例（テンプレート）として紹介します。
-「まずはすべて入れて、不要なものを削る」戦略に最適です。
+本記事では、Git のコミット前に自動実行できる `pre-commit` のフックを幅広く網羅し、設定例（テンプレート）として整理しておきます。
+「まずはすべて入れて、不要なものを削る」という使い方を想定しています。
 
 .. contents::
    :local:
@@ -117,23 +117,23 @@ YAML 設定ファイルの例
        hooks:
          - id: hadolint
 
-補足：pyproject.toml での設定統合
+pyproject.toml オプション設定例
 ----------------------------------
 
-多くのツールは `pyproject.toml` に統一的に設定できます：
+オプション設定は `pyproject.toml` に設定します：
 
 .. code-block:: toml
 
    [tool.black]
-   line-length = 88
+   line-length = 120
 
    [tool.flake8]
-   max-line-length = 88
+   max-line-length = 120
    max-complexity = 10
    extend-ignore = ["E203", "W503"]
 
    [tool.doc8]
-   ignore = ["D001", "D002"]
+   ignore = ["D001", "D002", "D004"]
 
    [tool.rstcheck]
    report_level = "WARNING"
