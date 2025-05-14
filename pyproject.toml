@@ -42,5 +42,7 @@ rstcheck = "^6.2.4"
 pre-commit = "^4.2.0"
 
 [tool.rstcheck]
-ignore_roles = ["doc"]
-ignore_directives = ["post", "postlist", "note", "warning", "admonition", "sidebar", "tip", "hint", "important", "caution", "danger", "error", "attention", "seealso", "code-block"]
+report_level = "warning"
+
+# ignore_roles = ["doc"]
+# ignore_directives = ["post", "postlist", "note", "warning", "admonition", "sidebar", "tip", "hint", "important", "caution", "danger", "error", "attention", "seealso", "code-block"]
