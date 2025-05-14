@@ -10,6 +10,10 @@ iPad上でSSH環境を無料で整える方法（iSH + OpenSSH）
 **無料アプリ iSH を使って、iPad上にSSH環境を構築する手順** をまとめました。
 ここまででLinuxにzsh + neovim + tmux での環境を整えてきたのでSSH接続さえ確立できれば、いつでも作業が可能になります。
 
+.. contents:
+   :local:
+   :depth: 2
+
 背景と目的
 ------------
 

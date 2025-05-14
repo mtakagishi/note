@@ -9,6 +9,10 @@ Windows Terminal + WSL　メモ
 
 Windows Terminal + WSLの利用の自分用メモです。
 
+.. contents::
+    :local:
+    :depth: 2
+
 WSL + Terminal で実現できること
 ---------------------------------
 
