@@ -110,5 +110,5 @@ tmuxのバッファはUbuntu側にあるため、Windowsのクリップボード
 
 .. rubric:: 記事情報
 
-:投稿者: mtakagishi
+:著者: mtakagishi
 :投稿日: 2025-05-20
