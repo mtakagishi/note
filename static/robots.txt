@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://note.mtakagishi.com/sitemap.xml
+Sitemap: https://mtakagishi.com/sitemap.xml
