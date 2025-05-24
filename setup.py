@@ -2,8 +2,31 @@ import os
 import subprocess
 from setuptools import setup, Command
 import shutil
+import time
+import filecmp
 
 LANGUAGES = ['ja', 'en']  # 'ja', 'en', 'zh', 'es', 'fr', 'hi'
+
+buildername = "html"
+sourcedir = "docs"
+output_base = "docs/_build/html"
+doctree_base = "docs/_build/doctrees"
+
+def build_lang(lang):
+    lang_output = f"{output_base}/{lang}"
+    lang_doctree = f"{doctree_base}_{lang}"
+    args = [
+        "sphinx-build",
+        "-b", buildername,
+        "-d", lang_doctree,
+        sourcedir,
+        lang_output,
+        "-D", f"language={lang}"
+    ]
+    print(f"[INFO] ビルド開始: {lang}")
+    subprocess.run(args, check=True)
+    print(f"[INFO] ビルド完了: {lang}")
+
 
 class SimpleCommand(Command):
     user_options = []
@@ -17,14 +40,18 @@ class SimpleCommand(Command):
 
 class DocCommand(SimpleCommand):
     def run(self):
-        buildername = "html"
-        sourcedir = "docs"
-        outputdir = "docs/_build/html"
+        start_time = time.time()
+
         for lang in LANGUAGES:
-            # args = ["sphinx-build","-vvv", "-b", buildername,
-            args = ["sphinx-build", "-E", "-a", "-b", buildername,
-                    sourcedir, f"{outputdir}/{lang}", "-D", f"language={lang}"]
-            subprocess.call(args)
+            build_lang(lang)
+
+        def copy_if_different(src, dst):
+            if not os.path.exists(src):
+                return
+            if not os.path.exists(dst) or not filecmp.cmp(src, dst, shallow=False):
+                shutil.copy(src, dst)
+                print(f"[COPY] {src} → {dst}")
+
         files_to_copy = [
             "index.html",
             "robots.txt",
@@ -32,11 +59,17 @@ class DocCommand(SimpleCommand):
             "style.css",
             "cmp.js",
         ]
-        # staticファイルを個別にコピー
         for file_path in files_to_copy:
-            shutil.copy(f"static/{file_path}", outputdir)
-        # sitemap.xmlを個別にコピー
-        shutil.copy(f"{outputdir}/ja/sitemap.xml", outputdir)
+            src_path = f"static/{file_path}"
+            dst_path = f"{output_base}/{file_path}"
+            copy_if_different(src_path, dst_path)
+
+        sitemap_src = f"{output_base}/ja/sitemap.xml"
+        sitemap_dst = f"{output_base}/sitemap.xml"
+        copy_if_different(sitemap_src, sitemap_dst)
+
+        elapsed = time.time() - start_time
+        print(f"✨ 全ビルド完了。所要時間: {elapsed:.2f} 秒")
 
 
 class GettextCommand(SimpleCommand):
