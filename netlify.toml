@@ -1,5 +1,5 @@
 [build]
-command = "poetry install --no-root && env | sort && poetry show && poetry run poe doc"
+command = "poetry install --no-root && env | sort && poetry show && poetry run doit doc"
 publish = "docs/_build/html"
 
 [build.environment]
@@ -13,7 +13,7 @@ TZ = "Asia/Tokyo"
 from = "/"
 to = "/ja/"
 status = 302
-conditions = { Language = ["ja"] }
+conditions = {Language = ["ja"]}
 force = true
 
 [[redirects]]
