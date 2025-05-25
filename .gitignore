@@ -1,6 +1,6 @@
-# 
+#
 # https://github.com/github/gitignore/blob/master/Python.gitignore
-# 
+#
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -147,3 +147,6 @@ cython_debug/
 
 # poetry
 # poetry.lock
+
+# doit キャッシュファイル
+.doit.db.db

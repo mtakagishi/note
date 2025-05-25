@@ -16,7 +16,7 @@
 git clone https://github.com/mtakagishi/note.git
 cd note
 poetry install
-poetry run poe doc
+poetry run doit doc
 python simple_http_server.py -p {port} --open-browser
 ```
 port:デフォは8000。
@@ -25,7 +25,7 @@ port:デフォは8000。
 ## サイト維持メモ
 ### 英語化
 - poファイル生成
-`poegry run poe gettext`
+`poegry run doit gettext`
 - Google翻訳
 `poetry run python .\translate-po-ja-en.py` {ファイルPATH}
 - 手作業翻訳
