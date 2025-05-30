@@ -1,9 +1,12 @@
 [build]
 command = """
-    curl -sSf https://rye.astral.sh/get | bash
-    source ~/.rye/env
-    rye sync
-    rye run doit doc
+  wget -q https://github.com/astral-sh/rye/releases/latest/download/rye-x86_64-linux.gz
+  gunzip rye-x86_64-linux.gz
+  chmod +x rye-x86_64-linux
+  ./rye-x86_64-linux self install --yes
+  . $HOME/.rye/env
+  rye sync
+  rye run doit doc
 """
 publish = "docs/_build/html"
 
