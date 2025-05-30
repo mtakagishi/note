@@ -1,5 +1,10 @@
 [build]
-command = "poetry install --no-root && env | sort && poetry show && poetry run doit doc"
+command = """
+    curl -sSf https://rye.astral.sh/get | bash
+    source ~/.rye/env
+    rye sync
+    rye run doit doc
+"""
 publish = "docs/_build/html"
 
 [build.environment]

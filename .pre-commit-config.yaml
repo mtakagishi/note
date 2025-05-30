@@ -1,4 +1,10 @@
 repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.12
+    hooks:
+      - id: ruff
+      - id: ruff-format
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -20,11 +26,6 @@ repos:
     hooks:
       - id: toml-sort
         args: ['--in-place']  # 自動修正
-
-  - repo: https://github.com/psf/black
-    rev: 25.1.0
-    hooks:
-      - id: black
 
   - repo: https://github.com/pre-commit/mirrors-isort
     rev: v5.10.1

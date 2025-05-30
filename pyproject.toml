@@ -1,42 +1,60 @@
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "note"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+  {name = "mtakagishi", email = "mtakagishi@gmail.com"}
+]
+dependencies = [
+  "sphinx>=8.2.3",
+  "pydata-sphinx-theme>=0.16.1",
+  "myst-parser>=4.0.1",
+  "sphinxcontrib-blockdiag>=3.0.0",
+  "sphinx-sitemap>=2.6.0",
+  "sphinxnotes-strike>=1.2.1",
+  "sphinx-intl>=2.3.1",
+  "sphinx-last-updated-by-git>=0.3.8",
+  "sphinx-git>=11.0.0",
+  "pillow>=11.2.1",
+  "ablog>=0.11.12"
+]
+readme = "README.md"
+requires-python = ">= 3.8"
 
 [tool.doc8]
 max-line-length = 120
 ignore = ["D001", "D004"]
 
-[tool.poetry]
-name = "ITNote"
-version = "0.1.0"
-description = ""
-authors = ["mtakagishi <mtakagishi+github@gimail.com>"]
-license = "MIT"
+[tool.hatch.build.targets.wheel]
+packages = ["src/note"]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-sphinx = "^7.0"
-pydata-sphinx-theme = "^0.16.0"
-myst-parser = "^4.0.0"
-sphinxcontrib-blockdiag = "^3.0.0"
-sphinx-sitemap = "^2.5.0"
-sphinxnotes-strike = "^1.2"
-sphinx-intl = "^2.1.0"
-sphinx-last-updated-by-git = "^0.3.4"
-sphinx-git = "^11.0.0"
-Pillow = "^10.0"
-ablog = "^0.11.12"
-
-[tool.poetry.group.dev.dependencies]
-sphinx-autobuild = "^2021.3.14"
-autopep8 = "^2.0.2"
-translate-po = {git = "https://github.com/mtakagishi/translate-po.git"}
-doc8 = "^1.1.2"
-esbonio = "^0.16.5"
-rstcheck = "^6.2.4"
-pre-commit = "^4.2.0"
-doit = "^0.36.0"
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.rstcheck]
 ignore_roles = ["doc"]
 ignore_directives = ["toctree", "post", "postlist", "note", "warning", "admonition", "sidebar", "tip", "hint", "important", "caution", "danger", "error", "attention", "seealso", "code-block"]
+
+[tool.ruff]
+line-length = 120
+extend-select = ["I", "C901"] # "I":import整理（isort相当） "C901": complexity
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+  "sphinx-autobuild>=2024.10.3",
+  "doc8>=1.1.2",
+  "esbonio>=0.16.5",
+  "rstcheck>=6.2.4",
+  "pre-commit>=4.2.0",
+  "doit>=0.36.0",
+  "ruff>=0.11.12",
+  "translate-po @ git+https://github.com/mtakagishi/translate-po.git"
+]
