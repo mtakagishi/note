@@ -8,7 +8,7 @@ mtakagishi's note
 
 Recent Posts
 ================================
-.. postlist:: 30
+.. postlist:: 100
    :date: %Y/%m/%d
    :format: ({date}) {title}
    :expand: Read more ...
