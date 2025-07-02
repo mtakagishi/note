@@ -101,7 +101,7 @@ html_theme_options = {
         },
     ],
     "navbar_end": ["navbar-icon-links", "language_swicher.html"],
-    "article_footer_items": ["ads_google.html", "ads_themoneytizer.html"],
+    "article_footer_items": ["ads_google.html"],
     "footer_start": ["copyright", "last-updated.html"],
     "footer_end": ["sphinx-version", "theme-version"],
     # https://ablog.readthedocs.io/en/stable/manual/templates-themes.html#blog-sidebars
