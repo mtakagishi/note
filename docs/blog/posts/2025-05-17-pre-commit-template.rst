@@ -21,6 +21,9 @@ YAML 設定ファイルの例
 
 .. code-block:: yaml
 
+   default_language_version:
+     python: python3.11
+
    repos:
      # 基本チェック
      - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -80,6 +83,23 @@ YAML 設定ファイルの例
        hooks:
          - id: toml-sort
            args: ["--all", "--write"]
+
+      - repo: https://github.com/pre-commit/mirrors-mypy
+        rev: 'v1.10.0'
+        hooks:
+          - id: mypy
+            args: [--install-types]
+            additional_dependencies:
+              - typing-extensions
+              - types-requests
+              - types-toml
+              - types-PyYAML
+              - types-setuptools
+              - types-python-dateutil
+              - pandas
+              - numpy
+              - pydantic
+              - pydantic-settings
 
      # セキュリティチェック
      - repo: https://github.com/PyCQA/bandit
@@ -144,4 +164,5 @@ pyproject.toml オプション設定例
 .. rubric :: 記事情報
 
 :投稿日: 2025-05-17
+:更新日: 2025-07-27
 :著者: mtakagishi
