@@ -151,7 +151,7 @@ pyproject.toml.poetry.bak
 setup.py.bak
 
 # doit キャッシュファイル
-.doit.db.db
+.doit.db.*
 
 # rye
 requirements*.lock
