@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-06 22:33+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:3
@@ -29,7 +29,8 @@ msgstr "Last Updated on 2021-08-15"
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:6
 msgid "共通の変数名や単語を一括変換したいときに便利"
-msgstr "Useful when you want to convert common variable names or words in bulk"
+msgstr ""
+"Useful when you want to convert common variable names or words in bulk"
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:9
 msgid "選択している単語について次に出現する単語を同時選択する"
@@ -45,5 +46,4 @@ msgstr "Selecting all Words in a Document for the Selected Word"
 
 #: ../../../tools/vscode/vscode_select_same_word.rst:16
 msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`L`"
-msgstr ""
-
+msgstr ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`L`"

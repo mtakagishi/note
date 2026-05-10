@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-05 22:48+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../programming/python/ipynb_extension.rst:3
@@ -29,7 +29,7 @@ msgstr "Update"
 
 #: ../../programming/python/ipynb_extension.rst:4
 msgid "2023-05-05"
-msgstr ""
+msgstr "2023-05-05"
 
 #: ../../programming/python/ipynb_extension.rst:7
 msgid "本記事の概要"
@@ -37,7 +37,9 @@ msgstr "Overview of this Article"
 
 #: ../../programming/python/ipynb_extension.rst:8
 msgid "拡張子ipynbはJupyterで使われるファイルで、IPython Notebookが由来です。"
-msgstr "The ipynb extension is a file used in Jupyter and derived from IPython Notebook."
+msgstr ""
+"The ipynb extension is a file used in Jupyter and derived from IPython "
+"Notebook."
 
 #: ../../programming/python/ipynb_extension.rst:9
 msgid "Poetryを活用してJupyterを起動する手順をまとめました。"
@@ -65,7 +67,9 @@ msgstr "Starting Jupyter"
 
 #: ../../programming/python/ipynb_extension.rst:19
 msgid "Jupyterがインストールされていない、起動方法が分からないという想定で記載しています。"
-msgstr "Assuming that Jupyter is not installed and the method of starting it is unknown, we have described the steps."
+msgstr ""
+"Assuming that Jupyter is not installed and the method of starting it is "
+"unknown, we have described the steps."
 
 #: ../../programming/python/ipynb_extension.rst:21
 msgid "作業ディレクトリへ移動"
@@ -85,5 +89,5 @@ msgstr "Launch Jupyter"
 
 #: ../../programming/python/ipynb_extension.rst:44
 msgid "成功すると次の画像のようにブラウザが立ち上がります。"
-msgstr "If successful, the browser will launch as shown in the following image:"
-
+msgstr ""
+"If successful, the browser will launch as shown in the following image:"

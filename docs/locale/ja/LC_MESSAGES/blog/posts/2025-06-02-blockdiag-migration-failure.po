@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:10
+msgid "blockdiagの代替手段を模索したが断念した記録"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:13
+msgid ""
+"sphinxcontrib.blockdiagについて、Pillow 9.5 "
+"依存がボトルネックだったので、諸々の移行対応を試みたが、最終的に移行を断念した記録です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:20
+msgid "背景と目的"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:22
+msgid ""
+"`sphinxcontrib.blockdiag` を用いて時系列図を可視化していたサイトを管理していました。 しかし、blockdiag は "
+"`Pillow 9.5` に依存しており、以降の Pillow 10.x 以降では非互換となってしまった。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:25
+msgid "`Pillow 9.5` のインストールも pip 上では終了しており、代替手段を模索する必要が生じた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:28
+msgid "試したこと"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:30
+msgid "**Graphvizへの移行を試行**"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:32
+msgid "blockdiag の構文を手作業で Graphviz の DOT 記法に変換。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:33
+msgid "`graphviz` ディレクティブを使って `sphinx` 上で描画。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:34
+msgid "しかし、横幅・縦幅の調整に限界を感じた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:35
+msgid "各ノードの大きさ指定や折返し等も Graphviz 側では厳しい。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:37
+msgid "**図の分割検討**"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:39
+msgid "グループ単位で図を分割し、複数の図に展開する構成を試みる。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:40
+msgid "やはり、横幅・縦幅の調整に限界を感じた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:42
+msgid "**blockdiag継続のための Pillow 9.5 固定**"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:44
+msgid "Pillow 9.5 の公式 wheel 提供が停止されていた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:45
+msgid "fork による維持を試みた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:46
+msgid "公式の `9.5.x` ブランチを fork。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:47
+msgid "`setup.py` の `get_version()` を修正。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:48
+msgid "Poetry の git 依存指定でインストールには成功。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:49
+msgid "しかし、最終的に Sphinx ビルド時に `AssertionError: len(context) = 1` という深刻なエラーが発生。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:50
+msgid "他のパッケージとの依存関係の複雑さを踏まえこの手も断念。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:53
+msgid "結論"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:55
+msgid "blockdiag による図の可視化は、現時点では維持・移行ともに困難と判断。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:56
+msgid "該当ページの管理をいったん **中断** し、代替の可視化方法やツールが整備されるまで凍結する。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:60
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:61
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-02-blockdiag-migration-failure.rst:62
+msgid "2025-06-02"
+msgstr ""
+

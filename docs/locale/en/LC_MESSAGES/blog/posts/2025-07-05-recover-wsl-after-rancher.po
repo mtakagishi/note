@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:8
+msgid "Rancher利用後に壊れたWSL環境を再構築した手順"
+msgstr "Steps to rebuild a broken WSL environment after using Rancher"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:10
+msgid ""
+"過去に Windows 上で Rancher を導入していた影響で、`wsl install` が正常に動作せず、WSL2 "
+"を利用できない状態が続いていた。今回、その WSL 環境を完全に初期化し、再構築することに成功したので、その手順を記録しておく。"
+msgstr ""
+"Due to the fact that I had installed Rancher on Windows in the past, `wsl "
+"install` did not work properly and I was unable to use WSL2. This time, I "
+"was able to completely initialize and rebuild the WSL environment, so I will"
+" record the steps."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:13
+msgid "背景と問題の発生状況"
+msgstr "Background and situation of the problem"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:15
+msgid ""
+"以前、Docker Desktop や Rancher Desktop を導入した経緯があり、WSL の仮想環境に `docker-desktop` や"
+" `rancher-desktop` などのディストリビューションが自動で追加されていた。"
+msgstr ""
+"I had previously introduced Docker Desktop and Rancher Desktop, and "
+"distributions such as `docker-desktop` and `rancher-desktop` were "
+"automatically added to the WSL virtual environment."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:17
+msgid ""
+"これらをアンインストールした後も、`wsl install` コマンドがエラーを返すようになり、Ubuntu を含む WSL "
+"環境の導入が一切できない状態に。"
+msgstr ""
+"Even after uninstalling these, the `wsl install` command returned an error, "
+"making it impossible to install any WSL environment including Ubuntu."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:19
+msgid "原因は、おそらく **WSLの内部状態が壊れていた** ことにある。"
+msgstr "The cause is probably that the internal state of WSL was corrupted."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:22
+msgid "解決のためのアプローチ"
+msgstr "approach to solution"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:24
+msgid "以下の手順で、WSL を一度完全に初期化し、再インストールを行った。"
+msgstr ""
+"I completely initialized WSL and reinstalled it using the following steps."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:26
+msgid "**現在の WSL 状態の確認**"
+msgstr "**Checking the current WSL status**"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:32
+msgid "**不要なディストリビューションの削除**"
+msgstr "**Remove unnecessary distributions**"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:40
+msgid "**WSL 機能を完全に無効化**"
+msgstr "**Completely disable WSL functionality**"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:47
+msgid "再起動を実施。"
+msgstr "Performed a reboot."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:49
+msgid "**WSL 機能の再有効化**"
+msgstr "**Re-enabling WSL functionality**"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:56
+msgid "再び再起動。"
+msgstr "Reboot again."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:58
+msgid "**WSL の再インストール**"
+msgstr "**Reinstall WSL**"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:64
+msgid "これで再び Ubuntu などの WSL ディストリビューションがインストール可能な状態に戻った。"
+msgstr "Now you can install WSL distributions such as Ubuntu again."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:67
+msgid "今後の方針と教訓"
+msgstr "Future policy and lessons learned"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:69
+msgid "Rancher Desktop や Docker Desktop のアンインストール後でも、WSL 内部に痕跡が残っている場合がある。"
+msgstr ""
+"Even after uninstalling Rancher Desktop or Docker Desktop, traces may remain"
+" inside WSL."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:70
+msgid "**`wsl --unregister` + `dism` のセットによる初期化が有効** だった。"
+msgstr "**Initialization by setting `wsl --unregister` + `dism` was valid**."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:71
+msgid "開発マシンで仮想化関連ツールを切り替える場合は、WSL の状態管理にも注意が必要。"
+msgstr ""
+"When switching virtualization-related tools on a development machine, you "
+"should also be careful about WSL state management."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:72
+msgid "今後は WSL の破損時に備え、定期的な `wsl --export` によるバックアップも検討したい。"
+msgstr ""
+"In the future, I would like to consider periodically backing up using `wsl "
+"--export` in case WSL becomes corrupted."
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:75
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:76
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:77
+msgid "2025-07-05"
+msgstr "2025-07-05"

@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:8
+msgid "Neovimでのプラグイン管理とGitHub Copilot導入メモ"
+msgstr "Plugin management in Neovim and GitHub Copilot introduction notes"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:10
+msgid ""
+"Neovimをインストールした直後の環境に、最小限のプラグインを導入して、自動補完環境を構築した記録です。 最初の段階では `vim-plug` "
+"をプラグインマネージャとして採用し、1つ目のプラグインとして GitHub Copilot を導入しました。"
+msgstr ""
+"This is a record of building an auto-completion environment by installing a "
+"minimum number of plugins in the environment immediately after installing "
+"Neovim. In the first stage, we adopted `vim-plug` as our plugin manager and "
+"introduced GitHub Copilot as the first plugin."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:17
+msgid "背景と目的"
+msgstr "Background and purpose"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:19
+msgid ""
+"「Neovim を軽量で自分好みに育てたい」「まずは1つずつプラグインを理解しながら導入したい」という思想のもと、 自動補完に優れた GitHub "
+"Copilot を導入しました。"
+msgstr ""
+"I added GitHub Copilot for its strong autocompletion, while keeping the "
+"overall approach of making Neovim lightweight, personal, and easy to grow "
+"one plugin at a time."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:22
+msgid "現在は Copilot が無料枠でも使えるようになっており、手軽に試すには最適なプラグインです。"
+msgstr ""
+"Copilot is now available in the free tier, making it the perfect plugin to "
+"try out easily."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:25
+msgid "vim-plug の導入"
+msgstr "Installing vim-plug"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:27
+msgid ""
+"まずは、プラグイン管理ツール `vim-plug` を導入します。 プラグイン管理ツールとしては他に、luaベースの `lazy.nvim` "
+"が急速に発展していることは認識していますが、 vim-"
+"plugは10年以上の実績と情報量で仕様も枯れていて、バニラからプラグインを試していくには対応しやすい環境となります。"
+msgstr ""
+"First, we will introduce the plugin management tool `vim-plug`. I am aware "
+"that the lua-based `lazy.nvim` is rapidly developing as a plugin management "
+"tool, but vim-plug has over 10 years of experience and a large amount of "
+"information, and its specifications are outdated, making it an easy "
+"environment for trying out plugins from vanilla."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:36
+msgid "init.vim には以下のように記述します："
+msgstr "In init.vim write:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:48
+msgid "vim-plug の基本コマンドと利用タイミング"
+msgstr "vim-plug basic commands and timing of use"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:50
+msgid "``:PlugInstall`` – プラグインのインストール"
+msgstr "``:PlugInstall`` – Install a plugin"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:51
+msgid "``:PlugUpdate`` – 既存プラグインの更新"
+msgstr "``:PlugUpdate`` – Update an existing plugin"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:52
+msgid "``:PlugClean`` – 不要になったプラグインの削除（!付きで確認なし）"
+msgstr ""
+"``:PlugClean`` – Delete plugins that are no longer needed (no confirmation "
+"with !)"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:54
+msgid "初回セットアップ時には ``:PlugInstall`` を実行すればOKです。"
+msgstr "When setting up for the first time, just run ``:PlugInstall``."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:56
+msgid "自動化したい場合は以下のようのコマンドラインからも実行できるので参考にしてください："
+msgstr ""
+"If you want to automate it, you can also run it from the command line as "
+"below, so please refer to it:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:63
+msgid "GitHub Copilot の導入とセットアップ"
+msgstr "Deploying and setting up GitHub Copilot"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:65
+msgid "プラグインに Copilot を採用した理由："
+msgstr "Reasons for choosing Copilot as a plugin:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:67
+msgid "GitHub アカウントがあれば **無料で利用可能**"
+msgstr "**Available for free** with a GitHub account"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:68
+msgid "Pythonや他言語に対して非常に高精度な補完を提示"
+msgstr "Provides highly accurate completion for Python and other languages"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:69
+msgid "ワンラインではなく、**複数行の関数定義補完も可能**"
+msgstr ""
+"Instead of one line, **Multi-line function definition completion is also "
+"possible**"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:71
+msgid ""
+"既に上記 "
+"init.vimの記述とPlugInstallの実行で必要ファイルはDLされています。copilotと連携したい場合は、初回にセットアップが必要です："
+msgstr ""
+"The necessary files have already been downloaded by writing the above "
+"init.vim and executing PlugInstall. If you want to work with copilot, you "
+"will need to set it up the first time:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:77
+msgid "表示された URL をローカルのブラウザで開き、認証コードを入力すれば連携完了です。"
+msgstr ""
+"Open the displayed URL in your local browser and enter the authentication "
+"code to complete the linkage."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:80
+msgid "導入時のエラー対処法"
+msgstr "How to deal with errors during installation"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:82
+msgid ""
+"**Node.js が必要**：``Copilot setup`` 時に ``Node.js not found in PATH`` "
+"と出たら、node.jsのインストールが必要です。``sudo apt install -y nodejs npm`` "
+"でもよいですが、本記事では、nvmでNode.jsをインストールしました。nvmはNode.jsのバージョン管理ツールで、複数のNode.jsを簡単に切り替えられます。"
+msgstr ""
+"**Node.js required**: If you get ``Node.js not found in PATH`` during "
+"``Copilot setup``, you need to install node.js. You can also use ``sudo apt "
+"install -y nodejs npm``, but in this article, we installed Node.js using "
+"nvm. nvm is a Node.js version control tool that allows you to easily switch "
+"between multiple Node.js versions."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:91
+msgid "また、次回以降のログインでもNode.jsが使えるように、以下を ``.bashrc`` または ``.zshrc`` に追記しておきます："
+msgstr ""
+"Also, add the following to ``.bashrc`` or ``.zshrc`` so that you can use "
+"Node.js on subsequent logins:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:98
+msgid ""
+"**SSH接続環境でブラウザが開けない** ： ``:Copilot setup`` 実行時に表示されるコードとURLをコピーし、 "
+"ローカルPCのブラウザで以下のURLを開きます："
+msgstr ""
+"**Unable to open browser in SSH connection environment**: Copy the code and "
+"URL that are displayed when you run ``:Copilot setup``, and open the "
+"following URL in your local PC's browser:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:101
+msgid "URL： https://github.com/login/device"
+msgstr "URL: https://github.com/login/device"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:103
+msgid "ブラウザで表示された入力欄に、Neovimで表示された認証コード（例: ``ABCD-EFGH`` ）を入力すればOKです。"
+msgstr ""
+"All you have to do is enter the authentication code displayed by Neovim "
+"(e.g. ``ABCD-EFGH``) into the input field displayed by your browser."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:105
+msgid "**認証コードが通らない** ：期限切れの場合があるため、再度 ``:Copilot setup`` を実行"
+msgstr ""
+"**Authentication code does not pass**: It may have expired, so run "
+"``:Copilot setup`` again."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:107
+msgid ""
+"**SSH接続環境で'xdg-open'エラーは無視** ： Error SERVER_REQUEST_HANDLER_ERROR: Vim:E475:"
+" Invalid value for argument cmd: 'xdg-open' is not executable は、無視して問題ない"
+msgstr ""
+"**Ignore 'xdg-open' error in SSH connection environment**: Error "
+"SERVER_REQUEST_HANDLER_ERROR: Vim:E475: Invalid value for argument cmd: "
+"'xdg-open' is not executable can be safely ignored."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:112
+msgid "**Setupが完了したことを確認する** ： Neovimを再起動し、以下のコマンドを実行してみます："
+msgstr ""
+"**Ensure Setup is completed**: Restart Neovim and try running the following "
+"command:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:119
+msgid "これで、 ``Ready`` と表示されていれば、Copilotとの連携が完了しています。"
+msgstr "If ``Ready`` is displayed, the link with Copilot is complete."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:122
+msgid "今後の補完プラグイン導入に向けた注意点"
+msgstr "Points to note when introducing complementary plug-ins in the future"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:124
+msgid ""
+"多くの補完エンジン（例：``nvim-cmp``）は、補完候補の選択や確定に ``<Tab>`` キーを利用します。 一方で GitHub "
+"Copilot もデフォルトで ``<Tab>`` による補完受け入れを設定しているため、 両者が同時に有効になると **キー操作の競合が発生** "
+"してしまいます。"
+msgstr ""
+"Many completion engines (e.g. ``nvim-cmp``) use the ``<Tab>`` key to select "
+"and confirm completion candidates. On the other hand, GitHub Copilot is also"
+" set to accept completion using ``<Tab>`` by default, so if both are enabled"
+" at the same time, a **keystroke conflict** will occur."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:128
+msgid "将来的な拡張を見据えて、あらかじめ Copilot のキーマッピングを変更しておくことで、 他の補完エンジンと共存しやすくなります。"
+msgstr ""
+"By changing Copilot's key mapping in advance for future expansion, it will "
+"be easier to coexist with other completion engines."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:131
+msgid ""
+"以下を ``init.vim`` に追記しておくことで、Copilot の補完受け入れを ``<C-J>`` （Ctrl+J）に変更できます："
+msgstr ""
+"You can change Copilot's completion acceptance to ``<C-J>`` (Ctrl+J) by "
+"adding the following to ``init.vim``:"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:139
+msgid "この設定を適用する場合は、Copilot の補完受け入れキーを `<C-J>` したことを忘れないようにしましょう。"
+msgstr ""
+"If you apply this setting, don't forget to set Copilot's completion "
+"acceptance key to `<C-J>`."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:142
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:144
+msgid "`vim-plug` にて、いちからvimプラグインを試せる環境を構築。"
+msgstr ""
+"Build an environment where you can try out vim plugins from scratch using "
+"`vim-plug`."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:145
+msgid "Copilot を導入するだけでも十分強力"
+msgstr "Just installing Copilot is powerful enough"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:146
+msgid "今後も様々なプラグインを試すことを考慮しキーマッピングを調整"
+msgstr ""
+"Adjust the key mapping in consideration of trying various plugins in the "
+"future."
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:150
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:151
+msgid "2025-05-08"
+msgstr "2025-05-08"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-08-neovim-vimplug-copilot.rst:152
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

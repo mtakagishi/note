@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:9
+msgid "REST APIのStubを手早い立上げにMockoonを使った記録"
+msgstr "Record of using Mockoon to quickly launch REST API Stub"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:11
+msgid ""
+"REST "
+"APIの本実装が遅れてたり、昔作ったスタブが動かなくなっていたり、ともかく急ぎで、フロントエンド開発や結合テストを行う必要性に迫られるケースという局面に最近よく遭遇します。"
+" とにかく「今すぐ」「最低限のStubが必要」という状況でMockoonが便利そうなので導入手順をまとめました。"
+msgstr ""
+"Recently, I often come across situations where the actual implementation of "
+"a REST API has been delayed, or a stub I created a long time ago no longer "
+"works, or I am in a hurry to perform front-end development and integration "
+"testing. In any case, Mockoon seems useful in situations where you need a "
+"minimum of Stub right now, so I have summarized the installation steps."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:20
+msgid "背景と目的"
+msgstr "Background and purpose"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:22
+msgid "REST実装が別チーム実装、開発遅れや提供サーバの不具合でREST APIが利用できない"
+msgstr ""
+"REST implementation is implemented by a different team, REST API is not "
+"available due to development delays or problems with the provided server."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:23
+msgid "早急にHTTPS通信でレスポンスを返すStubが必要"
+msgstr ""
+"I urgently need a Stub that returns a response via HTTPS communication."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:24
+msgid "本番APIのURLに差し替えるだけで移行できる構成にしたい"
+msgstr ""
+"I want to have a configuration that can be migrated by simply replacing it "
+"with the URL of the production API."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:25
+msgid "共同開発者はPythonに不慣れなため、ノーコード・GUIツールが望ましい"
+msgstr ""
+"Since the co-developers are not familiar with Python, a no-code/GUI tool is "
+"preferable."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:26
+msgid "Dockerは利用不可（社内制限あり）"
+msgstr "Docker cannot be used (internal restrictions apply)"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:28
+msgid "この条件をすべて満たす手段として、**Mockoon** を採用しました。"
+msgstr "We adopted **Mockoon** as a means to meet all of these conditions."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:31
+msgid "Mockoonとは"
+msgstr "What is Mockoon?"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:33
+msgid ""
+"`Mockoon <https://mockoon.com/>`_ は、GUIベースでREST APIのStubを定義できる無料のツールです。"
+msgstr ""
+"`Mockoon <https://mockoon.com/>`_ is a free tool that allows you to define a"
+" REST API Stub based on a GUI."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:35
+msgid "特徴："
+msgstr "Features:"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:37
+msgid "ノーコードでGET/POSTなどのRESTエンドポイントを作成可能"
+msgstr "You can create REST endpoints such as GET/POST with no code."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:38
+msgid "GUIでの操作が直感的"
+msgstr "Intuitive GUI operation"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:39
+msgid "HTTPS対応（自己署名証明書の自動生成）"
+msgstr "HTTPS compatible (automatic generation of self-signed certificate)"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:40
+msgid "レスポンスの遅延、ヘッダー、条件分岐なども柔軟に設定可能"
+msgstr ""
+"Response delays, headers, conditional branching, etc. can be flexibly set."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:41
+msgid "設定はJSONファイルでエクスポートでき、CLIやチーム内共有にも対応"
+msgstr ""
+"Settings can be exported as a JSON file and can be shared via CLI or within "
+"the team."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:42
+msgid "ライセンスはMITなのでテスト利用にも適している"
+msgstr "The license is MIT, so it is suitable for test use."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:45
+msgid "導入ステップ（Windows環境）"
+msgstr "Installation steps (Windows environment)"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:47
+msgid ""
+"Windowsの場合Microfost Storeからインストール可能です。他のOSは `公式サイト "
+"<https://mockoon.com/download>`_ を参照してください。"
+msgstr ""
+"For Windows, it can be installed from Microfost Store. For other OS, please "
+"refer to the `official website <https://mockoon.com/download>`_."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:49
+msgid ""
+"Mockoonを起動し、「New environment」でStub環境を作成 - "
+"保存のためのexploreが開くので該当環境を保存するファイル名を指定＝新環境が作成されます - ポートを 任意の番号へ "
+"変更（任意）※デフォルトは3001 - 必要に応じて「Enable HTTPS」を有効化 - 必要に応じて「Enable CORS」もONにする"
+msgstr ""
+"Start Mockoon and create a stub environment from \"New environment\". When "
+"the file explorer opens, choose a file name for saving that environment. "
+"Then change the port if needed; the default is 3001. Enable \"Enable HTTPS\""
+" and \"Enable CORS\" as necessary."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:55
+msgid ""
+"`+ Add route` で以下のようなStubエンドポイントを作成 - "
+"crudでGET/POST/PUT/DELETEの操作が自動で作成するのは新規APIの調整で便利そうですが、 "
+"ここではGET/POSTなどで取り急ぎ立上げたいので「Http Route」を選択 - /api/test-resource などのエンドポイントを指定"
+" - メソッドはGET/POST/PUT/DELETE を選択可能 - "
+"レスポンスは固定のJSONを指定できるのでRESTチームと整合したJSONサンプルを指定"
+msgstr ""
+"Create a Stub endpoint like the one below with `+ Add route` - Automatically"
+" creating GET/POST/PUT/DELETE operations with crud seems useful when "
+"adjusting a new API, but here we want to start up quickly with GET/POST, "
+"etc., so select \"Http Route\" - Specify an endpoint such as /api/test-"
+"resource - GET/POST/PUT/DELETE can be selected as the method - You can "
+"specify a fixed JSON for the response, so specify a JSON sample that is "
+"consistent with the REST team."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:61
+msgid "サーバーを「Start」で起動し、HTTPでアクセス確認 例： ::"
+msgstr "Start the server with \"Start\" and check access with HTTP Example: ::"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:69
+msgid "所感"
+msgstr "Impressions"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:71
+msgid ""
+"flackやFastapiも選択肢として考えましたが、手早く立ち上げるには前提知識やセッティングの手間から考えて、 "
+"もう少し便利なものがないかと探していたところ、Mockoonに辿り着きました。 "
+"想像以上に便利で手早く立ち上げられるので非常に助かりました。同様のニーズがる方には是非お勧めしたいです。"
+msgstr ""
+"I thought about flack and Fastapi as options, but I was looking for "
+"something a little more convenient in terms of prerequisite knowledge and "
+"setting up to get started quickly, and I ended up finding Mockoon. It was a "
+"great help as it was more convenient and quicker to start up than I "
+"expected. I would definitely recommend it to anyone with similar needs."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:75
+msgid "MITライセンスということなで実プロジェクトでの利用のハードルも低いのも魅力です。Mockoonの開発者の方に感謝です。"
+msgstr ""
+"It is also attractive because it is licensed under the MIT license, so the "
+"hurdles for using it in actual projects are low. Thank you to the developers"
+" of Mockoon."
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:78
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:79
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-19-mockoon-https-stub-windows.rst:80
+msgid "2025-05-19"
+msgstr "2025-05-19"

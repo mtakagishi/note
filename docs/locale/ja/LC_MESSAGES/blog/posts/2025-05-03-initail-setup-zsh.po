@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:9
+msgid "zsh + starship で始めるモダンシェル環境セットアップ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:11
+msgid ""
+"新しく入手した Linux を “bash のまま” で妥協しない。zsh と高速・多機能プロンプト starship "
+"を導入し、最低限押さえておきたい設定を一気に整えモダンなシェル環境を構築します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:18
+msgid "はじめに"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:20
+msgid ""
+"クラウドの VM や WSL、Raspberry Pi──どんな Linux を入手しても最初は ``bash`` が標準です。 "
+"もちろんそのままでも作業はできますが、zshは拡張性にもすぐれ、MacOSのデフォルトログインシェルに採用されるなど、今後は主流になる可能性を秘めています。"
+" さらに **starship** "
+"を組み合わせれば、情報量の多いプロンプトを極小コストで表示でき、どんな言語スタックでも一貫した開発体験が得られます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:24
+msgid "本記事では **「最短 30 分で *使える* zsh 環境」** を目標に、"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:26
+msgid "zsh の導入とログインシェル変更"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:27
+msgid "必須 & 人気のプラグイン／設定 (.zshrc)"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:28
+msgid "starship の概要とインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:29
+msgid "最低限知っておきたい starship のカスタマイズポイント"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:31
+msgid "をまとめます。 **コピペで動くコマンド** を中心に書いているので、作業ログ代わりにどうぞ。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:35
+msgid "前提条件"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:37
+msgid "Linux (Debian/Ubuntu 系を例にしますが、Fedora/Arch でも読み替え可)"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:38
+msgid "sudo 権限を持つユーザーでログイン済み"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:39
+msgid "ネットワーク接続"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:41
+msgid "**Tip:** 既存の ``.bashrc`` に独自エイリアスがある場合は終盤で zsh に移植します。忘れずバックアップを取っておきましょう。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:44
+msgid "Step 0 ─ システムを最新化"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:53
+msgid "Step 1 ─ zsh を導入し、ログインシェルに設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:55
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:95
+msgid "**インストール**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:61
+msgid "**標準シェルを切り替え**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:67
+msgid "反映には再ログインが必要です。SSH セッションなら ``exit`` →再接続で OK。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:69
+msgid ""
+"**初回起動ウィザードはスキップ** ``zsh`` を初めて起動すると設定ウィザードが走りますが、ここでは **(q) quit** "
+"を選択してスキップします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:73
+msgid "Step 2 ─ zsh設定ファイル .zshrc"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:75
+msgid "``~/.zshrc`` を作っておきます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:81
+msgid "``.bashrc`` から **alias/function/export** を中心に移植します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:91
+msgid "Step 3 ─ starship を導入する"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:93
+msgid ""
+"starship は Rust 製の高速プロンプト。git ブランチ、言語バージョン、exit code など “今ほしい情報” "
+"を自動で表示します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:101
+msgid "Rust toolchain を入れずとも単体バイナリで動くため軽量です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:103
+msgid "**Nerd Font をインストール**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:105
+msgid "unzip fontconfig が必要です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:111
+msgid "フォントフォルダを作成し、Nerd Font をダウンロードします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:121
+msgid "フォントキャッシュを更新します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:127
+msgid "フォントをターミナルから直接表示して確認します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:133
+msgid "ﬀ や ﬓ などのアイコンが表示されれば成功です。全てが?が表示される場合は、フォントが正しくインストールされていません。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:135
+msgid "**設定ファイルを作成**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:137
+msgid "starshipの初期ファイルの空の設定ファイルを作成します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:144
+msgid "starship.tomlに以下を書き込みます。 `最新はこちらを確認 <https://starship.rs/config/>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:162
+msgid "**シェルへ組み込み**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:164
+msgid "``.zshrc`` の最後に ``eval \"$(starship init zsh)\"`` を追記します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:171
+msgid "zshを再起動して反映します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:179
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:181
+msgid ""
+"これで zsh + starship によるモダンなシェル環境が使える状態になりました。 "
+"今後は、必要に応じてプラグインの追加などについて触れていきます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:186
+msgid "参考リンク"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:187
+msgid "zsh 公式ドキュメント — https://zsh.sourceforge.io/"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:188
+msgid "starship スターターガイド — https://starship.rs/guide/"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:191
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:192
+msgid "2025-05-03"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:193
+msgid "mtakagishi"
+msgstr ""
+

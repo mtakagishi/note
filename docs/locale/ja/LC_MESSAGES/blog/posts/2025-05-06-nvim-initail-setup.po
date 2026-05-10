@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:9
+msgid "Neovimの導入と初期設定、sudoeditとの関連と注意点"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:11
+msgid ""
+"WindowsでVSCodeという開発スタイルで十分ですが、あえてLinux環境で開発を行うならvi系のエディタを極めるのも一つの選択肢です。 "
+"この記事では、Neovimの導入と初期設定を整理します。また、避けるべきsudo nvimコマンドとsudoeditについてもまとめます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:16
+msgid "目次"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:19
+msgid "1. Neovim のインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:21
+msgid "以下のコマンドでインストールできます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:38
+msgid "2. 設定ディレクトリと構成ファイルの準備"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:40
+msgid "nvim の設定ファイル置き場は下記です。初期では手動でフォルダとファイルを作成します："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:47
+msgid "既に `init.vim` がある場合は、以下のコマンドでコピーします："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:55
+msgid "3. 初期 `init.vim` のサンプル"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:57
+msgid "以下は最低限の使いやすさを備えた `init.vim` の例です："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:84
+msgid "4. エイリアス"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:87
+msgid "エイリアスの推奨設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:97
+msgid ""
+"`vim` や `view` のエイリアスを設定することで、nvim をより快適に利用できます。 ただし、ここでは、`vi` "
+"だけはオリジナルのままにしておきます。純粋に `vi` を使いたいときもあるからです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:102
+msgid "5. sudo nvim は 避けるべき"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:105
+msgid "`sudo nvim` は非推奨"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:107
+msgid "nvim は以下の場所に一時ファイルやセッションファイルを保存します："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:114
+msgid ""
+"ログインユーザの環境下で初のnevimの起動を `sudo nvim` として実行してしまうと、これらのファイルが root "
+"所有になり、以降の通常起動でエラーが発生します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:117
+msgid "例：発生するエラー"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:126
+msgid "対策： `sudoedit` を使う"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:128
+msgid "安全に root 権限のファイルを編集する方法"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:135
+msgid "この方法では、nvim はユーザー権限のまま一時ファイルを編集し、保存時に root が上書きします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:138
+msgid "所有権の修復が必要な場合"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:146
+msgid "6. まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:148
+msgid "neovim の導入と初期設定、sudoedit との関連についてまとめました。 今後は、プラグインの導入や設定を進めていく予定です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:152
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:153
+msgid "2025-05-06"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-06-nvim-initail-setup.rst:154
+msgid "mtakagishi"
+msgstr ""
+

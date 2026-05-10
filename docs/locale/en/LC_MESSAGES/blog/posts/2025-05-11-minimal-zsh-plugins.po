@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:8
+msgid ""
+"Zsh での最小構成の Zsh プラグイン導入方法を紹介します。 "
+"本記事では、プラグインマネージャを使わずに手動で導入し、必須プラグインの構成を整理します。"
+msgstr ""
+"We will introduce how to install the Zsh plugin with a minimal configuration"
+" using Zsh. In this article, we will install it manually without using the "
+"plugin manager and organize the configuration of the required plugins."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:16
+msgid "概要"
+msgstr "overview"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:17
+msgid "Starship を事前に導入済み　⇒ :doc:`2025-05-03-initail-setup-zsh`"
+msgstr ""
+"Starship has been installed in advance ⇒ :doc:`2025-05-03-initail-setup-zsh`"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:18
+msgid "最低限のプラグインのみ"
+msgstr "Only minimal plugins"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:19
+msgid "`.zshrc` だけで完結"
+msgstr "Complete with just `.zshrc`"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:22
+msgid "対象プラグイン"
+msgstr "Target plugin"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:24
+msgid "以下はすべて **Starship と競合しない** ものです。"
+msgstr "All of the following do not conflict with Starship."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:26
+msgid "``zsh-autosuggestions``：過去の履歴などから自動補完を提示"
+msgstr ""
+"``zsh-autosuggestions``: Suggest auto-completion from past history etc."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:27
+msgid "``zsh-syntax-highlighting``：入力中のコマンド構文を色分け"
+msgstr ""
+"``zsh-syntax-highlighting``: Color-code the command syntax you are typing"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:28
+msgid "``zsh-completions``：公式以外の補完も含めて強化"
+msgstr "``zsh-completions``: Enhanced to include non-official completions"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:31
+msgid "プラグインの手動導入"
+msgstr "Manual installation of plugins"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:33
+msgid "以下のコードを ``.zshrc`` に記述することで、**初回のみ clone し、2回目以降はスキップ** できます。"
+msgstr ""
+"By writing the following code in ``.zshrc``, you can **clone only the first "
+"time and skip the second and subsequent times**."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:59
+msgid "Starship との順序関係"
+msgstr "Order relationship with Starship"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:61
+msgid "Starship を使っている場合、``.zshrc`` の先頭で初期化する必要があります。"
+msgstr ""
+"If you are using Starship, you will need to initialize it at the top of your"
+" ``.zshrc``."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:72
+msgid "dotfiles管理として、Git 管理から除外する"
+msgstr "Exclude from Git management as dotfiles management"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:74
+msgid "プラグインは clone すれば再取得できるため、Git 管理から除外すべきです。"
+msgstr ""
+"Plugins can be re-obtained by cloning, so they should be excluded from Git "
+"management."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:82
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:84
+msgid "zsh の最小構成のプラグイン導入により補完機能が充実して、コマンドの入力が効率化されます。"
+msgstr ""
+"Introducing a minimal plugin for zsh enriches the completion functions and "
+"makes command entry more efficient."
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:88
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:89
+msgid "2025-05-11"
+msgstr "2025-05-11"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-11-minimal-zsh-plugins.rst:90
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

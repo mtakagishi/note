@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:9
+msgid "Python製タスク自動化ツール「doit」の基本"
+msgstr "Basics of the Python task automation tool “doit”"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:11
+msgid "Pythonで書けるタスク自動化ツール「doit」について、基本的な考え方と導入方法、簡単な使用例までを整理した作業メモです。"
+msgstr ""
+"This is a work memo that explains the basic concept, introduction method, "
+"and simple usage examples of the task automation tool \"doit\" written in "
+"Python."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:18
+msgid "概要"
+msgstr "overview"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:20
+msgid ""
+"doit は、Makefile的なタスク自動化の仕組みを、Pythonの文法で柔軟に記述できるツールです。 "
+"Sphinxのビルドや、リント・テストなどの定型作業を記述しておけば、差分検出によって必要なタスクだけを自動実行できます。"
+msgstr ""
+"doit is a tool that allows you to flexibly describe Makefile-like task "
+"automation mechanisms using Python syntax. By writing routine tasks such as "
+"Sphinx builds, lint tests, etc., only the necessary tasks can be "
+"automatically executed using difference detection."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:24
+msgid "インストール"
+msgstr "install"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:30
+msgid "または Poetry を使う場合は以下のようにインストールします。"
+msgstr "Or if you use Poetry, install it as follows."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:37
+msgid "最小構成のタスク定義"
+msgstr "Minimal task definition"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:39
+msgid "ファイル名は ``dodo.py`` とするのが基本です。"
+msgstr "The file name should basically be ``dodo.py``."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:48
+msgid "実行は次のように行います。"
+msgstr "Execution is as follows."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:57
+msgid "入出力ファイルを使った例"
+msgstr "Example using input/output files"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:69
+msgid "``file_dep``: 入力ファイル（依存ファイル）"
+msgstr "``file_dep``: input file (dependent file)"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:70
+msgid "``targets``: 出力ファイル（ビルド済みならスキップ可能）"
+msgstr "``targets``: Output files (can be skipped if built)"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:71
+msgid "``clean``: ``doit clean`` 実行時に削除対象に含める"
+msgstr "``clean``: Include for deletion when executing ``doit clean``"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:74
+msgid "Python関数によるアクション"
+msgstr "Actions with Python functions"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:87
+msgid "よくある用途"
+msgstr "Common uses"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:89
+msgid "よく使われるdoitの用途"
+msgstr "Common uses of doit"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:93
+msgid "用途"
+msgstr "Purpose"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:94
+msgid "内容"
+msgstr "Content"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:95
+msgid "ドキュメント"
+msgstr "document"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:96
+msgid "SphinxやMkDocsのビルド"
+msgstr "Building Sphinx and MkDocs"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:97
+msgid "テスト"
+msgstr "test"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:98
+msgid "pytestやunittestなどの実行"
+msgstr "Running pytest, unittest, etc."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:99
+msgid "リント"
+msgstr "lint"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:100
+msgid "flake8, black, mypyなど"
+msgstr "flake8, black, mypy etc."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:101
+msgid "複数ステップ"
+msgstr "multiple steps"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:102
+msgid "ステップ間の依存関係も記述可能"
+msgstr "Dependencies between steps can also be described"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:103
+msgid "自動監視"
+msgstr "automatic monitoring"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:104
+msgid "``doit auto`` でファイルの変更を監視"
+msgstr "Watch file changes with ``doit auto``"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:107
+msgid "補足"
+msgstr "supplement"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:109
+msgid ""
+"プロジェクトが大きくなった場合、 ``tasks`` ディレクトリにタスクを分割して記述し、 ``dodo.py`` からインポートすることもできます。"
+msgstr ""
+"If your project grows, you can also write separate tasks in the ``tasks`` "
+"directory and import them from ``dodo.py``."
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:112
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-24-intro-to-doit.rst:114
+msgid ""
+"Pythonで定義でき、柔軟で再利用性の高いタスク自動化が可能になるdoitは、小規模〜中規模のプロジェクトでの効率化に非常に便利です。今後は、PoetryやSphinx、CIツールなどと連携させた構成についても検討していく予定です。"
+msgstr ""
+"doit, which can be defined in Python and enables flexible and highly "
+"reusable task automation, is extremely useful for streamlining small to "
+"medium-sized projects. In the future, we plan to consider configurations "
+"that link with Poetry, Sphinx, CI tools, etc."

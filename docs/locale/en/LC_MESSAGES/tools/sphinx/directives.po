@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-06 02:56+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../tools/sphinx/directives.rst:2
@@ -29,7 +29,7 @@ msgstr "A directive is a common block in markup languages."
 
 #: ../../tools/sphinx/directives.rst:6
 msgid "toctree"
-msgstr ""
+msgstr "toctree"
 
 #: ../../tools/sphinx/directives.rst:7
 msgid "Table of contentsの略"
@@ -41,15 +41,15 @@ msgstr "Strings that cannot be specified in toctree"
 
 #: ../../tools/sphinx/directives.rst:10
 msgid "genindex"
-msgstr ""
+msgstr "genindex"
 
 #: ../../tools/sphinx/directives.rst:11
 msgid "modindex"
-msgstr ""
+msgstr "mod index"
 
 #: ../../tools/sphinx/directives.rst:12
 msgid "search"
-msgstr ""
+msgstr "search"
 
 #: ../../tools/sphinx/directives.rst:13
 msgid "_(アンダースコア) で始まる名前"
@@ -72,7 +72,7 @@ msgstr "Directive:"
 
 #: ../../tools/sphinx/directives.rst:34
 msgid "code-block"
-msgstr ""
+msgstr "code-block"
 
 #: ../../tools/sphinx/directives.rst:36
 msgid "例::"
@@ -88,7 +88,7 @@ msgstr "Sample"
 
 #: ../../tools/sphinx/directives.rst:66
 msgid "todo"
-msgstr ""
+msgstr "todo"
 
 #: ../../tools/sphinx/directives.rst:71 ../../tools/sphinx/directives.rst:82
 #: ../../tools/sphinx/directives.rst:95 ../../tools/sphinx/directives.rst:108
@@ -115,130 +115,133 @@ msgstr "The TODO featured in the directive introduction example"
 
 #: ../../tools/sphinx/directives.rst:77
 msgid "todolist"
-msgstr ""
+msgstr "todo list"
 
 #: ../../tools/sphinx/directives.rst:88
 msgid "code"
-msgstr ""
+msgstr "code"
 
 #: ../../tools/sphinx/directives.rst:103
 msgid "image"
-msgstr ""
+msgstr "image"
 
 #: ../../tools/sphinx/directives.rst:114
 msgid "figure"
-msgstr ""
+msgstr "figure"
 
 #: ../../tools/sphinx/directives.rst:124
 msgid "link"
-msgstr ""
+msgstr "link"
 
 #: ../../tools/sphinx/directives.rst:131
 msgid "`Title <http://link>`_"
-msgstr ""
+msgstr "`Title <http://link>`_"
 
 #: ../../tools/sphinx/directives.rst:134
 msgid "admonition"
-msgstr ""
+msgstr "admonition"
 
 #: ../../tools/sphinx/directives.rst:144
 msgid "lorem30"
-msgstr ""
+msgstr "lorem30"
 
 #: ../../tools/sphinx/directives.rst:146
 msgid ""
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae "
-"placeat quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. "
-"Quidem et fugiat minima saepe atque sed totam quibusdam perspiciatis!"
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae placeat "
+"quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. Quidem et "
+"fugiat minima saepe atque sed totam quibusdam perspiciatis!"
 msgstr ""
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae placeat "
+"quia, magnam iusto cum beatae adipisci. Omnis nisi alias dolor. Quidem et "
+"fugiat minima saepe atque sed totam quibusdam perspiciatis!"
 
 #: ../../tools/sphinx/directives.rst:149 ../../tools/sphinx/directives.rst:156
 msgid "attention"
-msgstr ""
+msgstr "attention"
 
 #: ../../tools/sphinx/directives.rst:159 ../../tools/sphinx/directives.rst:166
 msgid "note"
-msgstr ""
+msgstr "note"
 
 #: ../../tools/sphinx/directives.rst:170 ../../tools/sphinx/directives.rst:177
 msgid "warning"
-msgstr ""
+msgstr "warning"
 
 #: ../../tools/sphinx/directives.rst:181 ../../tools/sphinx/directives.rst:188
 msgid "error"
-msgstr ""
+msgstr "error"
 
 #: ../../tools/sphinx/directives.rst:192 ../../tools/sphinx/directives.rst:199
 msgid "hint"
-msgstr ""
+msgstr "hint"
 
 #: ../../tools/sphinx/directives.rst:203 ../../tools/sphinx/directives.rst:211
 msgid "important"
-msgstr ""
+msgstr "important"
 
 #: ../../tools/sphinx/directives.rst:215 ../../tools/sphinx/directives.rst:222
 msgid "caution"
-msgstr ""
+msgstr "caution"
 
 #: ../../tools/sphinx/directives.rst:226 ../../tools/sphinx/directives.rst:233
 msgid "danger"
-msgstr ""
+msgstr "danger"
 
 #: ../../tools/sphinx/directives.rst:237 ../../tools/sphinx/directives.rst:245
 msgid "tip"
-msgstr ""
+msgstr "tip"
 
 #: ../../tools/sphinx/directives.rst:250 ../../tools/sphinx/directives.rst:260
 msgid "rubric"
-msgstr ""
+msgstr "rubric"
 
 #: ../../tools/sphinx/directives.rst:262
 msgid "math"
-msgstr ""
+msgstr "math"
 
 #: ../../tools/sphinx/directives.rst:269
 msgid ":math:`\\sqrt{16}`"
-msgstr ""
+msgstr ":math:`\\sqrt{16}`"
 
 #: ../../tools/sphinx/directives.rst:272
 msgid "command"
-msgstr ""
+msgstr "command"
 
 #: ../../tools/sphinx/directives.rst:279
 msgid ":command:`Title`"
-msgstr ""
+msgstr ":command:`Title`"
 
 #: ../../tools/sphinx/directives.rst:282
 msgid "file"
-msgstr ""
+msgstr "file"
 
 #: ../../tools/sphinx/directives.rst:289
 msgid ":file:`path`"
-msgstr ""
+msgstr ":file:`path`"
 
 #: ../../tools/sphinx/directives.rst:292
 msgid "guilabel"
-msgstr ""
+msgstr "guilabel"
 
 #: ../../tools/sphinx/directives.rst:299
 msgid ":guilabel:`Title`"
-msgstr ""
+msgstr ":guilabel:`Title`"
 
 #: ../../tools/sphinx/directives.rst:302
 msgid "key"
-msgstr ""
+msgstr "key"
 
 #: ../../tools/sphinx/directives.rst:309
 msgid ":kbd:`shortcut`"
-msgstr ""
+msgstr ":kbd:`shortcut`"
 
 #: ../../tools/sphinx/directives.rst:312
 msgid "menu"
-msgstr ""
+msgstr "menu"
 
 #: ../../tools/sphinx/directives.rst:319
 msgid ":menuselection:`Title --> Title2`"
-msgstr ""
+msgstr ":menuselection:`Title --> Title2`"
 
 #~ msgid "ディレクティブとはマークアップ言語における一般的なブロック。"
 #~ msgstr ""
@@ -257,4 +260,3 @@ msgstr ""
 
 #~ msgid "Pythonサンプル"
 #~ msgstr ""
-

@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:9
+msgid "MkDocs + mkdocstrings で Python コード連動のドキュメントを公開"
+msgstr "Publish Python code-linked documentation with MkDocs + mkdocstrings"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:11
+msgid ""
+"Python のコードから自動で API ドキュメントを生成し、それを MkDocs を使って GitHub Pages "
+"上に公開するまでの体験を行ったので、その手順と感想をまとめておきます。"
+msgstr ""
+"I experienced automatically generating API documentation from Python code "
+"and publishing it on GitHub Pages using MkDocs, so I would like to summarize"
+" the steps and impressions."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:18
+msgid "概要"
+msgstr "overview"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:20
+msgid "使用ツール: MkDocs, mkdocstrings, Poetry"
+msgstr "Tools used: MkDocs, mkdocstrings, Poetry"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:21
+msgid "目的: Python コードの docstring を API ドキュメントとして Markdown 上に展開し、公開まで一貫して試すこと"
+msgstr ""
+"Purpose: Deploy Python code docstrings as API documentation on Markdown and "
+"try them out until publishing."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:22
+msgid "成果: 関数の引数・戻り値などが表形式で整然と表示される見やすいドキュメントを作成・公開できた"
+msgstr ""
+"Results: We were able to create and publish an easy-to-read document that "
+"displays function arguments, return values, etc. in an orderly manner in a "
+"table format."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:25
+msgid "導入手順"
+msgstr "Installation steps"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:27
+msgid "Poetry プロジェクトの初期化::"
+msgstr "Initializing the Poetry project::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:32
+msgid "必要パッケージの導入::"
+msgstr "Installing required packages::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:36
+msgid "MkDocs プロジェクトの初期化::"
+msgstr "Initializing the MkDocs project::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:40
+msgid "`mkdocs.yml` の編集::"
+msgstr "Editing `mkdocs.yml`::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:53
+msgid "API ドキュメント用ファイルを作成（`docs/api.md`）::"
+msgstr "Create API documentation file (`docs/api.md`)::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:57
+msgid "サンプルコードの作成（`myproject/hello.py`）::"
+msgstr "Creating sample code (`myproject/hello.py`)::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:70
+msgid "ローカルで確認::"
+msgstr "Check locally::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:74
+msgid "GitHub Pages への公開::"
+msgstr "Publishing to GitHub Pages::"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:79
+msgid "感想"
+msgstr "thoughts"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:81
+msgid "docstring が自動で整形され、非常に見やすい表形式で API 仕様が表示されるのが便利"
+msgstr ""
+"Conveniently formats the docstring automatically and displays the API "
+"specification in a very easy-to-read tabular format."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:82
+msgid "Markdown ベースで編集できるため、Sphinx よりも導入・修正が簡単に感じた"
+msgstr ""
+"Since it can be edited based on Markdown, I felt it was easier to install "
+"and modify than Sphinx."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:83
+msgid "コードとの連動性が高く、変更があってもドキュメントにすぐ反映できる安心感がある"
+msgstr ""
+"It is highly linked with the code, and there is a sense of security that any"
+" changes can be immediately reflected in the document."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:84
+msgid "`mkdocstrings` を通じて、型ヒントや Google-style docstring の価値も改めて実感した"
+msgstr ""
+"Through `mkdocstrings`, I realized once again the value of type hints and "
+"Google-style docstrings."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:86
+msgid "今後は、この構成をテンプレート化したり、CI連携で自動更新の仕組みも導入していきたい。"
+msgstr ""
+"In the future, we would like to create a template for this configuration and"
+" introduce an automatic update mechanism through CI coordination."
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:90
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:91
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-23-mkdocs-mkdocstrings-githubio.rst:92
+msgid "2025-05-23"
+msgstr "2025-05-23"

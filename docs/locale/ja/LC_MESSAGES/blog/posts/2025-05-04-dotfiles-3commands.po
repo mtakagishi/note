@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:9
+msgid "Linux環境で自分専用環境を再現する"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:11
+msgid "Linux新環境で手早く自分専用の環境を立ち上げる手順と考え方をまとめます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:15
+msgid "目次"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:19
+msgid "環境立上げは、3Stepで完結"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:21
+msgid "実際には3コマンドを実行するだけです。README.mdにも記載して置記、いつでも参照できるようにしています。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:23
+msgid "必要なパッケージのインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:24
+msgid "dotfiles の bare-repo 方式での管理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:25
+msgid "install.sh の実行"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:27
+msgid "内容は以下となります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:46
+msgid "考え方・運用方法の整理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:48
+msgid "立上げ手順に影響せずメンテナンス可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:50
+msgid "dotfilesはBare-repo方式で管理、育成の都度gitへpush"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:51
+msgid "セットアップ手順はinstall.shにまとめる。育成の都度編集しgitへpush"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:55
+msgid "CI による品質維持"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:57
+msgid "Github Actions を使って、install.sh の品質を維持します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:59
+msgid "`.github/workflows/dotfiles-ci.yml` という、CIを設定ファイルを追加。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:60
+msgid "push や pull_request トリガに加え、週次実行も設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:61
+msgid ""
+"記載内容は、`こちら "
+"<https://github.com/mtakagishi/dotfiles/blob/main/.github/workflows"
+"/dotfiles-ci.yml>`_ を参照"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:65
+msgid "バッジの追加"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:67
+msgid "README.mdに、CIのバッジを追加して、視覚的に確認できるようにします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:69
+msgid "CIのバッジは、以下のように記載します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:75
+msgid "バッジの表示は以下のようになります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:77
+msgid "Dotfiles Setup"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:86
+msgid "おわりに"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:88
+msgid ""
+"ここでまとめた手順・考え方で、いつでも自分カスタムの環境を再現できます。 また、CIは、git "
+"pushトリガと、週次トリガで確認し、バッジで視覚的に確認することで品質を維持することができます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:93
+msgid "参考リンク"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:95
+msgid ""
+"`ArchWiki 「Dotfiles — bare-repo 方式」 "
+"<https://wiki.archlinux.jp/index.php/ドットファイル>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:96
+msgid ""
+"`The bare minimum to keep dot files in git（Liv Blog） "
+"<https://liv.pink/post/2022-04-27-the-bare-minimum-to-keep-dot-files-in-"
+"git/>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:97
+msgid ""
+"`dotfiles CI の具体例（ashishb/dotfiles） "
+"<https://github.com/ashishb/dotfiles>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:98
+msgid "`dotload — install.sh <https://github.com/cli-stuff/dotload>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:101
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:102
+msgid "2025-05-04"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:103
+msgid "mtakagishi"
+msgstr ""
+

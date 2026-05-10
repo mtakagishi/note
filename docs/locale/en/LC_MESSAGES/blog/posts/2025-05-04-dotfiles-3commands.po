@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:9
+msgid "Linux環境で自分専用環境を再現する"
+msgstr "Recreate your own private environment in a Linux environment"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:11
+msgid "Linux新環境で手早く自分専用の環境を立ち上げる手順と考え方をまとめます。"
+msgstr ""
+"We will summarize the steps and ideas for quickly starting up your own "
+"environment in a new Linux environment."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:15
+msgid "目次"
+msgstr "table of contents"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:19
+msgid "環境立上げは、3Stepで完結"
+msgstr "Environment setup is completed in 3 steps"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:21
+msgid "実際には3コマンドを実行するだけです。README.mdにも記載して置記、いつでも参照できるようにしています。"
+msgstr ""
+"Actually you just need to run 3 commands. It is also written in README.md so"
+" that it can be referenced at any time."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:23
+msgid "必要なパッケージのインストール"
+msgstr "Installing required packages"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:24
+msgid "dotfiles の bare-repo 方式での管理"
+msgstr "Bare-repo management of dotfiles"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:25
+msgid "install.sh の実行"
+msgstr "Run install.sh"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:27
+msgid "内容は以下となります。"
+msgstr "The contents are as follows."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:46
+msgid "考え方・運用方法の整理"
+msgstr "Organizing ideas and operating methods"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:48
+msgid "立上げ手順に影響せずメンテナンス可能"
+msgstr "Maintenance is possible without affecting the startup procedure"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:50
+msgid "dotfilesはBare-repo方式で管理、育成の都度gitへpush"
+msgstr ""
+"dotfiles are managed using Bare-repo method and pushed to git each time they"
+" are developed."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:51
+msgid "セットアップ手順はinstall.shにまとめる。育成の都度編集しgitへpush"
+msgstr ""
+"The setup procedure is summarized in install.sh. Edit each time you train "
+"and push to git"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:55
+msgid "CI による品質維持"
+msgstr "Quality maintenance through CI"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:57
+msgid "Github Actions を使って、install.sh の品質を維持します。"
+msgstr "Use Github Actions to maintain the quality of install.sh."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:59
+msgid "`.github/workflows/dotfiles-ci.yml` という、CIを設定ファイルを追加。"
+msgstr ""
+"Add a CI configuration file called `.github/workflows/dotfiles-ci.yml`."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:60
+msgid "push や pull_request トリガに加え、週次実行も設定"
+msgstr ""
+"In addition to push and pull_request triggers, you can also set weekly "
+"executions."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:61
+msgid ""
+"記載内容は、`こちら "
+"<https://github.com/mtakagishi/dotfiles/blob/main/.github/workflows/dotfiles-"
+"ci.yml>`_ を参照"
+msgstr ""
+"For the contents, see here "
+"<https://github.com/mtakagishi/dotfiles/blob/main/.github/workflows/dotfiles-"
+"ci.yml>`_"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:65
+msgid "バッジの追加"
+msgstr "Add badge"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:67
+msgid "README.mdに、CIのバッジを追加して、視覚的に確認できるようにします。"
+msgstr "Add a CI badge to README.md so you can see it visually."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:69
+msgid "CIのバッジは、以下のように記載します。"
+msgstr "CI badges are written as follows:"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:75
+msgid "バッジの表示は以下のようになります。"
+msgstr "The badge will look like this:"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:77
+msgid "Dotfiles Setup"
+msgstr "Dotfiles Setup"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:86
+msgid "おわりに"
+msgstr "Conclusion"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:88
+msgid ""
+"ここでまとめた手順・考え方で、いつでも自分カスタムの環境を再現できます。 また、CIは、git "
+"pushトリガと、週次トリガで確認し、バッジで視覚的に確認することで品質を維持することができます。"
+msgstr ""
+"Using the steps and ideas summarized here, you can recreate your own custom "
+"environment at any time. Additionally, CI can maintain quality with git push"
+" triggers, weekly triggers, and visual confirmation with badges."
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:93
+msgid "参考リンク"
+msgstr "Reference link"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:95
+msgid ""
+"`ArchWiki 「Dotfiles — bare-repo 方式」 "
+"<https://wiki.archlinux.jp/index.php/ドットファイル>`_"
+msgstr ""
+"`ArchWiki \"Dotfiles — bare-repo method\" "
+"<https://wiki.archlinux.jp/index.php/dotfiles>`_"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:96
+msgid ""
+"`The bare minimum to keep dot files in git（Liv Blog） "
+"<https://liv.pink/post/2022-04-27-the-bare-minimum-to-keep-dot-files-in-"
+"git/>`_"
+msgstr ""
+"`The bare minimum to keep dot files in git (Liv Blog) "
+"<https://liv.pink/post/2022-04-27-the-bare-minimum-to-keep-dot-files-in-"
+"git/>`_"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:97
+msgid ""
+"`dotfiles CI の具体例（ashishb/dotfiles） <https://github.com/ashishb/dotfiles>`_"
+msgstr ""
+"`dotfiles CI example (ashishb/dotfiles) "
+"<https://github.com/ashishb/dotfiles>`_"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:98
+msgid "`dotload — install.sh <https://github.com/cli-stuff/dotload>`_"
+msgstr "`dotload — install.sh <https://github.com/cli-stuff/dotload>`_"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:101
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:102
+msgid "2025-05-04"
+msgstr "2025-05-04"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-04-dotfiles-3commands.rst:103
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

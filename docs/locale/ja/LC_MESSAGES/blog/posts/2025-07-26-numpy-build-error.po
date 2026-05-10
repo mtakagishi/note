@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:7
+msgid "Poetry環境でのnumpyビルドエラーとバージョン制約による解決メモ"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:9
+msgid ""
+"Windows上で、Gitから取得したPythonプロジェクトを `poetry install` した際に、`numpy` "
+"のビルドに失敗する事象に遭遇した。Poetry環境でのエラーでありながら、原因は `numpy` のビルド処理にあった。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:11
+msgid "以下に、再現環境と解決までの経緯を記録しておく。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:14
+msgid "事象概要"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:16
+msgid "`pyproject.toml` に以下のような記述があった。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:23
+msgid "この指定は SemVer の仕様に基づき、以下の範囲を意味する。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:29
+msgid ""
+"このとき `poetry install` により、`numpy==1.26.4` が選ばれた。しかし、ビルド済みホイール (.whl) "
+"が解決されず、Poetry 経由でのインストール時にソースビルドが開始され、Visual C++ Build Tools の導入等を実施しても "
+"`not supporting PEP 517 builds` などのエラーで失敗した。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:32
+msgid "対応内容"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:34
+msgid "Poetryの依存定義を以下のように修正："
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:40
+msgid "これにより、Poetryは `numpy==2.2.x` 系のビルド済みバイナリを選択し、ビルド処理が不要となり、エラーが解消した。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:43
+msgid "背景と考察"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:45
+msgid ""
+"Poetryは `pyproject.toml` の内容や `poetry.lock` "
+"に基づき依存を解決するが、場合によってはビルド処理を行うパッケージを選択することがある。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:46
+msgid "`numpy` 1.26系は、バイナリを配布していた時期はあったはずだが、現状はバイナリ配布がないようで、ビルドが発生。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:47
+msgid "`numpy` 2.2系はホイール配布も安定しており、特にWindows環境ではビルドなしで導入できるケースが多い。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:48
+msgid "`^1.26.0` のような記述は保守的であるが、状況によっては逆に問題を引き起こすこともある。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:51
+msgid "今後の教訓"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:53
+msgid "同様の問題に遭遇した際は、以下の観点で早期に切り分けを行う："
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:55
+msgid "PEP 517 ビルドなどのお作法の変更に伴うエラーかどうかを確認"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:56
+msgid "必要に応じてバージョンを変更し、より新しい安定版を利用する"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:59
+msgid "補足：`numpy` の非互換について"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:61
+msgid ""
+"`numpy==2.0.0` 以降では、一部破壊的変更が入っているため、依存する他ライブラリとの互換性に注意。必要に応じて "
+"`>=1.26,<2.0` のような上限制約も有効。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:64
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:65
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:66
+msgid "2025-07-26"
+msgstr ""
+

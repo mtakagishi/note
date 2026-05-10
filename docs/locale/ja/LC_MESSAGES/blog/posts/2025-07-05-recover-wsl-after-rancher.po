@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:8
+msgid "Rancher利用後に壊れたWSL環境を再構築した手順"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:10
+msgid ""
+"過去に Windows 上で Rancher を導入していた影響で、`wsl install` が正常に動作せず、WSL2 "
+"を利用できない状態が続いていた。今回、その WSL 環境を完全に初期化し、再構築することに成功したので、その手順を記録しておく。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:13
+msgid "背景と問題の発生状況"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:15
+msgid ""
+"以前、Docker Desktop や Rancher Desktop を導入した経緯があり、WSL の仮想環境に `docker-"
+"desktop` や `rancher-desktop` などのディストリビューションが自動で追加されていた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:17
+msgid ""
+"これらをアンインストールした後も、`wsl install` コマンドがエラーを返すようになり、Ubuntu を含む WSL "
+"環境の導入が一切できない状態に。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:19
+msgid "原因は、おそらく **WSLの内部状態が壊れていた** ことにある。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:22
+msgid "解決のためのアプローチ"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:24
+msgid "以下の手順で、WSL を一度完全に初期化し、再インストールを行った。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:26
+msgid "**現在の WSL 状態の確認**"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:32
+msgid "**不要なディストリビューションの削除**"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:40
+msgid "**WSL 機能を完全に無効化**"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:47
+msgid "再起動を実施。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:49
+msgid "**WSL 機能の再有効化**"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:56
+msgid "再び再起動。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:58
+msgid "**WSL の再インストール**"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:64
+msgid "これで再び Ubuntu などの WSL ディストリビューションがインストール可能な状態に戻った。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:67
+msgid "今後の方針と教訓"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:69
+msgid "Rancher Desktop や Docker Desktop のアンインストール後でも、WSL 内部に痕跡が残っている場合がある。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:70
+msgid "**`wsl --unregister` + `dism` のセットによる初期化が有効** だった。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:71
+msgid "開発マシンで仮想化関連ツールを切り替える場合は、WSL の状態管理にも注意が必要。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:72
+msgid "今後は WSL の破損時に備え、定期的な `wsl --export` によるバックアップも検討したい。"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:75
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:76
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2025-07-05-recover-wsl-after-rancher.rst:77
+msgid "2025-07-05"
+msgstr ""
+

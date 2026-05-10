@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:9
+msgid "ChatGPT「プロジェクト」機能の実践ノート"
+msgstr "ChatGPT “Project” feature practice notes"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:11
+msgid ""
+"このページでは、 **ChatGPT-4o / o3 系の「プロジェクト」機能** を Python "
+"開発を中心とした問題解決ワークフローに組み込む方法を整理します。 機能の概要からモデル選定、巨大リポジトリの取り扱い、限界と対策まで "
+"自分用メモ＋ブログ記事を兼ねた備忘録です。"
+msgstr ""
+"This page organizes how to incorporate the **ChatGPT-4o/o3 series "
+"\"project\" function** into a problem-solving workflow centered on Python "
+"development. This is a memo that serves as both a personal memo and a blog "
+"article, from an overview of functions to model selection, handling of large"
+" repositories, limitations and countermeasures."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:21
+msgid "プロジェクト機能とは"
+msgstr "What is the project function?"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:23
+msgid "**チャット履歴・ファイル・カスタム指示** を 1 テーマに束ねる“作業部屋”"
+msgstr ""
+"**A “work room” that bundles chat history, files, and custom instructions** "
+"into one theme"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:24
+msgid "同一プロジェクト内なら **アップロード済み資料** をすべてのチャットで共有"
+msgstr "Share **uploaded documents** to all chats within the same project"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:25
+msgid "Plus／Teams 以上の有料プランで利用可（2025-06-04 時点）"
+msgstr "Available for paid plans of Plus/Teams and above (as of 2025-06-04)"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:28
+msgid "活用シナリオ"
+msgstr "Utilization scenario"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:30
+msgid "**研究メモ** – 論文 PDF ＋コードスニペットを放り込み、毎週 Q&A"
+msgstr "**Research Memo** – Includes paper PDF + code snippets and weekly Q&A"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:31
+msgid "**リポジトリ改善** – Git diff を貼ってリファクタ方針を議論"
+msgstr ""
+"**Repository improvement** – Post Git diffs and discuss refactoring "
+"strategies"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:32
+msgid "**イベント企画** – スプレッドシートと議事録を 1 か所に集約"
+msgstr ""
+"**Event Planning** – Consolidate spreadsheets and meeting minutes in one "
+"place"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:35
+msgid "モデル選定ガイド"
+msgstr "Model selection guide"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:37
+msgid "モデル比較"
+msgstr "model comparison"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:41
+msgid "モデル"
+msgstr "model"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:42
+msgid "強み"
+msgstr "Strengths"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:43
+msgid "想定タスク"
+msgstr "Assumed task"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:44
+msgid "GPT-4o"
+msgstr "GPT-4o"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:45
+msgid "速い・安い・画像/音声も可"
+msgstr "Fast, cheap, images/audio available"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:46
+msgid "仕様書 PDF＋設計図レビュー"
+msgstr "Specifications PDF + Blueprint review"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:47
+msgid "o3"
+msgstr "O3"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:48
+msgid "推論精度トップクラス"
+msgstr "Top class inference accuracy"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:49
+msgid "難解バグ解析、数理最適化"
+msgstr "Difficult bug analysis, mathematical optimization"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:50
+msgid "o3-mini / o4-mini"
+msgstr "o3-mini / o4-mini"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:51
+msgid "軽量・高速"
+msgstr "Light and fast"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:52
+msgid "定型生成、CI 用スクリプト"
+msgstr "Standard generation, CI script"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:54
+msgid "**実運用サンプル**"
+msgstr "**Actual operation sample**"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:56
+msgid "初期調査 →  **GPT-4o**"
+msgstr "Initial investigation → **GPT-4o**"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:57
+msgid "詰まったら →  **o3** にスイッチ"
+msgstr "If it gets stuck → switch to **o3**"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:58
+msgid "YAML 量産など小物 →  **mini 系**"
+msgstr "YAML Small items such as mass production → **mini series**"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:61
+msgid "巨大プロジェクトの“最新ソース”同期術"
+msgstr "“Latest source” synchronization technique for huge projects"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:63
+msgid ""
+"ChatGPT が参照できる情報源は **(1) チャット履歴** ・ **(2) アップロードファイル** ・ **(3) 明示的に読み込ませた "
+"URL** の三つだけ。 規模が膨らむほど **“与え方”** が重要になります。"
+msgstr ""
+"There are only three sources of information that ChatGPT can reference: "
+"**(1) Chat history**, **(2) Upload files**, and **(3) URLs that are "
+"explicitly loaded**. As the scale expands, **“how to give”** becomes more "
+"important."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:68
+msgid "同期パターン"
+msgstr "sync pattern"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:70
+msgid "**フル ZIP 定期アップロード** – 週 1 で ``git archive`` 出力を丸ごと"
+msgstr ""
+"**Full ZIP regular uploads** – Entire ``git archive`` output once a week"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:71
+msgid "**インクリメンタル diff** – PR ごとに ``git diff main..HEAD`` を貼付"
+msgstr "**Incremental diff** – Paste ``git diff main..HEAD`` for each PR"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:72
+msgid "**要約ドキュメント** – 主要モジュールの責務を Markdown 1 枚に凝縮"
+msgstr ""
+"**Summary Document** – Condenses the responsibilities of major modules into "
+"a single Markdown sheet"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:73
+msgid "**自動生成メタ資料** – 依存グラフや ERD を SVG で添付"
+msgstr ""
+"**Automatically generated metadata** – Attach dependency graphs and ERDs as "
+"SVG"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:76
+msgid "おすすめ運用フロー"
+msgstr "Recommended operation flow"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:78
+msgid "運用テンプレ"
+msgstr "Operational template"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:82
+msgid "タイミング"
+msgstr "timing"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:83
+msgid "アクション"
+msgstr "action"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:84
+msgid "目的"
+msgstr "the purpose"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:85
+msgid "PR マージ時"
+msgstr "When merging PR"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:86
+msgid "diff を ChatGPT に要約させて *summary.md* 追記"
+msgstr "Let ChatGPT summarize the diff and add *summary.md*"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:87
+msgid "“脳内 Wiki” を更新"
+msgstr "“Brain Wiki” updated"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:88
+msgid "週次"
+msgstr "weekly"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:89
+msgid "``main`` を ZIP で再同期"
+msgstr "Resynchronize ``main`` with ZIP"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:90
+msgid "漏れ取り・キャッシュ更新"
+msgstr "Removing leaks/updating cache"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:91
+msgid "新チャット開始時"
+msgstr "When starting a new chat"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:92
+msgid "*summary.md* ＋直近 diff をまず添付"
+msgstr "*summary.md* + latest diff first attached"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:93
+msgid "新コンテキストの初期化"
+msgstr "Initializing a new context"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:94
+msgid "機能完了時"
+msgstr "When the function completes"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:95
+msgid "「設計図を PlantUML で」など図を再生成"
+msgstr "Regenerate diagrams such as \"Blueprint with PlantUML\""
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:96
+msgid "可視化ドキュメント整備"
+msgstr "Visualization document preparation"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:98
+msgid "**把握度テスト用プロンプト例**"
+msgstr "**Example prompt for comprehension test**"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:105
+msgid "返答が古ければ、その時点で追加ファイルを再投入。"
+msgstr ""
+"If the response is outdated, resubmit the additional file at that point."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:108
+msgid "限界と注意点"
+msgstr "Limitations and precautions"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:110
+msgid "**トークン上限** – 128 k を超えると古い履歴から自然に落ちる → 要約レイヤーで情報を圧縮"
+msgstr ""
+"**Token cap** – above 128k, naturally falls off from older history → "
+"compress information in summary layer"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:112
+msgid "**GitHub deep research は Read-Only** – 自動で追従しない → 変更後は再 fetch を促す"
+msgstr ""
+"**GitHub deep research is Read-Only** – Does not follow automatically → "
+"Prompts re-fetch after changes"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:114
+msgid "**セキュリティ** – 秘匿コードはモック化、API キーは必ず Secret 管理"
+msgstr ""
+"**Security** – Secret code must be mocked, API key must be managed as Secret"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:115
+msgid "**最終責任は人間** – コミット・マージは必ず手元で CI／レビュー"
+msgstr ""
+"**Humans are ultimately responsible** – Always commit and merge at hand "
+"CI/review"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:118
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:120
+msgid "**プロジェクト = “AI 用ワークスペース”** 。資料と指示を整理すると再利用効率が跳ね上がる。"
+msgstr ""
+"**Project = “Workspace for AI”**. Organizing materials and instructions "
+"increases reuse efficiency."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:121
+msgid "**モデルは GPT-4o を基軸に o3 を切り札として併用** 。"
+msgstr "**The model is based on GPT-4o and uses o3 as a trump card**."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:122
+msgid "**同期はフル ZIP＋diff＋要約のカスケード** でスケール。"
+msgstr "**Synchronization scales with full ZIP+diff+summary cascade**."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:123
+msgid "**理解度チェック用プロンプトを常備** し、ギャップが出たら即アップデート。"
+msgstr ""
+"**Always have prompts to check for understanding** and update immediately if"
+" gaps appear."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:125
+msgid "これで **「どこまで AI が把握しているか」** を見える化しながら 大規模コードベースでも安全に ChatGPT を戦力化できます。"
+msgstr ""
+"With this setup, you can make ChatGPT useful even in a large codebase while "
+"keeping track of how much context the AI actually has."
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:129
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:130
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-06-04-chatgpt-project-workflow.rst:131
+msgid "2025-06-04"
+msgstr "2025-06-04"

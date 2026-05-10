@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:8
+msgid "PoetryからRyeへの移行と、Netlifyビルドの完全対応"
+msgstr "Migrating from Poetry to Rye and fully supporting Netlify builds"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:10
+msgid ""
+"Poetryで管理していたPythonプロジェクトを、最近注目されているRyeに移行し、 "
+"さらにNetlifyでのデプロイまでを通して構成を整えた。この記事では、その手順と要点を記録しておく。"
+msgstr ""
+"I migrated the Python project that was managed with Poetry to Rye, which has"
+" been attracting a lot of attention recently, and also completed the "
+"configuration by deploying it with Netlify. In this article, I will record "
+"the steps and key points."
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:13
+msgid "移行にあたり、以下のポイントを押さえて対応した："
+msgstr "During the transition, we kept the following points in mind:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:15
+msgid "既存のPoetryプロジェクトからの安全な移行"
+msgstr "Safe migration from existing Poetry projects"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:16
+msgid "pre-commitによるRuff設定の見直し"
+msgstr "Review of Ruff settings using pre-commit"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:17
+msgid "RyeバイナリのNetlify上でのインストールと実行"
+msgstr "Installing and running Rye binaries on Netlify"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:18
+msgid "Pythonバージョンによる依存解決失敗の原因と対策"
+msgstr ""
+"Causes and countermeasures for dependency resolution failure depending on "
+"Python version"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:19
+msgid "pipとの切り分け（requirements.txt方式の回避）"
+msgstr "Separating from pip (avoiding requirements.txt method)"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:28
+msgid "移行前の状態"
+msgstr "Status before migration"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:30
+msgid "Poetryで管理（``pyproject.toml``, ``poetry.lock`` あり）"
+msgstr "Managed by Poetry (``pyproject.toml``, ``poetry.lock`` included)"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:31
+msgid "``.venv/`` , ``setup.py`` , ``poetry.toml`` なども存在"
+msgstr "There are also ``.venv/``, ``setup.py``, ``poetry.toml``, etc."
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:32
+msgid "Netlifyでは、 ``requirements.txt`` と ``pip install`` によるビルド運用"
+msgstr ""
+"In Netlify, build operation is done using ``requirements.txt`` and ``pip "
+"install``."
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:37
+msgid "Ryeへの移行手順"
+msgstr "Steps to migrate to Rye"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:39
+msgid "現状をタグでバックアップ："
+msgstr "Back up the current status with tags:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:45
+msgid "Poetry関連のファイル削除："
+msgstr "Delete Poetry related files:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:52
+msgid "``setup.py`` を一時退避して ``rye init`` ："
+msgstr "Temporarily save ``setup.py`` and ``rye init``:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:59
+msgid "必要パッケージのインストール:"
+msgstr "Installing required packages:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:65
+msgid "開発パッケージのインストール:"
+msgstr "Installing development packages:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:71
+msgid "Pythonバージョンを明示："
+msgstr "Specify Python version:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:77
+msgid "``pyproject.toml`` をRye形式に手動で修正し、Ruffの設定も正規化："
+msgstr ""
+"Manually modify ``pyproject.toml`` to Rye format and also normalize Ruff "
+"settings:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:88
+msgid "``requires-python`` の条件を修正："
+msgstr "Modify the condition of ``requires-python``:"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:97
+msgid "Netlifyでの対応"
+msgstr "Compatible with Netlify"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:99
+msgid ""
+"Ryeの公式インストールスクリプトは ``curl | bash`` 形式だが、Netlifyでは ``curl -sSf "
+"https://rye.astral.sh/get | bash`` "
+"の方式でエラーとなったので、代わりにRyeバイナリをダウンロードして展開する方式を採用した。"
+msgstr ""
+"Rye's official installation script is in the ``curl | bash`` format, but "
+"with Netlify, the ``curl -sSf https://rye.astral.sh/get | bash`` method "
+"resulted in an error, so I instead adopted the method of downloading and "
+"extracting the Rye binary."
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:125
+msgid "トラブルと対策まとめ"
+msgstr "Summary of troubles and countermeasures"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:127
+msgid "poetry時代の ``pyproject.toml`` が残っているとあると `rye init` が失敗する → 削除する"
+msgstr ""
+"`rye init` fails if ``pyproject.toml`` from the poetry era remains → delete "
+"it"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:128
+msgid "``setup.py`` があると `rye init` が失敗する → 一時退避すればOK"
+msgstr ""
+"`rye init` fails if ``setup.py`` exists → Temporarily save it and it will be"
+" OK"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:129
+msgid ""
+"``pyproject.toml`` に ``requires-python = \">=3.8\"`` があると、Ryeが3.8を使ってしまう →  "
+"``\">=3.12\"`` に修正"
+msgstr ""
+"If ``pyproject.toml`` has ``requires-python = \">=3.8\"``, Rye uses 3.8 → "
+"corrected to ``\">=3.12\"``"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:130
+msgid ""
+"``max-complexity`` の設定が間違っているとRuffでエラー → ``[tool.ruff.lint.mccabe]`` に正しく記載"
+msgstr ""
+"If the ``max-complexity`` setting is incorrect, an error will occur in Ruff "
+"→ Correctly described in ``[tool.ruff.lint.mccabe]``"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:135
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:137
+msgid ""
+"Ryeは開発者体験が非常に良い一方で、NetlifyのようなCI環境での対応には少し工夫が必要だった。 "
+"移行はやり切れた。poetryとの違い、性能メリットを感じることもできた。今後はryeを基点にした開発にシフトしノウハウを蓄積したい。"
+msgstr ""
+"While Rye has a very good developer experience, it needed a bit of work in a"
+" CI environment like Netlify. The transition has been completed. I was also "
+"able to feel the differences and performance benefits compared to poetry. In"
+" the future, we would like to shift to development based on rye and "
+"accumulate know-how."
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:141
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:142
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-05-31-migrate-poetry-to-rye-netlify.rst:143
+msgid "2025-05-31"
+msgstr "2025-05-31"

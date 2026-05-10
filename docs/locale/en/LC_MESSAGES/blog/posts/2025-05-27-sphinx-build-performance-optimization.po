@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:9
+msgid "Sphinxドキュメントのビルド性能を改善する"
+msgstr "Improving build performance of Sphinx documentation"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:11
+msgid ""
+"Sphinxを使った多言語ドキュメントの構築において、ビルド時間が長くなってきたことをきっかけに、性能改善を行いました。この記事では、改善前後の状況や、試行錯誤のプロセス、そして得られた成果を整理しておきます。"
+msgstr ""
+"When building multilingual documents using Sphinx, we made performance "
+"improvements as the build time became longer. In this article, I will "
+"summarize the situation before and after the improvement, the process of "
+"trial and error, and the results obtained."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:20
+msgid "背景"
+msgstr "background"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:22
+msgid "以下のような構成でSphinxを使っていました："
+msgstr "I was using Sphinx with the following configuration:"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:24
+msgid "多言語構成： ``ja``, ``en``"
+msgstr "Multilingual configuration: ``ja``, ``en``"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:25
+msgid "``setup.py`` に ``doc`` コマンドを定義し、 ``python setup.py doc`` でビルド"
+msgstr ""
+"Define the ``doc`` command in ``setup.py`` and build with ``python setup.py "
+"doc``"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:26
+msgid "poetry + poe を使って ``poetry run poe doc`` で実行"
+msgstr "poetry + poe を使って ``poetry run poe doc`` で実行"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:27
+msgid "最初のビルド時間： **約1分**"
+msgstr "Initial build time: **about 1 minute**"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:32
+msgid "初期計測（改善前）"
+msgstr "Initial measurement (before improvement)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:34
+msgid "以下のように計測を行いました。"
+msgstr "Measurements were made as follows."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:40
+msgid "出力："
+msgstr "output:"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:46
+msgid "この段階では、すべての言語を直列に、かつ ``-E -a`` オプション付きでフルビルドしていました。"
+msgstr ""
+"At this stage, all languages ​​were fully built serially and with the ``-E "
+"-a`` option."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:51
+msgid "改善施策の試行"
+msgstr "Trial of improvement measures"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:53
+msgid "次のような改善を順に試しました："
+msgstr "I tried the following improvements in order:"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:55
+msgid "``-E -a`` の削除（差分ビルドを有効化）"
+msgstr "Removed ``-E -a`` (enables differential builds)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:56
+msgid "言語ごとの並列ビルド（``multiprocessing`` による）"
+msgstr "Parallel builds per language (via ``multiprocessing``)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:57
+msgid "静的ファイルコピーの差分対応（filecmpによる判定付き）"
+msgstr "Difference support for static file copy (with judgment by filecmp)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:58
+msgid "Sphinxの内部並列化（``-j auto`` オプション）"
+msgstr "Sphinx internal parallelization (``-j auto`` option)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:59
+msgid "コア数や仮想CPU環境による並列効果の検証"
+msgstr ""
+"Verification of parallelism effect by number of cores and virtual CPU "
+"environment"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:64
+msgid "Linuxでは、CPUのスペックは ``lscpu`` コマンドで確認できます。"
+msgstr "On Linux, you can check the CPU specs with the ``lscpu`` command."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:69
+msgid "最終構成（ベストプラクティス）"
+msgstr "Final configuration (best practices)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:71
+msgid "以下のような構成に落ち着きました："
+msgstr "I ended up with a configuration like this:"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:73
+msgid "``-E -a`` を外し、差分ビルドを有効に"
+msgstr "Remove ``-E -a`` and enable differential build"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:74
+msgid "並列ビルドはあえて使わず、2コア環境では直列が安定"
+msgstr ""
+"I purposely do not use parallel build, and series is stable in a 2-core "
+"environment."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:75
+msgid "``-j auto`` を用いてSphinx内部の並列処理を有効に"
+msgstr "Enable parallel processing inside Sphinx using ``-j auto``"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:76
+msgid "静的ファイルのコピーは差分判定付き"
+msgstr "Static file copying includes difference judgment"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:81
+msgid "改善後の計測結果"
+msgstr "Measurement results after improvement"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:88
+msgid "改善前と比較して **ビルド時間が6分の1以下に短縮** されました。"
+msgstr ""
+"**Build time has been reduced to less than 1/6th** compared to before the "
+"improvement."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:93
+msgid "考察と今後"
+msgstr "Discussion and future"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:95
+msgid "Sphinxはファイルキャッシュ（doctrees）を活用することで、大きく高速化可能"
+msgstr "Sphinx can be greatly speeded up by using file cache (doctrees)"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:96
+msgid "CPUコア数が少ない環境では並列化の効果は限定的"
+msgstr ""
+"The effect of parallelization is limited in environments with a small number"
+" of CPU cores."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:97
+msgid "``-j auto`` による内部並列化は効果あり"
+msgstr "Internal parallelization with ``-j auto`` is effective"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:98
+msgid "言語数が増えたり、仮想環境の構成が変わる場合は、再度並列処理の導入を検討"
+msgstr ""
+"If the number of languages ​​increases or the configuration of the virtual "
+"environment changes, consider introducing parallel processing again."
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:101
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:102
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-27-sphinx-build-performance-optimization.rst:103
+msgid "2025-05-27"
+msgstr "2025-05-27"

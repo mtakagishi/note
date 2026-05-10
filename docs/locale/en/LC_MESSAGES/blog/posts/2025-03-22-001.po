@@ -6,94 +6,105 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mtakagishi \n"
+"Project-Id-Version: mtakagishi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 21:39+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../../blog/posts/2025-03-22-001.rst:9
 msgid "サイト更新再開にあたり"
-msgstr ""
+msgstr "Upon restarting the site update"
 
 #: ../../../blog/posts/2025-03-22-001.rst:11
 msgid "久しぶりにサイトの更新を再開するにあたって行ったことのまとめ"
-msgstr ""
+msgstr "Summary of what we did to restart the site update after a long time"
 
 #: ../../../blog/posts/2025-03-22-001.rst:14
 msgid "対応メモ"
-msgstr ""
+msgstr "Correspondence memo"
 
 #: ../../../blog/posts/2025-03-22-001.rst:17
 msgid "英語化手順の整理"
-msgstr ""
+msgstr "Organizing the English translation procedure"
 
 #: ../../../blog/posts/2025-03-22-001.rst:19
 msgid "英語翻訳のsphinx記事としての手順を失念しがちなのでドキュメント化を強化"
 msgstr ""
+"Strengthen documentation as it is easy to forget the steps for English "
+"translation as a sphinx article"
 
 #: ../../../blog/posts/2025-03-22-001.rst:21
 msgid "`README <https://github.com/mtakagishi/note>`_"
-msgstr ""
+msgstr "`README <https://github.com/mtakagishi/note>`_"
 
 #: ../../../blog/posts/2025-03-22-001.rst:24
 msgid "Google広告の自動広告OFF"
-msgstr ""
+msgstr "Google Ads Auto Ads OFF"
 
 #: ../../../blog/posts/2025-03-22-001.rst:26
 msgid "Google Adsense自動広告の表示過多。自動広告は全てOFFへ。"
 msgstr ""
+"Excessive display of Google Adsense automatic ads. Turn off all automatic "
+"ads."
 
 #: ../../../blog/posts/2025-03-22-001.rst:29
 msgid "トップページ整備"
-msgstr ""
+msgstr "Top page maintenance"
 
 #: ../../../blog/posts/2025-03-22-001.rst:31
 msgid "見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。"
 msgstr ""
+"I reviewed the CSS for the appearance, but in the end, the top page was "
+"automatically redirected to /ja."
 
 #: ../../../blog/posts/2025-03-22-001.rst:34
 msgid "ブログ記事効率化"
-msgstr ""
+msgstr "Blog article efficiency"
 
 #: ../../../blog/posts/2025-03-22-001.rst:36
 msgid "VSCodeスニペットの整備"
-msgstr ""
+msgstr "Maintaining VSCode snippets"
 
 #: ../../../blog/posts/2025-03-22-001.rst:58
 msgid "次ステップ"
-msgstr ""
+msgstr "next step"
 
 #: ../../../blog/posts/2025-03-22-001.rst:60
 msgid ""
 "ablogで便利とのウワサの検証、しかし `poetry add ablog` "
 "にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。"
 msgstr ""
+"I verified the rumor that ablog is useful, but the following error occurred "
+"in `poetry add ablog`, so I gave up today, and next time I will update the "
+"Python version."
 
 #: ../../../blog/posts/2025-03-22-001.rst:72
 msgid "記事情報"
-msgstr ""
+msgstr "Article information"
 
 #: ../../../blog/posts/2025-03-22-001.rst
 msgid "投稿日"
-msgstr ""
+msgstr "Post date"
 
 #: ../../../blog/posts/2025-03-22-001.rst:73
 msgid "2025-03-22"
-msgstr ""
+msgstr "2025-03-22"
 
 #: ../../../blog/posts/2025-03-22-001.rst
-msgid "投稿者"
-msgstr ""
+msgid "著者"
+msgstr "author"
 
 #: ../../../blog/posts/2025-03-22-001.rst:74
 msgid "mtakagishi"
-msgstr ""
+msgstr "Mr. Takagi"
 
+#~ msgid "投稿者"
+#~ msgstr ""

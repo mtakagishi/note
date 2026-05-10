@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:9
+msgid "Sphinx + ablog でDraftを自動公開するための自動ビルドの設定"
+msgstr ""
+"Setting up automatic build to automatically publish Draft with Sphinx + "
+"ablog"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:11
+msgid ""
+"Sphinx + ablog "
+"でのブログ運営では「投稿日を未来日にしておく」ことで、ドラフト記事を準備できます。しかし、公開日以降にビルドが走らない限りWebサイトには反映されません。本記事では自動ビルドを実行する方法を考察します。"
+msgstr ""
+"When running a blog with Sphinx + ablog, you can prepare draft articles by "
+"setting the post date to a future date. However, it will not be reflected on"
+" the website unless the build is run after the release date. This article "
+"looks at how to run automated builds."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:19
+msgid "背景と課題"
+msgstr "Background and issues"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:21
+msgid ""
+"ablog では ``.. post:: YYYY-MM-DD`` "
+"のように記事日付を設定しますが、日付が未来である場合、その記事はドラフトとして無視されます。"
+msgstr ""
+"ablog sets the article date as ``.. post:: YYYY-MM-DD``, but if the date is "
+"in the future, the article will be ignored as a draft."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:23
+msgid "例えば2025-05-05現在、以下のような記事を書いたとしても："
+msgstr ""
+"For example, as of 2025-05-05, even if you write an article like the "
+"following:"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:33
+msgid "この記事が実際にビルド出力されるのは、 **6月1日以降に Sphinx を再ビルドしたとき** です。"
+msgstr ""
+"This article will actually be output when Sphinx is rebuilt after June 1st."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:35
+msgid ""
+"本サイトは、Netlifyでサイトを公開していますが、Netlifyでは GitHub への push "
+"がビルドトリガとなっているため、「未来記事の自動公開」には対応していません。"
+msgstr ""
+"This site is published on Netlify, but because Netlify uses a push to GitHub"
+" as a build trigger, it does not support \"automatic publication of future "
+"articles.\""
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:37
+msgid "そのため、 **未来日を迎えた後に自動で再ビルドを実行する仕組み** については別途検討する必要があります。"
+msgstr ""
+"Therefore, it is necessary to separately consider **a mechanism to "
+"automatically rebuild after a future date**."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:40
+msgid "本サイトの環境"
+msgstr "Environment of this site"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:41
+msgid "本サイトは、以下のような環境で運用しています。同じような環境の方は参考にしてください。"
+msgstr ""
+"This site is operated in the following environment. Please refer to this if "
+"you are in a similar environment."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:43
+msgid "**Sphinx** + **ablog** で構築"
+msgstr "Built with **Sphinx** + **ablog**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:44
+msgid "**GitHub** でソースコード管理"
+msgstr "Source code management with **GitHub**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:45
+msgid "**Netlify** でホスティング"
+msgstr "Hosted with **Netlify**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:48
+msgid "解決策：GitHub Actions × Netlify Build Hook"
+msgstr "Solution: GitHub Actions × Netlify Build Hook"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:50
+msgid ""
+"Netlify では、特定の URL に対して POST リクエストを送信することで、任意のタイミングでビルドを実行できる **Build Hook**"
+" 機能を提供しています。"
+msgstr ""
+"Netlify provides a **Build Hook** feature that allows you to run a build at "
+"any time by sending a POST request to a specific URL."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:52
+msgid ""
+"この Build Hook に対して、GitHub Actions "
+"の定期実行（cron）機能を使って毎日決まった時間にアクセスすれば、自動的にビルドが発生します。"
+msgstr ""
+"If you access this Build Hook at a fixed time every day using the periodic "
+"execution (cron) function of GitHub Actions, a build will occur "
+"automatically."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:54
+msgid "これにより、未来日を過ぎた ablog の記事が毎日チェックされ、自動公開されるようになります。"
+msgstr ""
+"With this, ablog articles past the future date will be checked every day and"
+" automatically published."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:57
+msgid "設定手順"
+msgstr "Setting procedure"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:59
+msgid "**NetlifyでBuild Hookを作成**"
+msgstr "**Create a Build Hook with Netlify**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:61
+msgid "Netlify の管理画面にアクセス"
+msgstr "Access the Netlify admin screen"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:62
+msgid "対象サイト →「Site configrations」→「Build & deploy」→「Build hooks」"
+msgstr "Target site → “Site configrations” → “Build & deploy” → “Build hooks”"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:63
+msgid ""
+"Add build hook - Hook name: 任意（例: `Daily Scheduled Deploy`） - Branch: `main`"
+" （または使用中のブランチ）"
+msgstr ""
+"Add build hook - Hook name: Any (e.g. `Daily Scheduled Deploy`) - Branch: "
+"`main` (or branch in use)"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:67
+msgid ""
+"作成後に表示される URL（例：`https://api.netlify.com/build_hooks/xxxxxxxxxxxxxx`）を控えておく"
+msgstr ""
+"Make a note of the URL that will be displayed after creation (e.g. "
+"`https://api.netlify.com/build_hooks/xxxxxxxxxxxxxx`)"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:69
+msgid "**GitHub Secrets に Build Hook を登録（セキュリティ対応）**"
+msgstr "**Register Build Hook in GitHub Secrets (security compatible)**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:71
+msgid ""
+"Build Hook の URL は知られてしまうと誰でもビルドを発動できてしまうため、**GitHub Secrets** で安全に管理します。"
+msgstr ""
+"If the Build Hook URL is known, anyone can trigger the build, so we safely "
+"manage it with **GitHub Secrets**."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:73
+msgid "GitHub リポジトリ → Settings → Secrets and variables → Actions"
+msgstr "GitHub repository → Settings → Secrets and variables → Actions"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:74
+msgid ""
+"「New repository secret」 - Name: `NETLIFY_BUILD_HOOK` - Value: Netlify で取得した "
+"Build Hook URL"
+msgstr ""
+"\"New repository secret\" - Name: `NETLIFY_BUILD_HOOK` - Value: Build Hook "
+"URL obtained with Netlify"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:78
+msgid "**GitHub Actions ワークフローを作成**"
+msgstr "**Create a GitHub Actions workflow**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:80
+msgid "リポジトリの `.github/workflows/` フォルダに以下のようなファイルを作成："
+msgstr ""
+"Create a file like the following in the `.github/workflows/` folder of your "
+"repository:"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:83
+msgid ".github/workflows/netlify-scheduled-deploy.yml"
+msgstr ".github/workflows/netlify-scheduled-deploy.yml"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:102
+msgid "🔹 `workflow_dispatch` を追加することで、必要に応じて GitHub 上から手動でビルドを実行することもできます。"
+msgstr ""
+"🔹 You can also run builds manually from GitHub if needed by adding "
+"`workflow_dispatch`."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:104
+msgid "**コミットして GitHub に反映**"
+msgstr "**Commit and reflect on GitHub**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:106
+msgid "作成した `.yml` をコミット・プッシュすれば、毎日自動的に Netlify ビルドが行われるようになります。"
+msgstr ""
+"If you commit and push the `.yml` you created, Netlify build will be "
+"performed automatically every day."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:109
+msgid "セキュリティ上の注意点"
+msgstr "Security considerations"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:111
+msgid "**Build Hook URL はトークンと同じ扱いで、絶対に公開しないこと**"
+msgstr ""
+"**Build Hook URL is treated like a token and should never be made public**"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:112
+msgid "`.env` ファイルで管理する場合は、`.gitignore` に含めてリポジトリに含めないようにする"
+msgstr ""
+"If you manage it with a `.env` file, include it in `.gitignore` so that it "
+"is not included in the repository."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:113
+msgid "GitHub Secrets を使えば、ログ出力などにもマスクが自動でかかるため安心"
+msgstr ""
+"If you use GitHub Secrets, you can rest assured that log output etc. will be"
+" automatically masked."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:116
+msgid "補足"
+msgstr "supplement"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:118
+msgid "cron は UTC ベースのため、日本時間（JST）で定期実行したい場合は9時間引く必要があります"
+msgstr ""
+"cron is based on UTC, so if you want to run it regularly in Japan Time "
+"(JST), you need to subtract 9 hours."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:119
+msgid "毎日 0 時 JST に実行したい場合 → `cron: '0 15 * * *'`"
+msgstr "If you want to run it every day at 0:00 JST → `cron: '0 15 * * *'`"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:120
+msgid "週次・月次への変更も可能（例: 毎週月曜 JST 0 時 → `'0 15 * * 1'`）"
+msgstr ""
+"It is also possible to change to weekly/monthly (e.g. every Monday at 0:00 "
+"JST → `'0 15 * * 1'`)"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:123
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:125
+msgid ""
+"ablog で未来日記事を予約投稿として管理した場合、Netlifyでホスティングしている以上は、通常はgit "
+"pushしない限りビルドされないため、公開されません。 今回、Netlify の Build Hook と GitHub Actions の "
+"`cron` 実行を組み合わせることで、 **定期的にビルドをトリガし、記事の自動公開を実現** しました。"
+msgstr ""
+"If you manage a future article as a scheduled post on ablog, it will not be "
+"published unless it is hosted on Netlify because it will not be built unless"
+" you git push it. This time, by combining Netlify's Build Hook and GitHub "
+"Actions' `cron` execution, we were able to **trigger builds periodically and"
+" automatically publish articles**."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:128
+msgid "本スタックは、GitHub Actions + Netlify の組み合わせで、コストもかからないのがうれしいところです。"
+msgstr ""
+"This stack is a combination of GitHub Actions + Netlify, and the good thing "
+"about it is that it doesn't cost anything."
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:132
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:133
+msgid "2025-05-05"
+msgstr "2025-05-05"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-05-scheduled-ablog-build.rst:134
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

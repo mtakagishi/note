@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:8
+msgid "Poetry と MkDocs を使って GitHub Pages に自己紹介ページを公開する手順メモ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:10
+msgid ""
+"Poetry でパッケージ管理しながら、MkDocs を使って簡単な静的ページを作成し、GitHub Pages "
+"に公開するまでの手順を整理した実践メモです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:16
+msgid "背景"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:18
+msgid "個人プロフィールを簡単に公開できる方法として、MkDocs を選定。加えて依存関係を明示的に管理するため、Poetry を用いることにした。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:21
+msgid "Poetry + MkDocs による静的サイト作成の手順"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:23
+msgid "以下のように進めた。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:25
+msgid "プロジェクトディレクトリ作成と初期化::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:32
+msgid "ドキュメントディレクトリ作成::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:37
+msgid "`docs/index.md` を以下のように編集::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:47
+msgid "`mkdocs.yml` 作成::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:55
+msgid "ローカルで確認::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:62
+msgid "GitHub リポジトリとの連携と公開"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:64
+msgid "GitHub 上でリポジトリ（例: my-profile）を作成し、初期化::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:77
+msgid "GitHub Pages にデプロイ::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:85
+msgid "手順通りに作成してみた実際のページ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:87
+msgid "`ページリンク <https://mtakagishi.github.io/github-io-test/>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:90
+msgid "学びと今後の応用"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:92
+msgid "`mkdocs gh-deploy` は `mkdocs` 本体に含まれるコマンド"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:93
+msgid "`gh-deploy` により、GitHub Pages の設定が簡単になる。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:96
+msgid "備考"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:98
+msgid "リモートURLの切替を確認するには::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:102
+msgid "SSHのテスト接続::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:106
+msgid "---"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:108
+msgid "必要に応じて、GitHub Actions による自動デプロイや、複数ページの構成などにも拡張できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:111
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:112
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-22-mkdocs-github-pages-poetry.rst:113
+msgid "2025-05-22"
+msgstr ""
+

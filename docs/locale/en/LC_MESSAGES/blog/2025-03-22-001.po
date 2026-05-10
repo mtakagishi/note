@@ -1,12 +1,7 @@
-
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: mtakagishiReport-Msgid-Bugs-To:POT-Creation-"
-"Date:2025-03-23 19:58+0900PO-Revision-Date:YEAR-MO-DA HO:MI+ZONELast-"
-"Translator:FULL NAME <EMAIL@ADDRESS>Language:enLanguage-Team:en "
-"<LL@li.org>Plural-Forms:nplurals=2; plural=(n != 1);MIME-Version:1"
-".0Content-Type:text/plain; charset=utf-8Content-Transfer-Encoding"
-":8bitGenerated-By:Babel 2.17.0\n"
+"Project-Id-Version: mtakagishiReport-Msgid-Bugs-To:POT-Creation-Date:2025-03-23 19:58+0900PO-Revision-Date:YEAR-MO-DA HO:MI+ZONELast-Translator:FULL NAME <EMAIL@ADDRESS>Language:enLanguage-Team:en <LL@li.org>Plural-Forms:nplurals=2; plural=(n != 1);MIME-Version:1.0Content-Type:text/plain; charset=utf-8Content-Transfer-Encoding:8bitGenerated-By:Babel 2.17.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-25 02:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -18,7 +13,6 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../posts/2025-03-22-001.rst:3
-#, fuzzy
 msgid "サイト更新再開にあたり"
 msgstr "Resuming Site Updates"
 
@@ -28,7 +22,8 @@ msgstr "Overview"
 
 #: ../../../posts/2025-03-22-001.rst:13
 msgid "久しぶりにサイトの更新を再開するにあたって行ったことのまとめ"
-msgstr "Summary of the steps I took to resume updating my site after a long break"
+msgstr ""
+"Summary of the steps I took to resume updating my site after a long break"
 
 #: ../../../posts/2025-03-22-001.rst:16
 msgid "対応メモ"
@@ -55,8 +50,8 @@ msgstr "Automatic Google Ads OFF"
 #: ../../../posts/2025-03-22-001.rst:28
 msgid "Google Adsense自動広告の表示過多。自動広告は全てOFFへ。"
 msgstr ""
-"Too many automatic Google AdSense ads were being displayed, so I turned "
-"them all off."
+"Too many automatic Google AdSense ads were being displayed, so I turned them"
+" all off."
 
 #: ../../../posts/2025-03-22-001.rst:31
 msgid "トップページ整備"
@@ -65,8 +60,8 @@ msgstr "Home page maintenance"
 #: ../../../posts/2025-03-22-001.rst:33
 msgid "見栄えのCSS見直ししたが、最終的にトップページは/jaに自動リダイレクトへ修正。"
 msgstr ""
-"I reviewed the CSS to improve the appearance, but in the end, I decided "
-"to set up an automatic redirect from the homepage to /ja."
+"I reviewed the CSS to improve the appearance, but in the end, I decided to "
+"set up an automatic redirect from the homepage to /ja."
 
 #: ../../../posts/2025-03-22-001.rst:36
 msgid "ブログ記事効率化"
@@ -85,9 +80,9 @@ msgid ""
 "ablogで便利とのウワサの検証、しかし `poetry add ablog` "
 "にて以下エラーが発生し本日は断念、次はPythonバージョンの最新化から。"
 msgstr ""
-"I tried to verify the rumor that ablog is useful, but encountered an "
-"error with `poetry add ablog`, so I gave up for now. Next, I'll update to"
-" the latest Python version."
+"I tried to verify the rumor that ablog is useful, but encountered an error "
+"with `poetry add ablog`, so I gave up for now. Next, I'll update to the "
+"latest Python version."
 
 #~ msgid "投稿日"
 #~ msgstr "Posted on"
@@ -100,4 +95,3 @@ msgstr ""
 
 #~ msgid "Sphinx, ドキュメント, ブログ運用, テンプレート"
 #~ msgstr "Sphinx, Documentation, Blog Operation, Template"
-

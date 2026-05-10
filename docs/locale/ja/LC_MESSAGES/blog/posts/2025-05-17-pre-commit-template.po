@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:8
+msgid "pre-commit フックの設定網羅テンプレート"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:10
+msgid ""
+"本記事では、Git のコミット前に自動実行できる `pre-commit` のフックを幅広く網羅し、設定例（テンプレート）として整理しておきます。"
+" 「まずはすべて入れて、不要なものを削る」という使い方を想定しています。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:18
+msgid "YAML 設定ファイルの例"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:20
+msgid "以下は、`.pre-commit-config.yaml` に記述するテンプレートです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:141
+msgid "pyproject.toml オプション設定例"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:143
+msgid "オプション設定は `pyproject.toml` に設定します："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:162
+msgid "このテンプレートをベースに、必要な項目だけを選び、実プロジェクトに合わせてカスタマイズしてみてください。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:165
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:166
+msgid "2025-05-17"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst
+msgid "更新日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:167
+msgid "2025-07-27"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-17-pre-commit-template.rst:168
+msgid "mtakagishi"
+msgstr ""
+

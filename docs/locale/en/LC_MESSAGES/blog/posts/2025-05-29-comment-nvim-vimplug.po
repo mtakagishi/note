@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:8
+msgid "Neovimで選択範囲をコメントアウト：comment.nvimをvim-plugで導入する"
+msgstr ""
+"Comment out selection range in Neovim: Introduce comment.nvim with vim-plug"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:10
+msgid ""
+"Neovimを使用していると、特にコードの一定範囲をコメントアウトしたい場面は多いです。 本記事では、Lua製の軽量プラグイン "
+"`comment.nvim` を `vim-plug` で導入し、 ファイルタイプに応じたコメントのON/OFFをスムーズに行う方法を紹介します。"
+msgstr ""
+"When using Neovim, there are many situations where you especially want to "
+"comment out a certain range of code. In this article, we will introduce the "
+"lightweight Lua plugin `comment.nvim` using `vim-plug` to smoothly turn "
+"comments on and off according to file type."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:19
+msgid "導入手順（vim-plug + init.vim）"
+msgstr "Installation steps (vim-plug + init.vim)"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:21
+msgid "`~/.config/nvim/init.vim` に以下を追記します："
+msgstr "Add the following to `~/.config/nvim/init.vim`:"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:33
+msgid "Neovim を起動後、以下のコマンドを実行します："
+msgstr "After starting Neovim, run the following command:"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:39
+msgid "これでプラグインが導入され、有効化されます。"
+msgstr "The plugin is now installed and activated."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:42
+msgid "基本的な操作方法"
+msgstr "Basic operation method"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:44
+msgid ""
+"`comment.nvim` はファイルタイプごとに適切なコメント記号（例: `//` , `#` , `--` , `<!-- -->` "
+"など）を自動で使い分けてくれます。"
+msgstr ""
+"`comment.nvim` automatically uses appropriate comment symbols (e.g. `//`, "
+"`#`, `--`, `<!-- -->`, etc.) for each file type."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:46
+msgid "ノーマルモードでの操作:"
+msgstr "Operation in normal mode:"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:51
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:63
+msgid "キー"
+msgstr "key"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:52
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:64
+msgid "動作内容"
+msgstr "Operation details"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:53
+msgid "``gcc``"
+msgstr "``gcc``"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:54
+msgid "現在行を行コメントトグル"
+msgstr "Toggle current line comment"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:55
+msgid "``gbc``"
+msgstr "``gbc``"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:56
+msgid "現在行をブロックコメントトグル"
+msgstr "Block current line comment toggle"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:58
+msgid "ビジュアルモードでの操作:"
+msgstr "Operation in visual mode:"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:65
+msgid "``gc``"
+msgstr "``gc``"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:66
+msgid "選択範囲の行コメントトグル"
+msgstr "Selection row comment toggle"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:67
+msgid "``gb``"
+msgstr "``gb``"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:68
+msgid "選択範囲のブロックコメントトグル"
+msgstr "Selected block comment toggle"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:71
+msgid "キーバインドの覚え方"
+msgstr "How to remember key bindings"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:73
+msgid "``gc`` →  *go comment* （コメント操作）"
+msgstr "``gc`` → *go comment* (comment operation)"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:74
+msgid "``gb`` →  *go block* （ブロックコメント）"
+msgstr "``gb`` → *go block* (block comment)"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:75
+msgid "``gcc`` → 現在行の *go comment current*"
+msgstr "``gcc`` → *go comment current* on current line"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:76
+msgid "Vimの ``g`` プレフィックス文化と一致しており、覚えやすい設計です。"
+msgstr ""
+"It is consistent with Vim's ``g`` prefix culture and is designed to be easy "
+"to remember."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:79
+msgid "commentstringの確認"
+msgstr "Check comment string"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:81
+msgid "現在のファイルタイプにおけるコメント記法は以下で確認できます："
+msgstr "The comment syntax for the current file type can be found below:"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:87
+msgid "この値をもとに `comment.nvim` は適切なコメント記号を選択しています。"
+msgstr ""
+"Based on this value, `comment.nvim` selects the appropriate comment symbol."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:90
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:92
+msgid "Neovim におけるコメント操作を快適にするには `comment.nvim` が最適"
+msgstr ""
+"`comment.nvim` is the best option for comfortable comment operations in "
+"Neovim."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:93
+msgid "`vim-plug` でも簡単に導入可能"
+msgstr "Easy to install with `vim-plug`"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:94
+msgid "ファイルタイプに応じたコメントを自動的に扱ってくれるため、設定いらずで便利"
+msgstr ""
+"It automatically handles comments according to the file type, so it is "
+"convenient and does not require any settings."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:95
+msgid "Vim文化に沿ったキーバインドで覚えやすい"
+msgstr "Easy to remember with key bindings that follow Vim culture"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:97
+msgid "Vim/Neovim を使った開発効率化に、ぜひ導入してみてください。"
+msgstr ""
+"Please try introducing it to improve development efficiency using "
+"Vim/Neovim."
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:100
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:101
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-29-comment-nvim-vimplug.rst:102
+msgid "2025-05-29.. rubric:: 記事情報"
+msgstr "2025-05-29.. rubric:: Article information"

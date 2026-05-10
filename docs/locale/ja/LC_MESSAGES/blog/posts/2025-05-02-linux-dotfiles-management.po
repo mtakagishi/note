@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:10
+msgid "Bare‑repo方式ではじめる Linux dotfiles 管理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:12
+msgid ""
+"本記事ではBare-repo方式でのdotfiles管理について整理します。dotbot / yadm / homeshick / chezmoi"
+" などdotfile管理マネージャがありますが、初期ではgitだけで完結する "
+"Bare‑repo方式で十分です。いつか、困るようなことがあれば、dotfile管理マネージャ への移行を再検討することにします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:16
+msgid "目次"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:19
+msgid "はじめに"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:20
+msgid ""
+"長期的に快適な開発体験を維持するうえで ``dotfiles`` のバージョン管理は 欠かせません。本記事では **Bare‑repo 方式** "
+"を用いて最小コストで管理を 始める手順を整理します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:24
+msgid "**対象読者** : 新規 Linux 環境を手に入れたばかりで、まずは手軽に dotfiles 管理を始めたい人"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:26
+msgid "**ゴール**   :"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:28
+msgid "Bare‑repo 方式を使った初期立ち上げができる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:29
+msgid "日々の変更を安全に運用できる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:30
+msgid "新しいマシンが来ても数コマンドで環境を再現できる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:31
+msgid "chezmoi への乗り換え判断材料を得る"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:34
+msgid "Bare‑repo 方式とは"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:35
+msgid ""
+"ホームディレクトリをそのままワークツリーにし、``$HOME/.dotfiles`` を **ベアリポジトリ** "
+"として扱うシンプルな手法です。利点と欠点を整理すると"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:38
+msgid "Bare‑repo 方式の概要"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:42
+msgid "観点"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:43
+msgid "メリット"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:44
+msgid "デメリット"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:45
+msgid "手軽さ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:46
+msgid "Git だけで完結、追加ツール不要"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:47
+msgid "コマンドが長くなりがち (alias 推奨)"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:48
+msgid "可搬性"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:49
+msgid "他環境で ``git clone --bare`` だけで再現"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:50
+msgid "OS ごとの分岐やテンプレートは手動管理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:51
+msgid "セキュリティ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:52
+msgid "秘密鍵などを除外しやすい (.gitignore)"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:53
+msgid "意図せず公開リポジトリへ push しない注意が必要"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:56
+msgid "Git の基本設定 (初回のみ)"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:57
+msgid "以下の設定は **一度だけ** 実行しておけば、以降すべての Git リポジトリに反映されます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:67
+msgid "初期立ち上げ手順"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:68
+msgid "**ベアリポジトリを作成**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:74
+msgid "**便利エイリアスを用意**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:81
+msgid "**Git の設定を調整** — git管理外のファイルを非表示にする"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:87
+msgid "**最初のコミット & リモート登録**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:97
+msgid "日々の運用フロー"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:98
+msgid "変更確認::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:102
+msgid "差分確認::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:106
+msgid "追加・コミット・プッシュ::"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:112
+msgid "**マシン固有設定の扱い**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:114
+msgid "``.config/machine-specific/`` などに分離し ``.git/info/exclude`` に登録"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:115
+msgid "代替: *includeIf* 機能でホスト名ごとに読み込む Git 設定を分割"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:118
+msgid "新規環境セットアップ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:119
+msgid "新しいサーバや WSL に入ったら以下だけで再現できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:128
+msgid ""
+"``dot checkout`` で既存ファイルと衝突した場合は上書きされます。 バックアップが必要なら ``--force`` "
+"を付けずにエラー一覧を確認し、 該当ファイルを退避してから再実行してください。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:133
+msgid "既存環境の最新化"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:138
+msgid "Conflicted ファイルがあれば通常の Git と同様に解決します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:141
+msgid "その他考慮すべきシーン"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:142
+msgid "**秘密情報の暗号化** — pass/git‑crypt/sops と組み合わせる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:143
+msgid "**GUI アプリの設定ディレクトリが巨大** — シンボリックリンクで一部のみ管理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:144
+msgid "**OS・ディストリ別の差分** — Makefile で分岐、または includeIf"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:145
+msgid "**自動同期** — GitHub Actions + SSH で定期 push/pull"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:148
+msgid "dotfile管理マネージャについて"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:149
+msgid "dotbot / yadm / homeshick / chezmoi などdotfile管理に特化したツールがある"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:150
+msgid "chezmoi は特に人気"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:152
+msgid ""
+"将来的に - Mac や Windows (WSL) を含む複数 OS を横断 - dotfiles に秘密情報が増える といったニーズが出たら "
+"管理マネージャ への移行を検討する。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:158
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:159
+msgid ""
+"Bare‑repo 方式は **Git だけ** で始められる最短ルートです。まずは運用に 慣れて “dotfiles を育てる” "
+"ことに集中し、複雑化してきたタイミングで dotfiles管理マネージャへの移行を検討すると学習コストも分散できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:163
+msgid "なお、現状の私のリポジトリURLは以下です。育成中ですが興味があれば覗いてみてください。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:165
+msgid "`mtakagishi's dotfiles <https://github.com/mtakagishi/dotfiles>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:169
+msgid "参考リンク"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:170
+msgid ""
+"`Atlassian Git Tutorial "
+"<https://www.atlassian.com/git/tutorials/dotfiles>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:171
+msgid "`chezmoi 公式ドキュメント <https://www.chezmoi.io>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:174
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:175
+msgid "2025-05-02"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-02-linux-dotfiles-management.rst:176
+msgid "mtakagishi"
+msgstr ""
+

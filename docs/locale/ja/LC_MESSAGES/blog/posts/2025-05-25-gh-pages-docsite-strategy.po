@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:9
+msgid "gh-pagesブランチで運用するドキュメント公開とその比較知識の整理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:11
+msgid "GitHub Pages の gh-pages ブランチを活用したドキュメント公開の仕組みについて、学びの多かった内容を整理する。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:13
+msgid "本記事では、以下の観点をまとめる："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:15
+msgid "GitHub Pages の仕組み"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:16
+msgid "gh-pages 運用の基本コマンドと設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:17
+msgid "mkdocs の自動化支援（gh-deploy）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:18
+msgid "sphinx との連携手法（ghp-import）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:19
+msgid "Netlifyとの比較整理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:26
+msgid "GitHub Pages と gh-pages ブランチの関係"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:28
+msgid ""
+"GitHub Pages は、GitHub リポジトリの中に静的HTMLファイルを含むブランチ（通常は ``gh-pages`` "
+"）を用意し、それをウェブ公開する仕組み。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:30
+msgid "次のようなURLで公開される："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:36
+msgid "また、独自ドメインを使用する場合は ``CNAME`` ファイルをブランチに含めることで対応可能。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:38
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:60
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:97
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:124
+msgid "---"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:41
+msgid "gh-pages 運用に必要な Git コマンド例"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:43
+msgid ""
+"Sphinx や MkDocs で生成された ``_build/html`` や ``site/`` を ``gh-pages`` "
+"ブランチに手動で反映するには、以下のようなGit操作を行う。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:56
+msgid "``--orphan`` で履歴なしの新規ブランチを作成"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:57
+msgid "``.nojekyll`` によりJekyll処理を無効化"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:58
+msgid "``CNAME`` により独自ドメイン指定が可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:63
+msgid "mkdocs gh-deploy の自動処理"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:65
+msgid "MkDocs では、以下のコマンドを使うだけで上記一連の処理を自動化できる："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:71
+msgid "このコマンドの内部では："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:73
+msgid "``mkdocs build`` でHTML生成"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:74
+msgid "一時ブランチを経由して ``gh-pages`` に ``site/`` の中身を配置"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:75
+msgid "``CNAME`` ファイルも自動でコピー（ルートに存在すれば）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:77
+msgid "非常に簡潔で、初心者にもやさしい運用が可能。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:81
+msgid "Sphinx では ghp-import の活用が定番"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:83
+msgid "Sphinxでは標準で ``gh-pages`` 対応がないため、次のように ``ghp-import`` パッケージを活用するのが一般的。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:91
+msgid "``-n``: `.nojekyll` を追加"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:92
+msgid "``-p``: 自動でpushする"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:93
+msgid "``-f``: 強制上書き"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:95
+msgid "CI/CDなどに組み込んで、GitHub Actions等と連携することも多い。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:100
+msgid "Netlifyとの比較"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:102
+msgid "Netlifyも静的サイトのホスティングに強く、次のような特徴がある："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:108
+msgid "項目"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:109
+msgid "GitHub Pages（gh-pages）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:110
+msgid "Netlify"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:111
+msgid "ビルド自動化"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:112
+msgid "GitHub Actions等で手動構築"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:113
+msgid "GUIで簡単に設定可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:114
+msgid "PRプレビュー"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:115
+msgid "✖（標準機能なし）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:116
+msgid "✔ 自動でPreview URL生成"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:117
+msgid "カスタムドメイン"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:118
+msgid "CNAMEで対応（SSLは自前）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:119
+msgid "自動SSL対応、DNS管理も可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:120
+msgid "動的機能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:121
+msgid "✖ 静的HTMLのみ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:122
+msgid "✔ Forms / Functions などあり"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:127
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:129
+msgid "``gh-pages`` ブランチを理解することで、軽量な静的サイト運用が可能となる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:130
+msgid "Sphinx/MkDocs であれば、HTML出力 → gh-pages反映 の流れをCI/CDに組み込むことで、完全自動化も視野に入る"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:131
+msgid "Netlifyとの比較では、 **PRプレビューやSSLの自動管理** など、利便性の高さが目立つ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:132
+msgid "一方、GitHub Pagesの軽量性とGitHub一体運用のわかりやすさも大きな魅力"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:135
+msgid "今後、自身の用途やチームの構成に応じて、 **「自動化の手間」と「ホスティング機能の豊富さ」** を天秤にかけて使い分けていきたい。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:138
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:139
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-25-gh-pages-docsite-strategy.rst:140
+msgid "2025-05-25"
+msgstr ""
+

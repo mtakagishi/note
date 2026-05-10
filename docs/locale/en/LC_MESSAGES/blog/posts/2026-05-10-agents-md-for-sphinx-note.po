@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:8
+msgid "AGENTS.md を既存の Sphinx + ablog 技術ノートに導入する"
+msgstr "Adding AGENTS.md to an Existing Sphinx + ablog Technical Note"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:10
+msgid ""
+"Codex を使ってこの技術ノートを編集する機会が増えてきたため、 リポジトリ固有の作業ルールを ``AGENTS.md`` にまとめることにした。"
+msgstr ""
+"As I have been using Codex more often to edit this technical note, I decided"
+" to collect the repository-specific working rules in ``AGENTS.md``."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:13
+msgid ""
+"このノートは Sphinx + ablog で作っている個人技術ブログであり、 記事作成、翻訳、ビルド、公開まわりにいくつか自分用の前提がある。"
+msgstr ""
+"This note is a personal technical blog built with Sphinx and ablog. It has a"
+" handful of assumptions around writing posts, translation, builds, and "
+"publishing."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:16
+msgid ""
+"Codex に毎回それを説明するのではなく、 リポジトリの中に作業方針として置いておくことで、 作業のブレを減らせるのではないか、という試みである。"
+msgstr ""
+"Rather than explaining those assumptions to Codex every time, I wanted to "
+"see whether keeping them inside the repository as working guidelines would "
+"make the workflow more consistent."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:21
+msgid "AGENTS.md とは何か"
+msgstr "What Is AGENTS.md?"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:23
+msgid "``AGENTS.md`` は、Codex などのエージェントに対して、 そのリポジトリでの作業方針や注意点を伝えるためのファイルである。"
+msgstr ""
+"``AGENTS.md`` is a file for telling agents such as Codex how work should be "
+"done in a particular repository, including the project?s conventions and "
+"caveats."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:26
+msgid "このノートでは、特に次のような情報を置くことにした。"
+msgstr "For this note, I decided to include information such as:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:28
+msgid "日本語を基準に作業すること"
+msgstr "Use Japanese as the baseline language for work"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:29
+msgid "Sphinx + ablog の記事配置ルール"
+msgstr "Where Sphinx + ablog posts should be placed"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:30
+msgid "Rye を使ったビルド手順"
+msgstr "How to build the site with Rye"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:31
+msgid "gettext / sphinx-intl による翻訳方針"
+msgstr "The translation workflow using gettext and sphinx-intl"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:32
+msgid "生成物を直接編集しないこと"
+msgstr "Do not edit generated files directly"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:33
+msgid "Netlify や GitHub Actions まわりの注意点"
+msgstr "Notes about Netlify and GitHub Actions"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:36
+msgid "なぜ体験用リポジトリではなく既存 note に入れるのか"
+msgstr "Why Put It in the Existing Note Instead of a Demo Repository?"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:38
+msgid "最初は、``AGENTS.md`` を試すためだけの小さな体験用リポジトリを作ることも考えた。"
+msgstr ""
+"At first, I considered creating a small demo repository just to try out "
+"``AGENTS.md``."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:40
+msgid "しかし、今回はあえて既存の技術ノートに直接導入することにした。"
+msgstr ""
+"This time, though, I chose to add it directly to my existing technical note."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:42
+msgid "理由は、体験用リポジトリでは本当に困っていることが出にくいからである。 このノートには、すでに次のような「実運用ならでは」の前提がある。"
+msgstr ""
+"The reason is that a demo repository rarely exposes the problems that "
+"actually matter. This note already has several assumptions that only show up"
+" in real day-to-day use:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:45
+msgid "記事本文は日本語を正とする"
+msgstr "The Japanese article is treated as the source of truth"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:46
+msgid "英語ページは翻訳版として扱う"
+msgstr "English pages are treated as translations"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:47
+msgid "``docs/_build/`` 配下は生成物なので直接編集しない"
+msgstr ""
+"Files under ``docs/_build/`` are generated and should not be edited directly"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:48
+msgid "``blog_future`` や ``blog_path`` など、変更に注意が必要な設定がある"
+msgstr ""
+"Settings such as ``blog_future`` and ``blog_path`` need to be changed "
+"carefully"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:49
+msgid "README に古い記述が残っている場合でも、実運用は ``pyproject.toml`` や ``dodo.py`` を優先する"
+msgstr ""
+"Even if the README still contains old notes, the actual workflow should be "
+"judged from ``pyproject.toml`` and ``dodo.py``"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:51
+msgid "こうした前提は、きれいな検証用リポジトリではなかなか再現できない。"
+msgstr ""
+"Those kinds of assumptions are hard to reproduce in a clean test repository."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:53
+msgid ""
+"むしろ、少し歴史があり、運用上の癖もある既存 note に入れることで、 ``AGENTS.md`` がどの程度役に立つのかを見やすくなると考えた。"
+msgstr ""
+"By putting it into an existing note with a bit of history and a few "
+"operational quirks, I thought it would be easier to see how useful "
+"``AGENTS.md`` really is."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:57
+msgid "導入した AGENTS.md のサンプル"
+msgstr "Sample AGENTS.md"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:59
+msgid "今回置いた ``AGENTS.md`` の内容は、おおよそ次のようなものにした。"
+msgstr "The ``AGENTS.md`` I added looks roughly like this:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:113
+msgid "実際に入れてみて気づいたこと"
+msgstr "What I Noticed After Adding It"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:115
+msgid "導入してみると、``AGENTS.md`` は単なる設定ファイルというより、 自分の運用ルールを棚卸しするためのメモにもなると感じた。"
+msgstr ""
+"After adding it, I found that ``AGENTS.md`` is not just a configuration "
+"file. It also works as a way to take inventory of my own operating rules."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:118
+msgid "たとえば、普段なんとなく守っている次のような判断も、 明文化しておくと Codex に伝えやすい。"
+msgstr ""
+"For example, decisions I usually follow without thinking become much easier "
+"to communicate to Codex once they are written down:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:121
+msgid "この記事は日本語原稿を正とする"
+msgstr "The Japanese draft is the source of truth for the article"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:122
+msgid "英語版は直接書かず、翻訳として扱う"
+msgstr ""
+"The English version is not written independently; it is handled as a "
+"translation"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:123
+msgid "生成された HTML や mo ファイルは直接編集しない"
+msgstr "Generated HTML and ``.mo`` files should not be edited directly"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:124
+msgid "ビルドは Poetry ではなく Rye を使う"
+msgstr "Builds should use Rye, not Poetry"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:126
+msgid "自分では当たり前だと思っていたことほど、 エージェントにとっては明示されていない前提になりやすい。"
+msgstr ""
+"The things that feel obvious to me are often exactly the assumptions that "
+"are invisible to an agent."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:129
+msgid "その意味で、``AGENTS.md`` を書く作業は、 自分の技術ノートの運用を言語化する作業でもあった。"
+msgstr ""
+"In that sense, writing ``AGENTS.md`` was also an exercise in putting the "
+"workflow for my technical note into words."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:133
+msgid "まだ迷っていること"
+msgstr "Open Questions"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:135
+msgid "一方で、どこまで細かく書くべきかはまだ迷っている。"
+msgstr "At the same time, I am still unsure how detailed it should be."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:137
+msgid ""
+"あまり細かく書きすぎると、``AGENTS.md`` 自体が古くなりやすい。 逆に抽象的すぎると、Codex "
+"が実際に作業するときの判断材料としては弱い。"
+msgstr ""
+"If I make it too detailed, ``AGENTS.md`` itself may become outdated quickly."
+" If it is too abstract, it will not give Codex enough practical guidance "
+"when it actually works in the repository."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:140
+msgid "今のところは、次のような基準で書くのがよさそうだと考えている。"
+msgstr ""
+"For now, I think the following criteria are a reasonable starting point:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:142
+msgid "間違えると公開物に影響することは書く"
+msgstr ""
+"Write down anything that could affect the published site if handled "
+"incorrectly"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:143
+msgid "自分が毎回説明していることは書く"
+msgstr "Write down anything I find myself explaining repeatedly"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:144
+msgid "生成物と手書きファイルの区別は書く"
+msgstr ""
+"Make the distinction between generated files and hand-written files explicit"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:145
+msgid "ツール選択に関わることは書く"
+msgstr "Document decisions that affect tool choice"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:146
+msgid "一時的な好みや未確定の運用は書きすぎない"
+msgstr "Avoid over-documenting temporary preferences or unsettled practices"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:149
+msgid "今後の展望: Skills も導入してみたい"
+msgstr "Next Step: Trying Skills"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:151
+msgid "``AGENTS.md`` でリポジトリ全体の方針を伝えられるようになったので、 次は Skills の導入も試してみたい。"
+msgstr ""
+"Now that ``AGENTS.md`` can communicate repository-wide guidelines, I would "
+"also like to try introducing Skills next."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:154
+msgid ""
+"``AGENTS.md`` が「このリポジトリでの基本方針」だとすると、 Skills は「特定の作業をするときの手順書」として使えそうである。"
+msgstr ""
+"If ``AGENTS.md`` is the set of general guidelines for this repository, "
+"Skills seem useful as playbooks for specific tasks."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:157
+msgid "たとえば、この技術ノートでは次のような Skills が考えられる。"
+msgstr "For this technical note, I can imagine Skills such as:"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:159
+msgid "新規 ablog 記事を作る Skill"
+msgstr "A Skill for creating a new ablog post"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:160
+msgid "日本語記事から英語翻訳用 po ファイルを更新する Skill"
+msgstr "A Skill for updating English ``.po`` files from Japanese articles"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:161
+msgid "Sphinx ビルドエラーを調査する Skill"
+msgstr "A Skill for investigating Sphinx build errors"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:162
+msgid "Netlify 公開前の確認を行う Skill"
+msgstr "A Skill for pre-publication checks before deploying to Netlify"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:164
+msgid "まずは、記事作成と翻訳まわりから小さく試してみるつもりである。"
+msgstr ""
+"I plan to start small, probably around article creation and translation."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:167
+msgid "おわりに"
+msgstr "Closing Thoughts"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:169
+msgid "``AGENTS.md`` を導入したことで、Codex に毎回説明していた前提を、 リポジトリ側に持たせられるようになった。"
+msgstr ""
+"By adding ``AGENTS.md``, I can now keep the assumptions I used to explain to"
+" Codex every time inside the repository itself."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:172
+msgid ""
+"特に、既存の Sphinx + ablog 技術ノートのように、 記事、翻訳、ビルド、公開がゆるくつながっているリポジトリでは、 "
+"こうした作業ルールの明文化が効きそうである。"
+msgstr ""
+"This kind of explicit working rule seems especially useful in an existing "
+"Sphinx + ablog technical note, where writing, translation, builds, and "
+"publishing are loosely connected."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:176
+msgid "まだ導入したばかりなので、今後の作業の中で少しずつ育てていきたい。"
+msgstr ""
+"I have only just introduced it, so I would like to keep improving it "
+"gradually as I continue working on the note."
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:179
+msgid "記事情報"
+msgstr "Article Information"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst
+msgid "著者"
+msgstr "Author"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:180
+msgid "mtakagishi"
+msgstr "mtakagishi"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst
+msgid "公開日"
+msgstr "Published"
+
+#: ../../../blog/posts/2026-05-10-agents-md-for-sphinx-note.rst:181
+msgid "2026-05-10"
+msgstr "2026-05-10"

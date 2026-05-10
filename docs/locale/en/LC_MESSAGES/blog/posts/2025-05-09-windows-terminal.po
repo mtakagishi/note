@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:8
+msgid "Windows Terminal + WSL　メモ"
+msgstr "Windows Terminal + WSL Memo"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:10
+msgid "Windows Terminal + WSLの利用の自分用メモです。"
+msgstr ""
+"This is a memo for myself regarding the use of Windows Terminal + WSL."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:17
+msgid "WSL + Terminal で実現できること"
+msgstr "What you can achieve with WSL + Terminal"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:19
+msgid "Linux コマンドライン環境に即座にアクセスできる。"
+msgstr "Instant access to the Linux command line environment."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:20
+msgid "TrueColor や Nerd Font 対応により neovim や tmux の画面が美しく表示される。"
+msgstr ""
+"Neovim and tmux screens are displayed beautifully with support for TrueColor"
+" and Nerd Font."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:21
+msgid "Windows ↔ Linux 間のファイル操作がスムーズ。"
+msgstr "File operations between Windows ↔ Linux are smooth."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:22
+msgid "分割ペインやタブの活用により作業が快適に。"
+msgstr "Work comfortably by using split panes and tabs."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:25
+msgid "Windows Terminal のインストール"
+msgstr "Installing Windows Terminal"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:27
+msgid "microsoft store からインストール"
+msgstr "Install from microsoft store"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:30
+msgid "WSL のインストール"
+msgstr "Installing WSL"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:37
+msgid "設定ファイルの場所と編集方法"
+msgstr "Where to find the configuration file and how to edit it"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:39
+msgid "`Ctrl + ,` で GUI 設定画面を表示し、右上の「設定ファイルを開く」"
+msgstr ""
+"Display the GUI settings screen with `Ctrl + ,` and click \"Open settings "
+"file\" in the upper right"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:40
+msgid "`Ctrl + Shift,` で JSON 設定ファイルを直接編集"
+msgstr "Edit JSON configuration files directly with `Ctrl + Shift,`"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:43
+msgid "開始ディレクトリが ``%USERPROFILE%``"
+msgstr "Starting directory is ``%USERPROFILE%``"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:47
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:51
+msgid "Windows ↔ Linux 間のファイルアクセス"
+msgstr "File access between Windows ↔ Linux"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:49
+msgid "WSL に保存したファイルを Windows 側から操作したい場合、以下のパスが便利です："
+msgstr ""
+"If you want to manipulate files saved in WSL from the Windows side, the "
+"following path is useful:"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:54
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:70
+msgid "操作"
+msgstr "operation"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:55
+msgid "説明"
+msgstr "explanation"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:56
+msgid "Windows → WSL"
+msgstr "Windows → WSL"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:57
+msgid "\\\\wsl$\\Ubuntu\\home\\<user> をエクスプローラで開く"
+msgstr "Open \\\\wsl$\\Ubuntu\\home\\<user> in Explorer"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:58
+msgid "WSL → Windows"
+msgstr "WSL → Windows"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:59
+msgid "/mnt/c/Users/<username>/ でWindowsのファイルへアクセス可能"
+msgstr "/mnt/c/Users/<username>/ allows access to Windows files"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:63
+msgid "キーボードショートカット（デフォルト）"
+msgstr "Keyboard shortcuts (default)"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:65
+msgid ""
+"Windows Terminal のショートカットには、作業効率を向上させる便利な操作が多数あります。とくに **ペインの分割と移動** "
+"は、リモート作業における複数のセッション管理で役立ちます。"
+msgstr ""
+"Windows Terminal shortcuts have many useful operations that can improve your"
+" work efficiency. In particular, **splitting and moving panes** is useful "
+"for managing multiple sessions when working remotely."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:67
+msgid "よく使うキーボードショートカット"
+msgstr "Frequently used keyboard shortcuts"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:71
+msgid "キー"
+msgstr "key"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:72
+msgid "新しいタブを開く"
+msgstr "open new tab"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:73
+msgid "Ctrl + Shift + T"
+msgstr "Ctrl + Shift + T"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:74
+msgid "ペインを横に分割"
+msgstr "split pane horizontally"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:75
+msgid "Alt + Shift + -"
+msgstr "Alt + Shift + -"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:76
+msgid "ペインを縦に分割"
+msgstr "Split pane vertically"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:77
+msgid "Alt + Shift + +"
+msgstr "Alt + Shift + +"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:78
+msgid "ペイン間の移動"
+msgstr "Moving between panes"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:79
+msgid "Alt + ← / → / ↑ / ↓"
+msgstr "Alt + ← / → / ↑ / ↓"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:80
+msgid "ペインサイズの調整"
+msgstr "Adjust pane size"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:81
+msgid "Ctrl + Shift + ← / → / ↑ / ↓"
+msgstr "Ctrl + Shift + ← / → / ↑ / ↓"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:84
+msgid "分割ペインを使って、1つのターミナルウィンドウ内で複数のSSH接続やログ確認などを並行して扱えるため、シェル作業の効率が向上します。"
+msgstr ""
+"Split panes allow you to handle multiple SSH connections, check logs, etc. "
+"in parallel within a single terminal window, improving the efficiency of "
+"shell work."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:87
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:89
+msgid "Windows Terminal ＋ WSLで今のところは十分だと思います。"
+msgstr "I think Windows Terminal + WSL is sufficient for now."
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:92
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:93
+msgid "2025-05-09"
+msgstr "2025-05-09"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-09-windows-terminal.rst:94
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

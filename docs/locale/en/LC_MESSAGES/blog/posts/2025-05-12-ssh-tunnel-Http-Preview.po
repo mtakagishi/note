@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:9
+msgid "Oracle Cloud上の開発用HTTPサーバにSSHトンネルでアクセスする方法"
+msgstr ""
+"How to access the development HTTP server on Oracle Cloud with an SSH tunnel"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:11
+msgid ""
+"Sphinx + ablog による静的サイトを Oracle Cloud 上の Ubuntu サーバで管理しているとき、 ``git push`` "
+"前にローカルでの表示確認を行いたいケースがあります。 "
+"外部からHTTPで直接アクセスできない状況でも、SSHトンネルを活用すれば開発中のサイトの確認が可能です。"
+msgstr ""
+"When managing a static site using Sphinx + ablog on an Ubuntu server on "
+"Oracle Cloud, you may want to check the display locally before ``git push``."
+" Even in situations where direct access via HTTP from the outside is not "
+"possible, you can check the site under development by using an SSH tunnel."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:15
+msgid ""
+"この記事では、Oracle CloudのFree Tierインスタンスに立てたUbuntuサーバ上でHTTPサーバを一時的に起動し、 "
+"SSHトンネルで自宅ブラウザから接続・確認する方法を紹介します。"
+msgstr ""
+"In this article, we will introduce how to temporarily start an HTTP server "
+"on an Ubuntu server set up on an Oracle Cloud Free Tier instance, and "
+"connect and check it from your home browser using an SSH tunnel."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:24
+msgid "背景"
+msgstr "background"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:26
+msgid "サーバは Oracle Cloud の Always Free 枠で稼働"
+msgstr "Servers run on Always Free tier in Oracle Cloud"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:27
+msgid "Sphinx + ablog によるドキュメントやブログ記事をメンテナンス中"
+msgstr "Maintaining documentation and blog articles using Sphinx + ablog"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:28
+msgid "``make html`` 後の ``_build/html`` をブラウザで確認したい"
+msgstr "I want to check ``_build/html`` after ``make html`` in a browser."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:29
+msgid "ただし、開発用ポート（例: 8000）が外部に公開されておらず、直接アクセスできない"
+msgstr ""
+"However, the development port (e.g. 8000) is not exposed externally and "
+"cannot be accessed directly."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:32
+msgid "実現方法：SSHトンネル"
+msgstr "How to achieve: SSH tunnel"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:34
+msgid ""
+"SSH接続が可能であれば、SSHの **ポートフォワーディング（ローカルフォワード）** 機能を使って、 サーバ内の "
+"``localhost:8000`` を自宅の ``localhost:8000`` に見せることができます。"
+msgstr ""
+"If you have an SSH connection, you can use SSH's **port forwarding (local "
+"forwarding)** feature to make ``localhost:8000`` on your server appear to be"
+" ``localhost:8000`` at home."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:38
+msgid "1. サーバ側で簡易HTTPサーバを起動"
+msgstr "1. Start a simple HTTP server on the server side"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:45
+msgid "サーバ内から ``curl http://localhost:8000`` で正常に応答することを確認します。"
+msgstr ""
+"Verify that ``curl http://localhost:8000`` responds correctly from within "
+"the server."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:48
+msgid "2. クライアント側（Windows）でSSHトンネルを張る"
+msgstr "2. Create an SSH tunnel on the client side (Windows)"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:50
+msgid "PowerShell または コマンドプロンプトで以下を実行："
+msgstr "Run the following in PowerShell or Command Prompt:"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:56
+msgid "``-i``：秘密鍵の指定"
+msgstr "``-i``: Specify private key"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:57
+msgid "``-L``：ローカルポート8000をサーバのlocalhost:8000に転送"
+msgstr "``-L``: Forward local port 8000 to server localhost:8000"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:58
+msgid "``-N``：コマンド実行せず、接続だけ行う"
+msgstr "``-N``: Do not execute command, just connect"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:60
+msgid ""
+"成功すれば、**ブラウザで ``http://localhost:8000`` にアクセス** することで、 開発中のHTML出力を確認できます。"
+msgstr ""
+"If successful, you can check the HTML output during development by visiting "
+"``http://localhost:8000`` in your browser."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:64
+msgid "備考"
+msgstr "remarks"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:66
+msgid "SSHトンネルは接続中のみ有効。ターミナルを閉じると切断されます"
+msgstr ""
+"SSH tunnel is valid only while connected. Closing the terminal will "
+"disconnect you"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:67
+msgid "PuTTYでも同様の設定が可能（GUIでトンネルを追加）"
+msgstr "Similar settings can be made with PuTTY (add tunnel via GUI)"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:68
+msgid "Oracle CloudのセキュリティリストやUFW設定を変更せずに利用可能"
+msgstr ""
+"Can be used without changing Oracle Cloud security list or UFW settings"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:71
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:73
+msgid ""
+"本手法により、Sphinx + ablog のサイトを **Gitにpushする前の状態で視覚的に確認できる方法** を整えることができました。"
+msgstr ""
+"Using this method, we were able to create a way to visually check the Sphinx"
+" + ablog site before it was pushed to Git."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:82
+msgid "外部公開せずに安全に開発環境を構築・確認する方法として、今後も活用できそうです。"
+msgstr ""
+"It looks like it will continue to be used in the future as a way to safely "
+"build and check a development environment without disclosing it to the "
+"outside world."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:85
+msgid ""
+"Oracle Cloud 側でポート 8001 を外部公開する設定（セキュリティリストやUFWの調整）も試みましたが、 "
+"接続確立できず、原因の特定に至りませんでした。ホスティングが目的ではないので諦めました。"
+msgstr ""
+"I tried setting up to expose port 8001 externally on the Oracle Cloud side "
+"(adjusting the security list and UFW), but I was unable to establish a "
+"connection and was unable to identify the cause. I gave up because hosting "
+"was not my goal."
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:90
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:91
+msgid "2025-05-12"
+msgstr "2025-05-12"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:92
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

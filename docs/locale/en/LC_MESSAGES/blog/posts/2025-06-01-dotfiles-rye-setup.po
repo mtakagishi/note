@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:8
+msgid "dotfiles管理における Rye 環境構築の整備ポイント"
+msgstr ""
+"Maintenance points for Rye environment construction in dotfiles management"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:10
+msgid ""
+"Poetry から Rye への移行を機に、bare-repo方式の dotfiles 管理で Python 開発環境の構築手順を再整理しました。"
+msgstr ""
+"Taking the opportunity of migrating from Poetry to Rye, we reorganized the "
+"procedure for building a Python development environment using bare-repo "
+"style dotfiles management."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:13
+msgid "この記事では、Rye の導入における dotfiles 側の整備ポイントについてまとめます。"
+msgstr ""
+"This article summarizes the maintenance points on the dotfiles side when "
+"introducing Rye."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:20
+msgid "背景と目的"
+msgstr "Background and purpose"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:22
+msgid ""
+"これまで Python プロジェクトのパッケージ管理には ``poetry`` を使っていましたが、 より軽量かつ高速な ``rye`` "
+"へ移行しました。"
+msgstr ""
+"Up until now, I've been using ``poetry`` to manage packages for my Python "
+"projects, but I've moved to ``rye``, which is lighter and faster."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:25
+msgid "dotfiles では、複数の開発環境へセットアップを自動で再現できるようにするため、 Rye の導入手順や設定も自動化・明示化しています。"
+msgstr ""
+"dotfiles also automates and clarifies Rye installation procedures and "
+"settings in order to be able to automatically reproduce setups in multiple "
+"development environments."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:29
+msgid "対応方針の概要"
+msgstr "Outline of response policy"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:31
+msgid "``.rye/`` 配下は原則 dotfiles では管理しない（再現可能な生成物）"
+msgstr ""
+"In principle, files under ``.rye/`` are not managed with dotfiles "
+"(reproducible products)"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:32
+msgid "``install.sh`` に Rye の導入処理を記述"
+msgstr "Describe Rye installation process in ``install.sh``"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:33
+msgid "PATH設定・補完設定は ``.zshrc`` などシェル設定ファイルに明示"
+msgstr ""
+"PATH settings and completion settings are specified in shell configuration "
+"files such as ``.zshrc``"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:34
+msgid "必要であれば ``.rye/settings.toml`` のみ管理対象とする"
+msgstr "Manage only ``.rye/settings.toml`` if necessary"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:37
+msgid "具体的な実装内容"
+msgstr "Specific implementation details"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:40
+msgid "``install.sh`` への追加例"
+msgstr "Example addition to ``install.sh``"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:58
+msgid "``.zshrc`` での設定（dotfiles管理対象）"
+msgstr "Settings in ``.zshrc`` (managed by dotfiles)"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:60
+msgid ""
+"シェルの設定は ``install.sh`` からの自動追記は行わず、 dotfiles で管理している ``.zshrc`` "
+"に以下を明示的に記述します。"
+msgstr ""
+"Shell settings are not automatically added from ``install.sh``, but are "
+"explicitly written in ``.zshrc`` managed by dotfiles."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:71
+msgid "これにより、スクリプトでの動的操作に頼らず、設定が明示的かつ再現可能になります。"
+msgstr ""
+"This makes configuration explicit and reproducible without relying on "
+"dynamic manipulation in scripts."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:74
+msgid "``.gitignore`` での除外指定"
+msgstr "Exclusion specification with ``.gitignore``"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:82
+msgid "整備対象と除外対象の整理"
+msgstr "Organizing maintenance targets and exclusion targets"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:87
+msgid "項目"
+msgstr "item"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:88
+msgid "管理対象"
+msgstr "Management target"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:89
+msgid "備考"
+msgstr "remarks"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:90
+msgid "install.sh"
+msgstr "install.sh"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:91
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:94
+msgid "○"
+msgstr "○"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:92
+msgid "Rye の導入自動化処理"
+msgstr "Rye installation automation process"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:93
+msgid ".zshrc"
+msgstr ".zshrc"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:95
+msgid "PATH や補完設定を明示的に記述"
+msgstr "Explicitly describe PATH and completion settings"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:96
+msgid ".rye/shims/"
+msgstr ".rye/shims/"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:97
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:100
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:103
+msgid "×"
+msgstr "×"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:98
+msgid "自動生成される"
+msgstr "automatically generated"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:99
+msgid ".rye/venvs/"
+msgstr ".rye/venvs/"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:101
+msgid "仮想環境。除外必須"
+msgstr "virtual environment. Exclusion required"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:102
+msgid ".rye/tools/"
+msgstr ".rye/tools/"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:104
+msgid "再インストール可能な生成物"
+msgstr "Reinstallable products"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:105
+msgid ".rye/settings.toml"
+msgstr ".rye/settings.toml"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:106
+msgid "△（任意）"
+msgstr "△ (optional)"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:107
+msgid "default-python などの設定用途"
+msgstr "Setting uses such as default-python"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:110
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:112
+msgid "Rye の導入は非常にシンプルで、dotfiles との相性も良好です。"
+msgstr "Rye is very simple to deploy and works well with dotfiles."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:114
+msgid ""
+"特に ``install.sh`` では導入とツールインストールに徹し、 設定ファイル（``.zshrc`` など）は明示的に管理することで、 "
+"再現性・可読性の高い開発環境を構築できます。"
+msgstr ""
+"In particular, ``install.sh`` focuses on installation and tool installation,"
+" and by explicitly managing configuration files (``.zshrc``, etc.), you can "
+"build a highly reproducible and readable development environment."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:118
+msgid "Poetry よりも軽量な選択肢として Rye を検討している方には、 dotfiles との組み合わせによる導入をおすすめします。"
+msgstr ""
+"For those considering Rye as a lighter-weight option than Poetry, we "
+"recommend implementing it in combination with dotfiles."
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:122
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:123
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-06-01-dotfiles-rye-setup.rst:124
+msgid "2025-06-01"
+msgstr "2025-06-01"

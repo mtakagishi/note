@@ -6,105 +6,113 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mtakagishi \n"
+"Project-Id-Version: mtakagishi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 21:39+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../../blog/posts/2025-03-23-002.rst:9
 msgid "netlifyで302リダイレクト"
-msgstr ""
+msgstr "302 redirect with netlify"
 
 #: ../../../blog/posts/2025-03-23-002.rst:11
 msgid "netlifyで302リダイレクトを実現する方法をまとめた。"
-msgstr ""
+msgstr "We have summarized how to implement 302 redirect with netlify."
 
 #: ../../../blog/posts/2025-03-23-002.rst:14
 msgid "実現したいこと"
-msgstr ""
+msgstr "What I want to achieve"
 
 #: ../../../blog/posts/2025-03-23-002.rst:16
 msgid "https://mtakagishi.com/ にアクセスした際に、"
-msgstr ""
+msgstr "When you access https://mtakagishi.com/,"
 
 #: ../../../blog/posts/2025-03-23-002.rst
 msgid "日本語ユーザ"
-msgstr ""
+msgstr "Japanese user"
 
 #: ../../../blog/posts/2025-03-23-002.rst:17
 msgid "/ja へ 302リダイレクトし日本語ページが初期表示される"
-msgstr ""
+msgstr "302 redirect to /ja and the Japanese page is initially displayed."
 
 #: ../../../blog/posts/2025-03-23-002.rst
 msgid "日本語以外"
-msgstr ""
+msgstr "Other than Japanese"
 
 #: ../../../blog/posts/2025-03-23-002.rst:18
 msgid "/en へ 302リダイレクトし英語ページが初期表示される"
-msgstr ""
+msgstr "302 redirect to /en and the English page is initially displayed."
 
 #: ../../../blog/posts/2025-03-23-002.rst:21
 msgid "netlify仕様"
-msgstr ""
+msgstr "netlify specifications"
 
 #: ../../../blog/posts/2025-03-23-002.rst:22
 msgid "設定方法は ``_redirects`` の配置か ``netlify.toml`` の記載"
 msgstr ""
+"The setting method is to place ``_redirects`` or write ``netlify.toml``"
 
 #: ../../../blog/posts/2025-03-23-002.rst:23
 #, python-brace-format
 msgid "ブラウザの言語で分岐可能。``conditions = { Language = [\"ja\"] }`` のように使う"
 msgstr ""
+"Can be branched by browser language. Use like ``conditions = { Language = "
+"[\"ja\"] }``"
 
 #: ../../../blog/posts/2025-03-23-002.rst:24
 msgid "複数のルーティング設定可能で上から解釈される。"
-msgstr ""
+msgstr "Multiple routing settings are possible and interpreted from above."
 
 #: ../../../blog/posts/2025-03-23-002.rst:25
 msgid "from の直下に index.html が存在する場合はリダイレクトされない。リダイレクトする場合はforce=trueが必要"
 msgstr ""
+"If index.html exists directly under from, it will not be redirected. "
+"force=true is required when redirecting"
 
 #: ../../../blog/posts/2025-03-23-002.rst:28
 msgid "nelify.tomlの設定例"
-msgstr ""
+msgstr "Example configuration of netlify.toml"
 
 #: ../../../blog/posts/2025-03-23-002.rst:30
 msgid "netlify.toml"
-msgstr ""
+msgstr "netlify.toml"
 
 #: ../../../blog/posts/2025-03-23-002.rst:48
 msgid "参考URL"
-msgstr ""
+msgstr "Reference URL"
 
 #: ../../../blog/posts/2025-03-23-002.rst:49
 msgid "`netlify関連ドキュメント <https://docs.netlify.com/routing/redirects/>`_"
 msgstr ""
+"`netlify related documents <https://docs.netlify.com/routing/redirects/>`_"
 
 #: ../../../blog/posts/2025-03-23-002.rst:52
 msgid "記事情報"
-msgstr ""
+msgstr "Article information"
 
 #: ../../../blog/posts/2025-03-23-002.rst
 msgid "投稿日"
-msgstr ""
+msgstr "Post date"
 
 #: ../../../blog/posts/2025-03-23-002.rst:53
 msgid "2025-03-23"
-msgstr ""
+msgstr "2025-03-23"
 
 #: ../../../blog/posts/2025-03-23-002.rst
-msgid "投稿者"
-msgstr ""
+msgid "著者"
+msgstr "author"
 
 #: ../../../blog/posts/2025-03-23-002.rst:54
 msgid "mtakagishi"
-msgstr ""
+msgstr "Mr. Takagi"
 
+#~ msgid "投稿者"
+#~ msgstr ""

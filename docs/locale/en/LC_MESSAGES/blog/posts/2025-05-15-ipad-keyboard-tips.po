@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:8
+msgid "iPadでのキーボード操作を快適にする工夫"
+msgstr "Tips to make keyboard operations more comfortable on the iPad"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:10
+msgid ""
+"普段Windowsで作業している人がiPadにキーボードをつないで本格作業をしたい場合、キー配列の違いやショートカット操作のギャップに戸惑うことがあります。"
+" この記事では、iPadでの作業効率を高めるための修飾キーの入れ替え方法と、覚えておくと便利なキー操作をまとめました。"
+msgstr ""
+"If you normally work on Windows and want to connect a keyboard to your iPad "
+"and do some serious work, you may be confused by the differences in key "
+"layouts and gaps in shortcut operations. In this article, we have summarized"
+" how to replace modifier keys to increase work efficiency on the iPad, and "
+"useful key operations to remember."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:13
+msgid "キーボードの違いに戸惑っている方や、vi操作やターミナル作業をiPadで快適に行いたい方の参考になれば幸いです。"
+msgstr ""
+"I hope this will be helpful for those who are confused about the differences"
+" in keyboards, or those who want to comfortably operate vi and terminal work"
+" on an iPad."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:17
+msgid "目次"
+msgstr "table of contents"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:20
+msgid "修飾キーの入れ替えでWindows感覚に近づける"
+msgstr "Get closer to the Windows feel by replacing modifier keys"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:22
+msgid ""
+"iPadでは、CapsLockキーとCtrlキーの物理的位置がWindowsと異なるため、ショートカットが非常に押しにくく感じます。 "
+"しかし、以下の手順で修飾キーを入れ替えることができ、**Windowsに近い操作感に調整可能** です。"
+msgstr ""
+"On iPad, the physical positions of the CapsLock and Ctrl keys are different "
+"from Windows, so shortcuts feel very difficult to press. However, you can "
+"replace the modifier keys by following the steps below, and you can adjust "
+"the operation feel to be similar to Windows."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:29
+msgid "ここで、以下のように割り当てを変更するのがおすすめです："
+msgstr "At this point, we recommend changing the assignments as follows:"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:31
+msgid "Caps Lock → Control"
+msgstr "Caps Lock → Control"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:32
+msgid "Control → Caps Lock（使わないなら「なし」にしても可）"
+msgstr "Control → Caps Lock (If you don't use it, you can set it to \"None\")"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:35
+msgid "vi操作に便利な「ESC」キーの代替として「Ctrl + [」を使う"
+msgstr ""
+"Use \"Ctrl + [\" as an alternative to \"ESC\" key, which is convenient for "
+"vi operations"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:37
+msgid ""
+"iPadではESCキーが押しづらい、または存在しないキーボードもあります。 その代わりとして、**Ctrl + [** "
+"を使えばVimでESCと同じ効果が得られます。"
+msgstr ""
+"On some iPad keyboards, the ESC key is difficult to press or doesn't exist. "
+"Alternatively, use **Ctrl + [** to have the same effect as ESC in Vim."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:40
+msgid "これはVimユーザーにとって定番の代替操作であり、iPadなどの制限環境下でも非常に有効です。"
+msgstr ""
+"This is a classic alternative for Vim users, and is very useful even in "
+"restricted environments such as the iPad."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:43
+msgid "iPadOSでの便利なショートカット操作一覧"
+msgstr "List of useful shortcut operations on iPadOS"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:45
+msgid "iPad独自の操作もあります。Globeキー（地球儀キー）と組み合わせたショートカットで、多くのiPad操作が可能です。"
+msgstr ""
+"There are also operations unique to the iPad. Many iPad operations can be "
+"performed using shortcuts combined with the Globe key."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:51
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:75
+msgid "操作"
+msgstr "operation"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:52
+msgid "キー"
+msgstr "key"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:53
+msgid "ホーム画面へ戻る"
+msgstr "Return to home screen"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:54
+msgid "Globe + H"
+msgstr "Globe + H"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:55
+msgid "アプリスイッチャー"
+msgstr "app switcher"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:56
+msgid "Globe + ↑"
+msgstr "Globe + ↑"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:57
+msgid "クイックメモを開く"
+msgstr "Open quick memo"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:58
+msgid "Globe + Q"
+msgstr "Globe + Q"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:59
+msgid "Siriを起動"
+msgstr "Activate Siri"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:60
+msgid "Globe + S"
+msgstr "Globe + S"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:61
+msgid "コントロールセンター表示"
+msgstr "control center display"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:62
+msgid "Globe + C"
+msgstr "Globe + C"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:63
+msgid "絵文字・言語切替"
+msgstr "Emoji/language switching"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:64
+msgid "Globe（長押し）"
+msgstr "Globe (hold)"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:67
+msgid "テキスト編集やターミナル作業での便利なキー操作"
+msgstr "Convenient key operations for text editing and terminal work"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:69
+msgid "以下は、iPad + 外付けキーボード環境でよく使うキー操作です。文章作成やvi操作、シェル作業にも役立ちます。"
+msgstr ""
+"The following are key operations commonly used in an iPad + external "
+"keyboard environment. It is also useful for writing documents, operating vi,"
+" and shell work."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:76
+msgid "キー操作"
+msgstr "key operation"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:77
+msgid "コピー／貼り付け／元に戻す"
+msgstr "Copy/Paste/Undo"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:78
+msgid "Command + C / V / Z"
+msgstr "Command + C / V / Z"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:79
+msgid "やり直し（Redo）"
+msgstr "Redo"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:80
+msgid "Shift + Command + Z"
+msgstr "Shift + Command + Z"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:81
+msgid "行頭／行末へ移動"
+msgstr "Move to beginning/end of line"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:82
+msgid "Command + ← / →"
+msgstr "Command + ← / →"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:83
+msgid "語単位移動"
+msgstr "Move by word"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:84
+msgid "Option + ← / →"
+msgstr "Option + ← / →"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:85
+msgid "履歴検索（ターミナル）"
+msgstr "History search (terminal)"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:86
+msgid "Ctrl + R"
+msgstr "Ctrl+R"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:87
+msgid "カーソル先頭／末尾（Bash系）"
+msgstr "Cursor beginning/end (Bash system)"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:88
+msgid "Ctrl + A / Ctrl + E"
+msgstr "Ctrl + A / Ctrl + E"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:89
+msgid "単語削除"
+msgstr "word deletion"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:90
+msgid "Ctrl + W"
+msgstr "Ctrl + W"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:91
+msgid "ESC代替（Vim）"
+msgstr "ESC alternative (Vim)"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:92
+msgid "Ctrl + ["
+msgstr "Ctrl + ["
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:95
+msgid "まとめ：iPadでも本格作業ができる"
+msgstr "Summary: You can do full-scale work on an iPad"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:97
+msgid ""
+"修飾キーの入れ替えとショートカット操作の習得により、iPadは**Windowsライクな環境での本格作業端末** に変わります。 "
+"とくに、viやターミナル作業を活用する技術者にとって、iPadは補助端末としても強力なツールとなり得ます。"
+msgstr ""
+"By replacing modifier keys and learning shortcut operations, your iPad will "
+"turn into a full-fledged work device in a Windows-like environment. "
+"Especially for engineers who use vi and terminal work, the iPad can be a "
+"powerful tool as an auxiliary terminal."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:100
+msgid "本記事の内容を活用して、ぜひ自分仕様にiPad環境を整えてみてください。"
+msgstr ""
+"Please use the contents of this article to create an iPad environment that "
+"suits your specifications."
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:103
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:104
+msgid "2025-05-15"
+msgstr "2025-05-15"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-15-ipad-keyboard-tips.rst:105
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

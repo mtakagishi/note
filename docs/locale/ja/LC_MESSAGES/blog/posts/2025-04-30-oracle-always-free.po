@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:9
+msgid "Oracle Cloud で 無料 Linux 環境を手に入れる"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:11
+msgid "Oracle Cloud Free Tierで無料インスタンスを作成し、WindowsからSSH接続するまでの手順を記録します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:18
+msgid "概要"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:20
+msgid ""
+"クラウド上に **無料** で使える Linux "
+"サーバを確保し、環境構築のたびに発生する手間を最小化するための記録です。頻繁に行わない作業ほど手順を忘れがちなので、この記事を備忘録として残します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:23
+msgid "目的"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:25
+msgid "無料で Ubuntu 24.04 環境を手に入れる"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:26
+msgid "Windows から SSH で接続できることを確認する"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:29
+msgid "前提"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:31
+msgid "Oracle Cloud アカウント（Free Tier）を保持している"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:34
+msgid "新規インスタンス作成"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:37
+msgid "Basic Information"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:39
+msgid "**Name** : ``oracle-private``"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:40
+msgid "**Image**: *Canonical Ubuntu 24.04 Minimal*"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:41
+msgid "**Shape**: VM.Standard.A1.Flex (OCPU = 1, Memory = 1 GB)"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:42
+msgid "**Always Free–eligible** という表記があることを確認"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:45
+msgid "Networking & SSH"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:47
+msgid "*Add SSH keys* で **Generate SSH key pair** を選択"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:48
+#, python-brace-format
+msgid "ローカルに ``ssh-key-{日付}.key`` (秘密鍵) と ``ssh-key-{日付}.key.pub`` (公開鍵) を保存"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:49
+#, python-brace-format
+msgid ".ssh フォルダに ``ssh-key-{日付}.key`` を移動し、パーミッションを変更"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:53
+msgid "鍵ファイルは後でダウンロードできないので忘れずに保存します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:56
+msgid "パブリック IP の確認"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:58
+#, python-brace-format
+msgid ""
+"インスタンス作成完了後、*Instance Details* 画面に表示される **Public IP** を控えます（以下 ``{ip}`` "
+"で表記）。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:61
+msgid "Windows からの SSH 接続"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:68
+msgid "パーミッションエラーが出る場合"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:74
+msgid "秘密鍵の属性を ``600`` に変更すると解消できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:81
+msgid "接続確認"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:83
+msgid "ログイン後に ``uname -a`` が返れば接続成功です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:86
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:88
+msgid "Oracle Cloud **Always Free** を使えば 10 分ほどでパーソナル Linux サーバを構築できる"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:89
+msgid "SSH 鍵のパーミッション設定に注意"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:90
+msgid "これでどこからでも同じ開発環境にアクセス可能。今後は Tmux の設定を深掘り予定 🚀"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:93
+msgid "参考リンク"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:95
+msgid ""
+"`Oracle Cloud Always Free FAQ <https://docs.oracle.com/.../free-tier-"
+"faq.html>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:96
+msgid "`公式ドキュメント – SSH の設定 <https://docs.oracle.com/.../ssh-access.html>`_"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:99
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:100
+msgid "2025-04-01"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-04-30-oracle-always-free.rst:101
+msgid "mtakagishi"
+msgstr ""
+

@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-06 02:56+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../tools/sphinx/block_diagrams.rst:3
@@ -25,7 +25,8 @@ msgstr "Creating Flowcharts with Sphinx"
 
 #: ../../tools/sphinx/block_diagrams.rst:5
 msgid "フロー図などを作図可能なSphinxの拡張機能"
-msgstr "An extension for Sphinx that enables drawing flowcharts and other diagrams."
+msgstr ""
+"An extension for Sphinx that enables drawing flowcharts and other diagrams."
 
 #: ../../tools/sphinx/block_diagrams.rst:7
 msgid "ブロック図(blockdiag)"
@@ -53,27 +54,27 @@ msgstr "Package installation"
 
 #: ../../tools/sphinx/block_diagrams.rst:17
 msgid "sphinxcontrib-blockdiag"
-msgstr ""
+msgstr "sphinxcontrib-blockdiag"
 
 #: ../../tools/sphinx/block_diagrams.rst:18
 msgid "sphinxcontrib-seqdiag"
-msgstr ""
+msgstr "sphinxcontrib-seqdiag"
 
 #: ../../tools/sphinx/block_diagrams.rst:19
 msgid "sphinxcontrib-actdiag"
-msgstr ""
+msgstr "sphinxcontrib-actdiag"
 
 #: ../../tools/sphinx/block_diagrams.rst:20
 msgid "sphinxcontrib-nwdiag"
-msgstr ""
+msgstr "sphinxcontrib-nwdiag"
 
 #: ../../tools/sphinx/block_diagrams.rst:22
 msgid "pip::"
-msgstr ""
+msgstr "pip::"
 
 #: ../../tools/sphinx/block_diagrams.rst:26
 msgid "poetry::"
-msgstr ""
+msgstr "poetry::"
 
 #: ../../tools/sphinx/block_diagrams.rst:31
 msgid "conf.pythのextensions設定"
@@ -83,7 +84,7 @@ msgstr "Extensions settings for conf.py"
 #: ../../tools/sphinx/block_diagrams.rst:50
 #: ../../tools/sphinx/block_diagrams.rst:67
 msgid "conf.py"
-msgstr ""
+msgstr "conf.py"
 
 #: ../../tools/sphinx/block_diagrams.rst:47
 msgid "イメージファイル形式選択の指定"
@@ -91,7 +92,7 @@ msgstr "Specifying Image File Format Selection"
 
 #: ../../tools/sphinx/block_diagrams.rst:48
 msgid "PNG か SV"
-msgstr ""
+msgstr "PNG or SV"
 
 #: ../../tools/sphinx/block_diagrams.rst:58
 msgid "日本語フォント"
@@ -99,7 +100,8 @@ msgstr "Japanese Font"
 
 #: ../../tools/sphinx/block_diagrams.rst:59
 msgid "日本語文字列を出力可能にするためにフォントファイルttf形式のファイルが必要となる。"
-msgstr "To enable output of Japanese strings, a font file in ttf format is required."
+msgstr ""
+"To enable output of Japanese strings, a font file in ttf format is required."
 
 #: ../../tools/sphinx/block_diagrams.rst:61
 msgid "`IPAexフォント <https://moji.or.jp/ipafont/>`_"
@@ -111,7 +113,7 @@ msgstr "conf.py font setting"
 
 #: ../../tools/sphinx/block_diagrams.rst:75
 msgid "書き方のサンプル"
-msgstr "Usage example" 
+msgstr "Usage example"
 
 #: ../../tools/sphinx/block_diagrams.rst:76
 msgid "blockdiagディレクティブ内に記載 [#]_"
@@ -123,7 +125,8 @@ msgstr "Related links"
 
 #: ../../tools/sphinx/block_diagrams.rst:118
 msgid "`blockdiag公式ドキュメント <http://blockdiag.com/ja/index.html>`_"
-msgstr "`Official Blockdiag Documentation <http://blockdiag.com/en/index.html>`_"
+msgstr ""
+"`Official Blockdiag Documentation <http://blockdiag.com/en/index.html>`_"
 
 #~ msgid "sphinxでブロック図など"
 #~ msgstr ""
@@ -168,4 +171,3 @@ msgstr "`Official Blockdiag Documentation <http://blockdiag.com/en/index.html>`_
 
 #~ msgid "blockdiagディレクティブ内に記載  詳細 ⇒ [#]_"
 #~ msgstr ""
-

@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:9
+msgid "Linux環境で行う初回作業"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:11
+msgid "新しくLinux環境を手に入れたとき、毎回行う作業があります。しかし、その作業内容を毎回調べ直すのは非効率です。本記事では、私が行っている初回セットアップと、その後の保守作業についてまとめました。主にUbuntuベースの環境を想定しています。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:18
+msgid "rootユーザでの初期作業"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:20
+msgid "最初に、rootユーザまたはsudo権限を持ったユーザで以下の作業を行います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:23
+msgid "パッケージの更新"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:30
+msgid "基本ツールのインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:32
+msgid "開発や設定に必要な最低限のツールをインストールします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:39
+msgid "日本語フォントのインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:41
+msgid "日本語表示に必要なフォントをインストールします。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:48
+msgid "ロケール設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:50
+msgid "日本語ロケールを設定します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:59
+msgid "設定が反映されているか確認します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:65
+msgid "出力の一部に以下が含まれていればOKです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:72
+msgid "タイムゾーン設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:74
+msgid "JST（日本標準時）に設定します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:80
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:103
+msgid "確認コマンド："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:86
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:109
+msgid "出力例："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:93
+msgid "ファイアウォールの設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:95
+msgid "基本的なセキュリティ設定を行います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:119
+msgid "パッケージの定期メンテナンス"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:121
+msgid "`cron` で定期的に不要なパッケージの削除を行います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:130
+msgid "作業用ユーザの追加と権限設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:132
+msgid "作業用ユーザを作成し、sudo権限を付与します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:140
+msgid "ユーザでの初期作業"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:142
+msgid "ここからは、作成した作業用ユーザ（例: `your-username`）に切り替えて行います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:145
+msgid "SSH公開鍵の設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:147
+msgid "SSHでの接続に備えて、`.ssh/authorized_keys` に公開鍵を配置します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:157
+msgid "接続確認"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:159
+msgid "別マシンからSSH接続できることを確認します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:166
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:168
+msgid "この記事では、Linux環境で最初に行うべき基本的なセットアップ手順と、最低限のメンテナンスについてまとめました。毎回調べ直す手間を省くため、自分用のリファレンスとして活用していきます。必要に応じて随時更新予定です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:171
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:172
+msgid "2025-05-01"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-01-initial-setup-linux.rst:173
+msgid "mtakagishi"
+msgstr ""
+

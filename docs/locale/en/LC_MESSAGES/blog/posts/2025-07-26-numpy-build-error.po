@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:7
+msgid "Poetry環境でのnumpyビルドエラーとバージョン制約による解決メモ"
+msgstr ""
+"numpy build error in Poetry environment and resolution notes due to version "
+"constraints"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:9
+msgid ""
+"Windows上で、Gitから取得したPythonプロジェクトを `poetry install` した際に、`numpy` "
+"のビルドに失敗する事象に遭遇した。Poetry環境でのエラーでありながら、原因は `numpy` のビルド処理にあった。"
+msgstr ""
+"When I tried `poetry install` on a Python project obtained from Git on "
+"Windows, I encountered an issue where `numpy` build failed. Although the "
+"error occurred in the Poetry environment, the cause was in the `numpy` build"
+" process."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:11
+msgid "以下に、再現環境と解決までの経緯を記録しておく。"
+msgstr ""
+"Below is a record of the reproduction environment and the process leading up"
+" to the resolution."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:14
+msgid "事象概要"
+msgstr "Event summary"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:16
+msgid "`pyproject.toml` に以下のような記述があった。"
+msgstr "There was a description like the following in `pyproject.toml`."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:23
+msgid "この指定は SemVer の仕様に基づき、以下の範囲を意味する。"
+msgstr ""
+"This designation is based on the SemVer specifications and means the "
+"following range."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:29
+msgid ""
+"このとき `poetry install` により、`numpy==1.26.4` が選ばれた。しかし、ビルド済みホイール (.whl) "
+"が解決されず、Poetry 経由でのインストール時にソースビルドが開始され、Visual C++ Build Tools の導入等を実施しても `not"
+" supporting PEP 517 builds` などのエラーで失敗した。"
+msgstr ""
+"At this time, `numpy==1.26.4` was selected by `poetry install`. However, the"
+" pre-built wheel (.whl) was not resolved, a source build was started when "
+"installing via Poetry, and even after installing Visual C++ Build Tools, it "
+"failed with an error such as `not supporting PEP 517 builds`."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:32
+msgid "対応内容"
+msgstr "Compatible content"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:34
+msgid "Poetryの依存定義を以下のように修正："
+msgstr "Modify the Poetry dependency definition as follows:"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:40
+msgid "これにより、Poetryは `numpy==2.2.x` 系のビルド済みバイナリを選択し、ビルド処理が不要となり、エラーが解消した。"
+msgstr ""
+"As a result, Poetry selected pre-built binaries of the `numpy==2.2.x` "
+"series, eliminating the need for a build process and eliminating the error."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:43
+msgid "背景と考察"
+msgstr "Background and considerations"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:45
+msgid ""
+"Poetryは `pyproject.toml` の内容や `poetry.lock` "
+"に基づき依存を解決するが、場合によってはビルド処理を行うパッケージを選択することがある。"
+msgstr ""
+"Poetry resolves dependencies based on the contents of `pyproject.toml` and "
+"`poetry.lock`, but in some cases it may choose a package to perform the "
+"build process."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:46
+msgid "`numpy` 1.26系は、バイナリを配布していた時期はあったはずだが、現状はバイナリ配布がないようで、ビルドが発生。"
+msgstr ""
+"There must have been a time when `numpy` 1.26 series distributed binaries, "
+"but currently it seems that there is no binary distribution, so a build "
+"occurs."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:47
+msgid "`numpy` 2.2系はホイール配布も安定しており、特にWindows環境ではビルドなしで導入できるケースが多い。"
+msgstr ""
+"`numpy` 2.2 series has stable wheel distribution, and in many cases it can "
+"be installed without building, especially in Windows environments."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:48
+msgid "`^1.26.0` のような記述は保守的であるが、状況によっては逆に問題を引き起こすこともある。"
+msgstr ""
+"Although a description like `^1.26.0` is conservative, it can actually cause"
+" problems depending on the situation."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:51
+msgid "今後の教訓"
+msgstr "Lessons for the future"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:53
+msgid "同様の問題に遭遇した際は、以下の観点で早期に切り分けを行う："
+msgstr ""
+"When you encounter a similar problem, isolate it early based on the "
+"following points:"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:55
+msgid "PEP 517 ビルドなどのお作法の変更に伴うエラーかどうかを確認"
+msgstr ""
+"Check whether the error is due to a change in manners such as PEP 517 build."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:56
+msgid "必要に応じてバージョンを変更し、より新しい安定版を利用する"
+msgstr "Change the version if necessary to use a newer stable version"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:59
+msgid "補足：`numpy` の非互換について"
+msgstr "Supplement: Regarding `numpy` incompatibility"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:61
+msgid ""
+"`numpy==2.0.0` 以降では、一部破壊的変更が入っているため、依存する他ライブラリとの互換性に注意。必要に応じて `>=1.26,<2.0` "
+"のような上限制約も有効。"
+msgstr ""
+"Since `numpy==2.0.0` contains some breaking changes, be careful about "
+"compatibility with other dependent libraries. Upper constraints such as "
+"`>=1.26,<2.0` are also valid if necessary."
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:64
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:65
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-07-26-numpy-build-error.rst:66
+msgid "2025-07-26"
+msgstr "2025-07-26"

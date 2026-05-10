@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:7
+msgid "Windows Terminal の便利操作集"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:9
+msgid ""
+"Windows Terminal 上での操作は、シェルの種類に関わらず共通して使えるものが多く、習得しておくと非常に効率が上がります。 "
+"特に便利なものは意識的に使って体にしみ込ませてしまいたいものですが、使わないと忘れてしまうのでまとめておきます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:17
+msgid "行頭・行末ジャンプ操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:19
+msgid "以下の操作は、bash、zsh、PowerShell など多くのシェルで共通して使えるものです（Emacs風キーバインド）。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:24
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:40
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:62
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:84
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:100
+msgid "操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:25
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:41
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:63
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:85
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:101
+msgid "ショートカット"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:26
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:42
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:64
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:86
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:102
+msgid "備考"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:27
+msgid "行頭へ移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:28
+msgid "``Ctrl + A``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:29
+msgid "Emacs系、全シェル共通"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:30
+msgid "行末へ移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:31
+msgid "``Ctrl + E``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:32
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:48
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:54
+msgid "同上"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:35
+msgid "カーソル移動・単語単位の移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:43
+msgid "カーソルを左へ1文字"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:44
+msgid "``←`` または ``Ctrl + B``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:45
+msgid "Emacs風操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:46
+msgid "カーソルを右へ1文字"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:47
+msgid "``→`` または ``Ctrl + F``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:49
+msgid "単語単位で左へ移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:50
+msgid "``Alt + B`` または ``Ctrl + ←``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:51
+msgid "bash/zshでは有効"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:52
+msgid "単語単位で右へ移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:53
+msgid "``Alt + F`` または ``Ctrl + →``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:57
+msgid "削除・編集系ショートカット"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:65
+msgid "カーソルから行末まで削除"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:66
+msgid "``Ctrl + K``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:67
+msgid "すばやくリセット可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:68
+msgid "行頭からカーソルまで削除"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:69
+msgid "``Ctrl + U``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:70
+msgid "入力やり直しに便利"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:71
+msgid "1単語削除（後方）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:72
+msgid "``Alt + D``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:73
+msgid "bash/zshで有効"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:74
+msgid "1単語削除（前方）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:75
+msgid "``Ctrl + W``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:76
+msgid "直前の単語を削除"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:79
+msgid "履歴とクリップボード操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:87
+msgid "履歴のインクリメンタル検索"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:88
+msgid "``Ctrl + R``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:89
+msgid "入力途中でも過去のコマンドを検索"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:90
+msgid "貼り付け（Windows Terminal）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:91
+msgid "``Ctrl + Shift + V``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:92
+msgid "マウス右クリックより高速"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:95
+msgid "Windows Terminal 固有の便利操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:103
+msgid "タブを開く"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:104
+msgid "``Ctrl + Shift + T``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:105
+msgid "新しいセッションを開く"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:106
+msgid "タブを閉じる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:107
+msgid "``Ctrl + Shift + W``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:108
+msgid "不要なタブを閉じる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:109
+msgid "ペインを縦分割"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:110
+msgid "``Alt + Shift + +``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:111
+msgid "水平に2画面"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:112
+msgid "ペインを横分割"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:113
+msgid "``Alt + Shift + -``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:114
+msgid "垂直に2画面"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:115
+msgid "ペインを移動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:116
+msgid "``Alt + 方向キー``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:117
+msgid "vimっぽく操作できる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:118
+msgid "画面クリア"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:119
+msgid "``Ctrl + L``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:120
+msgid "プロンプトをきれいに"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:123
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:125
+msgid ""
+"Windows Terminal 上での効率的な操作は、日々の作業効率を大きく向上させます。 "
+"特にカーソル移動や削除のキーボード操作は、慣れることで編集ストレスが大幅に減ります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:128
+msgid "ホームポジションからの移動のない操作を意識すると、 色々な操作やツールに気付けます。今後も気付いたことがあればまとめていきたいと思います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:133
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:134
+msgid "2025-05-13"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:135
+msgid "mtakagishi"
+msgstr ""
+

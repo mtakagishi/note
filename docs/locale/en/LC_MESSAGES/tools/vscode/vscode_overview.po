@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-04 21:01+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../tools/vscode/vscode_overview.rst:3
@@ -25,7 +25,7 @@ msgstr "About VSCode"
 
 #: ../../tools/vscode/vscode_overview.rst:4
 msgid "Last Updated on 2021-08-28"
-msgstr ""
+msgstr "Last Updated on 2021-08-28"
 
 #: ../../tools/vscode/vscode_overview.rst:7
 msgid "VSCodeとは"
@@ -33,7 +33,7 @@ msgstr "What is VSCode"
 
 #: ../../tools/vscode/vscode_overview.rst:8
 msgid "Visual Studio Code のことでマイクロソフトが開発するソースコードエディタ"
-msgstr ""
+msgstr "Visual Studio Code is a source code editor developed by Microsoft."
 
 #: ../../tools/vscode/vscode_overview.rst:11
 msgid "おすすめの理由"
@@ -45,41 +45,58 @@ msgstr "Being open source, there are no worries about costs."
 
 #: ../../tools/vscode/vscode_overview.rst:13
 msgid "MITライセンスなのでライセンスに関する制限がゆるい"
-msgstr "Thanks to the MIT license, restrictions related to licensing are loose."
+msgstr ""
+"Thanks to the MIT license, restrictions related to licensing are loose."
 
 #: ../../tools/vscode/vscode_overview.rst:14
 msgid "開発元がマイクロソフト様なので比較的堅い現場でも許可が取りやすい"
-msgstr "Since it is developed by Microsoft, it is relatively easy to obtain permission even in rigorous workplaces."
+msgstr ""
+"Since it is developed by Microsoft, it is relatively easy to obtain "
+"permission even in rigorous workplaces."
 
 #: ../../tools/vscode/vscode_overview.rst:15
 msgid "軽量ながら最低限の機能が揃っているので低スペック環境でも採用しやすい。"
-msgstr "Although it is lightweight, it has the minimum required functions, so it is easy to adopt even in low-spec environments."
+msgstr ""
+"Although it is lightweight, it has the minimum required functions, so it is "
+"easy to adopt even in low-spec environments."
 
 #: ../../tools/vscode/vscode_overview.rst:16
 msgid "自動補完機能があり、タイピングを省力化できる。"
-msgstr "There is an autocomplete feature, which allows to reduce typing effort."
+msgstr ""
+"There is an autocomplete feature, which allows to reduce typing effort."
 
 #: ../../tools/vscode/vscode_overview.rst:17
 msgid "Web開発者向けのemmet機能（省略入力）が秀逸。爆速でコーディングできる。"
-msgstr "The emmet feature (abbreviated input) for web developers is excellent. You can code at a high speed."
+msgstr ""
+"The emmet feature (abbreviated input) for web developers is excellent. You "
+"can code at a high speed."
 
 #: ../../tools/vscode/vscode_overview.rst:18
 msgid "ショートカットキーが豊富。慣れると効率的。"
-msgstr "There are many keyboard shortcuts. They are efficient once you get used to them."
+msgstr ""
+"There are many keyboard shortcuts. They are efficient once you get used to "
+"them."
 
 #: ../../tools/vscode/vscode_overview.rst:19
 msgid "同一ワード選択、矩形選択などが標準装備。"
-msgstr "Standard features include selecting the same word or selecting a rectangle."
+msgstr ""
+"Standard features include selecting the same word or selecting a rectangle."
 
 #: ../../tools/vscode/vscode_overview.rst:20
 msgid "ターミナルがエディタ内にあるのでアクティブウィンドウの数を抑えられる。"
-msgstr "Since the terminal is in the editor, it reduces the number of active windows."
+msgstr ""
+"Since the terminal is in the editor, it reduces the number of active "
+"windows."
 
 #: ../../tools/vscode/vscode_overview.rst:21
 msgid "デバッグ用の機能が標準。エラーや出力もエディタ内で完結できる（プログラム言語によっては要プラグイン）"
-msgstr "Debugging functions are standard. Errors and outputs can also be completed within the editor (plug-ins may be required depending on the programming language)."
+msgstr ""
+"Debugging functions are standard. Errors and outputs can also be completed "
+"within the editor (plug-ins may be required depending on the programming "
+"language)."
 
 #: ../../tools/vscode/vscode_overview.rst:22
 msgid "プラグインが豊富で、標準不足は拡張を探すと大抵あるので困らない。"
-msgstr "There are many plugins available, so you don't have to worry about the lack of standard features as there is usually an extension available."
-
+msgstr ""
+"There are many plugins available, so you don't have to worry about the lack "
+"of standard features as there is usually an extension available."

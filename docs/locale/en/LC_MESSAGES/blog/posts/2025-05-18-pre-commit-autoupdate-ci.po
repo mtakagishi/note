@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:8
+msgid "pre-commit フックを GitHub Actions で自動更新する"
+msgstr "Automatically update pre-commit hooks with GitHub Actions"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:10
+msgid ""
+"`pre-commit autoupdate` を定期的に自動実行し、フックのバージョン更新PRを GitHub Actions "
+"経由で作成する仕組みを紹介します。"
+msgstr ""
+"We will introduce a mechanism to automatically execute `pre-commit "
+"autoupdate` periodically and create a hook version update PR via GitHub "
+"Actions."
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:17
+msgid "自動更新導入の目的"
+msgstr "Purpose of introducing automatic updates"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:19
+msgid "フックのバージョンは手動更新しないと古くなる"
+msgstr "Hook versions become outdated unless manually updated"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:20
+msgid "セキュリティパッチや仕様変更を取り込みたい"
+msgstr "I want to incorporate security patches and specification changes"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:21
+msgid "ローカルで `pre-commit` を使っていないユーザの変更にも効く"
+msgstr ""
+"Also works for changes made by users who are not using `pre-commit` locally."
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:24
+msgid "設定ファイル例"
+msgstr "Configuration file example"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:26
+msgid "以下を ``.github/workflows/pre-commit-autoupdate.yml`` に配置します："
+msgstr ""
+"Place the following in ``.github/workflows/pre-commit-autoupdate.yml``:"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:70
+msgid "注意点と推奨運用"
+msgstr "Points to note and recommended operations"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:72
+msgid "生成されたPRは手動でレビュー＆マージ"
+msgstr "Manually review and merge generated PRs"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:73
+msgid "差分を確認して問題なければ取り込む"
+msgstr "Check the difference and import if there are no problems"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:74
+msgid "`pre-commit run --all-files` で CI による整合性チェックを追加すると安全"
+msgstr ""
+"It is safe to add consistency checks by CI with `pre-commit run --all-files`"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:77
+msgid "おわりに"
+msgstr "Conclusion"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:79
+msgid "自動更新の仕組みを組み込んでおくことで、運用コストを下げつつ、継続的にクリーンな開発環境を保つことができます。"
+msgstr ""
+"By incorporating an automatic update mechanism, you can continuously "
+"maintain a clean development environment while lowering operational costs."
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:82
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:83
+msgid "2025-05-18"
+msgstr "2025-05-18"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-18-pre-commit-autoupdate-ci.rst:84
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

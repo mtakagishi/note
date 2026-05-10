@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-22 11:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../programming/python/python_poetry.rst:3
@@ -29,14 +29,13 @@ msgstr "Update"
 
 #: ../../../programming/python/python_poetry.rst:4
 msgid "2024-01-03"
-msgstr ""
+msgstr "2024-01-03"
 
 #: ../../../programming/python/python_poetry.rst:6
 msgid "仮想環境+パッケージ管理ツール"
 msgstr "Virtual Environment and Package Management Tool"
 
 #: ../../../programming/python/python_poetry.rst:8
-#, fuzzy
 msgid "`公式サイト <https://python-poetry.org/>`_"
 msgstr "`Official site <https://python-poetry.org/>`_"
 
@@ -47,8 +46,8 @@ msgstr "Installation"
 #: ../../../programming/python/python_poetry.rst:13
 msgid "公式HPにインストールコマンドがあるのでターミナルから実行します。"
 msgstr ""
-"Execute the installation command from the terminal by following the steps"
-" mentioned in the official website."
+"Execute the installation command from the terminal by following the steps "
+"mentioned in the official website."
 
 #: ../../../programming/python/python_poetry.rst:15
 msgid "`公式HPのインストール手順へ <https://python-poetry.org/docs/#installation>`_"
@@ -61,6 +60,9 @@ msgid ""
 "pipx でのインストールが推奨に切り替わりました。 "
 "Windowsの方でPowershellコマンドでインストールして来た方、pipxでの管理への切替をおすすめします。"
 msgstr ""
+"Installation using pipx is now recommended. If you are using Windows and "
+"installed using Powershell commands, we recommend switching to management "
+"using pipx."
 
 #: ../../../programming/python/python_poetry.rst:22
 msgid "基本コマンド"
@@ -72,7 +74,7 @@ msgstr "Check Version"
 
 #: ../../../programming/python/python_poetry.rst:23
 msgid "poetry --version"
-msgstr ""
+msgstr "poetry --version"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "pyproject.toml作成"
@@ -80,15 +82,15 @@ msgstr "Creating pyproject.toml"
 
 #: ../../../programming/python/python_poetry.rst:24
 msgid "poetry init"
-msgstr ""
+msgstr "poetry init"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "PKGをinstall"
-msgstr ""
+msgstr "install PKG"
 
 #: ../../../programming/python/python_poetry.rst:25
 msgid "poetry install"
-msgstr ""
+msgstr "poetry install"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "依存PKGを最新化"
@@ -96,7 +98,7 @@ msgstr "Updating dependent packages"
 
 #: ../../../programming/python/python_poetry.rst:26
 msgid "poetry update"
-msgstr ""
+msgstr "poetry update"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "PKG追加"
@@ -104,7 +106,7 @@ msgstr "Adding packages"
 
 #: ../../../programming/python/python_poetry.rst:27
 msgid "poetry add [pkg]"
-msgstr ""
+msgstr "poetry add [pkg]"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "開発用PKG追加"
@@ -112,7 +114,7 @@ msgstr "Adding packages for development"
 
 #: ../../../programming/python/python_poetry.rst:28
 msgid "poetry add --dev [pkg]"
-msgstr ""
+msgstr "poetry add --dev [pkg]"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "GITHUBのPKGを追加"
@@ -120,7 +122,7 @@ msgstr "Adding packages from GITHUB"
 
 #: ../../../programming/python/python_poetry.rst:29
 msgid "poetry add git+https://github.com/repo/pkg.git"
-msgstr ""
+msgstr "poetry add git+https://github.com/repo/pkg.git"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "PKG削除"
@@ -128,7 +130,7 @@ msgstr "Deleting packages"
 
 #: ../../../programming/python/python_poetry.rst:30
 msgid "poetry remove [pkg]"
-msgstr ""
+msgstr "poetry remove [pkg]"
 
 #: ../../../programming/python/python_poetry.rst:34
 msgid "venv設定"
@@ -140,7 +142,7 @@ msgstr "Confirming settings"
 
 #: ../../../programming/python/python_poetry.rst:35
 msgid "poetry config --list"
-msgstr ""
+msgstr "poetry config --list"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "venv分離設定"
@@ -148,16 +150,15 @@ msgstr "venv Separation Configuration"
 
 #: ../../../programming/python/python_poetry.rst:36
 msgid "poetry config virtualenvs.in-project true"
-msgstr ""
+msgstr "poetry config virtualenvs.in-project true"
 
 #: ../../../programming/python/python_poetry.rst:38
-#, fuzzy
 msgid ""
 "in-"
 "projectはTrueにしておくと該当プロジェクトに閉じた影響範囲で管理されます。--localオプションをつけると、poetry.tomlに記録されてgit管理できるようになります。"
 msgstr ""
-"Setting in-project to True will manage it within the scope of the "
-"relevant project."
+"Setting in-project to True will manage it within the scope of the relevant "
+"project."
 
 #: ../../../programming/python/python_poetry.rst:40
 msgid "venv環境を独立するためのconfig確認・設定::"
@@ -172,6 +173,10 @@ msgid ""
 "Windows版では、度々self updateがNGになります。pipx版になったことで改善が期待できそうです。 "
 "以下は、Powershellコマンドでインストールしていた時代の過去の対処法のメモです。"
 msgstr ""
+"In the Windows version, self update often fails. It seems that improvements "
+"can be expected with the pipx version. The following is a memo of past "
+"workarounds from the days when installation was done using Powershell "
+"commands."
 
 #: ../../../programming/python/python_poetry.rst:50
 #: ../../../programming/python/python_poetry.rst:109
@@ -180,11 +185,11 @@ msgstr "Environment"
 
 #: ../../../programming/python/python_poetry.rst:56
 msgid "1.1.6⇒1.1.7(2021/08/14)"
-msgstr ""
+msgstr "1.1.6⇒1.1.7(2021/08/14)"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "ModuleNotFoundError: No module named 'msgpack.exceptions'"
-msgstr ""
+msgstr "ModuleNotFoundError: No module named 'msgpack.exceptions'"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "更新手順"
@@ -203,14 +208,16 @@ msgid ""
 "(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-"
 "poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -"
 msgstr ""
+"(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-"
+"poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -"
 
 #: ../../../programming/python/python_poetry.rst:69
 msgid "1.1.7⇒1.1.8(2021/08/22)"
-msgstr ""
+msgstr "1.1.7⇒1.1.8(2021/08/22)"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "ModuleNotFoundError: No module named 'crashtest.inspector'"
-msgstr ""
+msgstr "ModuleNotFoundError: No module named 'crashtest.inspector'"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "更新手順 = 前回同様で復旧"
@@ -222,19 +229,19 @@ msgstr "Waiting for issue fix."
 
 #: ../../../programming/python/python_poetry.rst
 msgid "https://github.com/python-poetry/poetry/issues/2681"
-msgstr ""
+msgstr "https://github.com/python-poetry/poetry/issues/2681"
 
 #: ../../../programming/python/python_poetry.rst:81
 msgid "1.1.8⇒1.1.9(2021/09/19)"
-msgstr ""
+msgstr "1.1.8⇒1.1.9(2021/09/19)"
 
 #: ../../../programming/python/python_poetry.rst:86
 msgid "1.1.9⇒1.1.11(2021/11/2)"
-msgstr ""
+msgstr "1.1.9⇒1.1.11(2021/11/2)"
 
 #: ../../../programming/python/python_poetry.rst:88
 msgid "$ ModuleNotFoundError: No module named 'cleo'"
-msgstr ""
+msgstr "$ ModuleNotFoundError: No module named 'cleo'"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "2021-12-18 追記"
@@ -252,17 +259,19 @@ msgstr ""
 
 #: ../../../programming/python/python_poetry.rst
 msgid ""
-"> pip install cleo tomlkit poetry.core requests cachecontrol cachy "
-"html5lib pkginfo virtualenv lockfile"
+"> pip install cleo tomlkit poetry.core requests cachecontrol cachy html5lib "
+"pkginfo virtualenv lockfile"
 msgstr ""
+"> pip install cleo tomlkit poetry.core requests cachecontrol cachy html5lib "
+"pkginfo virtualenv lockfile"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "https://github.com/python-poetry/poetry/issues/553"
-msgstr ""
+msgstr "https://github.com/python-poetry/poetry/issues/553"
 
 #: ../../../programming/python/python_poetry.rst:101
 msgid "1.1.13(2022/3/7)"
-msgstr ""
+msgstr "1.1.13(2022/3/7)"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "不調のため再インストール"
@@ -270,7 +279,7 @@ msgstr "Reinstall due to malfunction"
 
 #: ../../../programming/python/python_poetry.rst:108
 msgid "1.4.2(2023/05/03)"
-msgstr ""
+msgstr "1.4.2(2023/05/03)"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "%USERPROFILE%.poetry は存在せず従来手順から変更"
@@ -280,19 +289,21 @@ msgstr ""
 
 #: ../../../programming/python/python_poetry.rst
 msgid "%APPDATA%\\pypoetry が存在するのでこのフォルダを削除する"
-msgstr ""
+msgstr "%APPDATA%\\pypoetry exists, so delete this folder"
 
 #: ../../../programming/python/python_poetry.rst:119
 msgid ""
 "FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。: "
 "'C:\\\\Users\\\\username\\\\AppData\\\\Roaming\\\\Python\\\\Scripts\\\\poetry.exe'"
 msgstr ""
+"FileNotFoundError: [WinError 3] The specified path was not found. : "
+"'C:\\\\Users\\\\username\\\\AppData\\\\Roaming\\\\Python\\\\Scripts\\\\poetry.exe'"
 
 #: ../../../programming/python/python_poetry.rst
 msgid "このエラーが追加で発生。該当ファイルを手動削除し再実行"
 msgstr ""
-"This error occurred again. Please manually delete the corresponding file "
-"and try again."
+"This error occurred again. Please manually delete the corresponding file and"
+" try again."
 
 #: ../../../programming/python/python_poetry.rst
 msgid "再実行しインストール成功"
@@ -339,18 +350,13 @@ msgstr ""
 
 #~ msgid "``pip install --user poetry``  の利用は非推奨。 非推奨手順ではself update が利用できない。"
 #~ msgstr ""
-#~ "The use of ``pip install --user "
-#~ "poetry`` is deprecated, the self-update"
-#~ " function cannot be used with "
-#~ "deprecated steps."
+#~ "The use of ``pip install --user poetry`` is deprecated, the self-update "
+#~ "function cannot be used with deprecated steps."
 
 #~ msgid ""
-#~ "非推奨インストール方法ではself updateがNG。 しかし推奨インストールでもself "
-#~ "updateがerrorとなった。 そこで対処法のメモを記録しておく。"
+#~ "非推奨インストール方法ではself updateがNG。 しかし推奨インストールでもself updateがerrorとなった。 "
+#~ "そこで対処法のメモを記録しておく。"
 #~ msgstr ""
-#~ "self update is not available in "
-#~ "the deprecated installation method. However,"
-#~ " even with the recommended installation,"
-#~ " self update results in an error. "
+#~ "self update is not available in the deprecated installation method. However,"
+#~ " even with the recommended installation, self update results in an error. "
 #~ "Therefore, record the workaround memo."
-

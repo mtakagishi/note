@@ -6,109 +6,125 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mtakagishi \n"
+"Project-Id-Version: mtakagishi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 12:01+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:9
 msgid "ブログ運用にAblogを活用する"
-msgstr ""
+msgstr "Utilize Ablog for blog operation"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:11
 msgid "純粋なSphinxの機能よりも、もう少しブログっぽく運用したい場合にAblogを活用すると便利"
 msgstr ""
+"It is useful to use Ablog when you want to operate it more like a blog than "
+"pure Sphinx functions."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:14
 msgid "Ablogとは"
-msgstr ""
+msgstr "What is Ablog?"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:15
-msgid "sphinxの拡張機能で、ブログのような形式で記事を管理できる。カテゴリやタグを設定しておけば、それに基づいて記事一覧を生成してくれるのが便利。"
+msgid ""
+"sphinxの拡張機能で、ブログのような形式で記事を管理できる。カテゴリやタグを設定しておけば、それに基づいて記事一覧を生成してくれるのが便利。"
 msgstr ""
+"With the sphinx extension, you can manage articles in a blog-like format. If"
+" you set categories and tags, it is convenient to generate a list of "
+"articles based on them."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:18
 msgid "Ablogでできるようになること"
-msgstr ""
+msgstr "What you can do with Ablog"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:19
 msgid "カテゴリやタグで記事を分類"
-msgstr ""
+msgstr "Sort articles by category or tag"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:20
 msgid "記事一覧の自動生成"
-msgstr ""
+msgstr "Automatic generation of article list"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:21
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:65
 msgid "自動アーカイブ"
-msgstr ""
+msgstr "automatic archiving"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:22
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:82
 msgid "サイドバーサポート"
-msgstr ""
+msgstr "sidebar support"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:23
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:105
 msgid "ドラフト記事の作成"
-msgstr ""
+msgstr "Creating a draft article"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:26
 msgid "Ablogのインストール"
-msgstr ""
+msgstr "Installing Ablog"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:27
 msgid ""
 "pipやposetry addでインストールし、conf.pyを少しいじればすぐ使える。`詳細は公式ドキュメント参照 "
 "<https://ablog.readthedocs.io>`_"
 msgstr ""
+"You can install it with pip or posery add and use it immediately by "
+"modifying conf.py a little. `For details, refer to the official document "
+"<https://ablog.readthedocs.io>`_"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:31
 msgid "記事作成"
-msgstr ""
+msgstr "Article creation"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:33
-msgid "blogフォルダを作成し、その中に記事を作成。ファイルは手動作成でもよいし ``ablog post new-post`` で作成してもよい。"
+msgid ""
+"blogフォルダを作成し、その中に記事を作成。ファイルは手動作成でもよいし ``ablog post new-post`` で作成してもよい。"
 msgstr ""
+"Create a blog folder and write articles in it. The file can be created "
+"manually or with ``ablog post new-post``."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:35
 msgid "blog/2025-03-27-new-post.rst"
-msgstr ""
+msgstr "blog/2025-03-27-new-post.rst"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:48
 msgid "記事一覧"
-msgstr ""
+msgstr "List of articles"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:50
 msgid "index.rstに以下のように記述すると、最新の5件の記事が表示される。"
 msgstr ""
+"If you write the following in index.rst, the latest 5 articles will be "
+"displayed."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:52
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:69
 msgid "blog/index.rst"
-msgstr ""
+msgstr "blog/index.rst"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:62
 msgid "その他の機能"
-msgstr ""
+msgstr "Other features"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:67
 msgid "Ablogはビルド時に自動でアーカイブ実行される。以下のような記述をすると、アーカイブページへのリンクが簡単に設置できる。"
 msgstr ""
+"Ablog is automatically archived during build. You can easily create a link "
+"to an archive page by writing something like the following:"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:77
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:101
 msgid "参考URL"
-msgstr ""
+msgstr "Reference URL"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:78
 msgid ""
@@ -116,50 +132,74 @@ msgid ""
 "<https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-"
 "pages.html>`_"
 msgstr ""
+"`Official page (Cross-referencing Blog Pages) "
+"<https://ablog.readthedocs.io/en/stable/manual/cross-referencing-blog-"
+"pages.html>`_"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:84
-msgid "サイドバーには、タグ一覧やカテゴリ一覧、アーカイブへのリンクを設置することができる。当サイトの場合、secondary_sidebar_itemsに以下のように設定している。"
+msgid ""
+"サイドバーには、タグ一覧やカテゴリ一覧、アーカイブへのリンクを設置することができる。当サイトの場合、secondary_sidebar_itemsに以下のように設定している。"
 msgstr ""
+"The sidebar can include a list of tags, a list of categories, and links to "
+"archives. In the case of this site, secondary_sidebar_items is set as "
+"follows."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:86
 msgid "conf.py"
-msgstr ""
+msgstr "conf.py"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:102
 msgid ""
 "`公式ページ（Templating and Themes Support） "
 "<https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_"
 msgstr ""
+"`Official page (Templating and Themes Support) "
+"<https://ablog.readthedocs.io/en/stable/manual/templates-themes.html>`_"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:107
-msgid "記事のdate属性を未来日にしておけば、その記事はドラフト扱い。ビルド時には表示されない。sphinxは静的ページなので、未来日にビルドし直す必要がある。"
+msgid ""
+"記事のdate属性を未来日にしておけば、その記事はドラフト扱い。ビルド時には表示されない。sphinxは静的ページなので、未来日にビルドし直す必要がある。"
 msgstr ""
+"If you set the date attribute of an article to a future date, the article "
+"will be treated as a draft. It is not displayed during build. Since sphinx "
+"is a static page, it will need to be rebuilt in the future."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:111
 msgid "所感"
-msgstr ""
+msgstr "Impressions"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:113
-msgid "日々の勉強メモを残せるように継続の基盤にしたいという思いは達成できそう。カテゴリやタグの整理自動や、ドラフト記事の作成などは重宝しそう。折角の機会なので、これを機にブログを継続していきたい。"
+msgid ""
+"日々の勉強メモを残せるように継続の基盤にしたいという思いは達成できそう。カテゴリやタグの整理自動や、ドラフト記事の作成などは重宝しそう。折角の機会なので、これを機にブログを継続していきたい。"
 msgstr ""
+"I think I will be able to achieve my desire to use this as a basis for "
+"continuation so that I can keep daily study notes. Automatic organization of"
+" categories and tags, creation of draft articles, etc. seem to be useful. "
+"This is a great opportunity, so I would like to take this opportunity to "
+"continue blogging."
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:116
 msgid "記事情報"
-msgstr ""
+msgstr "Article information"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst
 msgid "投稿日"
-msgstr ""
+msgstr "Post date"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:117
-msgid "2025-03-27"
-msgstr ""
+msgid "2025-04-01"
+msgstr "2025-04-01"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst
-msgid "投稿者"
-msgstr ""
+msgid "著者"
+msgstr "author"
 
 #: ../../../blog/posts/2025-03-27-001-ablog-install.rst:118
 msgid "mtakagishi"
-msgstr ""
+msgstr "Mr. Takagi"
 
+#~ msgid "2025-03-27"
+#~ msgstr ""
+
+#~ msgid "投稿者"
+#~ msgstr ""

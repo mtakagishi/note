@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:8
+msgid "iPad上でSSH環境を無料で整える方法（iSH + OpenSSH）"
+msgstr "How to set up an SSH environment on iPad for free (iSH + OpenSSH)"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:10
+msgid ""
+"**無料アプリ iSH を使って、iPad上にSSH環境を構築する手順** をまとめました。 ここまででLinuxにzsh + neovim + "
+"tmux での環境を整えてきたのでSSH接続さえ確立できれば、いつでも作業が可能になります。"
+msgstr ""
+"**Steps to build an SSH environment on an iPad using the free app iSH**. Up "
+"to this point, we have set up an environment with zsh + neovim + tmux on "
+"Linux, so as long as we can establish an SSH connection, we can work at any "
+"time."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:18
+msgid "背景と目的"
+msgstr "Background and purpose"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:20
+msgid ""
+"iPadには標準でターミナルが存在しないため、Linux的な作業やSSH経由でのポートフォワーディングを行うには工夫が必要です。 有料アプリ（Blink"
+" ShellやTermius Pro）もありますが、**無料で完結したい** という場面では、iSHの活用が有力な選択肢です。"
+msgstr ""
+"Since the iPad does not have a terminal by default, some ingenuity is "
+"required to perform Linux-like tasks and port forwarding via SSH. There are "
+"paid apps (Blink Shell and Termius Pro), but in situations where you want to"
+" complete the process for free, using iSH is a strong option."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:24
+msgid "使用するツール"
+msgstr "Tools used"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:26
+msgid "**iSH** （App Storeから無料で入手可能）"
+msgstr "**iSH** (Available for free from the App Store)"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:27
+msgid "**OpenSSH** （Alpineパッケージとして追加）"
+msgstr "**OpenSSH** (added as Alpine package)"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:29
+msgid "iSHはAlpine Linuxに類似した軽量仮想環境であり、パッケージ管理に`apk`を使用します。"
+msgstr ""
+"iSH is a lightweight virtual environment similar to Alpine Linux that uses "
+"`apk` for package management."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:32
+msgid "導入手順"
+msgstr "Installation steps"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:34
+msgid "**iSHをApp Storeからインストール**"
+msgstr "**Install iSH from the App Store**"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:35
+msgid "iSHを起動し、次のコマンドを実行："
+msgstr "Start iSH and run the following command:"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:42
+msgid "これで `ssh`, `scp`, `sftp` などのコマンドが利用可能になります。"
+msgstr "Commands such as `ssh`, `scp`, and `sftp` are now available."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:44
+msgid "SSH接続してみる："
+msgstr "Try connecting via SSH:"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:50
+msgid "必要に応じて `.ssh/config` を整備して、接続先を整理することも可能です。"
+msgstr ""
+"If necessary, you can organize `.ssh/config` to organize the connection "
+"destinations."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:53
+msgid "ポートフォワーディング（ローカルトンネル）"
+msgstr "Port forwarding (local tunnel)"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:55
+msgid "iSH内で以下のように実行すれば、iPadローカルでポートフォワーディングが利用できます："
+msgstr ""
+"You can use port forwarding locally on your iPad by running the following "
+"within iSH:"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:61
+msgid "iPad側の `localhost:8080` にアクセスすると、リモートホストの `localhost:8000` にトンネルされます。"
+msgstr ""
+"When you access `localhost:8080` on the iPad side, it will be tunneled to "
+"`localhost:8000` on the remote host."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:63
+msgid "これで、リモートホストで簡易的に動作中のWebサーバにもアクセス可能になります。"
+msgstr "Now you can easily access a web server running on a remote host."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:66
+msgid "viで抜けられないときの対処"
+msgstr "What to do when you can't exit with vi"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:68
+msgid ""
+"iPadなどのタブレットキーボードでは、`vi` などのエディタを起動した際に `ESC` キーが見つからず困ることがあります。 iPadでは次の操作で"
+" `ESC` の代用が可能であることを知っておくと良いです。："
+msgstr ""
+"On a tablet keyboard such as an iPad, you may have trouble finding the `ESC`"
+" key when starting an editor such as `vi`. It is good to know that on iPad, "
+"you can substitute `ESC` with the following operation. :"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:71
+msgid "ソフトウェアキーボード： ``Ctrl`` + ``[`` を押す"
+msgstr "Software keyboard: press ``Ctrl`` + ``[``"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:75
+msgid "色や表示のカスタマイズ"
+msgstr "Customize colors and display"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:77
+msgid "iSHはデフォルトでLightモードなので、好みに応じてダークモードへの変更も可能。"
+msgstr ""
+"iSH is in Light mode by default, so you can change to Dark mode if you "
+"prefer."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:79
+msgid "画面上部の「歯車アイコン」から変更できます。"
+msgstr "You can change it from the \"gear icon\" at the top of the screen."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:82
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:84
+msgid ""
+"iSH + OpenSSH を使えば、iPad上でも軽快なターミナル環境が手に入ります。 ポートフォワーディングまで含めた機能を**無料で実現** "
+"できる点が魅力です。"
+msgstr ""
+"By using iSH + OpenSSH, you can get a lightweight terminal environment even "
+"on your iPad. Its appeal is that it provides functions including port "
+"forwarding **for free**."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:87
+msgid "接続先のLinux側ではzsh + neovim + tmuxといった環境が整って入れば、外出先で手軽にサイト管理ができそうです。"
+msgstr ""
+"If you have an environment like zsh + neovim + tmux installed on the "
+"connected Linux side, you will be able to easily manage your site on the go."
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:90
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:91
+msgid "2025-05-14"
+msgstr "2025-05-14"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-14-ipad-ssh-setup.rst:92
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:8
+msgid "Supabaseで無料のPostgreSQL環境を入手する"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:10
+msgid "クラウドで無料のリレーショナルデータベースを使いたいと考えたとき、Supabaseは非常に有力な選択肢のひとつです。この記事では、Supabaseを用いてPostgreSQLの無料環境をすばやく、安全に利用開始するための基本的なポイントをまとめます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:17
+msgid "はじめに"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:19
+msgid ""
+"Supabaseは、Firebaseの代替を目指したオープンソースのBaaS（Backend as a "
+"Service）であり、PostgreSQLを中心とした構成を持ちます。以下の点が特に魅力的です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:21
+msgid "永続的に使える**無料プラン**"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:22
+msgid "**PostgreSQL** ベースで標準的なRDBとして扱える"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:23
+msgid "REST / GraphQL APIも自動生成される"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:24
+msgid "GUIやSQLエディタが備わっており、学習にも最適"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:27
+msgid "無料プランの制限・制約"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:29
+msgid "Supabaseの無料枠（Free Tier）には、以下のような制約があります："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:31
+msgid "プロジェクト数：最大2つ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:32
+msgid "ストレージ容量：500MBまで"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:33
+msgid "リクエスト数：月間50万件、日次制限もあり"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:34
+msgid "3ヶ月以上アクセスがないとプロジェクトが自動停止される場合あり"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:35
+msgid "パフォーマンスは制限付き（I/OやCPU）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:37
+msgid "とはいえ、学習用途や小規模プロジェクトでは十分に使えるレベルです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:40
+msgid "PostgreSQLへの接続方法"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:42
+msgid "Supabaseのプロジェクト作成後、画面上部にある ``Connect`` ボタンから、以下の情報を簡単に確認できます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:44
+msgid "ホスト名（例: `db.abcdef.supabase.co` ）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:45
+msgid "ポート番号（通常は `5432` ）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:46
+msgid "ユーザー名とパスワード"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:47
+msgid "接続文字列（Postgres URI）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:49
+msgid "このURIはそのまま、psycopgやSQLAlchemyで使用可能です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:52
+msgid "SSL接続の強制設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:54
+msgid ""
+"セキュアな接続を担保するため、SupabaseではデフォルトでSSLが使用されます。さらに、管理画面の ``Configuration > SSL"
+" Configuration`` から、**「Enforce SSL」スイッチをONにする** ことで、**非SSL接続を完全に拒否** "
+"することが可能です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:56
+msgid "これにより、意図しない平文通信や中間者攻撃のリスクを防ぐことができます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:59
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:61
+msgid "Supabaseを使えば、わずか数分で無料のPostgreSQL環境をクラウド上に用意することができ、GUIやAPIも整っているため非常に手軽です。無料でここまで使えるクラウドRDBは希少であり、学習用・試作用に最適です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:63
+msgid "SSL強制設定などのセキュリティ機能も備わっており、安心して利用できる構成となっています。ぜひ活用してみてください。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:66
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:67
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:68
+msgid "2025-05-21"
+msgstr ""
+

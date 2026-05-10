@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:9
+msgid "Oracle Cloud上の開発用HTTPサーバにSSHトンネルでアクセスする方法"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:11
+msgid ""
+"Sphinx + ablog による静的サイトを Oracle Cloud 上の Ubuntu サーバで管理しているとき、 ``git "
+"push`` 前にローカルでの表示確認を行いたいケースがあります。 "
+"外部からHTTPで直接アクセスできない状況でも、SSHトンネルを活用すれば開発中のサイトの確認が可能です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:15
+msgid ""
+"この記事では、Oracle CloudのFree Tierインスタンスに立てたUbuntuサーバ上でHTTPサーバを一時的に起動し、 "
+"SSHトンネルで自宅ブラウザから接続・確認する方法を紹介します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:24
+msgid "背景"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:26
+msgid "サーバは Oracle Cloud の Always Free 枠で稼働"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:27
+msgid "Sphinx + ablog によるドキュメントやブログ記事をメンテナンス中"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:28
+msgid "``make html`` 後の ``_build/html`` をブラウザで確認したい"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:29
+msgid "ただし、開発用ポート（例: 8000）が外部に公開されておらず、直接アクセスできない"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:32
+msgid "実現方法：SSHトンネル"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:34
+msgid ""
+"SSH接続が可能であれば、SSHの **ポートフォワーディング（ローカルフォワード）** 機能を使って、 サーバ内の "
+"``localhost:8000`` を自宅の ``localhost:8000`` に見せることができます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:38
+msgid "1. サーバ側で簡易HTTPサーバを起動"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:45
+msgid "サーバ内から ``curl http://localhost:8000`` で正常に応答することを確認します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:48
+msgid "2. クライアント側（Windows）でSSHトンネルを張る"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:50
+msgid "PowerShell または コマンドプロンプトで以下を実行："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:56
+msgid "``-i``：秘密鍵の指定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:57
+msgid "``-L``：ローカルポート8000をサーバのlocalhost:8000に転送"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:58
+msgid "``-N``：コマンド実行せず、接続だけ行う"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:60
+msgid "成功すれば、**ブラウザで ``http://localhost:8000`` にアクセス** することで、 開発中のHTML出力を確認できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:64
+msgid "備考"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:66
+msgid "SSHトンネルは接続中のみ有効。ターミナルを閉じると切断されます"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:67
+msgid "PuTTYでも同様の設定が可能（GUIでトンネルを追加）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:68
+msgid "Oracle CloudのセキュリティリストやUFW設定を変更せずに利用可能"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:71
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:73
+msgid "本手法により、Sphinx + ablog のサイトを **Gitにpushする前の状態で視覚的に確認できる方法** を整えることができました。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:82
+msgid "外部公開せずに安全に開発環境を構築・確認する方法として、今後も活用できそうです。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:85
+msgid ""
+"Oracle Cloud 側でポート 8001 を外部公開する設定（セキュリティリストやUFWの調整）も試みましたが、 "
+"接続確立できず、原因の特定に至りませんでした。ホスティングが目的ではないので諦めました。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:90
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:91
+msgid "2025-05-12"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-12-ssh-tunnel-Http-Preview.rst:92
+msgid "mtakagishi"
+msgstr ""
+

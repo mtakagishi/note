@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:7
+msgid "Windows Terminal の便利操作集"
+msgstr "Collection of useful operations for Windows Terminal"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:9
+msgid ""
+"Windows Terminal 上での操作は、シェルの種類に関わらず共通して使えるものが多く、習得しておくと非常に効率が上がります。 "
+"特に便利なものは意識的に使って体にしみ込ませてしまいたいものですが、使わないと忘れてしまうのでまとめておきます。"
+msgstr ""
+"Many operations on Windows Terminal can be used in common regardless of the "
+"type of shell, and learning them will greatly improve your efficiency. You "
+"want to consciously use things that are especially useful and let them soak "
+"into your body, but if you don't use them, you'll forget them, so I've "
+"summarized them here."
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:17
+msgid "行頭・行末ジャンプ操作"
+msgstr "Start/end of line jump operation"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:19
+msgid "以下の操作は、bash、zsh、PowerShell など多くのシェルで共通して使えるものです（Emacs風キーバインド）。"
+msgstr ""
+"The following operations can be used commonly in many shells such as bash, "
+"zsh, and PowerShell (Emacs-style key bindings)."
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:24
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:40
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:62
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:84
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:100
+msgid "操作"
+msgstr "operation"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:25
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:41
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:63
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:85
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:101
+msgid "ショートカット"
+msgstr "shortcut"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:26
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:42
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:64
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:86
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:102
+msgid "備考"
+msgstr "remarks"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:27
+msgid "行頭へ移動"
+msgstr "Move to beginning of line"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:28
+msgid "``Ctrl + A``"
+msgstr "``Ctrl + A``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:29
+msgid "Emacs系、全シェル共通"
+msgstr "Emacs series, common to all shells"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:30
+msgid "行末へ移動"
+msgstr "move to end of line"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:31
+msgid "``Ctrl + E``"
+msgstr "``Ctrl + E``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:32
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:48
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:54
+msgid "同上"
+msgstr "Same as above"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:35
+msgid "カーソル移動・単語単位の移動"
+msgstr "Cursor movement/word unit movement"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:43
+msgid "カーソルを左へ1文字"
+msgstr "Move cursor one character to the left"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:44
+msgid "``←`` または ``Ctrl + B``"
+msgstr "``←`` or ``Ctrl + B``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:45
+msgid "Emacs風操作"
+msgstr "Emacs-like operations"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:46
+msgid "カーソルを右へ1文字"
+msgstr "Move cursor one character to the right"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:47
+msgid "``→`` または ``Ctrl + F``"
+msgstr "``→`` or ``Ctrl + F``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:49
+msgid "単語単位で左へ移動"
+msgstr "Move left by word"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:50
+msgid "``Alt + B`` または ``Ctrl + ←``"
+msgstr "``Alt + B`` or ``Ctrl + ←``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:51
+msgid "bash/zshでは有効"
+msgstr "Valid in bash/zsh"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:52
+msgid "単語単位で右へ移動"
+msgstr "Move right by word"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:53
+msgid "``Alt + F`` または ``Ctrl + →``"
+msgstr "``Alt + F`` or ``Ctrl + →``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:57
+msgid "削除・編集系ショートカット"
+msgstr "Delete/edit shortcuts"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:65
+msgid "カーソルから行末まで削除"
+msgstr "Delete from cursor to end of line"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:66
+msgid "``Ctrl + K``"
+msgstr "``Ctrl + K``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:67
+msgid "すばやくリセット可能"
+msgstr "Can be quickly reset"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:68
+msgid "行頭からカーソルまで削除"
+msgstr "Delete from beginning of line to cursor"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:69
+msgid "``Ctrl + U``"
+msgstr "``Ctrl + U``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:70
+msgid "入力やり直しに便利"
+msgstr "Convenient for redoing input"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:71
+msgid "1単語削除（後方）"
+msgstr "Delete 1 word (backward)"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:72
+msgid "``Alt + D``"
+msgstr "``Alt + D``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:73
+msgid "bash/zshで有効"
+msgstr "Valid in bash/zsh"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:74
+msgid "1単語削除（前方）"
+msgstr "Delete 1 word (forward)"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:75
+msgid "``Ctrl + W``"
+msgstr "``Ctrl + W``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:76
+msgid "直前の単語を削除"
+msgstr "Delete previous word"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:79
+msgid "履歴とクリップボード操作"
+msgstr "History and clipboard operations"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:87
+msgid "履歴のインクリメンタル検索"
+msgstr "Incremental search of history"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:88
+msgid "``Ctrl + R``"
+msgstr "``Ctrl + R``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:89
+msgid "入力途中でも過去のコマンドを検索"
+msgstr "Search for past commands even while typing"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:90
+msgid "貼り付け（Windows Terminal）"
+msgstr "Paste (Windows Terminal)"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:91
+msgid "``Ctrl + Shift + V``"
+msgstr "``Ctrl + Shift + V``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:92
+msgid "マウス右クリックより高速"
+msgstr "Faster than right mouse click"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:95
+msgid "Windows Terminal 固有の便利操作"
+msgstr "Convenient operations specific to Windows Terminal"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:103
+msgid "タブを開く"
+msgstr "open tab"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:104
+msgid "``Ctrl + Shift + T``"
+msgstr "``Ctrl + Shift + T``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:105
+msgid "新しいセッションを開く"
+msgstr "open a new session"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:106
+msgid "タブを閉じる"
+msgstr "close tab"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:107
+msgid "``Ctrl + Shift + W``"
+msgstr "``Ctrl + Shift + W``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:108
+msgid "不要なタブを閉じる"
+msgstr "Close unnecessary tabs"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:109
+msgid "ペインを縦分割"
+msgstr "Split pane vertically"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:110
+msgid "``Alt + Shift + +``"
+msgstr "``Alt + Shift + +``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:111
+msgid "水平に2画面"
+msgstr "2 screens horizontally"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:112
+msgid "ペインを横分割"
+msgstr "Split pane horizontally"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:113
+msgid "``Alt + Shift + -``"
+msgstr "``Alt + Shift + -``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:114
+msgid "垂直に2画面"
+msgstr "2 screens vertically"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:115
+msgid "ペインを移動"
+msgstr "move pane"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:116
+msgid "``Alt + 方向キー``"
+msgstr "``Alt + arrow keys``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:117
+msgid "vimっぽく操作できる"
+msgstr "Can be operated like vim"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:118
+msgid "画面クリア"
+msgstr "clear screen"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:119
+msgid "``Ctrl + L``"
+msgstr "``Ctrl + L``"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:120
+msgid "プロンプトをきれいに"
+msgstr "clean prompts"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:123
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:125
+msgid ""
+"Windows Terminal 上での効率的な操作は、日々の作業効率を大きく向上させます。 "
+"特にカーソル移動や削除のキーボード操作は、慣れることで編集ストレスが大幅に減ります。"
+msgstr ""
+"Efficient operations on Windows Terminal greatly improve daily work "
+"efficiency. In particular, once you get used to the keyboard operations for "
+"moving the cursor and deleting, editing stress will be greatly reduced."
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:128
+msgid "ホームポジションからの移動のない操作を意識すると、 色々な操作やツールに気付けます。今後も気付いたことがあればまとめていきたいと思います。"
+msgstr ""
+"When you become aware of operations that do not require you to move from "
+"your home position, you become aware of various operations and tools. If I "
+"notice anything else in the future, I would like to summarize it."
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:133
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:134
+msgid "2025-05-13"
+msgstr "2025-05-13"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-13-terminal-shortcuts.rst:135
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

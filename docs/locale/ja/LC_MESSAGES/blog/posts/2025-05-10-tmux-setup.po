@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:9
+msgid "tmux導入メモ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:11
+msgid "linux環境でセッションが切れても再開できる仕掛けであるtmuxについて導入し利用していきます。インストールと最小限の操作方法をまとめました。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:18
+msgid "インストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:25
+msgid "バージョン確認："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:31
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:66
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:90
+msgid "---"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:34
+msgid "最低限おさえておきたい操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:37
+msgid "セッション操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:39
+msgid "新規セッション作成: ``tmux``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:40
+msgid "新規セッション作成(名前付き): ``tmux new -s mysession``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:41
+msgid "セッション一覧: ``tmux ls``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:42
+msgid "セッションへ接続: ``tmux attach -t mysession``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:43
+msgid "セッションへ接続(簡易版): ``tmux a``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:44
+msgid "セッション離脱（デタッチ）: ``Ctrl-b d``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:45
+msgid "セッション終了: セッション内で ``exit`` または ``Ctrl-d``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:46
+msgid "tmuxの再起動: ``tmux kill-server``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:49
+msgid "ウィンドウ操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:51
+msgid "新規ウィンドウ作成: ``Ctrl-b c``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:52
+msgid "ウィンドウ切り替え: ``Ctrl-b n`` （次） / ``Ctrl-b p`` （前）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:53
+msgid "ウィンドウ名変更: ``Ctrl-b ,``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:56
+msgid "ペイン操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:57
+msgid "ペイン分割: ``Ctrl-b %`` （縦） / ``Ctrl-b \"`` （横）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:58
+msgid "ペインの切り替え: ``Ctrl-b o`` （次のペイン） / ``Ctrl-b ;`` （前のペイン）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:59
+msgid "ペインの切り替え: ``Ctrl-b`` + 矢印キー"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:60
+msgid "ペイン最大化: ``Ctrl-b z`` （再度押すと元に戻る）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:61
+msgid "ペインのサイズ調整: ``Ctrl-b`` → ``:`` , ``resize-pane -D/U/L/R``"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:64
+msgid "ペイン分割のデフォルトキー割り当ては分かりにくい。キー変更は.tmux.conf設定を参照。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:69
+msgid ".tmux.conf の最低限設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:71
+msgid "`\"` や `%` によるペイン分割操作を、より直感的な記号に置き換えた設定です。 また、デフォルトの分割キーは無効化しています。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:74
+msgid "以下を ``~/.tmux.conf`` に記載："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:83
+msgid "この設定により、以下の操作が可能になります："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:85
+msgid "``Ctrl-b \\\\`` : 横（左右）に分割"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:86
+msgid "``Ctrl-b -`` : 縦（上下）に分割"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:88
+msgid "記号の形状から、分割方向が直感的にわかるようになります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:93
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:95
+msgid "今回の記事では、以下のポイントを紹介しました："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:97
+msgid "tmux のインストール"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:98
+msgid "セッション・ウィンドウ・ペインの基本操作"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:99
+msgid "`.tmux.conf` による最小限のキーバインド改善"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:102
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:103
+msgid "2025-05-10"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-10-tmux-setup.rst:104
+msgid "mtakagishi"
+msgstr ""
+

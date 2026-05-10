@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:9
+msgid "zsh + starship で始めるモダンシェル環境セットアップ"
+msgstr "Modern shell environment setup starting with zsh + starship"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:11
+msgid ""
+"新しく入手した Linux を “bash のまま” で妥協しない。zsh と高速・多機能プロンプト starship "
+"を導入し、最低限押さえておきたい設定を一気に整えモダンなシェル環境を構築します。"
+msgstr ""
+"Don’t settle for “just using bash” with your newly acquired Linux. "
+"Introducing zsh and the high-speed, multifunctional prompt starship, we will"
+" set up the minimum necessary settings at once and build a modern shell "
+"environment."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:18
+msgid "はじめに"
+msgstr "Introduction"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:20
+msgid ""
+"クラウドの VM や WSL、Raspberry Pi──どんな Linux を入手しても最初は ``bash`` が標準です。 "
+"もちろんそのままでも作業はできますが、zshは拡張性にもすぐれ、MacOSのデフォルトログインシェルに採用されるなど、今後は主流になる可能性を秘めています。"
+" さらに **starship** を組み合わせれば、情報量の多いプロンプトを極小コストで表示でき、どんな言語スタックでも一貫した開発体験が得られます。"
+msgstr ""
+"Cloud VM , WSL, Raspberry Pi--no matter what Linux you get, ``bash`` is the "
+"standard at first. Of course, you can work with it as is, but zsh has "
+"excellent extensibility and has the potential to become mainstream in the "
+"future, such as being adopted as the default login shell of MacOS. And when "
+"combined with **starship**, you can display rich prompts at a fraction of "
+"the cost and get a consistent development experience no matter the language "
+"stack."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:24
+msgid "本記事では **「最短 30 分で *使える* zsh 環境」** を目標に、"
+msgstr ""
+"In this article, the goal is to set up **a usable zsh environment in about "
+"30 minutes**."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:26
+msgid "zsh の導入とログインシェル変更"
+msgstr "Introduction of zsh and change of login shell"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:27
+msgid "必須 & 人気のプラグイン／設定 (.zshrc)"
+msgstr "Required & Popular Plugins/Configurations (.zshrc)"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:28
+msgid "starship の概要とインストール"
+msgstr "starship overview and installation"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:29
+msgid "最低限知っておきたい starship のカスタマイズポイント"
+msgstr "Starship customization points you should know at least"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:31
+msgid "をまとめます。 **コピペで動くコマンド** を中心に書いているので、作業ログ代わりにどうぞ。"
+msgstr ""
+"I will summarize. **Commands that work with copy and paste** are mainly "
+"written, so please use this instead of a work log."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:35
+msgid "前提条件"
+msgstr "Prerequisites"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:37
+msgid "Linux (Debian/Ubuntu 系を例にしますが、Fedora/Arch でも読み替え可)"
+msgstr ""
+"Linux (Debian/Ubuntu is used as an example, but Fedora/Arch can also be "
+"used)"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:38
+msgid "sudo 権限を持つユーザーでログイン済み"
+msgstr "sudo 権限を持つユーザーでログイン済み"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:39
+msgid "ネットワーク接続"
+msgstr "network connection"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:41
+msgid ""
+"**Tip:** 既存の ``.bashrc`` に独自エイリアスがある場合は終盤で zsh に移植します。忘れずバックアップを取っておきましょう。"
+msgstr ""
+"**Tip:** If your existing ``.bashrc`` has its own alias, port it to zsh at "
+"the end. Don't forget to make a backup."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:44
+msgid "Step 0 ─ システムを最新化"
+msgstr "Step 0 – Modernize your system"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:53
+msgid "Step 1 ─ zsh を導入し、ログインシェルに設定"
+msgstr "Step 1 ─ Install zsh and set it as the login shell"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:55
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:95
+msgid "**インストール**"
+msgstr "**install**"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:61
+msgid "**標準シェルを切り替え**"
+msgstr "**Switch standard shell**"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:67
+msgid "反映には再ログインが必要です。SSH セッションなら ``exit`` →再接続で OK。"
+msgstr ""
+"You will need to log in again for the changes to take effect. For SSH "
+"sessions, ``exit`` → reconnect is OK."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:69
+msgid ""
+"**初回起動ウィザードはスキップ** ``zsh`` を初めて起動すると設定ウィザードが走りますが、ここでは **(q) quit** "
+"を選択してスキップします。"
+msgstr ""
+"**Skip the first-time startup wizard** When you start ``zsh`` for the first "
+"time, a configuration wizard will run, but for now, select **(q) quit** to "
+"skip it."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:73
+msgid "Step 2 ─ zsh設定ファイル .zshrc"
+msgstr "Step 2 ─ zsh configuration file .zshrc"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:75
+msgid "``~/.zshrc`` を作っておきます。"
+msgstr "Create ``~/.zshrc``."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:81
+msgid "``.bashrc`` から **alias/function/export** を中心に移植します。"
+msgstr "Porting mainly **alias/function/export** from ``.bashrc``."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:91
+msgid "Step 3 ─ starship を導入する"
+msgstr "Step 3 ─ Introduce starship"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:93
+msgid ""
+"starship は Rust 製の高速プロンプト。git ブランチ、言語バージョン、exit code など “今ほしい情報” を自動で表示します。"
+msgstr ""
+"starship is a fast prompt made in Rust. Automatically displays the "
+"“information you want right now” such as git branch, language version, exit "
+"code, etc."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:101
+msgid "Rust toolchain を入れずとも単体バイナリで動くため軽量です。"
+msgstr ""
+"It is lightweight because it runs as a standalone binary without the Rust "
+"toolchain."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:103
+msgid "**Nerd Font をインストール**"
+msgstr "**Install Nerd Font**"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:105
+msgid "unzip fontconfig が必要です。"
+msgstr "Requires unzip fontconfig."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:111
+msgid "フォントフォルダを作成し、Nerd Font をダウンロードします。"
+msgstr "Create a font folder and download Nerd Font."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:121
+msgid "フォントキャッシュを更新します。"
+msgstr "Update font cache."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:127
+msgid "フォントをターミナルから直接表示して確認します。"
+msgstr "Verify the font by viewing it directly from the terminal."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:133
+msgid "ﬀ や ﬓ などのアイコンが表示されれば成功です。全てが?が表示される場合は、フォントが正しくインストールされていません。"
+msgstr ""
+"If an icon such as ﬀ or ﬓ is displayed, it is successful. If all ? are "
+"displayed, the fonts are not installed correctly."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:135
+msgid "**設定ファイルを作成**"
+msgstr "**Create configuration file**"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:137
+msgid "starshipの初期ファイルの空の設定ファイルを作成します。"
+msgstr "Create an empty configuration file for starship's initial file."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:144
+msgid "starship.tomlに以下を書き込みます。 `最新はこちらを確認 <https://starship.rs/config/>`_"
+msgstr ""
+"Write the following in starship.toml: `Check here for the latest "
+"<https://starship.rs/config/>`_"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:162
+msgid "**シェルへ組み込み**"
+msgstr "**Built into shell**"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:164
+msgid "``.zshrc`` の最後に ``eval \"$(starship init zsh)\"`` を追記します。"
+msgstr "Add ``eval \"$(starship init zsh)\"`` to the end of ``.zshrc``."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:171
+msgid "zshを再起動して反映します。"
+msgstr "Restart zsh to take effect."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:179
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:181
+msgid ""
+"これで zsh + starship によるモダンなシェル環境が使える状態になりました。 "
+"今後は、必要に応じてプラグインの追加などについて触れていきます。"
+msgstr ""
+"Now you can use a modern shell environment using zsh + starship. In the "
+"future, we will discuss adding plugins as needed."
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:186
+msgid "参考リンク"
+msgstr "Reference link"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:187
+msgid "zsh 公式ドキュメント — https://zsh.sourceforge.io/"
+msgstr "zsh official documentation — https://zsh.sourceforge.io/"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:188
+msgid "starship スターターガイド — https://starship.rs/guide/"
+msgstr "starship starter guide — https://starship.rs/guide/"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:191
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:192
+msgid "2025-05-03"
+msgstr "2025-05-03"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-03-initail-setup-zsh.rst:193
+msgid "mtakagishi"
+msgstr "Mr. Takagi"

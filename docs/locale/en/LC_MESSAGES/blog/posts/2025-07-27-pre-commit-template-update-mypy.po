@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:7
+msgid "pre-commit テンプレートを更新（mypy 対応と default Python 指定）"
+msgstr ""
+"Updated pre-commit template (mypy compatible and default Python specified)"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:9
+msgid "以前紹介した pre-commit のテンプレートに対し、以下のアップデートを行った。"
+msgstr ""
+"The following updates have been made to the pre-commit template introduced "
+"previously."
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:11
+msgid ":doc:`pre-commit テンプレート <2025-05-17-pre-commit-template>` の内容を更新。"
+msgstr ":doc:`pre-commit テンプレート <2025-05-17-pre-commit-template>` の内容を更新。"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:14
+msgid "主な変更点"
+msgstr "Main changes"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:16
+msgid "default_language_version の追加"
+msgstr "Add default_language_version"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:18
+msgid ""
+"Python のバージョンを明示することで、pre-commit が仮想環境構築時に意図しない Python バージョン（例: "
+"3.13）を掴むのを防ぐ。"
+msgstr ""
+"By specifying the Python version, you can prevent pre-commit from grabbing "
+"an unintended Python version (e.g. 3.13) when building a virtual "
+"environment."
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:25
+msgid "mypy の pre-commit フック対応"
+msgstr "mypy pre-commit hook support"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:27
+msgid "型チェックを pre-commit に統合することで、ローカル／CI におけるチェックの一貫性を確保。"
+msgstr ""
+"Integrating type checking into pre-commit ensures consistent checking "
+"locally/CI."
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:29
+msgid "また、よく使われる `types-*` 系を `additional_dependencies` に指定している。"
+msgstr ""
+"Also, the commonly used `types-*` series is specified in "
+"`additional_dependencies`."
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:50
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:51
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst
+msgid "公開日"
+msgstr "Release date"
+
+#: ../../../blog/posts/2025-07-27-pre-commit-template-update-mypy.rst:52
+msgid "2025-07-27"
+msgstr "2025-07-27"

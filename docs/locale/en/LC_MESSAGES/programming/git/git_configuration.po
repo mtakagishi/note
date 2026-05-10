@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-05 23:16+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../programming/git/git_configuration.rst:2
@@ -29,7 +29,7 @@ msgstr "Update"
 
 #: ../../programming/git/git_configuration.rst:3
 msgid "2023-05-05"
-msgstr ""
+msgstr "2023-05-05"
 
 #: ../../programming/git/git_configuration.rst:6
 msgid "httpでclone後にsshに変更したい"
@@ -70,8 +70,8 @@ msgstr "Creating a key pair"
 #: ../../programming/git/git_configuration.rst:41
 msgid "githubにログインして公開キーを登録する。次のコマンドでクリップボードに保存できる。"
 msgstr ""
-"Log in to Github and register the public key. The following command can "
-"save it to the clipboard:"
+"Log in to Github and register the public key. The following command can save"
+" it to the clipboard:"
 
 #: ../../programming/git/git_configuration.rst:47
 msgid "sshの設定を修正する"
@@ -79,7 +79,7 @@ msgstr "Modifying ssh settings"
 
 #: ../../programming/git/git_configuration.rst:49
 msgid "~/.ssh/config"
-msgstr ""
+msgstr "~/.ssh/config"
 
 #: ../../programming/git/git_configuration.rst:61
 msgid "github連携を確認する"
@@ -91,16 +91,14 @@ msgstr "Github Command Error Related"
 
 #: ../../programming/git/git_configuration.rst:70
 msgid ""
-"`githubのトラブルシューティング <https://docs.github.com/ja/authentication"
-"/troubleshooting-ssh>`_"
+"`githubのトラブルシューティング "
+"<https://docs.github.com/ja/authentication/troubleshooting-ssh>`_"
 msgstr ""
-"`troubleshooting <https://docs.github.com/en/authentication"
-"/troubleshooting-ssh>`_"
+"`troubleshooting <https://docs.github.com/en/authentication/troubleshooting-"
+"ssh>`_"
 
 #: ../../programming/git/git_configuration.rst:73
-#, fuzzy
 msgid "``ssh-keygen -R github.com`` というコマンドで直った経験あり"
 msgstr ""
 "Had experience resolving this issue with the command ssh-keygen -R "
 "github.com"
-

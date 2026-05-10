@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-04 21:01+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../tools/sphinx/docstring_syntax.rst:2
@@ -29,7 +29,9 @@ msgstr "What is Docstring?"
 
 #: ../../tools/sphinx/docstring_syntax.rst:6
 msgid "Pythonコードの関数などの仕様を記載するための記述"
-msgstr "Description used for specifying the details of functions and methods in Python code"
+msgstr ""
+"Description used for specifying the details of functions and methods in "
+"Python code"
 
 #: ../../tools/sphinx/docstring_syntax.rst:7
 msgid "トリプルクオートで囲う"
@@ -41,7 +43,9 @@ msgstr "Can be written using reStructuredText format"
 
 #: ../../tools/sphinx/docstring_syntax.rst:9
 msgid "reStructuredTextスタイル，Numpyスタイル，Googleスタイルの3つ"
-msgstr "There are three styles: reStructuredText style, Numpy style, and Google style"
+msgstr ""
+"There are three styles: reStructuredText style, Numpy style, and Google "
+"style"
 
 #: ../../tools/sphinx/docstring_syntax.rst:12
 msgid "reStructuredTextスタイル"
@@ -53,69 +57,70 @@ msgstr "reStructuredText style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "param path"
-msgstr ""
+msgstr "param path"
 
 #: ../../tools/sphinx/docstring_syntax.rst:26
 msgid "The path of the file to wrap"
-msgstr ""
+msgstr "The path of the file to wrap"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "type path"
-msgstr ""
+msgstr "type path"
 
 #: ../../tools/sphinx/docstring_syntax.rst:-1
 #: ../../tools/sphinx/docstring_syntax.rst:27
 msgid "str"
-msgstr ""
+msgstr "str"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "param field_storage"
-msgstr ""
+msgstr "param field_storage"
 
 #: ../../tools/sphinx/docstring_syntax.rst:28
 msgid "The :class:`FileStorage` instance to wrap"
-msgstr ""
+msgstr "The :class:`FileStorage` instance to wrap"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "type field_storage"
-msgstr ""
+msgstr "type field_storage"
 
 #: ../../tools/sphinx/docstring_syntax.rst:29
 msgid "FileStorage"
-msgstr ""
+msgstr "FileStorage"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "param temporary"
-msgstr ""
+msgstr "param temporary"
 
 #: ../../tools/sphinx/docstring_syntax.rst:30
 msgid "Whether or not to delete the file when the File instance is destructed"
 msgstr ""
+"Whether or not to delete the file when the File instance is destructed"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "type temporary"
-msgstr ""
+msgstr "type temporary"
 
 #: ../../tools/sphinx/docstring_syntax.rst:32
 #: ../../tools/sphinx/docstring_syntax.rst:80
 msgid "bool"
-msgstr ""
+msgstr "bool"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "returns"
-msgstr ""
+msgstr "returns"
 
 #: ../../tools/sphinx/docstring_syntax.rst:33
 msgid "A buffered writable file descriptor"
-msgstr ""
+msgstr "A buffered writable file descriptor"
 
 #: ../../tools/sphinx/docstring_syntax.rst
 msgid "rtype"
-msgstr ""
+msgstr "rtype"
 
 #: ../../tools/sphinx/docstring_syntax.rst:34
 msgid "BufferedFileStorage"
-msgstr ""
+msgstr "BufferedFileStorage"
 
 #: ../../tools/sphinx/docstring_syntax.rst:37
 msgid "Numpyスタイル"
@@ -127,51 +132,54 @@ msgstr "Numpy style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst:64
 msgid "\"\"\"Example function with types documented in the docstring."
-msgstr ""
+msgstr "\"\"\"Example function with types documented in the docstring."
 
 #: ../../tools/sphinx/docstring_syntax.rst:66
 msgid ""
 "`PEP 484`_ type annotations are supported. If attribute, parameter, and "
-"return types are annotated according to `PEP 484`_, they do not need to "
-"be included in the docstring:"
+"return types are annotated according to `PEP 484`_, they do not need to be "
+"included in the docstring:"
 msgstr ""
+"`PEP 484`_ type annotations are supported. If attribute, parameter, and "
+"return types are annotated according to `PEP 484`_, they do not need to be "
+"included in the docstring:"
 
 #: ../../tools/sphinx/docstring_syntax.rst:71
 msgid "Parameters"
-msgstr ""
+msgstr "Parameters"
 
 #: ../../tools/sphinx/docstring_syntax.rst:72
 msgid "param1"
-msgstr ""
+msgstr "param1"
 
 #: ../../tools/sphinx/docstring_syntax.rst:-1
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../tools/sphinx/docstring_syntax.rst:73
 msgid "The first parameter."
-msgstr ""
+msgstr "The first parameter."
 
 #: ../../tools/sphinx/docstring_syntax.rst:75
 msgid "param2"
-msgstr ""
+msgstr "param2"
 
 #: ../../tools/sphinx/docstring_syntax.rst:75
 msgid "The second parameter."
-msgstr ""
+msgstr "The second parameter."
 
 #: ../../tools/sphinx/docstring_syntax.rst:78
 msgid "Returns"
-msgstr ""
+msgstr "Returns"
 
 #: ../../tools/sphinx/docstring_syntax.rst:80
 msgid "True if successful, False otherwise."
-msgstr ""
+msgstr "True if successful, False otherwise."
 
 #: ../../tools/sphinx/docstring_syntax.rst:85
 #: ../../tools/sphinx/docstring_syntax.rst:113
 msgid "\"\"\""
-msgstr ""
+msgstr "“””"
 
 #: ../../tools/sphinx/docstring_syntax.rst:89
 msgid "Googleスタイル"
@@ -183,21 +191,20 @@ msgstr "Google style::"
 
 #: ../../tools/sphinx/docstring_syntax.rst:104
 msgid "\"\"\"Example function with PEP 484 type annotations."
-msgstr ""
+msgstr "\"\"\"Example function with PEP 484 type annotations."
 
 #: ../../tools/sphinx/docstring_syntax.rst:108
 msgid "Args:"
-msgstr ""
+msgstr "Args:"
 
 #: ../../tools/sphinx/docstring_syntax.rst:107
 msgid "param1: The first parameter. param2: The second parameter."
-msgstr ""
+msgstr "param1: The first parameter. param2: The second parameter."
 
 #: ../../tools/sphinx/docstring_syntax.rst:111
 msgid "Returns:"
-msgstr ""
+msgstr "Returns:"
 
 #: ../../tools/sphinx/docstring_syntax.rst:111
 msgid "The return value. True for success, False otherwise."
-msgstr ""
-
+msgstr "The return value. True for success, False otherwise."

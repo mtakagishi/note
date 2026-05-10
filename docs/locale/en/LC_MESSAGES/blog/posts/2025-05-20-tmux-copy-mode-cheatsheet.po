@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:8
+msgid "tmuxでvi操作でコピーするcopy-modeまとめ"
+msgstr "Summary of copy-mode for copying with vi operation in tmux"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:9
+msgid ""
+"SSH経由でリモートのUbuntuに接続し、tmux上で作業しているときに、 **Vimのような操作感でコピーができる** ととても便利です。 "
+"本記事では、tmuxでの `copy-mode` を使って、**マウスを使わずにキーボードだけで文字列を選択・コピーする方法** を紹介します。"
+msgstr ""
+"When connecting to a remote Ubuntu via SSH and working on tmux, it is very "
+"convenient to be able to copy using Vim-like operations. In this article, we"
+" will use `copy-mode` in tmux to introduce how to select and copy strings "
+"using just the keyboard without using the mouse."
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:19
+msgid "前提環境"
+msgstr "Prerequisite environment"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:21
+msgid "Windows Terminal（クライアント側）"
+msgstr "Windows Terminal (client side)"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:22
+msgid "SSH接続先は Ubuntu"
+msgstr "SSH connection destination is Ubuntu"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:23
+msgid "tmux バージョン 1.9 以上推奨"
+msgstr "tmux version 1.9 or higher recommended"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:26
+msgid "tmux 初期設定（.tmux.conf）"
+msgstr "tmux initial settings (.tmux.conf)"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:28
+msgid "以下の内容を `~/.tmux.conf` に記載しておくことで、`vi` 操作とマウス対応が可能になります。"
+msgstr ""
+"By writing the following contents in `~/.tmux.conf`, `vi` operation and "
+"mouse support will be possible."
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:38
+msgid "設定を反映するには、tmux再起動またはセッション内で次を実行します。"
+msgstr ""
+"For the settings to take effect, run the following within a tmux restart or "
+"session:"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:45
+msgid "copy-mode によるキーボードコピー手順"
+msgstr "Keyboard copy procedure using copy-mode"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:47
+msgid "**copy-modeに入る**"
+msgstr "**enter copy-mode**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:53
+msgid "**カーソルを移動する（Vim風）**"
+msgstr "**Move the cursor (Vim style)**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:55
+msgid "`h`, `j`, `k`, `l` : 左・下・上・右に移動"
+msgstr "`h`, `j`, `k`, `l`: Move left/down/up/right"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:56
+msgid "`w`, `b`           : 単語単位で移動"
+msgstr "`w`, `b` : Move by word"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:57
+msgid "`0`, `$`           : 行頭、行末"
+msgstr "`0`, `$` : Start of line, end of line"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:58
+msgid "`g`, `G`           : バッファの先頭、末尾"
+msgstr "`g`, `G`: beginning, end of buffer"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:60
+msgid "**範囲選択を開始する**"
+msgstr "**Start range selection**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:66
+msgid "**コピーを確定する**"
+msgstr "**Confirm copy**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:72
+msgid "**貼り付ける場合**"
+msgstr "**When pasting**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:79
+msgid "Windows側へのコピーについて"
+msgstr "About copying to Windows side"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:81
+msgid "tmuxのバッファはUbuntu側にあるため、Windowsのクリップボードに直接コピーはできません。"
+msgstr ""
+"The tmux buffer is located on the Ubuntu side, so it cannot be copied "
+"directly to the Windows clipboard."
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:83
+msgid "代替手段:"
+msgstr "Alternative:"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:85
+msgid "**Windows Terminal のマウス選択＋右クリック** でコピー"
+msgstr "**Copy with Windows Terminal mouse selection + right click**"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:86
+msgid "`tmux` 上でファイルに書き出し、`scp` や `VSCode Remote` で取得"
+msgstr "Export to a file on `tmux` and obtain with `scp` or `VSCode Remote`"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:87
+msgid "Linux側で `xclip` や `wl-copy` を使ってホスト側に送る（GUIがある場合）"
+msgstr ""
+"Send to the host side using `xclip` or `wl-copy` on the Linux side (if there"
+" is a GUI)"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:90
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:96
+msgid "操作"
+msgstr "operation"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:97
+msgid "内容"
+msgstr "Content"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:98
+msgid "`Ctrl + b` → `[`"
+msgstr "`Ctrl + b` → `[`"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:99
+msgid "copy-mode に入る"
+msgstr "enter copy-mode"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:100
+msgid "Vim操作（`hjkl`, `w`, `b`, など）"
+msgstr "Vim operations (`hjkl`, `w`, `b`, etc.)"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:101
+msgid "カーソル移動"
+msgstr "Move cursor"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:102
+msgid "`Space`"
+msgstr "`Space`"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:103
+msgid "範囲選択を開始"
+msgstr "Start range selection"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:104
+msgid "`Enter`"
+msgstr "`Enter`"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:105
+msgid "選択をコピー"
+msgstr "copy selection"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:106
+msgid "`Ctrl + b` → `]`"
+msgstr "`Ctrl + b` → `]`"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:107
+msgid "コピー内容を貼り付け（tmux内）"
+msgstr "Paste the copied content (inside tmux)"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:109
+msgid "この操作を知って慣れておくと、tmux上での作業効率が上がりそうです。是非慣れていきたい。"
+msgstr ""
+"If you know and get used to this operation, you will be able to work more "
+"efficiently on tmux. I definitely want to get used to it."
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:112
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:113
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-20-tmux-copy-mode-cheatsheet.rst:114
+msgid "2025-05-20"
+msgstr "2025-05-20"

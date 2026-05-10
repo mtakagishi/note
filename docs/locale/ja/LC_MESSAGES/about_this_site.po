@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IT-Note \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 21:39+0900\n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../../about_this_site.rst:3
 msgid "About"
@@ -84,28 +84,24 @@ msgid "当サイトは「The Moneytizer」の広告プログラムに参加し�
 msgstr ""
 
 #: ../../../about_this_site.rst:36
-msgid "この広告プログラムに参加したい方は下記リンク経由で5$が付与されます。"
-msgstr ""
-
-#: ../../../about_this_site.rst:38
 msgid ""
 "`⇒The Moneytizer "
 "<https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9>`_"
 msgstr ""
 
-#: ../../../about_this_site.rst:41
+#: ../../../about_this_site.rst:39
 msgid "お問い合わせ"
 msgstr ""
 
-#: ../../../about_this_site.rst:42
+#: ../../../about_this_site.rst:40
 msgid "`お問い合わせ <https://forms.gle/SpENv7SWz5sUoN9g6>`_"
 msgstr ""
 
-#: ../../../about_this_site.rst:46
+#: ../../../about_this_site.rst:44
 msgid "最終更新"
 msgstr ""
 
-#: ../../../about_this_site.rst:49
+#: ../../../about_this_site.rst:47
 msgid "`更新詳細 <https://github.com/mtakagishi/note/commits/main>`_"
 msgstr ""
 
@@ -115,5 +111,8 @@ msgstr ""
 #~ msgid ""
 #~ "`⇒The Moneytizer紹介リンク "
 #~ "<https://us.themoneytizer.com/&sponsor=145d85f430008add7c50469cf587a9e9#inscription>`_"
+#~ msgstr ""
+
+#~ msgid "この広告プログラムに参加したい方は下記リンク経由で5$が付与されます。"
 #~ msgstr ""
 

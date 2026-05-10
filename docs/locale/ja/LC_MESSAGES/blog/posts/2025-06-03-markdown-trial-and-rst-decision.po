@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:9
+msgid "Markdown導入の検討と、reStructuredText継続の判断"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:11
+msgid "Sphinx + ablog において、記事を reStructuredText ではなく Markdown で書く運用を検討した。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:13
+msgid ""
+"MyST-Parser を導入することで、Sphinx は Markdown を理解可能となり、以下のような設定を行うことで `.md` "
+"ファイルでの投稿も実現できることが確認された。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:32
+msgid "Markdown 側では、以下のような front-matter を冒頭に記述することで `.. post::` 相当の意味を持たせることができる。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:43
+msgid ""
+"さらに、MyST記法を用いることで `note` や `warning` 、 `toctree` といった Sphinx ディレクティブの一部も "
+"Markdown 上で再現可能であることも確認された。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:51
+msgid "しかし、ChatGPT上でMarkdown形式の記事案を得ようとした場合、チャット欄がMarkdownを自動的にレンダリングしてしまうという問題に直面した。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:53
+#, python-brace-format
+msgid ""
+"たとえば `:::{note}` のような構文は、ユーザーがコピーペーストしようとした段階で展開表示されてしまい、正しく貼り付けることができない。"
+" これはUI設計上の仕様であり、ユーザー側からの回避は困難である。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:56
+msgid "このため、Markdownでの編集やテンプレート設計をChatGPTと協調して行うには現時点で限界があると判断した。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:58
+msgid "よって、今後の記事運用については、引き続き `.rst` 形式をベースとした運用を継続する方針とする。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:60
+msgid ""
+"Markdown記法に関しては、今後 Sphinx 本体や ablog、MyST "
+"側の進化や、ChatGPTのMarkdown出力制御手段が改善された段階で、再度検討の余地があるだろう。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:62
+msgid "---"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:64
+msgid "この検討記録は、自身の技術的試行錯誤と選択のログとして、ブログ上に残しておく。"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:67
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:68
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2025-06-03-markdown-trial-and-rst-decision.rst:69
+msgid "2025-06-03"
+msgstr ""
+

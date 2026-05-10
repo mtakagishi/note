@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:8
+msgid "pre-commit 導入メモ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:10
+msgid ""
+"本記事では、Git コミット前にコードやドキュメントの整形・チェックを自動で行うツール **pre-commit** "
+"について、導入方法と活用を整理します"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:17
+msgid "はじめに：pre-commit とは"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:19
+msgid ""
+"`pre-commit` は、Git の「コミット前フック」を簡単に管理・運用するための Python "
+"製ツールです。以下のような作業を自動化できます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:21
+msgid "ファイル末尾の改行チェック"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:22
+msgid "Python コードの整形（Black）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:23
+msgid "Markdown や reStructuredText の文法チェック"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:24
+msgid "YAML / JSON / TOML の構文検査"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:25
+msgid "セキュリティ的に危険なコードの検出（Bandit など）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:28
+msgid "インストールと初期設定"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:30
+msgid "まずは `pre-commit` をインストールします。仮想環境でもシステム全体でも OK です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:36
+msgid "もしくは `pipx` 派の方は："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:42
+msgid "次に、プロジェクトのルートに ``.pre-commit-config.yaml`` を用意します。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:44
+msgid "基本的な例："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:65
+msgid "フックのインストール："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:71
+msgid "これで、次回の ``git commit`` 時に自動的にチェックが走るようになります。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:75
+msgid "バージョン管理と自動更新"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:77
+msgid "すべてのフックにはバージョン（rev）が指定されており、次のコマンドで一括更新できます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:85
+msgid "pre-commit によるドキュメントチェック"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:87
+msgid "Markdown や reStructuredText のような軽量マークアップも pre-commit によって整備できます。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:89
+msgid "``doctoc``：Markdown の目次自動生成"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:90
+msgid "``mdformat``：Markdown の自動整形（Python製）"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:91
+msgid "``doc8``：reStructuredText のルールチェック"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:92
+msgid "``rstcheck``：Sphinx 向けの構文検証"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:94
+msgid ""
+"pre-commit で自動目次生成や API ドキュメント整形を行えば、**ドキュメントの陳腐化を防止** しつつ、**差分として明示できる**"
+" のが大きな利点です。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:96
+msgid "全てのファイルをチェックしたい場合は以下コマンドを使います:"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:102
+msgid ""
+"pre-"
+"commitは、自動でフォーマット修正などを行うため意図せずファイル変更してしまう場合があります。その時は、以下のコマンドで直近コミットまで戻せます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:109
+msgid "pre-commit の徹底"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:111
+msgid "コミットのたびにフックが実行されることで、次のような効果があります："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:113
+msgid "品質維持が“自動”で担保される"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:114
+msgid "Lint/整形のルール統一が強制される"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:115
+msgid "CI で気づく前に、ローカルで問題を検出できる"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:117
+msgid "チームで運用する場合には、README や CONTRIBUTING に以下を明記することで定着が進みます："
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:124
+msgid "まとめ"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:126
+msgid "pre-commitに関する導入の基本を整理しました。 今後、網羅的な設定や、CIへの連携なども検討していきたいと思います。"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:130
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst
+msgid "投稿日"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:131
+msgid "2025-05-16"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2025-05-16-pre-commit-introduction.rst:132
+msgid "mtakagishi"
+msgstr ""
+

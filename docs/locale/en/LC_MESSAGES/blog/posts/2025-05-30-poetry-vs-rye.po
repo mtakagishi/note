@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:8
+msgid "PoetryとRyeの比較と使い分け：Pythonプロジェクト管理の選択肢"
+msgstr ""
+"Comparison and usage of Poetry and Rye: Python project management options"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:10
+msgid ""
+"Pythonプロジェクトにおいて、依存管理やパッケージ公開を行うためのツールとして、長らく ``Poetry`` "
+"が人気を集めてきました。しかし最近では、より高速かつシンプルな運用を可能とする ``Rye`` という新しいツールが注目されています。"
+msgstr ""
+"``Poetry`` has long been a popular tool for dependency management and "
+"package publishing in Python projects. However, recently, a new tool called "
+"``Rye`` has been attracting attention because it enables faster and simpler "
+"operations."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:12
+msgid "本記事では、PoetryとRyeの比較、およびRye特有の機能や設計思想について整理し、どのような状況で移行を検討すべきかをまとめます。"
+msgstr ""
+"In this article, we will compare Poetry and Rye, organize Rye's unique "
+"functions and design philosophy, and summarize in what situations you should"
+" consider migrating."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:19
+msgid "PoetryとRyeの基本機能の対応"
+msgstr "Correspondence between basic functions of Poetry and Rye"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:21
+msgid "以下に、主な機能についてPoetryとRyeのコマンドを対応表として示します。"
+msgstr ""
+"Below is a correspondence table of Poetry and Rye commands for the main "
+"functions."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:23
+msgid "PoetryとRyeの主な機能対応"
+msgstr "Main function correspondence between Poetry and Rye"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:26
+msgid "機能"
+msgstr "function"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:27
+msgid "Poetry"
+msgstr "Poetry"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:28
+msgid "Rye"
+msgstr "Rye"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:29
+msgid "備考"
+msgstr "remarks"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:30
+msgid "プロジェクト初期化"
+msgstr "Project initialization"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:31
+msgid "``poetry init``"
+msgstr "``poetry init``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:32
+msgid "``rye init``"
+msgstr "``rye init``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:33
+msgid "対話形式はRyeの方が簡潔"
+msgstr "Rye has a more concise dialogue format."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:34
+msgid "依存追加"
+msgstr "Add dependency"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:35
+msgid "``poetry add requests``"
+msgstr "``poetry add requests``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:36
+msgid "``rye add requests``"
+msgstr "``rye add requests``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:37
+msgid "``--dev`` オプションも同様に対応"
+msgstr "``--dev`` option is also supported."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:38
+msgid "依存削除"
+msgstr "Dependency deletion"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:39
+msgid "``poetry remove requests``"
+msgstr "``poetry remove requests``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:40
+msgid "``rye remove requests``"
+msgstr "``rye remove requests``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:42
+msgid "ロックファイル作成・更新"
+msgstr "Create/update lock file"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:43
+msgid "``poetry lock``"
+msgstr "``poetry lock``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:44
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:48
+msgid "``rye sync``"
+msgstr "``rye sync``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:45
+msgid "Ryeは ``uv`` により高速"
+msgstr "Rye is faster with ``uv``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:46
+msgid "パッケージインストール"
+msgstr "package installation"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:47
+msgid "``poetry install``"
+msgstr "``poetry install``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:50
+msgid "スクリプト実行"
+msgstr "script execution"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:51
+msgid "``poetry run python``"
+msgstr "``poetry run python``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:52
+msgid "``rye run python``"
+msgstr "``rye run python``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:54
+msgid "仮想環境シェル起動"
+msgstr "Virtual environment shell startup"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:55
+msgid "``poetry shell``"
+msgstr "``poetry shell``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:56
+msgid "``rye shell``"
+msgstr "``rye shell``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:58
+msgid "Pythonバージョン指定"
+msgstr "Python version specification"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:59
+msgid "``poetry env use 3.11``"
+msgstr "``poetry env use 3.11``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:60
+msgid "``rye pin 3.11``"
+msgstr "``rye pin 3.11``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:61
+msgid "Ryeは ``pyenv`` 不要で独自DL可能"
+msgstr "Rye does not require ``pyenv`` and can be downloaded independently"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:62
+msgid "パッケージ公開"
+msgstr "Package release"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:63
+msgid "``poetry publish``"
+msgstr "``poetry publish``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:64
+msgid "``rye publish``"
+msgstr "``rye publish``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:65
+msgid "``twine`` 不要で簡易公開可能"
+msgstr "``twine`` is not required and can be easily published"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:68
+msgid "Rye特有の機能と利点"
+msgstr "Rye-specific features and benefits"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:70
+msgid "RyeはPoetryに比べて、以下のような特有の特徴を持ちます。"
+msgstr "Rye has the following unique features compared to Poetry."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:72
+msgid "**Pythonバージョンの自前管理** ："
+msgstr "**Manage your own Python version**:"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:74
+msgid "``rye pin 3.12`` でそのバージョンを直接DLして使うため、 ``pyenv`` や ``asdf`` は不要です。"
+msgstr ""
+"You don't need ``pyenv`` or ``asdf`` because you can directly download and "
+"use that version with ``rye pin 3.12``."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:76
+msgid "**高速な依存解決** ："
+msgstr "**Fast dependency resolution**:"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:78
+msgid "``uv`` を利用しており、Poetryより桁違いに高速です。"
+msgstr "It uses ``uv`` and is orders of magnitude faster than Poetry."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:80
+msgid "**シンプルな設計と統合CLI**  ："
+msgstr "**Simple design and integrated CLI**:"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:82
+msgid ""
+"``rye fmt`` （フォーマット）、 ``rye lint`` （静的解析）、 ``rye test`` "
+"（テスト実行）など、開発で使う基本的な機能をすべて内包。"
+msgstr ""
+"Contains all the basic functions used in development, such as ``rye fmt`` "
+"(format), ``rye lint`` (static analysis), and ``rye test`` (test execution)."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:84
+msgid "**自己更新コマンド** ："
+msgstr "**Self-update command**:"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:86
+msgid "``rye self update`` によりrye本体を常に最新状態に保つことができます。"
+msgstr "``rye self update`` allows you to always keep rye up to date."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:89
+msgid "導入判断の目安"
+msgstr "Guidelines for deciding whether to introduce"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:91
+msgid "以下のような観点で、Ryeへの移行を検討するとよいでしょう。"
+msgstr ""
+"You may want to consider migrating to Rye from the following points of view."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:93
+msgid "移行を検討すべきケース"
+msgstr "Cases in which you should consider migration"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:96
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:110
+msgid "判断基準"
+msgstr "Judgment criteria"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:97
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:111
+msgid "説明"
+msgstr "explanation"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:98
+msgid "高速な依存解決が必要"
+msgstr "Need fast dependency resolution"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:99
+msgid "大規模なプロジェクトやCIでの待ち時間短縮が狙える"
+msgstr "Aim to reduce waiting time in large-scale projects and CI"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:100
+msgid "Pythonバージョンの切替を頻繁に行う"
+msgstr "Switching Python versions frequently"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:101
+msgid "Ryeの ``pin`` により自前で柔軟に管理可能"
+msgstr "Flexible management possible with Rye's ``pin``"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:102
+msgid "新規プロジェクトでシンプルに始めたい"
+msgstr "I want to start a new project simply."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:103
+msgid "設定ファイルや構成が簡素"
+msgstr "Simple configuration files and configuration"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:105
+msgid "逆に、以下のような場合はPoetryの継続使用が現実的です。"
+msgstr ""
+"On the other hand, it is practical to continue using Poetry in the following"
+" cases:"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:107
+msgid "移行を控えるべきケース"
+msgstr "Cases in which you should avoid migration"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:112
+msgid "現在Poetryで安定運用中"
+msgstr "Currently in stable operation with Poetry"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:113
+msgid "無理に切り替える必要はない"
+msgstr "No need to force the switch"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:114
+msgid "チームやCIがPoetry前提で設計されている"
+msgstr "The team and CI are designed with Poetry in mind."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:115
+msgid "スムーズな運用を優先"
+msgstr "Prioritize smooth operations"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:118
+msgid "まとめ"
+msgstr "summary"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:120
+msgid ""
+"PoetryとRyeは似て非なるツールです。どちらもモダンなPython開発を支える優れた選択肢ですが、それぞれの特性を理解し、自身のプロジェクトのニーズに応じて使い分けることが重要です。"
+msgstr ""
+"Poetry and Rye are similar and different tools. Both are excellent options "
+"to support modern Python development, but it's important to understand the "
+"characteristics of each and use one depending on the needs of your project."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:122
+msgid ""
+"Ryeはまだ新しいツールですが、その軽快さと統一感は魅力的であり、今後の主流となる可能性もあります。まずは小規模な新規プロジェクトで試してみるのも良いアプローチでしょう。"
+msgstr ""
+"Although Rye is still a new tool, its lightness and sense of unity are "
+"appealing, and it has the potential to become mainstream in the future. A "
+"good approach is to try it out with a small new project first."
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:125
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:126
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-30-poetry-vs-rye.rst:127
+msgid "2025-05-30"
+msgstr "2025-05-30"

@@ -6,17 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: IT-Note \n"
+"Project-Id-Version: IT-Note\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-05 23:16+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../programming/git/git_basics.rst:2
@@ -29,7 +29,7 @@ msgstr "Updated"
 
 #: ../../programming/git/git_basics.rst:3
 msgid "2023-05-05"
-msgstr ""
+msgstr "2023-05-05"
 
 #: ../../programming/git/git_basics.rst:6
 msgid "gitコマンドの超基本ルーティン"
@@ -59,7 +59,7 @@ msgstr "git command for branch"
 
 #: ../../programming/git/git_basics.rst
 msgid "git branch"
-msgstr ""
+msgstr "git branch"
 
 #: ../../programming/git/git_basics.rst:18
 msgid "ローカルブランチの一覧を表示"
@@ -67,7 +67,7 @@ msgstr "Show list of local branches"
 
 #: ../../programming/git/git_basics.rst
 msgid "git branch -r"
-msgstr ""
+msgstr "git branch -r"
 
 #: ../../programming/git/git_basics.rst:19
 msgid "リモートブランチの一覧を表示"
@@ -75,7 +75,7 @@ msgstr "Show list of remote branches"
 
 #: ../../programming/git/git_basics.rst
 msgid "git branch -a"
-msgstr ""
+msgstr "git branch -a"
 
 #: ../../programming/git/git_basics.rst:20
 msgid "全てのブランチの一覧を表示"
@@ -123,7 +123,7 @@ msgstr "Rebase with the latest contents of <another branch>"
 
 #: ../../programming/git/git_basics.rst
 msgid "git remote prune origin --dry-run"
-msgstr ""
+msgstr "git remote prune origin --dry-run"
 
 #: ../../programming/git/git_basics.rst:26
 msgid "ローカルに残ってしまったリモートブランチの残骸を確認する"
@@ -131,7 +131,7 @@ msgstr "Check for remnants of remote branches left locally"
 
 #: ../../programming/git/git_basics.rst
 msgid "git remote prune origin"
-msgstr ""
+msgstr "git remote prune origin"
 
 #: ../../programming/git/git_basics.rst:27
 msgid "ローカルに残ってしまったリモートブランチの残骸を削除する"
@@ -139,7 +139,7 @@ msgstr "Remove local remnants of remote branches"
 
 #: ../../programming/git/git_basics.rst
 msgid "git branch -d <削除ブランチ>"
-msgstr ""
+msgstr "git branch -d <削除ブランチ>"
 
 #: ../../programming/git/git_basics.rst:28
 msgid "ローカルブランチを削除"
@@ -190,24 +190,20 @@ msgid "別変更のが先に行われた場合のルーティン例"
 msgstr "Example Routine when Another Change is Made First"
 
 #: ../../programming/git/git_basics.rst:43
-#, fuzzy
 msgid "``git fetch`` で最新を取り込み"
 msgstr "Fetch the latest changes with git fetch"
 
 #: ../../programming/git/git_basics.rst:44
-#, fuzzy
 msgid "``git rebase main`` としてmainの差分を先に取り込んで変更作業を継続"
 msgstr ""
 "Incorporate changes from main branch using git rebase main and continue "
 "working on changes."
 
 #: ../../programming/git/git_basics.rst:45
-#, fuzzy
 msgid "conflictしたら修正して ``git rebase –-continue``"
 msgstr "If conflicts arise, fix them and continue with git rebase --continue."
 
 #: ../../programming/git/git_basics.rst:46
-#, fuzzy
 msgid "``git push -f origin ブランチ``"
 msgstr "git push -f origin <branch>."
 
@@ -220,4 +216,5 @@ msgid ""
 "`あなたはmerge派？rebase派？綺麗なGitログで実感したメリット "
 "<https://style.biglobe.co.jp/entry/2022/03/22/090000>`_"
 msgstr ""
-
+"`Are you a merge person? Rebase group? Benefits I realized with a clean Git "
+"log <https://style.biglobe.co.jp/entry/2022/03/22/090000>`_"

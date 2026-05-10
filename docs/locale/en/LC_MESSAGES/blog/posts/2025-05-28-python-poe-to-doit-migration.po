@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 20:55+0900\n"
+"PO-Revision-Date: 2026-05-10 00:00+0900\n"
+"Last-Translator: mtakagishi <>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:8
+msgid "Python開発環境での poethepoet → doit への移行とベストプラクティス"
+msgstr ""
+"Migrating from poethepoet to doit in a Python development environment and "
+"best practices"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:10
+msgid ""
+"Poetry を使った Python プロジェクトで、これまで `poethepoet` を使ってタスク管理をしていたが、以下の理由から `doit` "
+"への移行を行った。"
+msgstr ""
+"In my Python project using Poetry, I used `poethepoet` to manage tasks, but "
+"I decided to migrate to `doit` for the following reasons."
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:12
+msgid "より柔軟な依存関係管理とカスタマイズが可能"
+msgstr "Allows for more flexible dependency management and customization"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:13
+msgid "複数タスクの依存や並列実行への対応が容易"
+msgstr "Easily supports multiple task dependencies and parallel execution"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:14
+msgid "Sphinx 多言語ビルドや静的ファイルコピーなどを整理したかった"
+msgstr ""
+"I wanted to organize Sphinx multilingual builds, static file copies, etc."
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:15
+msgid "`setup.py` に書いていたカスタムコマンドを `dodo.py` に統合したかった"
+msgstr ""
+"I wanted to integrate the custom commands written in `setup.py` into "
+"`dodo.py`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:22
+msgid "背景と現状"
+msgstr "Background and current situation"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:24
+msgid "従来の構成では以下のような形でタスクを管理していた："
+msgstr ""
+"In the traditional configuration, tasks were managed in the following way:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:26
+msgid "`poetry run poe doc` → `python setup.py doc`"
+msgstr "`poetry run poe doc` → `python setup.py doc`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:27
+msgid "`poetry run poe gettext` → `python setup.py gettext`"
+msgstr "`poetry run poe gettext` → `python setup.py gettext`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:28
+msgid "`setup.py` に `doc` / `gettext` コマンドクラスを定義"
+msgstr "Define `doc` / `gettext` command class in `setup.py`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:29
+msgid "pyproject.toml の `[tool.poe.tasks]` でラップ"
+msgstr "Wrapped in `[tool.poe.tasks]` in pyproject.toml"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:31
+msgid "この構成は、ある程度うまく動作していたが、次のような課題もあった："
+msgstr ""
+"Although this configuration worked reasonably well, it also had the "
+"following challenges:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:33
+msgid "`setup.py` に依存してしまう点（非推奨方向）"
+msgstr "Depends on `setup.py` (not recommended)"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:34
+msgid "タスクの柔軟な定義（ファイル依存・再実行判定）には限界"
+msgstr ""
+"There are limits to flexible task definition (file dependence/re-execution "
+"determination)"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:35
+msgid "`pre-commit` の導入との併用が中途半端"
+msgstr "Cannot be used in conjunction with the introduction of `pre-commit`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:38
+msgid "doit への移行ステップ"
+msgstr "Steps to transition to doit"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:40
+msgid "まず `doit` を開発依存として追加："
+msgstr "First add `doit` as a development dependency:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:46
+msgid "プロジェクトルートに `dodo.py` を作成し、以下のようにタスクを定義："
+msgstr "Create `dodo.py` in the project root and define the task as below:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:64
+msgid "動作確認："
+msgstr "Operation confirmation:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:71
+msgid "問題なければ `poe` を削除："
+msgstr "If there is no problem, delete `poe`:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:77
+msgid "併せて `[tool.poe.tasks]` セクションも `pyproject.toml` から削除。"
+msgstr "Also, delete the `[tool.poe.tasks]` section from `pyproject.toml`."
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:79
+msgid "`.doit.db.db` は Git 管理対象外とするため、`.gitignore` に以下を追加："
+msgstr ""
+"Since `.doit.db.db` is not managed by Git, add the following to "
+"`.gitignore`:"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:86
+msgid "pre-commit の併用"
+msgstr "Use with pre-commit"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:88
+msgid "コードフォーマットや静的解析は `pre-commit` で行うように変更。"
+msgstr "Changed code format and static analysis to be done in `pre-commit`."
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:107
+msgid "利点まとめ"
+msgstr "Summary of advantages"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:109
+msgid "`doit` は Python ベースで拡張性が高く、再実行判定も優秀"
+msgstr ""
+"`doit` is based on Python, has high extensibility, and has excellent re-"
+"execution judgment."
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:110
+msgid "`setup.py` を廃止し、 `pyproject.toml` 中心の構成へ整理できた"
+msgstr ""
+"`setup.py` was abolished and the structure was organized around "
+"`pyproject.toml`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:111
+msgid "`pre-commit` によってコミット前のチェックも統一的に管理"
+msgstr "Uniformly manage pre-commit checks with `pre-commit`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:112
+msgid "タスクの実行結果キャッシュも `.doit.db.db` により最適化"
+msgstr "Task execution result cache is also optimized using `.doit.db.db`"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:115
+msgid "記事情報"
+msgstr "Article information"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst
+msgid "著者"
+msgstr "author"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:116
+msgid "mtakagishi"
+msgstr "Mr. Takagi"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst
+msgid "投稿日"
+msgstr "Post date"
+
+#: ../../../blog/posts/2025-05-28-python-poe-to-doit-migration.rst:117
+msgid "2025-05-28"
+msgstr "2025-05-28"

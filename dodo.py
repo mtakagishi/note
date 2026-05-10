@@ -65,14 +65,16 @@ def task_gettext():
     """gettext + sphinx-intl"""
 
     def run():
-        os.chdir("docs")
         subprocess.run(
-            ["sphinx-build", "-b", "gettext", ".", "_build/_intl/gettext"], check=True
+            ["sphinx-build", "-b", "gettext", ".", "_build/_intl/gettext"],
+            check=True,
+            cwd="docs",
         )
         for lang in LANGUAGES:
             subprocess.run(
                 ["sphinx-intl", "update", "-p", "_build/_intl/gettext", "-l", lang],
                 check=True,
+                cwd="docs",
             )
 
     return {"actions": [run], "verbosity": 2}
