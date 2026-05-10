@@ -100,7 +100,8 @@ msgstr ""
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:49
 msgid "`インストール手順 <https://python-poetry.org/docs/#installation>`_"
-msgstr "Installation instructions"
+msgstr ""
+"`Installation instructions <https://python-poetry.org/docs/#installation>`_"
 
 #: ../../../tools/sphinx/sphinx_setup_github_netlify.rst:52
 msgid "pip install poetry は推奨手順ではないので注意"

@@ -136,10 +136,9 @@ msgid ""
 "Configuration`` から、**「Enforce SSL」スイッチをONにする** ことで、**非SSL接続を完全に拒否** "
 "することが可能です。"
 msgstr ""
-"To ensure a secure connection, Supabase uses SSL by default. Furthermore, "
-"you can **completely deny non-SSL connections** by turning on the ``Enforce "
-"SSL'' switch from ``Configuration > SSL Configuration`` on the management "
-"screen."
+"To ensure secure connections, Supabase uses SSL by default. In addition, "
+"from ``Configuration > SSL Configuration`` in the dashboard, you can turn on"
+" **Enforce SSL** to **completely reject non-SSL connections**."
 
 #: ../../../blog/posts/2025-05-21-supabase-postgresql-free.rst:56
 msgid "これにより、意図しない平文通信や中間者攻撃のリスクを防ぐことができます。"
