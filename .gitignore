@@ -153,5 +153,8 @@ setup.py.bak
 # doit キャッシュファイル
 .doit.db.*
 
+# Esbonio LSP キャッシュ
+run/
+
 # rye
 requirements*.lock
