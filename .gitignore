@@ -158,3 +158,6 @@ run/
 
 # rye
 requirements*.lock
+
+# Copilot session export logs
+_notes/sessions/
