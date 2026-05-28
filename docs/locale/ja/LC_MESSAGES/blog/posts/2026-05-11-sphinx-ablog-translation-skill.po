@@ -1,0 +1,432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 08:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:8
+msgid "AGENTS.md の次に、翻訳作業を Skills 化してみる"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:11
+msgid "はじめに"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:13
+msgid "前回、Sphinx + ablog で作っている個人技術ノートに ``AGENTS.md`` を導入した。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:15
+msgid "その後、英語ページ向けの ``.po`` 翻訳を進める中で、 翻訳作業には毎回同じ確認や判断が多いことに気づいた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:18
+msgid "今回は、その翻訳まわりの作業を Codex Skills として切り出してみた記録である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:21
+msgid "なぜ翻訳作業を Skills 化するのか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:23
+msgid "翻訳作業では、単に日本語を英語に置き換えるだけでは済まない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:25
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:96
+msgid "``msgid`` は変更しない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:26
+msgid "空の ``msgstr`` だけを埋める"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:27
+msgid "既存翻訳を不用意に上書きしない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:28
+msgid "reStructuredText の記法を壊さない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:29
+msgid "``rye run doit doc`` でビルド確認する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:30
+msgid "Sphinx の ``<translated>`` 警告を見て ``.po`` を直す"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:31
+msgid "英語として自然な技術ブログ文体にする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:33
+msgid "これらを毎回 Codex に説明するのは手間がかかる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:35
+msgid "また、同じ説明を繰り返すことは、 会話のトークン消費も増やしてしまう。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:38
+msgid "そこで、翻訳作業専用の手順として Skills にまとめることにした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:41
+msgid "AGENTS.md と Skills の役割分担"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:43
+msgid "今回の整理では、``AGENTS.md`` と Skills を次のように分けて考えた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:45
+msgid "``AGENTS.md`` には、リポジトリ全体のルールを書く。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:47
+msgid "日本語で説明する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:48
+msgid "Rye を使う"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:49
+msgid "生成物を直接編集しない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:50
+msgid "記事本文は日本語を正とする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:51
+msgid "英語ページは翻訳版として扱う"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:53
+msgid "一方で、Skills には特定作業の手順を書く。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:55
+msgid ""
+"今回作った ``sphinx-ablog-translation`` Skill では、 gettext / sphinx-intl の "
+"``.po`` 翻訳作業に必要な判断や確認をまとめた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:59
+msgid "作成した Skill"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:61
+msgid "今回作成した Skill は次の場所に置いた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:67
+msgid "Codex の個人設定配下に置くことで、 このPC上の Codex から利用できるようにする意図である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:70
+msgid "リポジトリ配下に置くのではなく、 個人プロファイル側に置くことで、 同じ種類の翻訳作業を他のリポジトリでも使い回しやすくなる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:75
+msgid "Skill に含めたもの"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:77
+msgid "最初から翻訳を完全自動化するのではなく、 まずは検査と作業方針を中心にした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:80
+msgid "構成は次のようにした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:93
+msgid "``SKILL.md`` には、翻訳時の基本ルールを書いた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:95
+msgid "日本語 ``.rst`` を正とする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:97
+msgid "``msgstr`` を埋める"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:98
+msgid "コマンド、パス、設定名、コード片は保持する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:99
+msgid "翻訳後に ``rye run doit doc`` を実行する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:100
+msgid "ビルド警告があれば ``.po`` の該当箇所を修正する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:102
+msgid "``style-guide.md`` には、 直訳ではなく自然な英語にするための方針を書いた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:105
+msgid "``glossary.md`` には、 この技術ノートでよく出る用語の訳語を置いた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:109
+msgid "``po_status.py`` で未翻訳を確認する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:111
+msgid ""
+"``po_status.py`` は、``docs/locale/en`` 配下の ``.po`` を確認し、 "
+"次の情報を出すためのスクリプトである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:114
+msgid "構文エラー"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:115
+msgid "空の ``msgstr``"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:116
+msgid "fuzzy"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:117
+msgid "翻訳済み件数"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:119
+msgid "今回の確認では、次のような状態まで持っていけた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:127
+msgid "この確認をスクリプトにしたことで、 毎回 Codex に集計用の Python を書かせる必要がなくなる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:131
+msgid "``check_po.py`` で rst 記法の崩れを検出する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:133
+msgid "翻訳作業で特に問題になったのは、 reStructuredText の記法が翻訳によって壊れることだった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:136
+msgid "たとえば、次のような記法である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:138
+msgid "インラインリテラルの ````...````"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:139
+msgid "強調の ``**...**``"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:140
+msgid "脚注参照の ``[#task]_``"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:141
+msgid "リンク参照の ```name`_``"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:142
+msgid "ロールの ``:doc:`...``` や ``:kbd:`...```"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:144
+msgid ""
+"機械翻訳を通すと、引用符やバッククォートが片側だけ変わることがある。 その結果、Sphinx のビルド時に ``<translated>`` "
+"警告が出る。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:147
+msgid "そこで ``check_po.py`` では、 翻訳後の ``msgstr`` に対して、 壊れやすい記法を検査するようにした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:152
+msgid "実際に使ってみた結果"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:154
+msgid "Skill を作る過程で、既存の英訳 ``.po`` にもいくつか問題が見つかった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:156
+msgid "``msgstr`` 内の余分な引用符"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:157
+msgid "````...```` の閉じ忘れ"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:158
+msgid "URL付きリンクの消失"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:159
+msgid "脚注・参照名の不一致"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:161
+msgid "これらを直したうえで、最終的に次の確認が通った。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:170
+msgid "さらに、``rye run doit doc`` も ja/en ともに成功した。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:173
+msgid "Skills 化してよかったこと"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:175
+msgid "今回の作業で、Skills は「手順書」と「小さな道具箱」の中間のように使えると感じた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:177
+msgid "特によかったのは次の点である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:179
+msgid "毎回説明していた翻訳ルールを短く呼び出せる"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:180
+msgid "集計や検査の Python を毎回生成しなくてよい"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:181
+msgid "トークン消費を減らしやすい"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:182
+msgid "翻訳作業で壊れやすいポイントを蓄積できる"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:183
+msgid "AGENTS.md を肥大化させずに済む"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:185
+msgid "AGENTS.md はリポジトリ全体の基本方針、 Skills は特定作業の手順と道具、 という分担が見えてきた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:190
+msgid "まだ課題もある"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:192
+msgid "一方で、翻訳そのものを完全に自動化するのはまだ慎重にしたい。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:194
+msgid "機械翻訳で ``msgstr`` を一括で埋めることはできるが、 自然な英語になっているか、 技術的に意味がずれていないかは別問題である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:198
+msgid "そのため、今回の Skill では、 まず検査と作業方針を中心にした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:201
+msgid ""
+"翻訳自動化スクリプトを入れるとしても、 既存翻訳を上書きしない、 空の ``msgstr`` だけを対象にする、 ビルド警告を必ず確認する、 "
+"といった制約が必要だと感じた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:208
+msgid "今後の展望"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:210
+msgid "今後は、この Skill を実際の翻訳作業で使いながら育てていきたい。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:212
+msgid "追加したい候補としては、次のようなものがある。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:214
+msgid "空の ``msgstr`` だけを翻訳する補助スクリプト"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:215
+msgid "Sphinx の警告ログから該当 ``.po`` を逆引きするスクリプト"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:216
+msgid "よくある翻訳崩れの自動修正"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:217
+msgid "技術ノート用語集の拡充"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:218
+msgid "重要記事だけ人手で英語を磨く運用"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:220
+msgid "まずは、未翻訳確認と rst 記法チェックを安定して使うところから始める。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:223
+msgid "おわりに"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:225
+msgid "AGENTS.md を導入したことで、リポジトリ全体の作業方針を Codex に伝えやすくなった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:227
+msgid "さらに今回、翻訳作業を Skills 化したことで、 特定作業の手順や検査を再利用しやすくなった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:230
+msgid ""
+"個人技術ノートのように、記事作成、翻訳、ビルド、公開が少しずつ絡み合うリポジトリでは、 こうした小さな Skill を育てていくことが、 "
+"作業の安定化と省力化につながりそうである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:235
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:236
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-11-sphinx-ablog-translation-skill.rst:237
+msgid "2026-05-11"
+msgstr ""
+

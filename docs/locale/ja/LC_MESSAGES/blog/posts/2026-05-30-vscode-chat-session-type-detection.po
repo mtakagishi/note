@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 08:16+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:8
+msgid "VS Code のチャット履歴を、実データだけで判定しないようにする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:10
+msgid ""
+"前回、AI とのやりとりをあとから記事化するために、 ``export_sessions.py`` で Copilot Chat "
+"のセッションを書き出す仕組みを作った。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:13
+msgid "ただ、実際に使ってみると、すぐに次の疑問が出てきた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:15
+msgid "``--list`` の一覧が、VS Code のチャット履歴一覧と合っていない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:16
+msgid "GitHub Copilot のチャットと CODEX のチャットで、記録のされ方が違うように見える"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:17
+msgid "CODEX 側のやりとりも、直近ログとして同じ流れで取り出せるのか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:19
+msgid ""
+"VS Code の画面では、チャット履歴の一覧にアイコンが付くものと付かないものがあり、 上部の「チャット / "
+"CODEX」の切り替えでも表示内容が変わる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:22
+msgid "最初は、見た目の印象から 「アイコンが付いているものが CODEX なのではないか」 と考えた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:26
+msgid "この疑問の根っこにあったのは、かなり素朴な違和感だった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:28
+msgid ""
+"GUI 上では CODEX のセッション履歴が確かに見えている。 タブを切り替えれば CODEX 側の履歴として確認できる。 "
+"それなのに、自分で作ったスクリプトから見ると、 その履歴がうまく一致しない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:33
+msgid ""
+"もし画面には存在しているのに、スクリプトからは見つけられないのだとしたら、 それは単なる「データがない」では済まない。 "
+"自分が見ている保存場所、読んでいる形式、判定している条件のどこかが、 VS Code の実際の扱いとずれているはずである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:38
+msgid "ここで少し立ち止まる必要があった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:40
+msgid ""
+"手元の保存データだけを見て判定ロジックを作ると、 自分がたまたま使った範囲に最適化されたスクリプトになってしまう。 "
+"それでは、別のモードや別の状態のセッションを取りこぼすかもしれない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:44
+msgid ""
+"今回は、その違和感と不安をきっかけに、 ``export_sessions.py`` "
+"の方針を「実データ観測」から「仕様を優先し、実データで補う」方向へ立て直した。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:48
+msgid "最初に見えた問題"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:50
+msgid "既存の ``export_sessions.py`` は、 主に次の場所を見ていた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:57
+msgid "この配下の ``.jsonl`` を読めば、 Copilot Chat の本文を取り出すことはできる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:60
+msgid "しかし、VS Code のチャット履歴一覧に近い情報を出そうとすると、 ``transcripts`` だけでは足りなかった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:63
+msgid ""
+"一覧表示には、セッションのタイトル、作成日時、状態、種類などが関係する。 それらは ``transcripts`` だけで完結しているとは限らず、"
+" ``workspaceStorage`` 配下の ``chatSessions`` 側にも手掛かりがある。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:67
+msgid "つまり、目的によって見るべきデータ源が違っていた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:69
+msgid "本文を取り出すには ``transcripts`` が重要"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:70
+msgid "VS Code の一覧に近づけるには ``chatSessions`` も重要"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:71
+msgid "セッション ID で両方を統合する必要がある"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:73
+msgid "この時点で、 ``--list`` が VS Code の一覧とずれる理由はかなり見えてきた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:77
+msgid "実データだけで判断しようとして不安になった"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:79
+msgid ""
+"最初の実装案では、手元の ``chatSessions`` を見て、 ``mode.kind`` や ``mode.id`` の値から CODEX"
+" らしさを判定しようとしていた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:82
+msgid ""
+"たとえば、観測できたデータでは ``mode.kind`` が ``agent`` になっていた。 また、``mode.id`` に "
+"``agent`` や ``Plan.agent.md`` のような値が入っていた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:85
+msgid "ここだけを見ると、 「``mode.kind=agent`` なら CODEX かもしれない」 という判定を書きたくなる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:89
+msgid "しかし、これは危ない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:91
+msgid ""
+"手元にあるデータは、あくまで自分がその日に試した操作の結果である。 Ask、Plan、Agent "
+"のすべての組み合わせを網羅しているわけではないし、 VS Code や拡張機能の内部実装がどういう意図でその値を保存しているかも、 "
+"実データだけでは分からない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:96
+msgid "この段階で、 「実装できそう」よりも 「この根拠で判定してよいのか」 を優先して考える必要が出てきた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:102
+msgid "仕様起点で見直す"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:104
+msgid ""
+"そこで、VS Code 本体や関連拡張の公開情報を確認し、 どこまでが仕様として頼れる情報で、 "
+"どこからが手元データによる補完なのかを分けて考えることにした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:108
+msgid "特に確認したかったのは、 VS Code のセッション履歴一覧で表示される「左側のアイコン」が何を意味しているのかである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:111
+msgid "調べた結果、少なくとも次のように考えるのがよさそうだった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:113
+msgid "左側のアイコンは、単純に「CODEX かどうか」だけを示すものではない"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:114
+msgid "進行中、要入力、失敗、未読などの状態アイコンが優先される場合がある"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:115
+msgid "状態アイコンでない場合に、セッション種別やプロバイダー由来のアイコンが出る"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:116
+msgid "CODEX 判定の主根拠は、model 名よりも ``sessionType`` や ``providerType`` 側に寄せるべき"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:118
+msgid "つまり、 「アイコンが付いているから CODEX」 という判定は雑すぎる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:122
+msgid "一方で、 「CODEX 判定は、VS Code のアイコン表示に近い根拠へ寄せるべき」 という方向性は正しい。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:126
+msgid "この違いが大事だった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:129
+msgid "判定の優先順位を決める"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:131
+msgid "最終的に、``export_sessions.py`` のセッション種別判定は、 次の優先順位で考えることにした。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:134
+msgid "``sessionType`` または ``providerType`` が CODEX 系かどうか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:135
+msgid "セッション resource の scheme が CODEX 系かどうか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:136
+msgid "``mode`` 情報から CODEX らしさを補助的に見る"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:137
+msgid "最後の補助として model 名を見る"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:139
+msgid "この順番にした理由は単純である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:141
+msgid ""
+"VS Code の UI がセッション種別として扱っている情報に近いものを優先し、 ``mode`` や model "
+"名のような情報は補助に回したかった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:144
+msgid ""
+"model 名に ``codex`` が含まれるかどうかだけで判定すると、 将来モデル名が変わったときに壊れやすい。 また、model "
+"名は「どのプロバイダーのセッションか」という UI 上の分類とは、 必ずしも同じ意味ではない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:149
+msgid ""
+"実データは無視しないが、主役にはしない。 仕様や UI の考え方を先に置き、 "
+"実データはそれを検証したり、保存形式に合わせて補正したりするために使う。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:154
+msgid "実装で直したこと"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:156
+msgid "今回の作業では、``export_sessions.py`` を次の方向で更新した。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:158
+msgid "``chatSessions`` の JSONL 解析を追加する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:159
+msgid "``transcripts`` と ``chatSessions`` をセッション ID で統合する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:160
+msgid "``--type`` で ``all`` / ``chat`` / ``codex`` を選べるようにする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:161
+msgid "``--recent N`` で直近 N 件を扱えるようにする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:162
+msgid "CODEX 判定を provider / sessionType 優先にする"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:163
+msgid "``chatSessions`` の ``kind=0`` 初期スナップショットを正しく読む"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:164
+msgid "``creationDate`` が epoch ミリ秒の場合に日時へ正規化する"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:166
+msgid "たとえば、利用イメージは次のようになる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:174
+msgid "これで、 VS Code の一覧に近い情報を出すための土台と、 本文ログを書き出すための土台を分けて考えられるようになった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:178
+msgid ""
+"ただし、今回の時点では、 手元の保存データに CODEX 判定へ使える ``providerType`` や ``sessionType`` "
+"のシグナルが十分に残っておらず、 ``--type codex`` は 0 件だった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:182
+msgid "ここで AI は、 判定ロジックと保存データの限界が切り分けられた状態だと整理していた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:185
+msgid "ただ、自分としてはまだ納得できていない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:187
+msgid ""
+"なぜなら、VS Code の GUI 上では CODEX の履歴を確認できているからである。 画面に表示できているということは、 "
+"どこかにはその一覧を構成する情報があるはずだ。 スクリプトで ``--type codex`` が 0 件になるなら、 「CODEX "
+"の履歴がない」のではなく、 「自分のスクリプトが GUI と同じ根拠にまだ到達できていない」 と見るほうが自然である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:195
+msgid ""
+"そのため、今回の結果は完了ではなく途中経過である。 少なくとも、自分にとっては 「いったん限界が分かった」 というより、 「GUI "
+"と保存データの対応関係をまだ取り切れていない」 という感覚のほうが強い。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:202
+msgid ""
+"この違和感を残しておくことも、今回の記事では大事にしたい。 同じように VS Code のチャット履歴や CODEX "
+"セッションの保存場所を調べる人は、 おそらく同じところで引っかかるからである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:207
+msgid "わかったこと"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:209
+msgid "今回いちばん大きかった学びは、 「動く判定」と「根拠のある判定」は違うということだった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:212
+msgid ""
+"手元の JSONL を見れば、 その日に保存されたデータに対して動くロジックは作れる。 しかし、それだけでは、 VS Code の UI "
+"が何を根拠に一覧を構成しているのか、 拡張機能がどの情報をセッション種別として扱っているのかまでは分からない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:218
+msgid ""
+"特に、今回のように 「画面上の表示に近い一覧を作りたい」 という目的では、 保存ファイルの形だけでなく、 UI "
+"がどの概念を表示しているのかを見る必要がある。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:224
+msgid "また、状態アイコンと種別アイコンが混ざる点も重要だった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:226
+msgid ""
+"左側に何かアイコンがあるからといって、 それが常に CODEX という意味になるわけではない。 状態を示すアイコンかもしれないし、 "
+"プロバイダー種別を示すアイコンかもしれない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:231
+msgid "こういうところを雑に扱うと、 後から一覧とフィルタの意味がずれてしまう。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:235
+msgid "次に確認したいこと"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:237
+msgid ""
+"次にやるなら、 CODEX セッションを開いた直後に ``export_sessions.py`` を再実行し、 "
+"そのセッションにどの識別子が保存されるかを確認したい。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:241
+msgid ""
+"加えて、GUI の「チャット / CODEX」切り替えが、 内部的にどのデータ源や provider 情報に結びついているのかを、 "
+"もう少し直接追いかけたい。 画面上の一覧に出ている以上、 VS Code 本体または拡張機能のどこかに、 その一覧を構成する入口があるはずである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:248
+msgid "特に見たいのは次のような情報である。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:250
+msgid "``sessionType`` や ``providerType`` が保存されるか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:251
+msgid "resource の scheme に CODEX 系の情報が出るか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:252
+msgid "Ask、Plan、Agent の違いが保存形式にどう出るか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:253
+msgid "VS Code の一覧表示と ``--list`` の順序、タイトル、日時がどこまで一致するか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:254
+msgid "GUI の CODEX タブに出る履歴と、ローカル保存ファイルの対応関係をどう取れるか"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:256
+msgid "ここまで確認できれば、 ``--type codex`` の精度をもう一段上げられるはずである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:260
+msgid "おわりに"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:262
+msgid "AI とのやりとりをログとして残す仕組みは、 単に JSONL を読めば終わりではなかった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:265
+msgid ""
+"本文を取り出したいのか、 VS Code の一覧に近づけたいのか、 GitHub Copilot と CODEX を分けたいのか。 "
+"目的によって、見るべきデータも、頼るべき根拠も変わる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:270
+msgid "今回は、実データを見て一気に実装しようとしたところで、 「それは仕様理解として十分なのか」 と立ち止まれたのがよかった。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:274
+msgid ""
+"そして同時に、 「AI が一応の整理をしたとしても、人間側の納得感が追いついていないなら、 そこにはまだ記事にする価値のある問いが残っている」 "
+"とも感じた。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:279
+msgid "GUI では見えている。 しかし、スクリプトではまだ取れない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:282
+msgid "このずれをどう埋めるかが、次の調査テーマである。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:284
+msgid "手元の観測を大切にしつつ、 それだけに引っ張られない。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:287
+msgid "個人用の小さなスクリプトでも、 こういう順番で考えると、あとから育てやすい道具になる。"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:291
+msgid "記事情報"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst
+msgid "著者"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:292
+msgid "mtakagishi"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst
+msgid "公開日"
+msgstr ""
+
+#: ../../../blog/posts/2026-05-30-vscode-chat-session-type-detection.rst:293
+msgid "2026-05-30"
+msgstr ""
+

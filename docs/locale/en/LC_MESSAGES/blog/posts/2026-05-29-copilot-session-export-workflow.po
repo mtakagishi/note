@@ -1,0 +1,417 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:mtakagishi"
+"Report-Msgid-Bugs-To:"
+"POT-Creation-Date:2026-05-28 08:16+0900"
+"PO-Revision-Date:YEAR-MO-DA HO:MI+ZONE"
+"Last-Translator:FULL NAME <EMAIL@ADDRESS>"
+"Language:en"
+"Language-Team:en <LL@li.org>"
+"Plural-Forms:nplurals=2; plural=(n != 1);"
+"MIME-Version:1.0"
+"Content-Type:text/plain; charset=utf-8"
+"Content-Transfer-Encoding:8bit"
+"Generated-By:Babel 2.18.0"
+
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:8
+msgid "AIとのやりとりを記事の素材として残すために、Copilotセッションを書き出す"
+msgstr ""
+"Export Copilot sessions to record interactions with AI as material for "
+"articles"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:11
+msgid "はじめに"
+msgstr "Introduction"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:13
+msgid "AI とやりとりしていると、その場ではかなり大事なことを調べたり、 判断したりしているのに、あとから振り返りにくいことがある。"
+msgstr ""
+"When interacting with AI, it can be difficult to look back on something "
+"important at the moment, even though it is investigating or making decisions"
+" on the spot."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:16
+msgid ""
+"チャット欄で右クリックして「すべてコピー」すれば、 会話内容を Markdown として取り出せる。 しかし、毎回クリック操作をして保存するのは、 "
+"継続的な運用としては少し弱い。"
+msgstr ""
+"Right-clicking in the chat pane and choosing \"Copy All\" lets me extract "
+"the conversation as Markdown. But clicking through and saving it manually "
+"every time is not a very solid workflow."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:21
+msgid "今回やりたかったのは、もっと単純である。"
+msgstr "What I wanted to do this time was something simpler."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:23
+msgid ""
+"今まさに行っている Copilot とのやりとりも含めて、 AI と調べたことや考えたことを、現在のリポジトリ配下にログとして残したい。 "
+"そして、そのログをあとから読み返し、 自分が興味を持ったことや、AI との対話で明らかになった知識を、 ブログ記事に仕立てていきたい。"
+msgstr ""
+"I would like to keep a log of what I researched and thought about AI, "
+"including the interaction with Copilot that I am currently doing, under the "
+"current repository. Then, I would like to read the logs later and write blog"
+" articles about things that interested me and the knowledge that became "
+"clear through my interactions with AI."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:29
+msgid "今回は、そのための入口として、 Copilot Chat のセッションを Markdown に書き出すスクリプトを作り始めた記録である。"
+msgstr ""
+"This time, as an entry point for that purpose, I will record how I started "
+"writing a script to export Copilot Chat sessions to Markdown."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:33
+msgid "最初に考えたこと"
+msgstr "Initial Thoughts"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:35
+msgid "最初に調べたのは、既存の Copilot セッションエクスポート拡張が、 どのようにセッション情報を取得しているのかだった。"
+msgstr ""
+"The first thing I looked into was how the existing Copilot session export "
+"extension retrieved session information."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:38
+msgid "期待としては、Copilot の公開 API のようなものから、 セッション一覧、タイトル、日時、本文を取得できると扱いやすい。"
+msgstr ""
+"My hope is that it will be easier to use if the session list, title, date "
+"and time, and body can be obtained from something like Copilot's public API."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:41
+msgid ""
+"しかし、調べてみると、そういう安定した API を使っているというより、 VS Code のユーザーデータ配下に保存されている transcript の"
+" JSONL を読み、 そこからセッション情報を再構成しているようだった。"
+msgstr ""
+"However, when I investigated, I found that rather than using such a stable "
+"API, it seemed to be reading the JSONL of the transcript stored under VS "
+"Code's user data and reconstructing session information from there."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:45
+msgid "つまり、実態としては次のような処理になる。"
+msgstr "In other words, the actual process is as follows."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:47
+msgid "VS Code の ``workspaceStorage`` 配下を探す"
+msgstr "Search under ``workspaceStorage`` in VS Code"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:48
+msgid "``GitHub.copilot-chat/transcripts`` にある ``.jsonl`` を読む"
+msgstr "Read ``.jsonl`` located at ``GitHub.copilot-chat/transcripts``"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:49
+msgid "``session.start`` からセッション ID や開始時刻を取る"
+msgstr "Get session ID and start time from ``session.start``"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:50
+msgid "``user.message`` と ``assistant.message`` を順番に取り出す"
+msgstr "Extract ``user.message`` and ``assistant.message`` in order"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:51
+msgid "最初のユーザー発言からタイトルを作る"
+msgstr "Create a title from the first user comment"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:52
+msgid "Markdown に整形して保存する"
+msgstr "Format and save in Markdown"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:54
+msgid "ここで大事なのは、 これは Copilot の公式な安定 API に乗った方法ではない、という点である。"
+msgstr ""
+"It's important to note that this is not a method based on Copilot's official"
+" stable API."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:57
+msgid ""
+"VS Code や Copilot の内部保存形式が変われば壊れる可能性がある。 ただし、個人の作業ログを残すための道具としては、 "
+"まず十分に試す価値があると判断した。"
+msgstr ""
+"If the internal storage format of VS Code or Copilot changes, it may break. "
+"However, as a tool for keeping a personal work log, I decided that it was "
+"worth trying out first."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:62
+msgid "右クリックでコピーする代わりにスクリプトで保存する"
+msgstr "Saving with a script instead of right-click copy"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:64
+msgid "当初の目的は、 チャット欄から手でコピーする代わりに、 コマンドラインからログを保存できるようにすることだった。"
+msgstr ""
+"The original goal was to be able to save logs from the command line instead "
+"of manually copying them from the chat field."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:68
+msgid "そこで、次のようなスクリプトを考えた。"
+msgstr "So I came up with the following script."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:74
+msgid ""
+"最新のセッションだけを書き出す場合は ``--latest`` を使う。 一覧を確認したい場合は ``--list`` を使う。 "
+"特定のセッションだけを出したい場合は ``--session`` を使う。"
+msgstr ""
+"Use ``--latest`` to write only the latest session. If you want to check the "
+"list, use ``--list``. If you want to display only a specific session, use "
+"``--session``."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:78
+msgid "出力形式は Markdown とした。"
+msgstr "The output format was Markdown."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:80
+msgid ""
+"ブログ記事そのものは reStructuredText で書くが、 生ログとしては Markdown の方が読みやすく、 Copilot "
+"の会話内容をそのまま保持しやすい。"
+msgstr ""
+"The blog posts themselves are written in reStructuredText, but Markdown is "
+"easier to read as a raw log and makes it easier to preserve the Copilot "
+"conversation as-is."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:84
+msgid "ログを記事に変える段階で、 必要な内容を抜き出して reStructuredText の記事に整理すればよい。"
+msgstr ""
+"When turning the log into an article, I can extract the parts I need and "
+"organize them into a reStructuredText post."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:88
+msgid "ログの置き場所を考える"
+msgstr "Think about where to store your logs"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:90
+msgid "スクリプトを書き始めたとき、 最初に迷ったのはファイルの置き場所だった。"
+msgstr ""
+"When I started writing the script, the first thing I wondered about was "
+"where to put the file."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:93
+msgid ""
+"このリポジトリは、あくまで Sphinx + ablog のブログサイトである。 そのため、ブログ本体とは少し違う補助スクリプトを "
+"ルート直下に増やし続けるのは、あまりきれいではない。"
+msgstr ""
+"This repository is strictly a Sphinx + ablog blog site. Therefore, it is not"
+" very clean to keep adding auxiliary scripts that are slightly different "
+"from the main blog directly under the root."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:97
+msgid ""
+"一方で、すでに ``translate-po-ja-en.py`` がルート直下にある。 "
+"これは記事の英語翻訳を支援するために作ったブログ支援ツールである。"
+msgstr ""
+"On the other hand, ``translate-po-ja-en.py`` is already located directly "
+"under the root. This is a blog support tool created to support the "
+"translation of articles into English."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:100
+msgid ""
+"では、今回の ``export_sessions.py`` も ``tools/`` のような場所へ移すべきか。 "
+"それとも、ひとまずルート直下に置くことを許容するか。"
+msgstr ""
+"So, should I also move this ``export_sessions.py`` to a location like "
+"``tools/``? Or should I allow it to be placed directly under the root for "
+"now?"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:103
+msgid ""
+"調べてみると、``translate-po-ja-en.py`` は ``AGENTS.md`` や ``README.md`` "
+"のコマンド例から参照されていた。 移動しても大きな技術的問題はなさそうだが、 ドキュメント更新は必要になる。"
+msgstr ""
+"When I looked into it, I found that ``translate-po-ja-en.py`` was referenced"
+" in the command examples in ``AGENTS.md`` and ``README.md``. It seems that "
+"there will be no major technical problems with the move, but the "
+"documentation will need to be updated."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:108
+msgid "今回は、スクリプト配置の整理よりも、 まずログを残す運用を回し始めることを優先した。"
+msgstr ""
+"This time, rather than organizing the script placement, I prioritized "
+"starting operations to keep logs."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:111
+msgid "そのため、スクリプト本体はルート直下のままとし、 出力先だけを分けることにした。"
+msgstr ""
+"Therefore, I decided to leave the script body directly under the root and "
+"separate only the output destination."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:118
+msgid ""
+"ここに Copilot セッションの Markdown を保存する。 ``_notes`` は手元メモや素材置き場として扱い、 "
+"公開記事そのものとは分けておく。"
+msgstr ""
+"Save the Copilot session Markdown here. Treat ``_notes`` as a storage area "
+"for hand notes and materials, and keep it separate from the published "
+"article itself."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:122
+msgid "さらに、生ログはそのままコミットするものではないため、 ``.gitignore`` で管理対象外にする。"
+msgstr ""
+"Furthermore, since raw logs are not committed as they are, use "
+"``.gitignore`` to make them unmanaged."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:125
+msgid "この方針にすると、流れは次のようになる。"
+msgstr "If you follow this policy, the flow will be as follows."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:139
+msgid "「生ログ」と「公開記事」を分けられるので、 後から扱いやすい。"
+msgstr ""
+"You can separate \"raw logs\" and \"published articles\", making it easier "
+"to handle them later."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:143
+msgid "コミットしてよいスクリプトにする"
+msgstr "Commit the script to make it a good script"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:145
+msgid "次に気になったのは、 スクリプトをコミットしてよい状態になっているかだった。"
+msgstr ""
+"The next thing I was concerned about was whether the script was in a good "
+"state to commit."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:148
+msgid ""
+"初期実装では、VS Code の ``workspaceStorage`` の特定 ID を前提にしていた。 これは自分の環境では動くが、 "
+"そのままコミットすると環境依存の強いスクリプトになってしまう。"
+msgstr ""
+"The initial implementation assumed a specific ID for ``workspaceStorage`` in"
+" VS Code. This works in my environment, but if I commit it as is, it becomes"
+" a script that is highly dependent on the environment."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:152
+msgid ""
+"そこで、固定の workspace ID を前提にするのではなく、 既定では ``workspaceStorage`` 配下を走査し、 "
+"``GitHub.copilot-chat/transcripts`` が存在するディレクトリを探す形にした。"
+msgstr ""
+"Therefore, instead of assuming a fixed workspace ID, by default it scans "
+"under ``workspaceStorage`` and looks for the directory where "
+"``GitHub.copilot-chat/transcripts`` exists."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:156
+msgid "必要であれば、オプションで対象を絞れる。"
+msgstr "If necessary, you can narrow down the target with options."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:163
+msgid "通常は自動探索で使い、 必要なときだけ明示指定できるようにしておく。"
+msgstr ""
+"Normally, it is used for automatic search, so that it can be explicitly "
+"specified only when necessary."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:166
+msgid "これで、個人の workspace ID を直書きせずに済む。"
+msgstr "This eliminates the need to directly write personal workspace IDs."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:168
+msgid ""
+"この変更は、単に見た目をきれいにするためではない。 リポジトリに入れるスクリプトは、 あとから自分が別の環境で見ても意味がわかり、 "
+"必要なら少し直して使える状態にしておきたい。"
+msgstr ""
+"This change was not just about keeping things tidy. A script committed to "
+"the repository should still make sense when I look at it later in another "
+"environment, and it should be easy to adjust if needed."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:173
+msgid "環境固有の値が混ざったままだと、 その時点の作業メモとしては動いても、 リポジトリに残す道具としては弱くなる。"
+msgstr ""
+"If environment-specific values ​​remain mixed in, it may work as a work memo"
+" at that point, but it will be weak as a tool to keep in the repository."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:178
+msgid "今回わかったこと"
+msgstr "What I learned this time"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:180
+msgid "今回の作業で見えてきたのは、 AI とのやりとりをそのまま保存するだけでは、 まだブログ記事にはならないということだった。"
+msgstr ""
+"What became clear through this work is that simply saving the interactions "
+"with AI as-is is not enough to make them into a blog post."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:184
+msgid "ログには、調査の途中経過、迷い、確認、実装判断が混ざっている。 それは作業記録としては価値があるが、 読者にそのまま読ませるものではない。"
+msgstr ""
+"The log contains a mixture of progress during the investigation, "
+"hesitations, confirmations, and implementation decisions. It is valuable as "
+"a work record, but it is not meant to be read directly by the reader."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:188
+msgid "記事にするときには、次のような整理が必要になる。"
+msgstr "When writing an article, you will need to organize it as follows."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:190
+msgid "何をしたかったのか"
+msgstr "what I wanted to do"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:191
+msgid "どこで迷ったのか"
+msgstr "where I hesitated"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:192
+msgid "どんな判断をしたのか"
+msgstr "What decision did you make?"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:193
+msgid "実際にどう実装したのか"
+msgstr "How was it actually implemented?"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:194
+msgid "次回以降に使える知識は何か"
+msgstr "What knowledge can you use next time?"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:196
+msgid "今回でいえば、主題は Copilot セッションのエクスポートそのものだけではない。"
+msgstr "This time, we're not just talking about exporting Copilot sessions."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:198
+msgid ""
+"むしろ、 AI との対話を一時的なチャットで終わらせず、 作業ログとして残し、 そこからブログ記事を作る流れを整えようとしている点が重要である。"
+msgstr ""
+"What matters more is building a flow where conversations with AI do not end "
+"as temporary chats, but are kept as work logs and later turned into blog "
+"posts."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:203
+msgid "ログを残す道具を作ることは、 記事作成の前処理でもある。"
+msgstr ""
+"Creating a tool to keep logs is also a preprocessing process for writing "
+"articles."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:207
+msgid "今後の使い方"
+msgstr "Future usage"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:209
+msgid "今後は、AI とまとまった調査や実装相談をしたあとに、 次のようにログを保存する。"
+msgstr ""
+"In the future, after comprehensive research and implementation consultation "
+"with AI, logs will be saved as follows."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:216
+msgid ""
+"保存された Markdown を読み返し、 記事にできそうなテーマがあれば、 ``docs/blog/posts/`` に未来日付の記事としてまとめる。"
+msgstr ""
+"Read over the saved Markdown, and if you find a theme that could be written "
+"about as an article, compile it as a future-dated article in "
+"``docs/blog/posts/``."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:220
+msgid "このとき、生ログの内容を全部記事にする必要はない。"
+msgstr ""
+"At this time, there is no need to write an article about the entire contents"
+" of the raw log."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:222
+msgid "むしろ、ログは材料であり、 記事はそこから読者向けに構成し直したものと考える。"
+msgstr ""
+"Rather, I think of logs as material, and articles that are restructured for "
+"readers from there."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:225
+msgid "必要であれば、 今後は次のような改善もできそうである。"
+msgstr "If necessary, the following improvements could be made in the future."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:228
+msgid "タイトル生成をもう少し読みやすくする"
+msgstr "Make title generation a little more readable"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:229
+msgid "出力 Markdown から秘密情報らしきものを検出する"
+msgstr "Detecting what appears to be secret information from output Markdown"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:230
+msgid "特定リポジトリのセッションだけを絞り込む"
+msgstr "Narrow down sessions to specific repositories"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:231
+msgid "ログから記事の下書き候補を生成する"
+msgstr "Generate article draft suggestions from logs"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:232
+msgid "ablog 記事化までの専用エージェント定義を育てる"
+msgstr ""
+"Develop a dedicated agent definition for turning logs into ablog posts"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:234
+msgid "特に最後の点は、このブログの運用と相性がよい。"
+msgstr ""
+"The last point in particular goes well with the operation of this blog."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:236
+msgid ""
+"ログを保存するだけでなく、 ログから記事を書くエージェントを定義しておけば、 次回以降は「このログを元に記事を書いてほしい」と頼むだけで、 "
+"日付、置き場所、記事形式、確認事項をそろえやすくなる。"
+msgstr ""
+"If you define an agent that not only saves logs but also writes articles "
+"from them, next time you can simply ask them to write an article based on "
+"this log, and it will be easier to arrange the date, location, article "
+"format, and confirmation items."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:242
+msgid "おわりに"
+msgstr "Closing"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:244
+msgid "AI との会話は、その場で問題を解くためだけに使うこともできる。"
+msgstr ""
+"Conversations with AI can also be used just to solve problems on the spot."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:246
+msgid ""
+"しかし、調べたことや判断したことをログとして残せば、 あとから自分の知識として再利用できる。 さらに、ブログ記事に整理すれば、 "
+"同じようなことを考えている誰かの役にも立つかもしれない。"
+msgstr ""
+"However, if you keep a log of your research and decisions, you can reuse it "
+"later as your own knowledge. Furthermore, if I organize it into a blog post,"
+" it might be helpful to someone who is thinking about the same thing."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:251
+msgid "今回は、そのための最初の導線として、 Copilot セッションを Markdown に書き出す仕組みを作り始めた。"
+msgstr ""
+"This time, as a first step toward that end, I started creating a mechanism "
+"to export Copilot sessions to Markdown."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:254
+msgid "まだ内部保存形式に依存する部分はあるが、 個人の作業ログを残す道具としては十分に使い始められそうである。"
+msgstr ""
+"Although there are still some parts that depend on the internal storage "
+"format, it seems like it will be enough to start using it as a tool for "
+"keeping personal work logs."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:257
+msgid "まずはログを残す。 次に読み返す。 そして、記事にする。"
+msgstr "First, leave a log. Then read it again. And write an article."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:261
+msgid "この流れを、少しずつ育てていきたい。"
+msgstr "I want to grow this workflow little by little."
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:264
+msgid "記事情報"
+msgstr "Article information"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst
+msgid "著者"
+msgstr "author"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:265
+msgid "mtakagishi"
+msgstr "mtakagishi"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst
+msgid "公開日"
+msgstr "Published"
+#: ../../../blog/posts/2026-05-29-copilot-session-export-workflow.rst:266
+msgid "2026-05-29"
+msgstr "2026-05-29"
