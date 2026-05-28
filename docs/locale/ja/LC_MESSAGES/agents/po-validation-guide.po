@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 21:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../agents/po-validation-guide.md:1
+msgid "翻訳検証ガイド（ja -> en）"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:3
+msgid "機械翻訳後の `.po` を公開品質へ引き上げるための運用ガイド。"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:5
+msgid "対象"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:7
+msgid "`docs/locale/en/LC_MESSAGES/` 配下の `.po`"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:8
+msgid "生成直後、または翻訳直後のファイル"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:10
+msgid "推奨フロー"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:12
+msgid "gettext 更新: `rye run doit gettext`"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:13
+msgid "機械翻訳: `rye run python translate-po-ja-en.py <対象.po>`"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:14
+msgid "機械チェック: `rye run doit intl_validate`"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:15
+msgid "人手 + AI で意味確認"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:16
+msgid "必要な箇所のみ修正"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:18
+msgid "機械チェックの見方"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:20
+msgid "`docs/_build/_intl/validation-report.md` を確認する。"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:22
+msgid "Untranslated: `msgstr` が空"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:23
+msgid "Fuzzy: `#, fuzzy` が残っている"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:24
+msgid "Same as msgid: 英語訳が原文と同一（未翻訳疑い）"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:26
+msgid "品質チェック観点"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:28
+msgid "意味一致: 日本語原文の意図を保っているか"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:29
+msgid "用語統一: 同じ用語が同じ英語で訳されているか"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:30
+msgid "文体自然さ: 直訳調で不自然になっていないか"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:31
+msgid "技術正確性: コマンド名、オプション、識別子を変えていないか"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:32
+msgid "保守性: 長文を無理に1文にせず、読みやすさを維持しているか"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:34
+msgid "AI レビュー用プロンプト雛形"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:50
+msgid "運用ルール"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:52
+msgid "自動修正より先に、検出と根拠提示を優先する"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:53
+msgid "変更理由は必ず日本語で残す"
+msgstr ""
+
+#: ../../../agents/po-validation-guide.md:54
+msgid "`.pot` と `.mo` は生成物としてコミットしない"
+msgstr ""
+

@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 21:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../agents/log-extraction-checklist.md:1
+msgid "ログ記事化チェックリスト"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:3
+msgid "AI ログから記事を作る前に、最低限の品質をそろえるためのチェックリスト。"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:5
+msgid "使い方"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:7
+msgid "`export_sessions.py` で対象ログを取得する。"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:8
+msgid "本チェックリストで抽出内容を確認する。"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:9
+msgid "不足があれば、記事化前に追加質問する。"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:11
+msgid "必須チェック"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:13
+msgid "[ ] 何をしたかったか（目的）が 1 文で言える"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:14
+msgid "[ ] なぜ調べたか（背景・動機）が明記されている"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:15
+msgid "[ ] 違和感や困りごとの起点がある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:16
+msgid "[ ] 試したことが時系列で整理されている"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:17
+msgid "[ ] つまずいた点と原因仮説が書ける"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:18
+msgid "[ ] わかったことと未解決点が分離されている"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:19
+msgid "[ ] 次に試す行動が 1 つ以上ある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:21
+msgid "事実性チェック"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:23
+msgid "[ ] 断定文にログ上の根拠がある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:24
+msgid "[ ] 推測は推測と明示している"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:25
+msgid "[ ] 外部情報を使った箇所は出典を確認済み"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:26
+msgid "[ ] 秘密情報や個人情報が含まれていない"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:28
+msgid "読者価値チェック"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:30
+msgid "[ ] 同じ悩みの読者が検索しそうな語がある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:31
+msgid "[ ] 再現可能なコマンドや手順がある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:32
+msgid "[ ] 途中経過なら途中経過と明言している"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:33
+msgid "[ ] 学びが「次にどう使えるか」まで書かれている"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:35
+msgid "自己検証プロンプト雛形"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:53
+msgid "インタビューが必要なサイン"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:55
+msgid "ログだけでは主題が1つに定まらない"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:56
+msgid "AIの結論と本人の納得感がズレている"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:57
+msgid "公開可否が判断しづらい固有名詞がある"
+msgstr ""
+
+#: ../../../agents/log-extraction-checklist.md:58
+msgid "読者向けの検索語が不足している"
+msgstr ""
+

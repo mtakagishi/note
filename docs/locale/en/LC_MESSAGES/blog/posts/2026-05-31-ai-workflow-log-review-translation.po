@@ -1,0 +1,547 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:mtakagishi"
+"Report-Msgid-Bugs-To:"
+"POT-Creation-Date:2026-05-28 21:56+0900"
+"PO-Revision-Date:YEAR-MO-DA HO:MI+ZONE"
+"Last-Translator:FULL NAME <EMAIL@ADDRESS>"
+"Language:en"
+"Language-Team:en <LL@li.org>"
+"Plural-Forms:nplurals=2; plural=(n != 1);"
+"MIME-Version:1.0"
+"Content-Type:text/plain; charset=utf-8"
+"Content-Transfer-Encoding:8bit"
+"Generated-By:Babel 2.18.0"
+
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:8
+msgid "AI との作業を、ログから翻訳レビューまでの運用に落とし込む"
+msgstr ""
+"Turning AI Work into a Workflow from Logs to Translation Review"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:10
+msgid "AI をもっと上手く使うには、どうすればよいのだろうか。"
+msgstr "How can we use AI better?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:12
+msgid "この問い自体は大きい。 プロンプトの書き方、ツールの選び方、モデルの使い分け、作業の分解など、 考えることはいくらでもある。"
+msgstr ""
+"That is a big question in itself. There are countless things to think about:"
+" how to write prompts, how to choose tools, how to use different models, and"
+" how to break work down."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:16
+msgid "ただ、自分のリポジトリに引き寄せて考えると、 すぐに試せることはかなり具体的だった。"
+msgstr ""
+"But when I brought the question back to my own repository, the things I could"
+" try right away became much more concrete."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:19
+msgid ""
+"このブログでは、AI とのやりとりをログとして保存し、 そのログをもとに日本語記事を書く流れを作り始めている。 さらに、日本語記事を gettext の"
+" ``.po`` に展開し、 機械翻訳したあと、AI と人間のレビューで英語として自然に整える、 という運用も見えてきている。"
+msgstr ""
+"For this blog, I have started building a flow where I save interactions with"
+" AI as logs and write Japanese posts from those logs. I can also see the next"
+" part of the workflow taking shape: extracting Japanese posts into gettext "
+"``.po`` files, machine-translating them, and then using both AI and human "
+"review to turn them into natural English."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:25
+msgid ""
+"今回のセッションでは、 外部の AI 活用トピックをそのまま真似るのではなく、 このリポジトリにすぐ取り込める形へ落とし込むことを目標にした。"
+msgstr ""
+"In this session, the goal was not to copy external AI usage tips as-is, but "
+"to turn them into something I could immediately adopt in this repository."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:29
+msgid "結果として、次の流れを整備することになった。"
+msgstr "As a result, I ended up refining the following flow."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:31
+msgid "AI とのセッションをログとして保存する"
+msgstr "Log sessions with AI"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:32
+msgid "ログから日本語記事を書く"
+msgstr "Write Japanese articles from logs"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:33
+msgid "人間が記事としてレビューする"
+msgstr "Have a human review the post"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:34
+msgid "gettext で翻訳対象を生成する"
+msgstr "Generate translation targets with gettext"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:35
+msgid "機械翻訳する"
+msgstr "Machine-translate it"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:36
+msgid "自然な英語になるように、AI と人間で修正する"
+msgstr "Have AI and a human revise it into natural English"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:38
+msgid "やりたいことは派手ではない。 しかし、毎回の作業で迷わないようにするには、 こういう地味な運用の固定がかなり効く。"
+msgstr ""
+"What I want to do is not flashy. But if I want to avoid getting lost each "
+"time I work through the process, fixing these plain workflow steps in place "
+"is surprisingly effective."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:43
+msgid "最初に考えたこと"
+msgstr "What I Thought First"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:45
+msgid "最初の関心は、 「AI 活用ノウハウをこのブログ運用にどう取り入れるか」 だった。"
+msgstr ""
+"My first concern was: \"How can I incorporate AI know-how into this blog "
+"workflow?\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:49
+msgid "この時点で、リポジトリにはすでにいくつかの材料があった。"
+msgstr "At that point, the repository already had several pieces in place."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:51
+msgid ""
+"``export_sessions.py`` では、 VS Code / Copilot Chat のセッションを Markdown として書き出せる。"
+msgstr ""
+"``export_sessions.py`` allows you to export VS Code / Copilot Chat sessions "
+"as Markdown."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:54
+msgid "``docs/agents/ai-log-blog-writer.md`` には、 ログから記事を書くときのエージェント向け手順がある。"
+msgstr ""
+"``docs/agents/ai-log-blog-writer.md`` contains instructions for agents to "
+"write articles from logs."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:57
+msgid "``translate-po-ja-en.py`` では、 英語版 ``.po`` の機械翻訳を補助できる。"
+msgstr ""
+"``translate-po-ja-en.py`` can assist with machine translation for English "
+"``.po`` files."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:60
+msgid ""
+"Sphinx 側には gettext のタスクがあり、 ``rye run doit gettext`` や ``rye run doit doc`` "
+"で翻訳とビルドの流れを回せる。"
+msgstr ""
+"On the Sphinx side, there are gettext tasks, and I can run the translation "
+"and build flow with ``rye run doit gettext`` and ``rye run doit doc``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:63
+msgid "つまり、部品はすでにあった。"
+msgstr "In other words, the parts were already there."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:65
+msgid "ただし、部品があることと、毎回安定して使えることは別である。"
+msgstr ""
+"However, having the pieces and being able to use them reliably every time are"
+" two different things."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:67
+msgid "ログを読んで記事にする段階では、 AI の要約をそのまま受け取ると、 事実と推測が混ざるかもしれない。"
+msgstr ""
+"When turning logs into posts, simply accepting an AI summary as-is can mix "
+"facts and speculation together."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:71
+msgid "翻訳では、 機械翻訳の結果が一見それらしく見えても、 日本語原文との意味ズレや、技術語の壊れ方を見逃すかもしれない。"
+msgstr ""
+"In translation, machine-translated text can look plausible at first glance "
+"while still drifting from the Japanese source text or breaking technical "
+"terms."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:75
+msgid "そこで今回の中心は、 「AI に任せる範囲を広げる」ことではなく、 「AI の出力を人間が見直しやすくする型を作る」ことになった。"
+msgstr ""
+"So the focus this time was not to \"expand the range of work handed to AI,\""
+" but to \"create a structure that makes AI output easier for humans to "
+"review.\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:80
+msgid "ログ記事化のチェックリストを作る"
+msgstr "Create a Checklist for Turning Logs into Posts"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:82
+msgid "まず追加されたのが、 ``docs/agents/log-extraction-checklist.md`` だった。"
+msgstr ""
+"The first thing added was ``docs/agents/log-extraction-checklist.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:85
+msgid "これは、AI ログから記事を書く前に見るチェックリストである。"
+msgstr ""
+"This is a checklist to look at before writing an article from AI logs."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:87
+msgid "主な観点は次のようなものだった。"
+msgstr "The main review points were as follows."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:89
+msgid "何をしたかったかを 1 文で言えるか"
+msgstr "Can I state what I wanted to do in one sentence?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:90
+msgid "なぜ調べたのかが書けるか"
+msgstr "Can I explain why I investigated it?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:91
+msgid "違和感や困りごとの起点があるか"
+msgstr "Is there a clear source of friction or confusion?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:92
+msgid "試したことが時系列で整理されているか"
+msgstr "Are the things I tried organized chronologically?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:93
+msgid "わかったことと未解決点が分かれているか"
+msgstr ""
+"Are the things I learned separated from the unresolved points?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:94
+msgid "次に試す行動が残っているか"
+msgstr "Is there at least one next action left to try?"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:96
+msgid "この観点は、ログを記事にするときにかなり重要だと思う。"
+msgstr ""
+"I think these perspectives matter a lot when turning logs into posts."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:98
+msgid "AI との会話ログは、そのままだと会話の順番に引っ張られる。 しかし、読者が読みたいのは、 会話の逐語的な再現ではない。"
+msgstr ""
+"If I leave a conversation log with AI as-is, it is pulled along by the order "
+"of the conversation. But readers do not want a verbatim reproduction of that "
+"conversation."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:102
+msgid "読者が知りたいのは、 なぜその調査を始めたのか、 どこで困ったのか、 何を試したのか、 どこまでわかって、 何がまだ残っているのかである。"
+msgstr ""
+"What readers want to know is why I started the investigation, where I got "
+"stuck, what I tried, how far I got, and what still remains."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:109
+msgid "ログには材料がある。 けれど、記事にするには、 その材料を読者向けの構造に並べ替える必要がある。"
+msgstr ""
+"The log contains the raw material. But to make it into a post, that material"
+" has to be rearranged into a structure for readers."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:113
+msgid "そのために、チェックリストには 「事実」「推測」「未確認」を分ける自己検証プロンプトも入れた。"
+msgstr ""
+"For that reason, I also added a self-check prompt to the checklist that "
+"separates \"facts,\" \"speculation,\" and \"unconfirmed items.\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:116
+msgid ""
+"これは、自分にとってかなり実用的な追加だった。 AI に記事素材を抽出させるだけでなく、 その抽出結果に対して、 もう一度 AI "
+"に批評させる流れを作れるからである。"
+msgstr ""
+"This was a very practical addition for me. It lets me do more than ask AI to"
+" extract material for a post: I can also ask AI to critique the extracted "
+"material once more."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:121
+msgid "AI の出力をそのまま信じるのではなく、 AI に一度点検させ、そのうえで人間が見る。"
+msgstr ""
+"Instead of trusting AI output as-is, I can have AI inspect it once, and then"
+" have a human review it."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:124
+msgid "この順番にすると、 人間のレビューは少し楽になる。"
+msgstr "This order makes human review a little easier."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:128
+msgid "翻訳レビューの入口を作る"
+msgstr "Create an Entry Point for Translation Review"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:130
+msgid "次に整備したのが、 翻訳まわりの運用だった。"
+msgstr "The next thing I organized was the translation workflow."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:133
+msgid ""
+"新しく ``docs/agents/po-validation-guide.md`` と ``docs/agents/translation-"
+"workflow.md`` が追加された。"
+msgstr ""
+"I added two new files: ``docs/agents/po-validation-guide.md`` and "
+"``docs/agents/translation-workflow.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:136
+msgid "``translation-workflow.md`` は、 日本語記事を英語公開するまでの大まかな流れをまとめる文書である。"
+msgstr ""
+"``translation-workflow.md`` summarizes the broad flow from a Japanese post "
+"to English publication."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:139
+msgid "流れは次のようになる。"
+msgstr "The flow is as follows."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:148
+msgid "このうち、今回のポイントは ``intl_validate`` である。"
+msgstr "The key point in that flow is ``intl_validate``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:150
+msgid "``dodo.py`` に新しいタスクを追加し、 英語 ``.po`` の状態を機械的に確認できるようにした。"
+msgstr ""
+"I added a new task to ``dodo.py`` so the state of English ``.po`` files can "
+"be checked mechanically."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:153
+msgid "確認するのは、主に次の3つである。"
+msgstr "The task mainly checks three things:"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:155
+msgid "``msgstr`` が空の未翻訳"
+msgstr "Untranslated entries where ``msgstr`` is empty"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:156
+msgid "``#, fuzzy`` が残っている翻訳"
+msgstr "Translations that still have ``#, fuzzy``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:157
+msgid "``msgid`` と ``msgstr`` が同じままの項目"
+msgstr "Entries where ``msgid`` and ``msgstr`` are still the same"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:159
+msgid "レポートは ``docs/_build/_intl/validation-report.md`` に出る。"
+msgstr "The report is written to ``docs/_build/_intl/validation-report.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:162
+msgid "最初は単純な集計でよいと考えていたが、 セッションの途中で、優先度も見たいという話になった。"
+msgstr ""
+"At first, I thought a simple summary would be enough, but partway through "
+"the session we started talking about wanting to see priorities as well."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:165
+msgid ""
+"そこで、未翻訳、fuzzy、原文と同一の件数をもとに、 ``Priority score`` と ``Priority`` の列も出すようにした。"
+msgstr ""
+"So I added ``Priority score`` and ``Priority`` columns based on the counts "
+"of untranslated, fuzzy, and source-identical entries."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:168
+msgid "このあたりは、 「AI に直してもらう」前の地ならしである。"
+msgstr "This is groundwork before asking AI to fix anything."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:171
+msgid "翻訳レビューでいちばん困るのは、 どこから見ればよいかわからないことである。 すべてを同じ重さで見ると、毎回の作業が重くなる。"
+msgstr ""
+"The hardest part of translation review is not knowing where to start. If "
+"everything has the same weight, each review becomes heavy."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:175
+msgid "まず機械的に危ない箇所を拾い、 優先度の高いファイルから見る。"
+msgstr ""
+"First, mechanically identify risky areas, then start with the highest-"
+"priority files."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:178
+msgid ""
+"そのうえで、``po-validation-guide.md`` の観点に沿って、 意味一致、用語統一、英語としての自然さ、技術語の保持を確認する。"
+msgstr ""
+"After that, I can use the viewpoints in ``po-validation-guide.md`` to check "
+"meaning alignment, terminology consistency, natural English, and preservation"
+" of technical terms."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:181
+msgid "この流れなら、 機械翻訳を初稿として使いつつ、 公開前に人間が見るべき場所をかなり絞れる。"
+msgstr ""
+"With this flow, machine translation can be used as a first draft while still"
+" narrowing down the places a human should check before publication."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:186
+msgid "人間レビューを運用の中心に残す"
+msgstr "Keep Human Review at the Center of the Workflow"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:188
+msgid "今回、地味に大事だったのは、 「人間によるレビュー」を消さなかったことだと思う。"
+msgstr ""
+"I think the quietly important point this time was that I did not remove "
+"\"human review.\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:191
+msgid "AI の活用を考えると、 つい自動化を増やしたくなる。"
+msgstr ""
+"When thinking about AI usage, it is tempting to increase automation."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:194
+msgid "ログ保存も、記事作成も、翻訳も、翻訳レビューも、 できるだけ AI に任せたくなる。"
+msgstr ""
+"It becomes tempting to leave log storage, article writing, translation, and "
+"translation review to AI as much as possible."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:197
+msgid "しかし、このブログでは日本語原稿が正である。 英語版は翻訳版であり、 意味の確認や変更理由は日本語で残す必要がある。"
+msgstr ""
+"But for this blog, the Japanese draft is the source of truth. The English "
+"version is a translated version, and checks of meaning and reasons for "
+"changes need to be recorded in Japanese."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:201
+msgid "その前提では、 AI に任せる部分と、 人間が判断する部分を分けておくほうがよい。"
+msgstr ""
+"Given that premise, it is better to separate the parts left to AI from the "
+"parts that humans should judge."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:205
+msgid ""
+"たとえば、ログから記事にするとき、 AI は時系列の整理や論点抽出には強い。 一方で、 「自分は本当にその結論に納得しているか」 "
+"「この記事として公開してよい粒度か」 「未解決の違和感を消してしまっていないか」 は、人間が見るべきところである。"
+msgstr ""
+"For example, when turning logs into posts, AI is good at organizing events "
+"chronologically and extracting discussion points. On the other hand, humans "
+"should check questions such as: \"Do I really agree with that conclusion?\" "
+"\"Is this the right level of detail to publish as a post?\" \"Have any "
+"unresolved concerns been erased?\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:213
+msgid "翻訳でも同じである。"
+msgstr "The same is true for translation."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:215
+msgid ""
+"AI は自然な英語への修正案を出せる。 しかし、 その修正が日本語原文の意図を保っているか、 技術的な固有名詞やコマンドを壊していないかは、 "
+"日本語原文と照らして確認する必要がある。"
+msgstr ""
+"AI can suggest revisions toward natural English. However, those revisions "
+"still need to be checked against the Japanese source text to confirm that "
+"they preserve the original intent and do not break technical proper nouns or"
+" commands."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:221
+msgid "今回作った文書は、 AI を信用しないためのものではない。"
+msgstr "The documents I created this time are not meant to distrust AI."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:224
+msgid "むしろ、AI を継続的に使うために、 人間がレビューしやすい場所へ出力を持ってくるためのものだと思う。"
+msgstr ""
+"Rather, I think they are meant to bring AI output into a form that humans can"
+" review more easily, so that AI can continue to be used."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:228
+msgid "実演したかった流れ"
+msgstr "The Flow I Wanted to Demonstrate"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:230
+msgid "セッションの最後では、 今回のやりとり自体を題材にして、 一連の流れを実演したいという話になった。"
+msgstr ""
+"At the end of the session, we talked about demonstrating the whole flow using"
+" this exchange itself as the subject."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:234
+msgid "想定していた流れは次の通りである。"
+msgstr "The assumed flow was as follows."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:236
+msgid "``export_sessions.py`` でログを保存する"
+msgstr "Save logs with ``export_sessions.py``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:237
+msgid "保存されたログから日本語記事を書く"
+msgstr "Write Japanese articles from saved logs"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:238
+msgid "人間が記事をレビューする"
+msgstr "Have a human review the post"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:239
+msgid "``rye run doit gettext`` で翻訳対象を作る"
+msgstr "Create translation targets with ``rye run doit gettext``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:240
+msgid "``translate-po-ja-en.py`` で機械翻訳する"
+msgstr "Machine-translate with ``translate-po-ja-en.py``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:241
+msgid "``intl_validate`` で未翻訳や怪しい箇所を確認する"
+msgstr "Check untranslated or suspicious parts with ``intl_validate``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:242
+msgid "``po-validation-guide.md`` に沿って自然な英語へ修正する"
+msgstr "Revise it into natural English using ``po-validation-guide.md``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:243
+msgid "``rye run doit doc`` でビルド確認する"
+msgstr "Check the build with ``rye run doit doc``"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:245
+msgid "そして、後日同じことを思い出すために、 どのファイルを見ればよいかも整理した。"
+msgstr ""
+"I also organized which files to look at later when I need to remember how to"
+" do the same thing again."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:248
+msgid ""
+"ログから記事化するなら、 ``docs/agents/ai-log-blog-writer.md`` と ``docs/agents/log-"
+"extraction-checklist.md`` を見る。"
+msgstr ""
+"When turning logs into posts, I should look at ``docs/agents/ai-log-blog-"
+"writer.md`` and ``docs/agents/log-extraction-checklist.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:252
+msgid "翻訳の流れを思い出すなら、 ``docs/agents/translation-workflow.md`` を見る。"
+msgstr ""
+"To recall the translation flow, I should look at ``docs/agents/translation-"
+"workflow.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:255
+msgid "翻訳レビューの観点を思い出すなら、 ``docs/agents/po-validation-guide.md`` を見る。"
+msgstr ""
+"To recall the translation review viewpoints, I should look at "
+"``docs/agents/po-validation-guide.md``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:258
+msgid "コマンドやタスクの実体を確認するなら、 ``dodo.py`` と ``translate-po-ja-en.py`` を見る。"
+msgstr ""
+"To check the actual commands and tasks, I should look at ``dodo.py`` and "
+"``translate-po-ja-en.py``."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:261
+msgid "この時点で、 実演用の1ページランブックを作る案も出ていた。"
+msgstr ""
+"At that point, we also discussed creating a one-page runbook for the "
+"demonstration."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:264
+msgid "ただ、ログを見る限り、 ``docs/agents/session-demo-runbook.md`` は最終的には作成されていない。"
+msgstr ""
+"However, as far as the logs show, ``docs/agents/session-demo-runbook.md`` "
+"was never actually created."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:267
+msgid ""
+"つまり、今回できたことは、 チェックリスト、翻訳レビューガイド、翻訳ワークフロー、検証タスクの整備までである。 "
+"実演用ランブックは、次に追加するとよさそうな残課題として残った。"
+msgstr ""
+"In other words, what was completed this time was the setup of the checklist,"
+" the translation review guide, the translation workflow, and the validation "
+"task. The demonstration runbook remained as a useful next item to add."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:272
+msgid "わかったこと"
+msgstr "What I Learned"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:274
+msgid "今回の学びは、 AI 活用は「便利なプロンプトを1つ覚える」だけでは続かない、 ということだった。"
+msgstr ""
+"The lesson this time was that AI usage does not continue just by "
+"\"remembering one useful prompt.\""
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:278
+msgid "少なくとも、自分のブログ運用では、 次のような流れ全体を整えるほうが効きそうである。"
+msgstr ""
+"At least for my own blog workflow, it seems more effective to set up the "
+"whole flow like this."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:281
+msgid "入力を残す"
+msgstr "Keep the input"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:282
+msgid "AI に整理させる"
+msgstr "Have AI organize it"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:283
+msgid "AI の整理を検証する"
+msgstr "Validate AI's organization"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:284
+msgid "人間が納得できる形へ直す"
+msgstr "Revise it into a form a human can accept"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:285
+msgid "翻訳する"
+msgstr "Translate it"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:286
+msgid "翻訳を機械的に点検する"
+msgstr "Check the translation mechanically"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:287
+msgid "最後に人間が意味を確認する"
+msgstr "Finally, have a human confirm the meaning"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:289
+msgid "AI を使う場所は増えている。 しかし、人間が見る場所も同時に明確になっている。"
+msgstr ""
+"The number of places where I use AI is increasing. At the same time, the "
+"places where humans need to look are becoming clearer."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:292
+msgid "これは、自動化が進んでいないというより、 自動化を運用に乗せるための足場ができてきた、 と考えるほうが近い。"
+msgstr ""
+"Rather than saying automation has not progressed, it feels more accurate to "
+"say that the footing for putting automation into the workflow is taking "
+"shape."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:296
+msgid ""
+"特に、今回のように個人ブログであっても、 「日本語原文を正とする」 「英語版は翻訳として扱う」 「変更理由は日本語で残す」 というルールがあると、 AI"
+" の出力をそのまま公開するわけにはいかない。"
+msgstr ""
+"Especially for a personal blog like this one, rules such as \"the Japanese "
+"source text is authoritative,\" \"the English version is treated as a "
+"translation,\" and \"reasons for changes are recorded in Japanese\" mean "
+"that I cannot publish AI output as-is."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:303
+msgid "だからこそ、 チェックリストや検証レポートが効いてくる。"
+msgstr "That's why checklists and verification reports are so effective."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:306
+msgid ""
+"毎回の作業で、 何を見ればよいか、 どこまで確認すればよいか、 どの順番で進めればよいかが決まっていれば、 AI を使うこと自体に余計な迷いが減る。"
+msgstr ""
+"If I know what to look at, how far to check, and what order to follow each "
+"time, there is less unnecessary hesitation around using AI itself."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:313
+msgid "次にやること"
+msgstr "What to Do Next"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:315
+msgid "次にやるなら、 まずは今回の題材で、実際にこの流れを最後まで通したい。"
+msgstr ""
+"If I do this next, I want to start with this topic and actually run the flow"
+" all the way through."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:318
+msgid ""
+"この記事自体を日本語原稿として確定し、 gettext を更新し、 英語 ``.po`` を機械翻訳し、 ``intl_validate`` "
+"のレポートを確認し、 自然な英語への修正まで進める。"
+msgstr ""
+"I will finalize this post as the Japanese source text, update gettext, "
+"machine-translate the English ``.po`` file, check the ``intl_validate`` "
+"report, and continue through revisions into natural English."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:324
+msgid "そのうえで、 後日見返すための ``docs/agents/session-demo-runbook.md`` を追加するとよさそうである。"
+msgstr ""
+"After that, it would be useful to add ``docs/agents/session-demo-"
+"runbook.md`` so I can refer back to it later."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:328
+msgid ""
+"今はまだ、手順が複数のファイルに分かれている。 それ自体は悪くないが、 実演当日に見る入口としては、 1ページのランブックがあったほうが迷いにくい。"
+msgstr ""
+"For now, the steps are still split across several files. That is not bad by "
+"itself, but on the day of a demonstration, a one-page runbook would make it "
+"easier to avoid getting lost."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:333
+msgid "今回のセッションは、 AI 活用の抽象論ではなく、 自分のリポジトリの運用を少しだけ前に進める作業だった。"
+msgstr ""
+"This session was not an abstract discussion of AI usage. It was work that "
+"moved the workflow of my own repository forward a little."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:337
+msgid "ログを残し、記事にし、レビューし、翻訳し、またレビューする。"
+msgstr "Leave logs, turn them into posts, review, translate, and review again."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:339
+msgid "この一連の流れを育てていけば、 AI との作業そのものが、 次の記事の材料になっていく。"
+msgstr ""
+"If I keep developing this sequence, the work with AI itself will become "
+"material for the next post."
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:344
+msgid "記事情報"
+msgstr "Article information"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst
+msgid "著者"
+msgstr "Author"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:345
+msgid "mtakagishi"
+msgstr "mtakagishi"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst
+msgid "公開日"
+msgstr "Publication date"
+#: ../../../blog/posts/2026-05-31-ai-workflow-log-review-translation.rst:346
+msgid "2026-05-31"
+msgstr "2026-05-31"
