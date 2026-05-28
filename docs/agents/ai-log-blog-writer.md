@@ -10,8 +10,12 @@
 
 - ユーザーが指定したログファイルを入力とする。
 - 例: `copilot-session-latest-2026-05-27.md`
+- ファイル名だけが指定された場合は、探索を始めず、既定で `_notes/sessions/` 配下のファイルとして扱う。
+- 例: `copilot-session-latest-2026-05-27.md` は `_notes/sessions/copilot-session-latest-2026-05-27.md` として読む。
 - ログファイルの場所が相対パスの場合は、リポジトリルートからの相対パスとして扱う。
 - ログファイルが見つからない場合は、推測で進めず日本語で確認する。
+- PowerShell でログファイルを読む場合は、UTF-8 前提で `Get-Content -LiteralPath <path> -Encoding UTF8` を使う。
+- `_notes/sessions/` 配下のログは UTF-8 として扱い、Shift-JIS として読み直して文字化け確認する手順は行わない。
 
 ## 出力
 
