@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mtakagishi \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:56+0900\n"
+"POT-Creation-Date: 2026-06-20 16:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -38,410 +38,756 @@ msgid ""
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:9
-msgid "入力"
+msgid ""
+"ログの順番をそのまま記事の順番にしない。読者にとっての問い、山場、発見、未解決の余韻を設計し、プロのライター、IT "
+"実務者、好奇心を持つ個人の視点が同居する文章にする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:11
-msgid "ユーザーが指定したログファイルを入力とする。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:12
-msgid "例: `copilot-session-latest-2026-05-27.md`"
+msgid "入力"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:13
-msgid "ログファイルの場所が相対パスの場合は、リポジトリルートからの相対パスとして扱う。"
+msgid "ユーザーが指定したログファイルを入力とする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:14
-msgid "ログファイルが見つからない場合は、推測で進めず日本語で確認する。"
+msgid "例: `copilot-session-latest-2026-05-27.md`"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:15
+msgid "ファイル名だけが指定された場合は、探索を始めず、既定で `_notes/sessions/` 配下のファイルとして扱う。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:16
-msgid "出力"
+msgid ""
+"例: `copilot-session-latest-2026-05-27.md` は `_notes/sessions/copilot-"
+"session-latest-2026-05-27.md` として読む。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:17
+msgid "ログファイルの場所が相対パスの場合は、リポジトリルートからの相対パスとして扱う。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:18
-msgid "記事ファイルを `docs/blog/posts/` に作成する。"
+msgid "ログファイルが見つからない場合は、推測で進めず日本語で確認する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:19
-msgid "記事形式は reStructuredText とし、拡張子は `.rst` とする。"
+msgid ""
+"PowerShell でログファイルを読む場合は、UTF-8 前提で `Get-Content -LiteralPath <path> "
+"-Encoding UTF8` を使う。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:20
-msgid "ファイル名は `YYYY-MM-DD-slug.rst` とする。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:21
-msgid "記事本文は日本語で書く。"
+msgid "`_notes/sessions/` 配下のログは UTF-8 として扱い、Shift-JIS として読み直して文字化け確認する手順は行わない。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:22
-msgid "英語記事を直接作らない。英語化が必要な場合は、通常の gettext 翻訳手順に回す。"
+msgid "出力"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:24
-msgid "日付決定ルール"
+msgid "記事ファイルを `docs/blog/posts/` に作成する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:25
+msgid "記事形式は reStructuredText とし、拡張子は `.rst` とする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:26
-msgid "記事の日付は必ず作業日より未来の日付にする。"
+msgid "ファイル名は `YYYY-MM-DD-slug.rst` とする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:27
-msgid "作業日の翌日から順に、既存記事が存在しない最初の日付を使う。"
+msgid "記事本文は日本語で書く。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:28
-msgid "既存記事の判定は、まず `docs/blog/posts/YYYY-MM-DD-*.rst` のファイル名で行う。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:29
-msgid "対象日のファイルが存在する場合は、その翌日に進む。"
+msgid "英語記事を直接作らない。英語化が必要な場合は、通常の gettext 翻訳手順に回す。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:30
-msgid "ファイル名の日付と `.. post::` の日付は一致させる。"
+msgid "日付決定ルール"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:31
-msgid "1 日 1 記事の原則を守る。"
+#: ../../../agents/ai-log-blog-writer.md:32
+msgid "記事の日付は必ず作業日より未来の日付にする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:33
-msgid "例:"
+msgid "作業日の翌日から順に、既存記事が存在しない最初の日付を使う。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:34
+msgid "既存記事の判定は、まず `docs/blog/posts/YYYY-MM-DD-*.rst` のファイル名で行う。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:35
-msgid "作業日が `2026-05-27` で、`2026-05-28-*.rst` がなければ `2026-05-28` を使う。"
+msgid "対象日のファイルが存在する場合は、その翌日に進む。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:36
+msgid "ファイル名の日付と `.. post::` の日付は一致させる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:37
+msgid "1 日 1 記事の原則を守る。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:39
+#: ../../../agents/ai-log-blog-writer.md:144
+msgid "例:"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:41
+msgid "作業日が `2026-05-27` で、`2026-05-28-*.rst` がなければ `2026-05-28` を使う。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:42
 msgid "`2026-05-28-*.rst` があれば `2026-05-29` を確認する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:38
+#: ../../../agents/ai-log-blog-writer.md:44
 msgid "記事メタデータ"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:40
+#: ../../../agents/ai-log-blog-writer.md:46
 msgid "記事冒頭には ablog の `post` directive を置く。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:50
+#: ../../../agents/ai-log-blog-writer.md:56
 msgid "`:tags:` はログ内容に合わせて調整する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:51
+#: ../../../agents/ai-log-blog-writer.md:57
 msgid "`:category:` は原則 `AI活用` とし、ログ内容が明確に別カテゴリの場合のみ変更する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:52
+#: ../../../agents/ai-log-blog-writer.md:58
 msgid "`:author:` は `mtakagishi` とする。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:53
+#: ../../../agents/ai-log-blog-writer.md:59
 msgid "`:language:` は `ja` とする。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:55
+#: ../../../agents/ai-log-blog-writer.md:61
 msgid "執筆手順"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:57
+#: ../../../agents/ai-log-blog-writer.md:63
 msgid "指定されたログファイルを読む。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:58
+#: ../../../agents/ai-log-blog-writer.md:64
 msgid "既存記事の文体、見出し、長さ、メタデータを確認する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:59
+#: ../../../agents/ai-log-blog-writer.md:65
 msgid "翌日以降で未使用の投稿日を決める。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:60
+#: ../../../agents/ai-log-blog-writer.md:66
 msgid "ログから次を抽出する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:61
+#: ../../../agents/ai-log-blog-writer.md:67
 msgid "何をしたかったのか"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:62
+#: ../../../agents/ai-log-blog-writer.md:68
 msgid "なぜそれを調べたかったのか"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:63
+#: ../../../agents/ai-log-blog-writer.md:69
 msgid "どのような違和感や困りごとが出発点だったのか"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:64
+#: ../../../agents/ai-log-blog-writer.md:70
 msgid "試したこと"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:65
+#: ../../../agents/ai-log-blog-writer.md:71
 msgid "つまずいたこと"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:66
+#: ../../../agents/ai-log-blog-writer.md:72
 msgid "わかったこと"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:67
+#: ../../../agents/ai-log-blog-writer.md:73
 msgid "まだ納得できていないこと"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:68
+#: ../../../agents/ai-log-blog-writer.md:74
 msgid "次に活かせること"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:69
-msgid "抽出した内容を「事実」「推測」「未確認」に分けて整理する。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:70
-msgid "ログから読み取れる AI の結論と、ユーザー本人の納得感が一致しているか確認する。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:71
-msgid "不足情報が記事品質に影響する場合は、作成前に日本語でインタビューする。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:72
-msgid "検索で記事にたどり着く読者が使いそうな言葉、困りごと、調査動機を本文に自然に含める。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:73
-msgid "インタビューは一度に多くしすぎず、原則 1 回あたり 1 から 3 問に絞る。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:74
-msgid "事実が不明な部分は推測で断定しない。"
-msgstr ""
-
 #: ../../../agents/ai-log-blog-writer.md:75
-msgid "読者にとっての学びが伝わる構成にする。"
+msgid "抽出した内容を「事実」「推測」「未確認」「人間側の感覚」に分けて整理する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:76
-msgid "`docs/blog/posts/YYYY-MM-DD-slug.rst` を作成する。"
+msgid "ログから読み取れる AI の結論と、ユーザー本人の納得感が一致しているか確認する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:77
-msgid "記事末尾に `.. rubric:: 記事情報` を置き、著者、公開日を明記する。"
+msgid "記事で読者に渡したい中心メッセージを 1 文で決める。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:78
-msgid "必要に応じて `rye run doit doc` でビルド確認する。"
+msgid "中心メッセージに合わせて、記事の型を選ぶ。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:79
-msgid "記事化前の確認として `docs/agents/log-extraction-checklist.md` のチェックを実施する。"
+msgid "ログ順ではなく、選んだ型に沿ってアウトラインを組み直す。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:80
+msgid "不足情報が記事品質に影響する場合は、作成前に日本語でインタビューする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:81
-msgid "抽出時の自己検証フロー"
+msgid "検索で記事にたどり着く読者が使いそうな言葉、困りごと、調査動機を本文に自然に含める。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:82
+msgid "インタビューは一度に多くしすぎず、原則 1 回あたり 1 から 3 問に絞る。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:83
-msgid "抽出結果は 1 回で確定させず、次の 3 ステップで見直す。"
+msgid "事実が不明な部分は推測で断定しない。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:84
-msgid "初稿抽出: ログから主要事実を抽出する。"
+msgid "読者にとっての学びが伝わる構成にする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:85
-msgid "批評: 抽出漏れ、飛躍、断定過多、読者価値不足を指摘する。"
+msgid "初稿を書いたあと、ログ要約記事になっていないか編集者目線で再構成する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:86
-msgid "改稿: 批評を反映して、記事アウトラインと本文案を更新する。"
+msgid "`docs/blog/posts/YYYY-MM-DD-slug.rst` を作成する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:87
+msgid "記事末尾に `.. rubric:: 記事情報` を置き、著者、公開日を明記する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:88
-msgid "使う観点:"
+msgid "必要に応じて `rye run doit doc` でビルド確認する。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:90
-msgid "事実性: ログに根拠があるか。"
+#: ../../../agents/ai-log-blog-writer.md:89
+msgid "記事化前の確認として `docs/agents/log-extraction-checklist.md` のチェックを実施する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:91
-msgid "納得感: ユーザー本人の気持ちが反映されているか。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:92
-msgid "検索性: 同じ問題を調べる読者が使う語が含まれているか。"
+msgid "記事構成の設計"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:93
-msgid "再現性: 読者が次に試せる行動が書かれているか。"
+msgid "ログ記事は、生成 AI とのチャットの時系列に従って書かない。まず、読者に届けたい中心メッセージを決め、それに合う型を選ぶ。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:95
-msgid "自己検証プロンプト雛形"
+msgid "型は固定しないが、少なくとも次の候補から意識的に選ぶ。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:97
-msgid "次の雛形を、ログ抽出直後の見直しに使う。"
+msgid "問題解決型: 困りごと、原因、試したこと、解決、再利用できる手順の順に書く。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:112
-msgid "記事情報"
+#: ../../../agents/ai-log-blog-writer.md:98
+msgid "PREP 型: 結論、理由、具体例、もう一度結論の順に書く。短く実用的な記事に向く。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:114
-msgid "ログから作成した記事の末尾には、次の形式で記事情報を必ず入れる。"
+#: ../../../agents/ai-log-blog-writer.md:99
+msgid "起承転結型: 出発点、試行、予想外の気づき、次に残る問いの順に書く。作業記録に人間味を残したい場合に向く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:100
+msgid "失敗から学ぶ型: 期待、失敗、原因仮説、修正、次の予防策の順に書く。過ちや危うさを価値に変える場合に向く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:101
+msgid "比較検討型: 選択肢、判断基準、採用した案、捨てた案、次回の見直し条件の順に書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:102
+msgid "エッセイ型: 技術的な事実を軸にしつつ、違和感、好奇心、納得できなさを前面に出す。AI 時代の人間側の問いを扱う場合に向く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:104
+msgid "型を選んだら、記事の冒頭で読者に暗黙の約束を作る。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:106
+msgid "この記事を読むと何がわかるのか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:107
+msgid "なぜ今それを考える意味があるのか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:108
+msgid "著者はどこで迷い、どこで判断したのか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:109
+msgid "読者は次に何を試せるのか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:111
+msgid "メリハリの作り方"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:113
+msgid "記事には、すべての出来事を同じ重さで並べない。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:115
+msgid "冒頭では、ログの説明ではなく、読者が引っかかる問いや困りごとから入る。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:116
+msgid "本文では、単なる作業手順と、著者の判断が入った箇所を分ける。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:117
+msgid "山場を 1 つ以上作る。山場は「思っていた前提が崩れた」「実はここが危なかった」「自動化より人間の判断が重要だった」などでよい。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:118
+msgid "重要でないツール操作、探索過程、AI の定型応答は大胆に圧縮する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:119
+msgid "記事末尾では、実施内容の再掲だけで終わらず、次回の自分や読者に残る問いを書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:121
+msgid "避けること:"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:123
-msgid "`:公開日:` は `.. post::` の日付と一致させる。"
+msgid "「まず A をした。次に B をした。最後に C をした。」だけで終わる構成。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:124
-msgid "記事情報の形式は既存記事と揃え、原則として著者と公開日のみにする。"
+msgid "AI の回答を、著者の納得や判断として扱うこと。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:125
+msgid "すべてのセクションが同じ温度、同じ長さ、同じ粒度になること。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:126
-msgid "インタビュー方針"
+msgid "ログに出た順番を、記事構成の正解として扱うこと。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:128
-msgid "次のような場合は、記事作成前にユーザーへ確認する。"
+msgid "人間側の視点"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:130
-msgid "ログだけでは記事の主題が決められない。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:131
-msgid "結論や成果がログ内で明確でない。"
+msgid "生成 AI に聞けば済む情報と、人間として記事に残す価値がある情報を分ける。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:132
-msgid "AI の結論は書かれているが、ユーザー本人が納得しているか不明である。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:133
-msgid "ログには出ていないが、記事の出発点になった違和感、動機、課題意識がありそうである。"
+msgid "記事では、必要に応じて次の要素を入れる。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:134
-msgid "公開してよい情報か判断が必要な内容が含まれる。"
+msgid "好奇心: なぜそれが気になったのか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:135
-msgid "実名、サービス名、秘密情報、個人情報に見える内容が含まれる。"
+msgid "違和感: どこがしっくりこなかったのか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:136
-msgid "読者に伝えたい重点が複数あり、優先順位が不明な場合。"
+msgid "迷い: どの選択肢の間で揺れたのか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:137
-msgid "同じ疑問を持つ読者が検索しそうな言葉や文脈が、ログだけでは不足している場合。"
+msgid "過ち: 何を見落としたのか、どこで楽観しすぎたのか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:138
+msgid "危うさ: AI の回答をそのまま信じると何が危ないのか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:139
-msgid "質問例:"
+msgid "納得: どの時点で「これなら使える」と感じたのか。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:141
-msgid "「この記事でいちばん伝えたい学びはどれですか。」"
+#: ../../../agents/ai-log-blog-writer.md:140
+msgid "未解決感: まだ何を保留しているのか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:142
-msgid "「AI はこのように整理していますが、ご自身として納得できていますか。」"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:143
-msgid "「この調査を始めたときの最初の違和感や困りごとは何でしたか。」"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:144
-msgid "「同じ問題で検索する人は、どのような言葉で調べそうだと思いますか。」"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:145
-msgid "「このログに含まれる固有名詞は、そのまま公開してよいですか。」"
+msgid "これらは、感想文として長く書くのではなく、技術的な判断と結びつけて書く。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:146
-msgid "「結論は『うまくいった』記事にしますか、それとも『途中経過』の記事にしますか。」"
+msgid "「便利だった」ではなく、「便利だったが、ログを失う可能性を考えると、自動命名の安全側の設計が必要だった」と書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:147
+msgid "「AI がそう言った」ではなく、「AI の提案は妥当そうだったが、自分の運用では `--out` の明示指定だけは変えない方が納得できた」と書く。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:148
-msgid "記事スタイル"
+msgid "「うまくいった」ではなく、「今回は通った。ただし、ビルド警告や生成物の扱いは別の問題として残った」と書く。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:150
-msgid "個人技術ブログとして、作業記録と学びの両方が伝わる文章にする。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:151
-msgid "断定しすぎず、実際に試した範囲がわかるように書く。"
+msgid "編集レビュー"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:152
-msgid "ログの逐語的な要約ではなく、読者向けに整理した記事にする。"
-msgstr ""
-
-#: ../../../agents/ai-log-blog-writer.md:153
-msgid "AI との会話そのものよりも、そこから得た判断、手順、気づき、納得できていない点を中心にする。"
+msgid "初稿を書いたあと、次の観点で自己レビューする。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:154
-msgid "AI のまとめをそのまま著者の見解として扱わない。ユーザーの感覚と異なる可能性がある場合は確認する。"
+msgid "この記事の中心メッセージを 1 文で言えるか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:155
-msgid "調査記事では、検索する読者がたどり着きやすいように、具体的なエラーメッセージ、画面上の呼び名、コマンド名、ファイル名、疑問文を自然な範囲で含める。"
+msgid "冒頭 3 段落で、読者が読み続ける理由が出ているか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:156
-msgid "「まだ分からない」「GUI では見えるがスクリプトでは取れない」など、未解決の違和感も記事の価値として扱う。"
+msgid "ログの時系列に引きずられすぎていないか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:157
-msgid "コード、コマンド、ファイル名は reStructuredText のリテラル表記で扱う。"
+msgid "作業の羅列ではなく、判断、迷い、発見が見えるか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:158
-msgid "秘密情報やトークンらしき文字列は記事に含めない。"
+msgid "AI に聞けば済む一般論だけでなく、著者本人の具体的な運用や感覚が入っているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:159
+msgid "技術記事として、コマンド、ファイル名、前提、確認結果が不足していないか。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:160
-msgid "完了報告"
+msgid "文章の温度が単調になっていないか。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:162
-msgid "作業後は日本語で次を報告する。"
+#: ../../../agents/ai-log-blog-writer.md:161
+msgid "未解決点や危うさを、無理に消していないか。"
 msgstr ""
 
-#: ../../../agents/ai-log-blog-writer.md:164
-msgid "作成した記事ファイル"
+#: ../../../agents/ai-log-blog-writer.md:163
+msgid "自己レビューで弱い場合は、全文を書き直すのではなく、次の順で直す。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:165
-msgid "採用した投稿日"
+msgid "冒頭を問いや困りごとから始める。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:166
-msgid "記事の主題"
+msgid "中心メッセージから外れる段落を削るか圧縮する。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:167
-msgid "確認したこと"
+msgid "山場になる段落を 1 つ作る。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:168
-msgid "ビルド確認をしたかどうか"
+msgid "人間側の判断や違和感を、技術的な事実と結びつけて 1 から 3 箇所だけ足す。"
 msgstr ""
 
 #: ../../../agents/ai-log-blog-writer.md:169
+msgid "末尾を「やったこと」ではなく「次に活かすこと」で締める。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:171
+msgid "外部化した批評"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:173
+msgid "生成 AI の自己検証だけでは、記事の弱さを見逃すことがある。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:175
+msgid "そのため、重要な記事や、文章が平板に見える記事では、執筆者と編集者の役割を分けて見直す。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:177
+msgid "執筆者として、ログから記事の初稿を書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:178
+msgid "編集者として、読者価値、構成、山場、削るべき箇所を批評する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:179
+msgid "IT 実務者として、技術的な前提、コマンド、再現性、危険な断定を確認する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:180
+msgid "人間の読者として、好奇心、違和感、危うさ、余韻が残っているかを見る。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:182
+msgid "この批評で「単に実施したことを読みやすく並べただけ」と判断した場合は、記事を完成扱いにしない。 中心メッセージと構成の型から作り直す。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:185
+msgid "抽出時の自己検証フロー"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:187
+msgid "抽出結果は 1 回で確定させず、次の 3 ステップで見直す。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:188
+msgid "初稿抽出: ログから主要事実を抽出する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:189
+msgid "批評: 抽出漏れ、飛躍、断定過多、読者価値不足を指摘する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:190
+msgid "改稿: 批評を反映して、記事アウトラインと本文案を更新する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:192
+msgid "使う観点:"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:194
+msgid "事実性: ログに根拠があるか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:195
+msgid "納得感: ユーザー本人の気持ちが反映されているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:196
+msgid "検索性: 同じ問題を調べる読者が使う語が含まれているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:197
+msgid "再現性: 読者が次に試せる行動が書かれているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:198
+msgid "構成力: ログ順ではなく、読者に伝わる順番になっているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:199
+msgid "温度感: 著者の好奇心、迷い、納得、危うさが技術的な事実と結びついているか。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:201
+msgid "自己検証プロンプト雛形"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:203
+msgid "次の雛形を、ログ抽出直後の見直しに使う。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:221
+msgid "記事情報"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:223
+msgid "ログから作成した記事の末尾には、次の形式で記事情報を必ず入れる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:232
+msgid "`:公開日:` は `.. post::` の日付と一致させる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:233
+msgid "記事情報の形式は既存記事と揃え、原則として著者と公開日のみにする。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:235
+msgid "インタビュー方針"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:237
+msgid "次のような場合は、記事作成前にユーザーへ確認する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:239
+msgid "ログだけでは記事の主題が決められない。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:240
+msgid "結論や成果がログ内で明確でない。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:241
+msgid "AI の結論は書かれているが、ユーザー本人が納得しているか不明である。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:242
+msgid "ログには出ていないが、記事の出発点になった違和感、動機、課題意識がありそうである。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:243
+msgid "公開してよい情報か判断が必要な内容が含まれる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:244
+msgid "実名、サービス名、秘密情報、個人情報に見える内容が含まれる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:245
+msgid "読者に伝えたい重点が複数あり、優先順位が不明な場合。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:246
+msgid "同じ疑問を持つ読者が検索しそうな言葉や文脈が、ログだけでは不足している場合。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:248
+msgid "質問例:"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:250
+msgid "「この記事でいちばん伝えたい学びはどれですか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:251
+msgid "「AI はこのように整理していますが、ご自身として納得できていますか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:252
+msgid "「この調査を始めたときの最初の違和感や困りごとは何でしたか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:253
+msgid "「同じ問題で検索する人は、どのような言葉で調べそうだと思いますか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:254
+msgid "「このログに含まれる固有名詞は、そのまま公開してよいですか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:255
+msgid "「結論は『うまくいった』記事にしますか、それとも『途中経過』の記事にしますか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:256
+msgid "「この記事は、実用手順、失敗談、考察、どれを中心にしたいですか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:257
+msgid "「ログには出ていないけれど、本当は引っかかっていた違和感はありますか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:258
+msgid "「AI に聞けば済む話ではなく、人間として残したい感想や危うさはありますか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:259
+msgid "「読み終えた人に、どんな行動や問いを持ち帰ってほしいですか。」"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:261
+msgid "記事スタイル"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:263
+msgid "個人技術ブログとして、作業記録と学びの両方が伝わる文章にする。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:264
+msgid "断定しすぎず、実際に試した範囲がわかるように書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:265
+msgid "ログの逐語的な要約ではなく、読者向けに整理した記事にする。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:266
+msgid "ログの順番に従うのではなく、中心メッセージに従って再構成する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:267
+msgid "AI との会話そのものよりも、そこから得た判断、手順、気づき、納得できていない点を中心にする。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:268
+msgid "AI のまとめをそのまま著者の見解として扱わない。ユーザーの感覚と異なる可能性がある場合は確認する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:269
+msgid "小学生の作文のような「やったことの順番の記録」で終わらせず、問い、判断、山場、余韻を持たせる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:270
+msgid "PREP 法、起承転結、問題解決型、失敗から学ぶ型など、記事の目的に合う構成を意識する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:271
+msgid "読者のための実用性と、著者本人の好奇心や温度感を両立させる。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:272
+msgid "生成 AI の能力が発達した時代だからこそ、AI に聞けば済む一般論と、人間として残す価値のある違和感、感想、過ち、危うさを分けて書く。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:273
+msgid "調査記事では、検索する読者がたどり着きやすいように、具体的なエラーメッセージ、画面上の呼び名、コマンド名、ファイル名、疑問文を自然な範囲で含める。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:274
+msgid "「まだ分からない」「GUI では見えるがスクリプトでは取れない」など、未解決の違和感も記事の価値として扱う。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:275
+msgid "コード、コマンド、ファイル名は reStructuredText のリテラル表記で扱う。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:276
+msgid "秘密情報やトークンらしき文字列は記事に含めない。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:278
+msgid "完了報告"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:280
+msgid "作業後は日本語で次を報告する。"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:282
+msgid "作成した記事ファイル"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:283
+msgid "採用した投稿日"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:284
+msgid "記事の主題"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:285
+msgid "確認したこと"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:286
+msgid "ビルド確認をしたかどうか"
+msgstr ""
+
+#: ../../../agents/ai-log-blog-writer.md:287
 msgid "残課題があればその内容"
 msgstr ""
+
+#~ msgid "抽出した内容を「事実」「推測」「未確認」に分けて整理する。"
+#~ msgstr ""
 

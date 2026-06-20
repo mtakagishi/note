@@ -1,0 +1,384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, mtakagishi
+# This file is distributed under the same license as the mtakagishi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mtakagishi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-20 16:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:8
+msgid "生成AIは純粋置換モダナイの費用をどこまで下げられるのか"
+msgstr "How Far Can Generative AI Reduce the Cost of Pure Replacement Modernization?"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:10
+msgid "生成AIを開発にどう活用するか、という話はよく聞く。"
+msgstr "I often hear people talk about how to use generative AI in development."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:12
+msgid ""
+"ただ、その入口にはいつも少し引っかかりがある。 「生成AIがすごい」という言葉は多いのに、 "
+"何が一次情報で、何が期待で、何が実務上の制約なのかが見えにくい。"
+msgstr ""
+"Still, I always feel a slight snag at the entrance to that conversation. "
+"There is plenty of talk about how “generative AI is amazing,” but it is hard "
+"to tell what is primary information, what is expectation, and what is an "
+"actual practical constraint."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:16
+msgid ""
+"今回のセッションでは、最初は生成AIを活用した開発方法論を整理しようとしていた。 Eval 駆動、Spec-first、Context "
+"Engineering など、 有力そうな言葉はいくつも出てくる。"
+msgstr ""
+"In this session, I originally set out to organize development methodologies "
+"that make use of generative AI. Terms that sound promising keep appearing: "
+"Eval-driven development, Spec-first, Context Engineering, and so on."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:20
+msgid "しかし、話しているうちに関心は少しずつ別の問いへ移っていった。"
+msgstr "But as the conversation continued, my interest gradually shifted to a different question."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:22
+msgid "生成AIは、レガシーシステムのモダナイに対して、 これまで費用対効果が合わなかった「純粋置換」を現実的にするのだろうか。"
+msgstr "Can generative AI make “pure replacement” modernization realistic for legacy systems, even when it had previously been hard to justify on cost-effectiveness grounds?"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:26
+msgid "ここでいう純粋置換"
+msgstr "What I Mean by Pure Replacement"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:28
+msgid "モダナイという言葉は広い。"
+msgstr "The word modernization covers a broad range of work."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:30
+msgid ""
+"実際の現場では、言語の置き換えだけでなく、 システム統廃合、運用ルール変更、業務プロセス見直し、UI 改善などを含むことが多い。 "
+"その場合、投資価値は説明しやすくなる。 古いものを新しくするだけでなく、業務価値も変えるからである。"
+msgstr ""
+"In real projects, it often includes not only replacing a programming "
+"language, but also consolidating systems, changing operational rules, "
+"revisiting business processes, and improving the UI. In that case, the "
+"investment value is easier to explain, because the project is not merely "
+"making something old new again; it is also changing the business value."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:35
+msgid "一方で、今回考えたのはもっと狭い前提だった。"
+msgstr "This time, though, I was thinking under much narrower assumptions."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:37
+msgid "システムのスコープは変えない"
+msgstr "Do not change the system scope"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:38
+msgid "外部環境も変えない"
+msgstr "Do not change the external environment either"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:39
+msgid "画面、ロジック、タイミングを可能な限り同じにする"
+msgstr "Keep screens, logic, and timing as close as possible to the original"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:40
+msgid "潜在バグや暗黙ルールも含めて移植する"
+msgstr "Migrate even latent bugs and implicit rules"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:41
+msgid "COBOL などで動いていたものを、別言語へ置き換える"
+msgstr "Replace something that ran in COBOL or a similar language with another language"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:43
+msgid "つまり、業務改善を主目的にしない。 「同じものを、別の技術基盤で動かす」ことに徹する。"
+msgstr "In other words, business improvement is not the main objective. The goal is to stay focused on “running the same thing on a different technical foundation.”"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:46
+msgid "この前提を置くと、よくあるモダナイの説明は少し弱くなる。"
+msgstr "Once I set those assumptions, the usual explanations of modernization start to feel a little weaker."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:48
+msgid ""
+"たとえば、外部連携先が変わるから難しい、運用ルールが変わるから難しい、 という話は、今回の前提ではいったん脇に置く。 "
+"外部環境は変えないことにするし、運用もできるだけ同じにする。"
+msgstr ""
+"For example, arguments such as “it is hard because external integration "
+"partners change” or “it is hard because operational rules change” are set "
+"aside under this premise. The external environment is assumed not to change, "
+"and operations are kept as close as possible to the current ones."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:52
+msgid "すると問いは、かなり素朴になる。"
+msgstr "Then the question becomes quite simple."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:54
+msgid "これまで「お金をかける価値が見いだしにくい」とされてきた純粋置換は、 生成AIによって安くできるのではないか。"
+msgstr "Could generative AI make pure replacement cheaper, even though it has long been considered hard to justify spending money on?"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:58
+msgid "生成AIが効きそうなところ"
+msgstr "Where Generative AI Seems Likely to Help"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:60
+msgid "この問いに対して、まず期待できる部分はある。"
+msgstr "There are certainly parts of this question where expectations seem reasonable."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:62
+msgid ""
+"生成AIは、コード変換そのものにはかなり効きそうである。 古いコードを読み、別言語の実装案を出し、 周辺のテスト雛形やドキュメントを作る。 "
+"差分が出たときに、原因候補を整理することもできる。"
+msgstr ""
+"Generative AI seems likely to be quite useful for code conversion itself. It "
+"can read old code, propose an implementation in another language, and create "
+"surrounding test scaffolds and documentation. When differences appear, it can "
+"also organize candidate causes."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:67
+msgid "人間が一つずつ読み替えていた作業を、 AI が下書きし、人間が確認する形に変えられるなら、 変換工程の費用は大きく下がる可能性がある。"
+msgstr "If work that humans used to translate piece by piece can be changed into a workflow where AI drafts and humans review, the cost of the conversion phase may drop significantly."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:71
+msgid "ここまでは、かなり前向きに見てよいと思う。"
+msgstr "Up to this point, I think it is fair to be fairly optimistic."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:73
+msgid ""
+"ただし、そこで「では純粋置換は簡単になった」とは言えない。 セッションで繰り返し出てきたのは、 "
+"作ることと、同じであると説明することは別だという点だった。"
+msgstr ""
+"But that does not mean we can say pure replacement has become easy. What came "
+"up repeatedly in the session was that building something and explaining that "
+"it is the same are two different things."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:78
+msgid "最後に残るのは同値性検証"
+msgstr "What Remains at the End Is Equivalence Verification"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:80
+msgid "純粋置換で難しいのは、正しい新システムを作ることではない。 旧システムと同じように正しく、同じように間違うことを確認することである。"
+msgstr "The hard part of pure replacement is not building a correct new system. It is confirming that it is correct in the same way as the old system, and wrong in the same way as well."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:83
+msgid ""
+"たとえば、桁あふれ、丸め、文字コード、初期値、ソート順、NULL の扱い、 日付境界、バッチの実行順、例外時の戻り値などは、 "
+"言語や実行基盤を変えると微妙にずれることがある。"
+msgstr ""
+"For example, overflow, rounding, character encodings, initial values, sort "
+"order, NULL handling, date boundaries, batch execution order, and return "
+"values on exceptions can all shift subtly when the language or runtime "
+"foundation changes."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:87
+msgid ""
+"通常の新規開発なら、そのずれを「新しい仕様」として整理できるかもしれない。 しかし純粋置換では、ずれ自体が問題になる。 "
+"古い挙動が業務上の前提になっているなら、 たとえそれが美しくない挙動でも互換対象になる。"
+msgstr ""
+"In ordinary new development, such differences might be organized as “new "
+"specifications.” In pure replacement, however, the differences themselves "
+"become the problem. If old behavior has become a business assumption, then "
+"even behavior that is not elegant becomes part of the compatibility target."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:92
+msgid "ここで効いてくるのが、同値性検証である。"
+msgstr "This is where equivalence verification matters."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:94
+msgid ""
+"旧システムと新システムに同じ入力を与え、 出力、ログ、副作用、状態遷移を比較する。 過去データやゴールデンデータを使い、 "
+"差分が出たら原因を調べる。 必要なら差分を許容するのか、旧挙動に寄せるのかを決める。"
+msgstr ""
+"Give the same input to the old and new systems, then compare outputs, logs, "
+"side effects, and state transitions. Use historical data or golden data, and "
+"when differences appear, investigate their causes. If necessary, decide "
+"whether to allow the difference or move the new behavior closer to the old "
+"one."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:100
+msgid "生成AIは、この差分分析を助けられる。 テストケースを増やしたり、差分の分類をしたり、 怪しい変換箇所を指摘したりできる。"
+msgstr "Generative AI can help with this difference analysis. It can add test cases, classify differences, and point out suspicious conversion points."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:104
+msgid "それでも、最終的に「この範囲で同じとみなす」と決めるのは人間側である。 ここは AI が代わりに責任を取れる場所ではない。"
+msgstr "Even so, humans ultimately decide, “within this range, we consider them the same.” This is not a place where AI can take responsibility on our behalf."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:108
+msgid "「再現できない」より「再現できたと言い切れない」"
+msgstr "Less “Cannot Reproduce” Than “Cannot Say We Reproduced It”"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:110
+msgid "今回の対話で、自分の理解が少し変わったのはここだった。"
+msgstr "This is where my understanding shifted a little through the conversation."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:112
+msgid ""
+"最初は、モダナイを阻むものとして、 タイミング依存、人間依存、外部依存、暗黙ルールのような例が挙がった。 "
+"しかし、純粋置換という前提を強く置くなら、 それらは「移植対象に含めればよい」と考えることもできる。"
+msgstr ""
+"At first, examples such as timing dependencies, human dependencies, external "
+"dependencies, and implicit rules came up as things that block modernization. "
+"But if we strongly assume pure replacement, we can also think of them as "
+"things that should simply be included in the migration target."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:117
+msgid ""
+"直列実行が必要なら、その仕組みも移す。 潜在バグがあるなら、それも前提に含める。 画面外の運用があるなら、外部環境は変えない。 "
+"連携先も変わらないものとして考える。"
+msgstr ""
+"If serial execution is required, migrate that mechanism too. If there are "
+"latent bugs, include them in the premise. If there are off-screen operations, "
+"assume the external environment does not change. Treat integration partners "
+"as unchanged as well."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:122
+msgid "そうすると、「再現できないから無理」という説明は弱くなる。"
+msgstr "Once we do that, the explanation “it is impossible because we cannot reproduce it” becomes weaker."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:124
+msgid "むしろ問題は、 再現できたことをどこまで証明できるのか、 その証明にどれだけ費用がかかるのか、 そして誰がその説明責任を引き受けるのか、である。"
+msgstr "The real issue is how far we can prove that we have reproduced it, how much that proof costs, and who accepts accountability for the explanation."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:129
+msgid "生成AIが登場したことで、 純粋置換の変換費用は下がるかもしれない。 だが、検証責任まで自動的に消えるわけではない。"
+msgstr "With the arrival of generative AI, the conversion cost of pure replacement may decrease. But responsibility for verification does not disappear automatically."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:133
+msgid "この整理のほうが、いまの自分にはしっくりくる。"
+msgstr "This framing feels more convincing to me right now."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:136
+msgid "開発方法論として見ると何が残るか"
+msgstr "What Remains When Viewed as a Development Methodology"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:138
+msgid "この話は、生成AI活用の一般的な方法論にもつながる。"
+msgstr "This also connects to broader methodologies for using generative AI."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:140
+msgid ""
+"Eval 駆動や Spec-first が重要と言われるのは、 AI による生成が強力になったからこそ、 "
+"何を合格とみなすかを先に決める必要があるからである。"
+msgstr ""
+"Eval-driven development and Spec-first are said to be important because AI "
+"generation has become powerful enough that we need to decide in advance what "
+"counts as passing."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:144
+msgid "純粋置換モダナイでいえば、Spec-first は新仕様を書くことだけではない。 むしろ、互換性の判定条件を書くことになる。"
+msgstr "In pure replacement modernization, Spec-first is not only about writing new specifications. Rather, it means writing the criteria for judging compatibility."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:147
+msgid "どの入出力を比較するのか"
+msgstr "Which inputs and outputs to compare"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:148
+msgid "どの副作用を比較するのか"
+msgstr "Which side effects to compare"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:149
+msgid "どの差分を許容しないのか"
+msgstr "Which differences are not acceptable"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:150
+msgid "どの差分は仕様更新として扱うのか"
+msgstr "Which differences should be treated as specification updates"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:151
+msgid "どの時点で受け入れ可能と判断するのか"
+msgstr "At what point the replacement can be judged acceptable"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:153
+msgid "この条件がないまま AI に変換させると、 コードは早く出てくる。 しかし、成功したかどうかを判断できない。"
+msgstr "If we let AI perform the conversion without these criteria, code appears quickly. But we cannot judge whether it succeeded."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:157
+msgid "速度を上げるほど、判定基準の弱さが後で効いてくる。 ここに生成AI活用の怖さがある。"
+msgstr "The more speed increases, the more weakness in the judgment criteria matters later. This is one of the risks in using generative AI."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:161
+msgid "現時点での整理"
+msgstr "My Current Understanding"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:163
+msgid "今回のセッションを通して、現時点では次のように考えている。"
+msgstr "Through this session, my current view is as follows."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:165
+msgid "生成AIは、純粋置換モダナイの可能性を広げる。 特に、コード変換、テスト雛形、差分分析、ドキュメント化の費用は下げられる。"
+msgstr "Generative AI expands the possibilities for pure replacement modernization. In particular, it can reduce the cost of code conversion, test scaffolding, difference analysis, and documentation."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:168
+msgid ""
+"一方で、生成AIは「同じであることの説明責任」を消してくれない。 純粋置換で最後に重く残るのは、 変換作業そのものではなく、 "
+"同値性検証、受入ゲート、責任分界である。"
+msgstr ""
+"On the other hand, generative AI does not remove the accountability for "
+"explaining that two systems are the same. What remains heavy at the end of "
+"pure replacement is not the conversion work itself, but equivalence "
+"verification, acceptance gates, and responsibility boundaries."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:173
+msgid "だから、生成AIは銀の弾というより、強力な圧縮機に近い。 作業を圧縮し、検証の材料を増やし、 人間が判断する場所を見えやすくする。"
+msgstr "That is why generative AI feels less like a silver bullet and more like a powerful compressor. It compresses work, increases the material available for verification, and makes the places where humans must judge more visible."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:177
+msgid "ただし、何を同じとみなすかを決めないままでは、 その力はかえって危うい。"
+msgstr "But if we have not decided what counts as the same, that power can become dangerous instead."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:180
+msgid "次に考えるなら、純粋置換専用のチェックリストを作りたい。"
+msgstr "If I continue this line of thought, I would like to create a checklist specifically for pure replacement."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:182
+msgid "互換性の判定項目"
+msgstr "Compatibility judgment items"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:183
+msgid "ゴールデンデータの作り方"
+msgstr "How to create golden data"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:184
+msgid "差分の分類ルール"
+msgstr "Rules for classifying differences"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:185
+msgid "受入ゲート"
+msgstr "Acceptance gates"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:186
+msgid "経営向けの費用対効果説明"
+msgstr "A cost-effectiveness explanation for management"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:188
+msgid "生成AI時代のモダナイは、 「AI が変換できるか」だけでは判断できない。"
+msgstr "Modernization in the age of generative AI cannot be judged only by asking whether AI can perform the conversion."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:191
+msgid "本当に問うべきなのは、 AI を使って、どこまで検証可能性を高められるかである。"
+msgstr "The real question is how far we can use AI to improve verifiability."
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:195
+msgid "記事情報"
+msgstr "Article Information"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst
+msgid "著者"
+msgstr "Author"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:196
+msgid "mtakagishi"
+msgstr "mtakagishi"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst
+msgid "公開日"
+msgstr "Publication Date"
+
+#: ../../../blog/posts/2026-06-21-generative-ai-modernization-verification.rst:197
+msgid "2026-06-21"
+msgstr "2026-06-21"
