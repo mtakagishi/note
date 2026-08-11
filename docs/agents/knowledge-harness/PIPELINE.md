@@ -364,3 +364,7 @@ Phase 1の完了時に、この候補を最初の一件として採用するか�
 - `SCREENED / ADVANCE`のときだけ、O-04以降へ進むための統合完了として扱う
 - 監査記録に、実行順、開始時刻、終了時刻、停止理由、再開位置を残す
 - 既存Operationの実装境界や判定ルールを変更しない
+
+### Phase 15-a の実装状況
+
+この候補は、[src/note/knowledge_harness/orchestrate_run.py](src/note/knowledge_harness/orchestrate_run.py) と [tests/test_orchestrate_run.py](tests/test_orchestrate_run.py) で実装済みである。O-01〜O-03の直列実行、ラベル不足時の停止、再実行時の冪等性を検証済みであり、次はO-04以降への接続境界を定義する。

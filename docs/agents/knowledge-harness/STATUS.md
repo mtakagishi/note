@@ -5,7 +5,7 @@
 ## 現在地
 
 - フェーズ: Phase 15 / 横断統合の境界定義
-- 状態: 横断統合の目的、スコープ、スコープ外、完了条件を定義済み
+- 状態: Phase 15-a の最小Orchestratorを実装済み。O-01〜O-03の直列実行、停止条件、再開位置、冪等性を検証済み
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
 - レビュー対象: なし
@@ -156,13 +156,14 @@
 - 人間がPR #27をレビューしてマージ
 - Phase 15として横断統合の境界定義を`PIPELINE.md`へ追加
 - Phase 15の採用判断を`DECISIONS.md`へ記録
+- Phase 15-aとしてO-01〜O-03統合Orchestratorを実装し、単体テストで検証
 
 ## 次の一手
 
-Phase 15-aとして、O-01〜O-03統合Orchestratorの着手順と受け入れ条件を実装前の設計として固定する。
+O-04 Collect Evidenceへ接続するための次の統合境界を定義する。
 
 ## 停止条件
 
-- 実装着手前に、着手順と受け入れ条件を文書化しない
-- O-04以降の接続を同時に実装しない
+- O-04以降の接続境界を定義しない
+- 既存Operationの契約や判定ルールを変更しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
