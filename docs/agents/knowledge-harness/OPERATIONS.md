@@ -515,3 +515,84 @@ rye run python -m note.knowledge_harness.draft_article `
 - 同じ入力の再実行では`draft.rst`とmanifestを書き換えない
 - O-08は人間へ質問せず`DRAFT_READY / ADVANCE`とする
 - 事実性、意味の飛躍、読者価値、構成品質、リンク、ビルド、秘密情報はO-09で検証する
+
+## O-09 Validate Draftの実行
+
+O-09はO-08のDraftをProgramとAI Judgeで検証し、修正済みDraftとValidation Reportを中間成果物として保存する。
+
+```powershell
+rye run python -m note.knowledge_harness.validate_draft `
+  --draft-file _notes/knowledge_harness/drafts/run-20260811-002/draft.rst `
+  --manifest-file _notes/knowledge_harness/drafts/run-20260811-002/draft_manifest.json `
+  --plan-file _notes/knowledge_harness/plans/run-20260811-002/article_plan.json `
+  --packet-file _notes/knowledge_harness/packets/run-20260811-002/evidence_packet.json `
+  --judgment-file draft-validation-judgment.json
+```
+
+`draft-validation-judgment.json`は次の形式にする。5評価軸すべてに判定、確信度、理由、実在するDraftブロックとPacket項目の参照を指定する。
+
+```json
+{
+  "rubric_version": "draft-validation-v1",
+  "judge_id": "judge-example",
+  "evaluations": {
+    "factual_grounding": {
+      "verdict": "PASS",
+      "confidence": 0.9,
+      "reason_ja": "記述が指定した根拠の範囲内です。",
+      "block_ids": ["block-001"],
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    },
+    "semantic_leap": {
+      "verdict": "PASS",
+      "confidence": 0.9,
+      "reason_ja": "根拠から結論への飛躍はありません。",
+      "block_ids": ["block-001"],
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    },
+    "reader_value": {
+      "verdict": "PASS",
+      "confidence": 0.8,
+      "reason_ja": "計画した読者価値を本文で伝えています。",
+      "block_ids": ["block-001"],
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    },
+    "plan_alignment": {
+      "verdict": "PASS",
+      "confidence": 0.9,
+      "reason_ja": "Article Planに沿っています。",
+      "block_ids": ["block-001"],
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    },
+    "uncertainty_handling": {
+      "verdict": "PASS",
+      "confidence": 0.8,
+      "reason_ja": "未確認事項を明示しています。",
+      "block_ids": ["block-002"],
+      "packet_refs": ["uncertainties/0"]
+    }
+  },
+  "policy_change_candidate": {"required": false}
+}
+```
+
+既定では次の中間成果物を保存する。
+
+- `_notes/knowledge_harness/validations/<run_id>/validated_draft.rst`
+- `_notes/knowledge_harness/validations/<run_id>/validation_report.json`
+
+検証と判定の規則は次のとおり。
+
+- 同じ`run_id`の`DRAFT_READY / ADVANCE`、Article Plan、Evidence Packetだけを受け付ける
+- 元DraftとmanifestのSHA-256、節順、ブロック本文・SHA-256・Packet参照の整合性を検査する
+- reStructuredText構文、必須metadata、外部・ローカルリンク、秘密情報、個人情報、非公開マーカーを検査する
+- 外部URLはEvidence Packetの`source_catalog`に記録されたURLだけを許可する
+- 既存記事との正規化タイトル一致はError、正規化本文の類似度0.85以上はWarning候補とする
+- 末尾空白、最終改行、生成された見出し装飾長だけを一回自動修正し、O-08の入力Draftは変更しない
+- AI Judgeの判定は`PASS`、`FAIL`、`UNCERTAIN`とし、確信度0.70未満の`PASS`は`UNCERTAIN`へ正規化する
+- Program Errorがなく、5評価軸がすべて確信度0.70以上の`PASS`なら`VALIDATED / ADVANCE`とする
+- Program Error、AI Judgeの非`PASS`、または恒久方針変更候補があれば`HOLD / HOLD`とし、公開へ進めない
+- 恒久方針変更が本当に必要な場合だけ、問題と2件以上3件以下の選択肢・影響を保存し、人間の`policy`判断を要求する
+- Warningだけでは停止せずValidation Reportへ残す
+- 同じ入力の再実行では成果物を書き換えない
+- O-09は新しい調査、意味を変える本文修正、公開配置、英訳、画像生成を行わない
