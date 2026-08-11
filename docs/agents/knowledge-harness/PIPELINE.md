@@ -64,7 +64,7 @@ flowchart TD
 | O-01 | Capture Request | Program | 公開Issueまたは許可済み入力 | Request | 公開可能性が明示されていない |
 | O-02 | Authorize Run | Program | Request、実行ラベル | Authorized Request | 呼ばない。ラベルがなければ待機 |
 | O-03 | Screen Safety | Program | Authorized Request | Screening Result | 私的情報か判断不能な場合だけ |
-| O-04 | Collect Evidence | Program | Screening Result、対象範囲 | Evidence Set | 呼ばない。取得失敗は再試行またはHOLD |
+| O-04 | Collect Evidence | Program | Screening Result、対象範囲 | Evidence Set | 呼ばない。欠落・矛盾を記録し、全面的な取得不能だけHOLD |
 | O-05 | Build Evidence Packet | Skill / Agent | Evidence Set | Evidence Packet | 呼ばない。不足は明示する |
 | O-06 | Judge Candidate | AI Judge | Evidence Packet、過去記事 | Candidate Decision | 呼ばない。不足・新規性なしはNO_CANDIDATE |
 | O-07 | Plan Article | Skill / Agent | Accepted Candidate | Article Plan | 著者固有の動機が中心主張に必須で、根拠から復元不能な場合だけ |
@@ -99,10 +99,20 @@ flowchart TD
 
 ### O-04 Collect Evidence
 
-- 許可された情報源から、出典URLまたはリポジトリ参照、取得時刻、対象バージョンを保存する
-- 同一出典を重複登録しない
-- 一時的な取得失敗は上限付きで再試行する
-- 取得不能が残る場合は不確実性を記録し、核心主張を支えられなければ`HOLD`にする
+- 公式・一次情報を優先し、一般Web上の説明、評価、懸念も候補に含める
+- 情報源を`primary`、`secondary`、`community`、`discovery_only`へ分類し、多数意見を事実の正しさとして扱わない
+- 出典URLまたはリポジトリ参照、タイトル、発行者・著者、発行日、取得時刻、対象バージョン、該当箇所、日本語要約、確からしさと理由を保存する
+- 検索結果のスニペットは発見専用とし、可能な限りリンク先を取得する
+- 同一出典を重複登録せず、同一ドメインへの偏りを抑える
+- 初期値として、検索3ラウンド、各ラウンド4クエリ、本文取得20件、採用12件、同一ドメイン3件、処理時間15分を上限とする
+- 一時的な取得失敗は1 URLにつき追加2回まで再試行する
+- 核心事実は一次・公式情報2件を目標とし、世間的評価を扱う場合は独立した二次・コミュニティ情報3件を目標とする。ただし、存在しない資料を件数合わせで補わない
+- 必要な論点を確認できた場合、検索結果が重複だけになった場合、または上限へ達した場合に収集を終了する
+- 根拠不足、取得不能、矛盾、対象範囲の曖昧さ、古さを理由コードと不確実性として消さずに保存する
+- 何らかの証拠が得られた場合は、不足や矛盾があっても`EVIDENCE_READY / ADVANCE`として後続へ渡す
+- 全面的な取得不能だけを`HOLD`とし、一時的な取得失敗は`RETRYABLE_ERROR`と区別する
+- 検索数、取得試行数、成功率、採用数、一次情報率、重複数、取得不能数、矛盾数、不足論点数、処理時間をMetricsとして記録する
+- 初期上限は固定的な正解とせず、原則10実行分のMetricsと後続Operationで判明した根拠不足から変更候補を作る。恒久変更は自動採用しない
 
 ### O-05 Build Evidence Packet
 
@@ -205,7 +215,7 @@ O-06が新規性または読者価値不足を理由に`NO_CANDIDATE`とする�
 
 ### 情報不足
 
-取得再試行とAI Judgeの評価後も核心主張を支えられない場合、`HOLD`で終了する。人間へ追加調査を依頼せず、取得不能な根拠と再開条件を記録する。
+O-04は取得できた証拠、取得不能、矛盾、不足をEvidence Setへ残す。O-05とO-06の評価後も核心主張を支えられない場合は`NO_CANDIDATE`または`HOLD`で終了する。人間へ追加調査を依頼せず、取得不能な根拠と再開条件を記録する。
 
 ### 修正上限到達
 
