@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 8 / Operation実装準備
-- 状態: O-06 `Judge Candidate`の実装境界をDraft PR #14でレビュー待ち
+- フェーズ: Phase 8 / Operation実装
+- 状態: O-06 `Judge Candidate`の実装をDraft PR #15でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)
-- レビュー対象: [GitHub Draft PR #14](https://github.com/mtakagishi/note/pull/14)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)、[GitHub PR #14](https://github.com/mtakagishi/note/pull/14)
+- レビュー対象: [GitHub Draft PR #15](https://github.com/mtakagishi/note/pull/15)
 - ブロッカー: なし
 
 ## 完了
@@ -72,13 +72,19 @@
 - O-06の目的、スコープ、スコープ外、完了条件、5評価軸を確定
 - `NO_CANDIDATE`、`HOLD`、`CANDIDATE_ACCEPTED`の決定規則と確信度下限0.70を確定
 - O-06の実装境界を確認するDraft PR #14を作成
+- 人間がPR #14をレビューしてマージ
+- AI Judge判定案の5軸、理由、確信度、Packet参照を検証する処理を実装
+- 必須軸の失敗・不確実性・確信度下限・高影響不確実性による決定規則を実装
+- 過去記事なしでの新規性PASSを拒まず`UNCERTAIN`へ正規化する処理を実装
+- Candidate Decisionの冪等な保存、CLI、単体テスト、運用文書を追加
+- O-06実装を確認するDraft PR #15を作成
 
 ## 次の一手
 
-人間がDraft PR #14のO-06実装境界を確認し、問題がなければマージする。
+人間がDraft PR #15のO-06実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
-- O-06の実装へ着手しない
-- Phase 8の境界を確認するDraft PRを作成したら、人間のレビューまで停止する
+- O-07以降のOperationへ着手しない
+- O-06実装のDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
