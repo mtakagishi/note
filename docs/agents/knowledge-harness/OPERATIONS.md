@@ -455,3 +455,63 @@ rye run python -m note.knowledge_harness.plan_article `
 - 回答後に`PLAN`へ進む場合は、公開可能な回答の参照を`author_context_ref`へ指定する
 - 回答がなくても安全な計画を作れる場合は質問せず、不確実性の扱いを指定して進める
 - O-07は記事本文、reStructuredText、英訳、画像、最終タイトル、公開日を生成・確定しない
+
+## O-08 Draft Articleの実行
+
+O-08はSkill / Agentが作る節別本文案をProgramで検証し、日本語reStructuredTextのDraftとPacket参照manifestへ保存する。
+
+```powershell
+rye run python -m note.knowledge_harness.draft_article `
+  --plan-file _notes/knowledge_harness/plans/run-20260811-002/article_plan.json `
+  --packet-file _notes/knowledge_harness/packets/run-20260811-002/evidence_packet.json `
+  --proposal-file article-draft-proposal.json
+```
+
+`article-draft-proposal.json`は次の形式にする。
+
+```json
+{
+  "draft_version": "article-draft-v1",
+  "drafter_id": "drafter-example",
+  "sections": [
+    {
+      "section_id": "section-001",
+      "blocks": [
+        {
+          "block_id": "block-001",
+          "body_rst": "公式情報で確認できる変更点を説明します。",
+          "packet_refs": ["topics/topic-001/items/item-001"]
+        },
+        {
+          "block_id": "block-002",
+          "body_rst": "対象バージョンの一部は未確認です。",
+          "packet_refs": ["uncertainties/0"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+既定では次の中間成果物を保存する。
+
+- `_notes/knowledge_harness/drafts/<run_id>/draft.rst`
+- `_notes/knowledge_harness/drafts/<run_id>/draft_manifest.json`
+
+検証と生成の規則は次のとおり。
+
+- 同じ`run_id`の`PLAN_READY / ADVANCE`と`PACKET_READY / ADVANCE`だけを受け付ける
+- Article Planの全節を同じIDと順序で一回ずつ指定する
+- 各節に一件以上の本文ブロックを指定し、`block_id`はDraft全体で一意にする
+- 本文ブロックのPacket参照は、そのPlan節で許可された参照だけに限定する
+- 各節の計画済み参照を少なくとも一つの本文ブロックへ対応付ける
+- `DISCLOSE`と`LIMIT_CLAIM`の不確実性を本文で使用し、`EXCLUDE`対象は使用しない
+- `raw`、`include`、`literalinclude`、`image`、`figure`、`post` directiveを本文ブロックへ含めない
+- 本文ブロック内にPlan外のreStructuredText見出しを追加しない
+- manifestへ各ブロックの節ID、Packet参照、SHA-256を保存する
+- Draft冒頭に記事状態、未確定の公開日、情報基準日、対象バージョン、生成動機、AI担当範囲、人間の確認範囲を表示する
+- Packetに対象バージョンがなければ推測せず`未確認`とする
+- 公開用`post` directiveを生成せず、`docs/blog/posts/`への出力を拒否する
+- 同じ入力の再実行では`draft.rst`とmanifestを書き換えない
+- O-08は人間へ質問せず`DRAFT_READY / ADVANCE`とする
+- 事実性、意味の飛躍、読者価値、構成品質、リンク、ビルド、秘密情報はO-09で検証する
