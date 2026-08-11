@@ -1,0 +1,267 @@
+"""O-13 Record Outcomeの記録処理とCLI。"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import tempfile
+from collections import Counter
+from dataclasses import asdict, dataclass, field
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any, Sequence
+
+RESULTS = (
+    "ADVANCE",
+    "NO_CANDIDATE",
+    "REJECTED",
+    "HOLD",
+    "RETRYABLE_ERROR",
+)
+PRODUCERS = ("program", "skill_agent", "ai_judge", "human")
+HUMAN_ACTIONS = ("none", "publication", "policy", "privacy", "exception")
+RUN_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
+STATE_PATTERN = re.compile(r"^[A-Z][A-Z0-9_]{0,63}$")
+
+
+@dataclass(frozen=True)
+class Outcome:
+    """共通Operation契約とO-13固有情報。"""
+
+    run_id: str
+    input_refs: list[str]
+    state_before: str
+    state_after: str
+    result: str
+    reason_codes: list[str]
+    summary_ja: str
+    uncertainties: list[str]
+    created_at: str
+    producer: str
+    artifact_refs: list[str] = field(default_factory=list)
+    verification_refs: list[str] = field(default_factory=list)
+    next_action: str = "なし"
+    human_action: str = "none"
+    schema_version: int = 1
+
+
+@dataclass(frozen=True)
+class RecordResult:
+    """記録先と更新有無。"""
+
+    outcome_path: Path
+    handoff_path: Path
+    metrics_path: Path
+    changed: bool
+
+
+def _validate(outcome: Outcome) -> None:
+    if not RUN_ID_PATTERN.fullmatch(outcome.run_id):
+        raise ValueError("run_idは英数字で始まる128文字以内の英数字・._-にしてください")
+    if not STATE_PATTERN.fullmatch(outcome.state_before):
+        raise ValueError("state_beforeは大文字英数字とアンダースコアで指定してください")
+    if not STATE_PATTERN.fullmatch(outcome.state_after):
+        raise ValueError("state_afterは大文字英数字とアンダースコアで指定してください")
+    if outcome.result not in RESULTS:
+        raise ValueError(f"resultは{', '.join(RESULTS)}のいずれかにしてください")
+    if outcome.producer not in PRODUCERS:
+        raise ValueError(f"producerは{', '.join(PRODUCERS)}のいずれかにしてください")
+    if outcome.human_action not in HUMAN_ACTIONS:
+        raise ValueError(f"human_actionは{', '.join(HUMAN_ACTIONS)}のいずれかにしてください")
+    if not outcome.reason_codes:
+        raise ValueError("reason_codesを一件以上指定してください")
+    if not outcome.summary_ja.strip():
+        raise ValueError("summary_jaを指定してください")
+    if not outcome.created_at.strip():
+        raise ValueError("created_atを指定してください")
+
+
+def _json_text(data: Any) -> str:
+    return json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
+def _write_if_changed(path: Path, content: str) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(
+        "w", encoding="utf-8", newline="\n", dir=path.parent, delete=False
+    ) as temporary:
+        temporary.write(content)
+        temporary_path = Path(temporary.name)
+    temporary_path.replace(path)
+    return True
+
+
+def _list_items(values: Sequence[str]) -> str:
+    if not values:
+        return "- なし"
+    return "\n".join(f"- {value}" for value in values)
+
+
+def _handoff_text(outcome: Outcome) -> str:
+    return f"""# HANDOFF {outcome.run_id}
+
+## 完了
+
+- 状態: `{outcome.state_before}` → `{outcome.state_after}`
+- 結果: `{outcome.result}`
+- 記録者: `{outcome.producer}`
+- 記録時刻: `{outcome.created_at}`
+
+## 要約
+
+{outcome.summary_ja}
+
+## 理由コード
+
+{_list_items(outcome.reason_codes)}
+
+## 入力参照
+
+{_list_items(outcome.input_refs)}
+
+## 成果物
+
+{_list_items(outcome.artifact_refs)}
+
+## 検証
+
+{_list_items(outcome.verification_refs)}
+
+## 不確実性
+
+{_list_items(outcome.uncertainties)}
+
+## 人間判断
+
+- 種類: `{outcome.human_action}`
+
+## 次の一手
+
+- {outcome.next_action}
+"""
+
+
+def _read_outcomes(output_dir: Path) -> list[dict[str, Any]]:
+    outcomes: list[dict[str, Any]] = []
+    for path in sorted(output_dir.glob("*/outcome.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(data, dict) and data.get("run_id") == path.parent.name:
+            outcomes.append(data)
+    return outcomes
+
+
+def _metrics(outcomes: Sequence[dict[str, Any]]) -> dict[str, Any]:
+    results = Counter(str(item.get("result", "UNKNOWN")) for item in outcomes)
+    reason_codes = Counter(
+        str(code) for item in outcomes for code in item.get("reason_codes", [])
+    )
+    human_actions = Counter(
+        str(item.get("human_action", "none")) for item in outcomes
+    )
+    return {
+        "schema_version": 1,
+        "total_runs": len(outcomes),
+        "results": dict(sorted(results.items())),
+        "reason_codes": dict(sorted(reason_codes.items())),
+        "human_actions": dict(sorted(human_actions.items())),
+    }
+
+
+def record_outcome(outcome: Outcome, output_dir: Path) -> RecordResult:
+    """Outcomeを冪等に保存し、全runのMetricsを再集計する。"""
+
+    _validate(outcome)
+    run_dir = output_dir / outcome.run_id
+    outcome_path = run_dir / "outcome.json"
+    handoff_path = run_dir / "HANDOFF.md"
+    metrics_path = output_dir / "metrics.json"
+
+    outcome_changed = _write_if_changed(outcome_path, _json_text(asdict(outcome)))
+    handoff_changed = _write_if_changed(handoff_path, _handoff_text(outcome))
+    metrics_changed = _write_if_changed(
+        metrics_path, _json_text(_metrics(_read_outcomes(output_dir)))
+    )
+    return RecordResult(
+        outcome_path=outcome_path,
+        handoff_path=handoff_path,
+        metrics_path=metrics_path,
+        changed=outcome_changed or handoff_changed or metrics_changed,
+    )
+
+
+def _existing_created_at(output_dir: Path, run_id: str) -> str | None:
+    path = output_dir / run_id / "outcome.json"
+    if not path.exists():
+        return None
+    try:
+        value = json.loads(path.read_text(encoding="utf-8")).get("created_at")
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return None
+    return value if isinstance(value, str) and value else None
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="O-13 Record Outcomeを記録します")
+    parser.add_argument("--run-id", required=True)
+    parser.add_argument("--state-before", required=True)
+    parser.add_argument("--state-after", required=True)
+    parser.add_argument("--result", required=True, choices=RESULTS)
+    parser.add_argument("--reason-code", required=True, action="append", dest="reason_codes")
+    parser.add_argument("--summary-ja", required=True)
+    parser.add_argument("--producer", required=True, choices=PRODUCERS)
+    parser.add_argument("--input-ref", action="append", default=[], dest="input_refs")
+    parser.add_argument("--uncertainty", action="append", default=[], dest="uncertainties")
+    parser.add_argument("--artifact-ref", action="append", default=[], dest="artifact_refs")
+    parser.add_argument("--verification-ref", action="append", default=[], dest="verification_refs")
+    parser.add_argument("--next-action", default="なし")
+    parser.add_argument("--human-action", default="none", choices=HUMAN_ACTIONS)
+    parser.add_argument("--created-at")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("_notes/knowledge_harness/outcomes"),
+    )
+    return parser
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    created_at = args.created_at or _existing_created_at(args.output_dir, args.run_id)
+    if created_at is None:
+        created_at = datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+    outcome = Outcome(
+        run_id=args.run_id,
+        input_refs=args.input_refs,
+        state_before=args.state_before,
+        state_after=args.state_after,
+        result=args.result,
+        reason_codes=args.reason_codes,
+        summary_ja=args.summary_ja,
+        uncertainties=args.uncertainties,
+        created_at=created_at,
+        producer=args.producer,
+        artifact_refs=args.artifact_refs,
+        verification_refs=args.verification_refs,
+        next_action=args.next_action,
+        human_action=args.human_action,
+    )
+    try:
+        result = record_outcome(outcome, args.output_dir)
+    except ValueError as error:
+        _parser().error(str(error))
+
+    status = "更新しました" if result.changed else "変更はありません"
+    print(f"{status}: {result.outcome_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
