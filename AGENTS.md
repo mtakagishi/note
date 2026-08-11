@@ -105,6 +105,14 @@ rye run python translate-po-ja-en.py docs/locale/en/LC_MESSAGES/対象ファイ�
 - 運用者が日本語のみ理解する前提で、判断が必要な点は日本語で確認する。
 - ブログ公開上、英語読者も意識するが、管理・編集・レビューの基準言語は日本語とする。
 
+## 作業再開の最小確認
+
+- 再開時は、まず最小確認手順で状況把握する。
+- 手順は `docs/agents/resume-minimal-checklist.md` を参照する。
+- 全履歴確認は、同手順書の拡張条件に該当する場合のみ実施する。
+- 再開時に貼るプロンプトは `docs/agents/resume-minimal-checklist.md` の「再開時に使うプロンプト」を使う。
+- セッション終了時のハンドオフ記録は `_notes/sessions/resume-handoff-latest.md` を更新する。
+
 ## ログから記事を書くエージェント
 
 - ユーザーが AI とのやりとりログを指定してブログ記事作成を依頼した場合は、`docs/agents/ai-log-blog-writer.md` の手順に従う。
