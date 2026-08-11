@@ -138,3 +138,23 @@ rye run python -m note.knowledge_harness.capture_request `
 - 問いが空の場合は、記事内容を推測せず入力エラーとする
 - 同じ`run_id`の再実行では重複させず、内容が変わった場合だけ更新する
 - O-01はO-02以降を自動実行しない
+
+## O-02 Authorize Runの実行
+
+O-02はO-01が生成したRequestと現在のラベル一覧を受け取り、明示的な実行ラベルがある場合だけ後続処理を許可する。
+
+```powershell
+rye run python -m note.knowledge_harness.authorize_run `
+  --request-file _notes/knowledge_harness/requests/run-20260811-002/request.json `
+  --label knowledge-harness:run
+```
+
+既定では`_notes/knowledge_harness/authorized/<run_id>/authorization.json`へ保存する。
+
+- 既定の実行ラベルは`knowledge-harness:run`とする
+- 別のラベルを使う場合は`--required-label`で変更できる
+- 必須ラベルがあれば`AUTHORIZED / ADVANCE`とする
+- 必須ラベルがなければ`CAPTURED / HOLD`とし、状態を進めない
+- ラベルがない場合は人間へ質問や催促を行わない
+- O-01が`HOLD`にしたRequestはラベルがあっても許可しない
+- 同じ`run_id`へラベルを追加して再実行した場合は、既存記録を更新する
