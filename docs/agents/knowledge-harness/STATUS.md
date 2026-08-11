@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 0 / 継続基盤
-- 状態: 継続基盤の4文書をDraft PR #3でレビュー待ち
+- フェーズ: Phase 0 / 完了
+- 状態: Draft PR #3を人間がマージし、継続基盤を確立済み
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- レビュー対象: [GitHub Draft PR #3](https://github.com/mtakagishi/note/pull/3)
-- ブロッカー: なし
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)
+- ブロッカー: Phase 1の目的、範囲、完了条件に関する人間の判断待ち
 
 ## 完了
 
@@ -19,13 +19,14 @@
 - 現在地と次の一手をこの文書へ記録
 - 中断、再開、HANDOFF、状態更新の手順を`OPERATIONS.md`へ記録
 - 4文書を確認するためのDraft PR #3を作成
+- 人間がPR #3をレビューしてマージ
+- Phase 0の完了条件をすべて達成
 
 ## 次の一手
 
-人間がDraft PR #3の内容を確認し、問題がなければマージする。
+人間がPhase 1の目的、スコープ、スコープ外、完了条件を決定する。
 
 ## 停止条件
 
-- 人間のレビュー結果が出たら停止し、修正要求があればその内容を次の一手にする
-- 人間のマージが完了するまでPhase 0を完了扱いにしない
-- Phase 1以降の実装には着手しない
+- Phase 1の境界が合意されるまで実装へ進まない
+- 合意内容を`CHARTER.md`、`DECISIONS.md`、`STATUS.md`へ記録してから最初のOperationを決める
