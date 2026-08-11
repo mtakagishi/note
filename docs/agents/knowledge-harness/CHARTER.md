@@ -346,3 +346,54 @@ Phase 10では、O-08 `Draft Article`を実装し、Article PlanとEvidence Pack
 - 同一入力では不要な書き換えを行わない
 - CLI、単体テスト、既存Operationの回帰テストが成功する
 - Draft PRを人間が確認してマージする
+
+## Phase 11の境界
+
+Phase 11では、O-09 `Validate Draft`を実装し、O-08のDraftをProgramとAI Judgeの独立した検査に通し、公開レビュー準備へ進めるかをValidation Reportとして保存する。
+
+### 目的
+
+- 形式・安全性・追跡整合性と、事実性・意味・読者価値の評価を分離する
+- 機械修正可能な表示上の問題だけを限定的に直し、内容変更や根拠補完を自動修正に混ぜない
+- 品質不足を人間への質問ではなく、安全な非公開保留として再検証可能に記録する
+
+### スコープ
+
+- O-08の`DRAFT_READY / ADVANCE`成果物、Article Plan、Evidence Packetの契約検証
+- manifest、Draft SHA-256、節・ブロック・Packet参照の整合検証
+- reStructuredText構文、メタデータ、リンク、既存記事との重複、秘密情報・個人情報のProgram検査
+- 内容を変えない機械修正を一回だけ適用した再検査
+- AI Judgeによる事実的根拠、意味の飛躍、外部読者価値、構成整合、不確実性の扱いの独立評価
+- 各評価軸の`PASS`、`FAIL`、`UNCERTAIN`、確信度、理由、Draftブロック・Packet参照の保存
+- `VALIDATED / ADVANCE`と`HOLD / HOLD`の決定規則
+- 恒久方針が本当に必要な場合だけの方針変更候補記録
+- `run_id`単位の冪等なValidation Report保存
+- CLI、単体テスト、運用文書
+
+### スコープ外
+
+- 新しい情報の検索と根拠不足の補完
+- Draft本文の意味、事実、主張、構成の自動書き換え
+- Article Plan、Evidence Packet、Candidate Decisionの変更
+- 公開用`post` directive、最終タイトル、公開日の確定
+- `docs/blog/posts/`への配置、英訳、画像生成
+- Draft PR、公開判断、GitHub Actionsと定期実行
+- 単発記事の問題を恒久方針として人間へ質問すること
+
+### 完了条件
+
+- 同じ`run_id`の正常なDraft、manifest、Article Plan、Evidence Packetだけを入力できる
+- DraftとmanifestのSHA-256、全ブロック、節、Packet参照の整合を検証できる
+- reStructuredTextを単独で構文解析し、エラーを記録できる
+- 外部URLをEvidence Packetの情報源へ限定し、ローカル参照のパストラバーサルと不存在を検出できる
+- 既存記事との正規化タイトル一致をエラー、本文類似度0.85以上を重複候補として記録できる
+- O-03相当の秘密情報、非公開マーカー、マスクされていないメールアドレス・電話番号を検出できる
+- 末尾空白、最終改行、生成見出しの装飾長だけを一回自動修正し、修正内容と再検査結果を保存できる
+- 5評価軸を独立に判定し、理由、確信度、実在するブロック・Packet参照を保存できる
+- Programエラーがなく、全必須軸が確信度0.70以上の`PASS`の場合だけ`VALIDATED / ADVANCE`へ進める
+- 未解決Programエラー、`FAIL`、`UNCERTAIN`、確信度0.70未満を`HOLD / HOLD`として正常終了できる
+- 技術的事実や根拠不足を人間へ質問せず、内容の自動改変を行わない
+- 恒久方針候補は現行方針では判定不能な場合だけ、選択肢と影響を伴って記録できる
+- 同一入力では不要な書き換えを行わない
+- CLI、単体テスト、既存Operationの回帰テストが成功する
+- Draft PRを人間が確認してマージする
