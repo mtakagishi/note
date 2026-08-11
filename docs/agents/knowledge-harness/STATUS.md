@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 2 / Operation実装
-- 状態: 最初のOperationとしてO-13 `Record Outcome`を実装中
+- 状態: O-13 `Record Outcome`の実装をDraft PR #6でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)
-- レビュー対象: O-13実装のDraft PR（作成予定）
+- レビュー対象: [GitHub Draft PR #6](https://github.com/mtakagishi/note/pull/6)
 - ブロッカー: なし
 
 ## 完了
@@ -28,10 +28,12 @@
 - Phase 1設計を確認するDraft PR #5を作成
 - 人間がPR #5をレビューしてマージ
 - 最初の実装対象としてO-13 `Record Outcome`を採用
+- O-13の記録処理、CLI、単体テスト、運用文書を実装
+- O-13実装を確認するDraft PR #6を作成
 
 ## 次の一手
 
-O-13 `Record Outcome`を実装し、検証結果を添えたDraft PRを作成する。
+人間がDraft PR #6のO-13実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
