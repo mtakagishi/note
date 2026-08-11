@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 14 / Operation設計
-- 状態: O-12 `Apply Feedback`実装PRのレビュー待ち
+- 状態: O-12 `Apply Feedback`実装をマージ済み。次フェーズの着手条件を確認中
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #25](https://github.com/mtakagishi/note/pull/25)
-- レビュー対象: [GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
+- レビュー対象: なし
 - ブロッカー: なし
 
 ## 完了
@@ -156,10 +156,9 @@
 
 ## 次の一手
 
-人間がPR #27のO-12実装を確認し、問題がなければ承認してマージする。
+Phase 15として、横断統合の実装境界（目的、スコープ、スコープ外、完了条件）を定義する。
 
 ## 停止条件
 
-- O-13や横断的な統合へ着手しない
-- PR #27がマージされるまで次の作業へ進まない
+- 境界定義の承認前に、横断統合の実コードへ着手しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
