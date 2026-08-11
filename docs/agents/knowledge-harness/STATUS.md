@@ -4,8 +4,8 @@
 
 ## 現在地
 
-- フェーズ: Phase 14 / Operation設計
-- 状態: O-12 `Apply Feedback`実装をマージ済み。次フェーズの着手条件を確認中
+- フェーズ: Phase 15 / 横断統合の境界定義
+- 状態: 横断統合の目的、スコープ、スコープ外、完了条件を定義済み
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
 - レビュー対象: なし
@@ -153,12 +153,16 @@
 - 2回上限、3回目の保留、O-09への再検証接続を実装
 - 日本語案内、冪等保存、CLI、単体テスト、運用文書を追加
 - O-12実装を確認するDraft PR #27を作成
+- 人間がPR #27をレビューしてマージ
+- Phase 15として横断統合の境界定義を`PIPELINE.md`へ追加
+- Phase 15の採用判断を`DECISIONS.md`へ記録
 
 ## 次の一手
 
-Phase 15として、横断統合の実装境界（目的、スコープ、スコープ外、完了条件）を定義する。
+Phase 15の最初の実装候補を一件に絞り、統合Orchestratorの最小実装境界を決める。
 
 ## 停止条件
 
 - 境界定義の承認前に、横断統合の実コードへ着手しない
+- 最初の実装候補を確定する前に、複数の統合実装を並行着手しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
