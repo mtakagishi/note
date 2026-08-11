@@ -48,6 +48,8 @@ class Outcome:
     verification_refs: list[str] = field(default_factory=list)
     next_action: str = "なし"
     human_action: str = "none"
+    source_operation: str = ""
+    operation_metrics: dict[str, int | float] = field(default_factory=dict)
     schema_version: int = 1
 
 
@@ -79,6 +81,8 @@ def _validate(outcome: Outcome) -> None:
         raise ValueError("summary_jaを指定してください")
     if not outcome.created_at.strip():
         raise ValueError("created_atを指定してください")
+    if outcome.operation_metrics and not outcome.source_operation.strip():
+        raise ValueError("operation_metricsを記録する場合はsource_operationを指定してください")
 
 
 def _list_items(values: Sequence[str]) -> str:
@@ -151,13 +155,49 @@ def _metrics(outcomes: Sequence[dict[str, Any]]) -> dict[str, Any]:
     human_actions = Counter(
         str(item.get("human_action", "none")) for item in outcomes
     )
+    operation_metrics: dict[str, dict[str, Any]] = {}
+    for item in outcomes:
+        operation = item.get("source_operation")
+        values = item.get("operation_metrics")
+        if not isinstance(operation, str) or not operation or not isinstance(values, dict):
+            continue
+        aggregate = operation_metrics.setdefault(operation, {"runs": 0, "totals": {}})
+        aggregate["runs"] += 1
+        for name, value in values.items():
+            if isinstance(value, (int, float)) and not isinstance(value, bool):
+                aggregate["totals"][str(name)] = aggregate["totals"].get(str(name), 0) + value
     return {
         "schema_version": 1,
         "total_runs": len(outcomes),
         "results": dict(sorted(results.items())),
         "reason_codes": dict(sorted(reason_codes.items())),
         "human_actions": dict(sorted(human_actions.items())),
+        "operation_metrics": operation_metrics,
     }
+
+
+def _read_operation_metrics(path: Path | None) -> dict[str, int | float]:
+    if path is None:
+        return {}
+    data = _read_json_object(path, "Operation Metrics")
+    metrics = data.get("metrics")
+    if not isinstance(metrics, dict):
+        raise ValueError("Operation Metricsファイルにmetricsがありません")
+    return {
+        str(name): value
+        for name, value in metrics.items()
+        if isinstance(value, (int, float)) and not isinstance(value, bool)
+    }
+
+
+def _read_json_object(path: Path, label: str) -> dict[str, Any]:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise ValueError(f"{label}をJSONとして読めません: {path}") from error
+    if not isinstance(data, dict):
+        raise ValueError(f"{label}はJSONオブジェクトである必要があります")
+    return data
 
 
 def record_outcome(outcome: Outcome, output_dir: Path) -> RecordResult:
@@ -197,6 +237,8 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--verification-ref", action="append", default=[], dest="verification_refs")
     parser.add_argument("--next-action", default="なし")
     parser.add_argument("--human-action", default="none", choices=HUMAN_ACTIONS)
+    parser.add_argument("--source-operation", default="")
+    parser.add_argument("--operation-metrics-file", type=Path)
     parser.add_argument("--created-at")
     parser.add_argument(
         "--output-dir",
@@ -214,6 +256,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     if created_at is None:
         created_at = datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
 
+    try:
+        operation_metrics = _read_operation_metrics(args.operation_metrics_file)
+    except ValueError as error:
+        _parser().error(str(error))
     outcome = Outcome(
         run_id=args.run_id,
         input_refs=args.input_refs,
@@ -229,6 +275,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         verification_refs=args.verification_refs,
         next_action=args.next_action,
         human_action=args.human_action,
+        source_operation=args.source_operation,
+        operation_metrics=operation_metrics,
     )
     try:
         result = record_outcome(outcome, args.output_dir)

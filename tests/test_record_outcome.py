@@ -82,6 +82,21 @@ class RecordOutcomeTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "run_id"):
             record_outcome(invalid, self.output_dir)
 
+    def test_aggregates_numeric_operation_metrics(self) -> None:
+        measured = replace(
+            self.outcome,
+            source_operation="O-04",
+            operation_metrics={"retrieval_attempts": 4, "retrieval_success_rate": 0.75},
+        )
+
+        result = record_outcome(measured, self.output_dir)
+        metrics = json.loads(result.metrics_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(metrics["operation_metrics"]["O-04"]["runs"], 1)
+        self.assertEqual(
+            metrics["operation_metrics"]["O-04"]["totals"]["retrieval_attempts"], 4
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
