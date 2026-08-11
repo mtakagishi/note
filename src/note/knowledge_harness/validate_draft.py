@@ -94,10 +94,11 @@ def _read_inputs(value: ValidationInput) -> tuple[str, dict[str, Any], dict[str,
     manifest = _read_json(value.manifest_path, "Draft manifest")
     plan = _read_json(value.plan_path, "Article Plan")
     packet = _read_json(value.packet_path, "Evidence Packet")
-    if not isinstance(manifest, dict) or manifest.get("operation_id") != "O-08":
-        raise ValueError("O-08が生成したDraft manifestだけを受け付けます")
-    if manifest.get("state_after") != "DRAFT_READY" or manifest.get("result") != "ADVANCE":
-        raise ValueError("DRAFT_READY / ADVANCEのDraftだけを検証できます")
+    if not isinstance(manifest, dict) or manifest.get("operation_id") not in {"O-08", "O-12"}:
+        raise ValueError("O-08またはO-12が生成したDraft manifestだけを受け付けます")
+    expected_state = "DRAFT_READY" if manifest.get("operation_id") == "O-08" else "REVISED"
+    if manifest.get("state_after") != expected_state or manifest.get("result") != "ADVANCE":
+        raise ValueError("DRAFT_READYまたはREVISED / ADVANCEのDraftだけを検証できます")
     if not isinstance(plan, dict) or plan.get("operation_id") != "O-07":
         raise ValueError("O-07が生成したArticle Planだけを受け付けます")
     if plan.get("state_after") != "PLAN_READY" or plan.get("result") != "ADVANCE":
@@ -429,7 +430,7 @@ def validate_draft(
         "operation_id": "O-09",
         "run_id": run_id,
         "input_refs": [str(value.draft_path), str(value.manifest_path), str(value.plan_path), str(value.packet_path), str(value.judgment_path)],
-        "state_before": "DRAFT_READY",
+        "state_before": manifest["state_after"],
         "state_after": state_after,
         "result": result,
         "reason_codes": reasons,

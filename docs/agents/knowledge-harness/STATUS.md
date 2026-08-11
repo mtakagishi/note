@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 14 / Operation設計
-- 状態: O-12 `Apply Feedback`の実装境界をDraft PR #26でレビュー待ち
+- 状態: O-12 `Apply Feedback`実装PRのレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #25](https://github.com/mtakagishi/note/pull/25)
-- レビュー対象: [GitHub PR #26](https://github.com/mtakagishi/note/pull/26)
+- レビュー対象: [GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
 - ブロッカー: なし
 
 ## 完了
@@ -147,14 +147,19 @@
 - O-12の目的、スコープ、スコープ外、完了条件を確定
 - 指定箇所だけの修正、2回上限、安全な保留、O-09への再検証境界を確定
 - O-12の実装境界を確認するDraft PR #26を作成
+- 人間がPR #26をレビューしてマージ
+- 修正要求、Draft、manifest、修正文案の契約・SHA-256検証を実装
+- 指定ブロックだけの修正、Packet参照不変、変更追跡を実装
+- 2回上限、3回目の保留、O-09への再検証接続を実装
+- 日本語案内、冪等保存、CLI、単体テスト、運用文書を追加
+- O-12実装を確認するDraft PR #27を作成
 
 ## 次の一手
 
-人間がPR #26のO-12実装境界を確認し、問題がなければ承認してマージする。
+人間がPR #27のO-12実装を確認し、問題がなければ承認してマージする。
 
 ## 停止条件
 
-- O-12の実装へ着手しない
 - O-13や横断的な統合へ着手しない
-- PR #26がマージされるまでO-12の実装へ着手しない
+- PR #27がマージされるまで次の作業へ進まない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
