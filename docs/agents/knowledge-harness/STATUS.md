@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 6 / Operation実装準備
-- 状態: O-04 `Collect Evidence`の実装境界をDraft PR #10でレビュー待ち
+- 状態: O-04 `Collect Evidence`を実装中
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)
-- レビュー対象: [GitHub Draft PR #10](https://github.com/mtakagishi/note/pull/10)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)
+- レビュー対象: なし
 - ブロッカー: なし
 
 ## 完了
@@ -49,13 +49,18 @@
 - 不足・取得不能・矛盾をEvidence Setへ保持し、後続Operationで評価する境界を確定
 - O-04 Metricsを原則10実行分蓄積して初期値を見直す方針を確定
 - O-04の実装境界を確認するDraft PR #10を作成
+- 人間がPR #10をレビューしてマージ
+- O-04の公開URL取得、情報源分類、重複排除、収集上限、限定的な再試行を実装
+- 不足、取得不能、矛盾、対象範囲の曖昧さとMetricsをEvidence Setへ保存する処理を実装
+- O-04 MetricsをO-13でOperation別に集計する処理を実装
+- O-04のCLI、単体テスト、運用文書を追加
 
 ## 次の一手
 
-人間がDraft PR #10のO-04実装境界を確認し、問題がなければマージする。
+O-04実装を確認するDraft PRを作成する。
 
 ## 停止条件
 
-- O-04の実コードをDraft PR #10へ追加しない
-- Draft PR #10を作成したら、人間のレビューまで停止する
+- O-05以降のOperationを同じPRへ追加しない
+- O-04実装のDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ

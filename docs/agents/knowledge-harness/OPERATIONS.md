@@ -178,3 +178,73 @@ rye run python -m note.knowledge_harness.screen_safety `
 - 自動判定不能と分かっている場合は`--assessment uncertain`で本文を保持せず`HOLD`とし、公開可能性だけを確認する
 - 明確に非公開と分かっている場合は`--assessment private`で質問せず`REJECTED`とする
 - O-02が待機中のAuthorizationは検査しない
+
+## O-04 Collect Evidenceの実行
+
+O-04はO-03を通過したRequestと、検索で発見した公開情報源候補を受け取り、本文を取得してEvidence Setを作る。外部検索サービスとの本格連携はPhase 6のスコープ外であるため、検索結果はJSONマニフェストとして渡す。
+
+```powershell
+rye run python -m note.knowledge_harness.collect_evidence `
+  --screening-file _notes/knowledge_harness/screened/run-20260811-002/screening.json `
+  --sources-file sources.json
+```
+
+`sources.json`は次の形式にする。
+
+```json
+{
+  "sources": [
+    {
+      "url": "https://example.com/official-document",
+      "source_type": "primary",
+      "title": "公式文書",
+      "publisher": "Example",
+      "published_at": "2026-08-11",
+      "target_version": "1.0",
+      "summary_ja": "確認対象となる公式説明の要約",
+      "supports": ["確認できた事実"],
+      "limitations": ["この資料だけでは確認できない事項"],
+      "confidence": "high",
+      "confidence_reason": "公式文書であるため",
+      "search_round": 1,
+      "query": "example 公式文書",
+      "topics": ["対象仕様"],
+      "uncertainties": [],
+      "contradictions": []
+    }
+  ]
+}
+```
+
+既定では`_notes/knowledge_harness/evidence/<run_id>/evidence.json`へ保存する。
+
+- `source_type`は`primary`、`secondary`、`community`、`discovery_only`から選ぶ
+- URLは公開HTTP(S)だけを受け付け、認証やアクセス制限を回避しない
+- 取得本文そのものは保存せず、SHA-256、バイト数、Content-Typeと提供された該当箇所・要約を保存する
+- URL断片を除いた同一URLを重複排除し、同一ドメインからの採用は3件までとする
+- 検索3ラウンド、各4クエリ、取得20回、採用12件、15分を初期上限とする
+- 一時的な失敗は追加2回まで再試行し、恒久的失敗とともに理由を保存する
+- 必要範囲を確認できた候補へ`"complete_scope": true`を指定すると、取得成功後に早期終了する
+- 1件以上取得できれば、不足や矛盾があっても`EVIDENCE_READY / ADVANCE`とする
+- 一時的失敗だけなら`SCREENED / RETRYABLE_ERROR`、全面的に取得不能なら`HOLD`とする
+- 同じ入力と同じ取得内容では成果物を書き換えない
+
+O-04のMetricsをO-13へ集計する場合は、Evidence Set自体をMetrics入力として指定する。
+
+```powershell
+rye run python -m note.knowledge_harness.outcomes `
+  --run-id run-20260811-002 `
+  --state-before SCREENED `
+  --state-after EVIDENCE_READY `
+  --result ADVANCE `
+  --reason-code EVIDENCE_COLLECTED `
+  --summary-ja "公開情報を取得し、不足と矛盾を含むEvidence Setを記録しました。" `
+  --producer program `
+  --source-operation O-04 `
+  --operation-metrics-file _notes/knowledge_harness/evidence/run-20260811-002/evidence.json `
+  --artifact-ref _notes/knowledge_harness/evidence/run-20260811-002/evidence.json `
+  --next-action "O-05 Build Evidence Packetへ渡す" `
+  --human-action none
+```
+
+O-13は数値MetricsをOperation別に合計する。初期上限の変更は自動採用せず、原則10実行分を人間が確認する。
