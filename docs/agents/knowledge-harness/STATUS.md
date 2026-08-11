@@ -4,8 +4,8 @@
 
 ## 現在地
 
-- フェーズ: Phase 15 / 横断統合の境界定義
-- 状態: Phase 15-a の最小Orchestratorを実装済み。O-01〜O-03の直列実行、停止条件、再開位置、冪等性を検証済み
+- フェーズ: Phase 15 / 横断統合の実装
+- 状態: OrchestratorはO-01〜O-13まで接続済み。HOLD時のnext_action契約を停止理由ベースで具体化し、回帰テストで固定済み
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
 - レビュー対象: なし
@@ -157,13 +157,17 @@
 - Phase 15として横断統合の境界定義を`PIPELINE.md`へ追加
 - Phase 15の採用判断を`DECISIONS.md`へ記録
 - Phase 15-aとしてO-01〜O-03統合Orchestratorを実装し、単体テストで検証
+- O-04〜O-13をOrchestratorへ順次接続し、O-12改稿経路とO-09再検証を含む実行経路を接続
+- 承認時にO-13 `Record Outcome`まで進む統合経路を実装
+- HOLD時の`stop_reason`と`resume_position`に対応する`next_action`契約を具体化
+- `tests/test_orchestrate_run.py`に停止系`next_action`回帰を追加し、契約を固定
 
 ## 次の一手
 
-O-04 Collect Evidenceへ接続するための次の統合境界を定義する。
+HOLD理由と`resume_position`の網羅性を点検し、必要な追加回帰テストを定義する。
 
 ## 停止条件
 
-- O-04以降の接続境界を定義しない
 - 既存Operationの契約や判定ルールを変更しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
+- `next_action`文言の調整だけで挙動を変える変更は行わず、必ず回帰テストを同時更新する
