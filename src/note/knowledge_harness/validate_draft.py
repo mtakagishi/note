@@ -360,6 +360,35 @@ def _judge(judgment: Any, manifest: dict[str, Any]) -> tuple[dict[str, Any], boo
     }, has_failure or validated_policy["required"]
 
 
+def _human_guidance(program_failed: bool, judge_failed: bool, policy_required: bool) -> dict[str, Any]:
+    if not (program_failed or judge_failed or policy_required):
+        return {
+            "status_label_ja": "検証合格",
+            "result_label_ja": "次の工程へ進めます",
+            "summary_ja": "原稿は自動検証に合格しました。まだ公開はされません。次は公開レビューの準備です。",
+            "human_action_required": False,
+            "requested_decision_ja": "この段階で人間の判断は必要ありません。",
+            "if_no_response_ja": "次の工程へ進める状態を維持します。",
+        }
+    if policy_required:
+        return {
+            "status_label_ja": "方針判断待ち",
+            "result_label_ja": "判断があるまで保留します",
+            "summary_ja": "現行方針では扱えない恒久的な問題があるため、原稿を保留しています。公開はされません。",
+            "human_action_required": True,
+            "requested_decision_ja": "記録された方針変更候補と各選択肢の影響を確認し、採用する方針を決めてください。",
+            "if_no_response_ja": "判断がない場合、原稿は公開されず保留状態を維持します。",
+        }
+    return {
+        "status_label_ja": "検証不合格",
+        "result_label_ja": "問題があるため保留します",
+        "summary_ja": "原稿は自動検証に合格しませんでした。公開せず、検出した問題を記録して保留します。",
+        "human_action_required": False,
+        "requested_decision_ja": "人間による根拠の補完や例外判断は求めません。",
+        "if_no_response_ja": "原稿は公開されず保留状態を維持します。",
+    }
+
+
 def validate_draft(
     value: ValidationInput,
     output_dir: Path,
@@ -386,6 +415,11 @@ def validate_draft(
     reasons = ["DRAFT_VALIDATION_FAILED"] if blocked else ["DRAFT_VALIDATED"]
     if validated_judgment["policy_change_candidate"]["required"]:
         reasons.append("POLICY_CHANGE_REQUIRED")
+    human_guidance = _human_guidance(
+        program_failed,
+        judge_failed,
+        validated_judgment["policy_change_candidate"]["required"],
+    )
     run_id = str(manifest["run_id"])
     run_dir = output_dir / run_id
     validated_draft_path = run_dir / "validated_draft.rst"
@@ -399,6 +433,7 @@ def validate_draft(
         "state_after": state_after,
         "result": result,
         "reason_codes": reasons,
+        "human_guidance_ja": human_guidance,
         "created_at": value.created_at,
         "producer": "program_and_ai_judge",
         "program_validation": {

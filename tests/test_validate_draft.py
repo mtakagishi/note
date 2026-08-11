@@ -78,6 +78,10 @@ class ValidateDraftTest(unittest.TestCase):
         self.assertEqual((result.state_after, result.result), ("VALIDATED", "ADVANCE"))
         self.assertTrue(report["program_validation"]["passed"])
         self.assertEqual(report["required_human_action"], "none")
+        self.assertEqual(report["human_guidance_ja"]["status_label_ja"], "検証合格")
+        self.assertEqual(report["human_guidance_ja"]["result_label_ja"], "次の工程へ進めます")
+        self.assertFalse(report["human_guidance_ja"]["human_action_required"])
+        self.assertIn("まだ公開はされません", report["human_guidance_ja"]["summary_ja"])
 
     def test_low_confidence_pass_holds(self) -> None:
         self._write_judgment(confidence=0.69)
@@ -86,7 +90,12 @@ class ValidateDraftTest(unittest.TestCase):
 
     def test_ai_fail_holds(self) -> None:
         self._write_judgment(verdict="FAIL")
-        self.assertEqual(self._run().result, "HOLD")
+        result = self._run()
+        report = json.loads(result.report_path.read_text(encoding="utf-8"))
+        self.assertEqual(result.result, "HOLD")
+        self.assertEqual(report["human_guidance_ja"]["status_label_ja"], "検証不合格")
+        self.assertFalse(report["human_guidance_ja"]["human_action_required"])
+        self.assertIn("公開されず保留", report["human_guidance_ja"]["if_no_response_ja"])
 
     def test_manifest_sha_mismatch_holds(self) -> None:
         self.draft_path.write_text(self._draft() + "改変です。\n", encoding="utf-8")
@@ -148,6 +157,9 @@ class ValidateDraftTest(unittest.TestCase):
         result = self._run()
         report = json.loads(result.report_path.read_text(encoding="utf-8"))
         self.assertEqual(result.result, "HOLD")
+        self.assertEqual(report["human_guidance_ja"]["status_label_ja"], "方針判断待ち")
+        self.assertTrue(report["human_guidance_ja"]["human_action_required"])
+        self.assertIn("採用する方針", report["human_guidance_ja"]["requested_decision_ja"])
         self.assertEqual(report["required_human_action"], "policy")
 
     def test_rejects_unknown_ai_references(self) -> None:

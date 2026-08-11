@@ -592,6 +592,10 @@ rye run python -m note.knowledge_harness.validate_draft `
 - AI Judgeの判定は`PASS`、`FAIL`、`UNCERTAIN`とし、確信度0.70未満の`PASS`は`UNCERTAIN`へ正規化する
 - Program Errorがなく、5評価軸がすべて確信度0.70以上の`PASS`なら`VALIDATED / ADVANCE`とする
 - Program Error、AI Judgeの非`PASS`、または恒久方針変更候補があれば`HOLD / HOLD`とし、公開へ進めない
+- 機械用の状態・結果コードは維持し、人間向けには`human_guidance_ja`で状態名、結果の意味、判断要否、求める判断、無回答時の扱いを日本語表示する
+- `VALIDATED / ADVANCE`は「検証合格：次の工程へ進めます」を意味し、公開承認や公開完了を意味しない
+- 通常の検証不合格は「検証不合格：問題があるため保留します」と表示し、人間へ根拠補完や例外判断を求めない
+- 恒久方針変更候補がある場合は「方針判断待ち：判断があるまで保留します」と表示し、選択肢と影響の確認を日本語で求める
 - 恒久方針変更が本当に必要な場合だけ、問題と2件以上3件以下の選択肢・影響を保存し、人間の`policy`判断を要求する
 - Warningだけでは停止せずValidation Reportへ残す
 - 同じ入力の再実行では成果物を書き換えない
