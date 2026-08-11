@@ -4,11 +4,12 @@
 
 ## 現在地
 
-- フェーズ: Phase 0 / 完了
-- 状態: Draft PR #3を人間がマージし、継続基盤を確立済み
+- フェーズ: Phase 1 / Operation設計
+- 状態: Phase 1のOperation設計をDraft PR #5でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)
-- ブロッカー: Phase 1の目的、範囲、完了条件に関する人間の判断待ち
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)
+- レビュー対象: [GitHub Draft PR #5](https://github.com/mtakagishi/note/pull/5)
+- ブロッカー: なし
 
 ## 完了
 
@@ -21,12 +22,17 @@
 - 4文書を確認するためのDraft PR #3を作成
 - 人間がPR #3をレビューしてマージ
 - Phase 0の完了条件をすべて達成
+- Phase 1をOperation設計とする方針を人間が承認
+- Phase 1の目的、スコープ、スコープ外、完了条件を定義
+- `PIPELINE.md`へ状態遷移、Operation契約、人間判断の条件を記録
+- Phase 1設計を確認するDraft PR #5を作成
 
 ## 次の一手
 
-人間がPhase 1の目的、スコープ、スコープ外、完了条件を決定する。
+人間がDraft PR #5のOperation設計を確認し、問題がなければマージする。
 
 ## 停止条件
 
-- Phase 1の境界が合意されるまで実装へ進まない
-- 合意内容を`CHARTER.md`、`DECISIONS.md`、`STATUS.md`へ記録してから最初のOperationを決める
+- 人間のレビュー結果が出たら停止し、修正要求があればその内容を次の一手にする
+- 人間がDraft PR #5をマージするまで最初のOperationの実装へ進まない
+- Phase 1の完了後、最初に実装するOperationを一件だけ選ぶ
