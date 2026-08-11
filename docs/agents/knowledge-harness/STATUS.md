@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 13 / Operation実装準備
-- 状態: O-11 `Decide Publication`の実装境界を文書化中
+- 状態: O-11 `Decide Publication`の実装境界をDraft PR #24でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #23](https://github.com/mtakagishi/note/pull/23)
-- レビュー対象: なし（O-11境界確認用のDraft PRを作成予定）
+- レビュー対象: [GitHub Draft PR #24](https://github.com/mtakagishi/note/pull/24)
 - ブロッカー: なし
 
 ## 完了
@@ -134,10 +134,11 @@
 - 十二番目の実装対象としてO-11 `Decide Publication`を採用
 - O-11の目的、スコープ、スコープ外、完了条件を確定
 - 日本語の4選択肢、mergeによる承認、修正・棄却・方針候補・無回答の境界を確定
+- O-11の実装境界を確認するDraft PR #24を作成
 
 ## 次の一手
 
-O-11の実装境界を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がDraft PR #24のO-11実装境界を確認し、問題がなければマージする。
 
 ## 停止条件
 
