@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 6 / Operation実装準備
-- 状態: O-04 `Collect Evidence`を実装中
+- 状態: O-04 `Collect Evidence`の実装をDraft PR #11でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)
-- レビュー対象: なし
+- レビュー対象: [GitHub Draft PR #11](https://github.com/mtakagishi/note/pull/11)
 - ブロッカー: なし
 
 ## 完了
@@ -54,10 +54,11 @@
 - 不足、取得不能、矛盾、対象範囲の曖昧さとMetricsをEvidence Setへ保存する処理を実装
 - O-04 MetricsをO-13でOperation別に集計する処理を実装
 - O-04のCLI、単体テスト、運用文書を追加
+- O-04実装を確認するDraft PR #11を作成
 
 ## 次の一手
 
-O-04実装を確認するDraft PRを作成する。
+人間がDraft PR #11のO-04実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
