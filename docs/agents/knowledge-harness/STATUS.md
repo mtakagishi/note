@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 9 / Operation実装準備
-- 状態: O-07 `Plan Article`の実装境界をDraft PR #16でレビュー待ち
+- フェーズ: Phase 9 / Operation実装
+- 状態: O-07 `Plan Article`の実装と検証を完了
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)、[GitHub PR #14](https://github.com/mtakagishi/note/pull/14)、[GitHub PR #15](https://github.com/mtakagishi/note/pull/15)
-- レビュー対象: [GitHub Draft PR #16](https://github.com/mtakagishi/note/pull/16)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)、[GitHub PR #14](https://github.com/mtakagishi/note/pull/14)、[GitHub PR #15](https://github.com/mtakagishi/note/pull/15)、[GitHub PR #16](https://github.com/mtakagishi/note/pull/16)
+- レビュー対象: なし
 - ブロッカー: なし
 
 ## 完了
@@ -84,13 +84,18 @@
 - O-07の目的、スコープ、スコープ外、完了条件、Article Plan項目を確定
 - 5種類の構成型、不確実性の扱い、例外的な人間質問の境界を確定
 - O-07の実装境界を確認するDraft PR #16を作成
+- 人間がPR #16をレビューしてマージ
+- Article Planの中心メッセージ、読者、検索動機、構成、節、除外事項を検証する処理を実装
+- 節とすべての不確実性をEvidence Packetへ追跡する処理を実装
+- 一回・最大3問の著者動機質問と、質問後の公開回答参照による再開を実装
+- Article Planの冪等な保存、CLI、単体テスト、運用文書を追加
 
 ## 次の一手
 
-人間がDraft PR #16のO-07実装境界を確認し、問題がなければマージする。
+O-07 `Plan Article`の実装を確認するDraft PRを作成する。
 
 ## 停止条件
 
-- O-07の実装へ着手しない
-- Phase 9の境界を確認するDraft PRを作成したら、人間のレビューまで停止する
+- O-08以降のOperationへ着手しない
+- O-07実装のDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
