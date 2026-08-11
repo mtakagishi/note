@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 12 / Operation実装
-- 状態: O-10 `Prepare Review`の実装と検証を進行中
+- 状態: O-10 `Prepare Review`の実装をDraft PR #23でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #22](https://github.com/mtakagishi/note/pull/22)
-- レビュー対象: なし（O-10実装用のDraft PRを作成予定）
+- レビュー対象: [GitHub Draft PR #23](https://github.com/mtakagishi/note/pull/23)
 - ブロッカー: なし
 
 ## 完了
@@ -128,10 +128,11 @@
 - 日本語公開候補と日本語Review Packetの冪等な生成を実装
 - 4つの人間判断、無回答時の保留、Draft PR重複防止情報を実装
 - O-10のCLI、単体テスト、運用文書を追加
+- O-10実装を確認するDraft PR #23を作成
 
 ## 次の一手
 
-O-10実装を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がDraft PR #23のO-10実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
