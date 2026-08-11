@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 12 / Operation実装準備
-- 状態: O-10 `Prepare Review`の実装境界を文書化中
+- 状態: O-10 `Prepare Review`の実装境界をDraft PR #22でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #21](https://github.com/mtakagishi/note/pull/21)
-- レビュー対象: なし（O-10境界確認用のDraft PRを作成予定）
+- レビュー対象: [GitHub Draft PR #22](https://github.com/mtakagishi/note/pull/22)
 - ブロッカー: なし
 
 ## 完了
@@ -121,10 +121,11 @@
 - 十一番目の実装対象としてO-10 `Prepare Review`を採用
 - O-10の目的、スコープ、スコープ外、完了条件を確定
 - 日本語Review Packet、公開候補配置、Draft PR、O-11との判断境界を確定
+- O-10の実装境界を確認するDraft PR #22を作成
 
 ## 次の一手
 
-O-10の実装境界を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がDraft PR #22のO-10実装境界を確認し、問題がなければマージする。
 
 ## 停止条件
 
