@@ -241,9 +241,16 @@ Programはmanifest整合性、reStructuredText構文、メタデータ、リン�
 
 ### O-12 Apply Feedback
 
-- 修正要求だけを反映し、未依頼の全面改稿を行わない
-- 修正後はO-09へ戻る
-- AIによる修正は2回までとし、超過時は`HOLD`にする
+- 同じ`run_id`の`REVISION / ADVANCE`、Publication Decision、対象公開候補、Review Packet、上流Draftだけを受け付ける
+- 具体的な日本語修正指示、対象箇所、GitHub参照、対象commit、修正前SHA-256を照合する
+- 修正文案は指定対象だけへ適用し、未指定ブロック、Article Planの節構成、中心メッセージを変更しない
+- 変更ブロックごとに修正要求、既存Packet参照、修正前後SHA-256をrevision manifestへ保存する
+- 新しい根拠、未依頼の節・主張、対象不明の指示、上流成果物の変更を拒否して`HOLD / HOLD`とする
+- AIによる修正は同一記事2回までとし、3回目は実行せず`HOLD / HOLD`とする
+- 正常時は`REVISED / ADVANCE`と日本語の「修正しました。再検証します」を保存し、O-09へ戻す
+- 修正後も公開承認済みとは扱わず、O-09、O-10、O-11の検証・レビューを再実行する
+- 同一入力の再実行ではRevised Draft、差分、履歴を重複生成しない
+- O-12は新しい調査、根拠補完、公開候補への再配置、GitHub操作、恒久方針採用を行わない
 
 ### O-13 Record Outcome
 
