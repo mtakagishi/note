@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 6 / Operation実装準備
-- 状態: O-04 `Collect Evidence`の実装境界を確定
+- 状態: O-04 `Collect Evidence`の実装境界をDraft PR #10でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)
-- レビュー対象: なし
+- レビュー対象: [GitHub Draft PR #10](https://github.com/mtakagishi/note/pull/10)
 - ブロッカー: なし
 
 ## 完了
@@ -48,13 +48,14 @@
 - O-04の目的、スコープ、スコープ外、完了条件、初期収集上限を確定
 - 不足・取得不能・矛盾をEvidence Setへ保持し、後続Operationで評価する境界を確定
 - O-04 Metricsを原則10実行分蓄積して初期値を見直す方針を確定
+- O-04の実装境界を確認するDraft PR #10を作成
 
 ## 次の一手
 
-確定したPhase 6境界に従い、O-04 `Collect Evidence`を実装する。
+人間がDraft PR #10のO-04実装境界を確認し、問題がなければマージする。
 
 ## 停止条件
 
-- O-05以降のOperationを同じPRへ追加しない
-- O-04実装のDraft PRを作成したら、人間のレビューまで停止する
+- O-04の実コードをDraft PR #10へ追加しない
+- Draft PR #10を作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
