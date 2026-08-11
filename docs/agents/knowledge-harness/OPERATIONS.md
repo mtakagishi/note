@@ -600,3 +600,53 @@ rye run python -m note.knowledge_harness.validate_draft `
 - Warningだけでは停止せずValidation Reportへ残す
 - 同じ入力の再実行では成果物を書き換えない
 - O-09は新しい調査、意味を変える本文修正、公開配置、英訳、画像生成を行わない
+
+## O-10 Prepare Reviewの実行
+
+O-10は検証済みDraftへ公開用metadataを付け、日本語Review PacketとDraft PR準備情報を保存する。O-10自身はGitHub認証、commit、push、PR作成、mergeを実行しない。
+
+```powershell
+rye run python -m note.knowledge_harness.prepare_review `
+  --validated-draft-file _notes/knowledge_harness/validations/run-20260811-002/validated_draft.rst `
+  --validation-report-file _notes/knowledge_harness/validations/run-20260811-002/validation_report.json `
+  --plan-file _notes/knowledge_harness/plans/run-20260811-002/article_plan.json `
+  --packet-file _notes/knowledge_harness/packets/run-20260811-002/evidence_packet.json `
+  --proposal-file review-proposal.json
+```
+
+`review-proposal.json`は次の形式にする。
+
+```json
+{
+  "review_version": "review-v1",
+  "preparer_id": "preparer-example",
+  "final_title_ja": "変更を安全に確認する方法",
+  "slug": "safe-change-review",
+  "tags": ["運用", "検証"],
+  "category_ja": "運用改善",
+  "author": "mtakagishi"
+}
+```
+
+既定では次の成果物を保存する。
+
+- `docs/blog/posts/YYYY-MM-DD-slug.rst`
+- `_notes/knowledge_harness/reviews/<run_id>/review_packet.json`
+
+検証と生成の規則は次のとおり。
+
+- 同じ`run_id`の`VALIDATED / ADVANCE`、修正済みDraft、Article Plan、Evidence Packetだけを受け付ける
+- 修正済みDraftのSHA-256をValidation Reportと照合する
+- `slug`は小文字英数字をハイフンで区切り、タグは空・重複を許可しない
+- Asia/Tokyo基準の実行日より後で、既存ファイル名と`post` directiveに使われていない最初の日を公開日にする
+- 再実行時は同じ`run_id`のReview Packetに保存した公開日を再利用する
+- 検証済み本文の意味を変更せず、最終タイトル、`post` directive、公開候補状態、公開日だけを反映する
+- `post` directiveにはタグ、カテゴリ、著者、`:language: ja`を付ける
+- Review Packetへ公開候補と全入力のパス・SHA-256、中心メッセージ、根拠参照、不確実性、検証結果を保存する
+- 人間向け状態は「公開候補の確認待ち」とし、まだ公開承認されていないことを日本語で説明する
+- 「公開を承認する」「今回だけ修正を求める」「公開しない」「今後の方針として検討する」の4選択肢と影響を日本語で示す
+- 回答がない場合は公開せず保留することを明記する
+- `pr_preparation.dedupe_key`を`run_id`とし、一実行につき一つのDraft PRを外側の実行主体が作れる情報を保存する
+- 正常時は`REVIEW_READY / ADVANCE`とし、`required_human_action`を`publication`とする
+- 同じ入力の再実行では公開候補とReview Packetを書き換えない
+- O-10は本文修正、新しい調査、英訳、画像、レビュー判断、公開承認を行わない
