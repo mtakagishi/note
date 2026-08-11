@@ -209,3 +209,48 @@ Phase 7では、O-05 `Build Evidence Packet`を実装し、O-04のEvidence Set�
 - 同一入力では不要な書き換えを行わない
 - CLI、単体テスト、既存Operationの回帰テストが成功する
 - Draft PRを人間が確認してマージする
+
+## Phase 8の境界
+
+Phase 8では、O-06 `Judge Candidate`を実装し、Evidence Packetから記事候補として先へ進めるかを、理由と確信度を伴う再検証可能なAI Judge判定として保存する。
+
+### 目的
+
+- 根拠充足性、新規性、外部読者が再利用できる価値、著者固有の問いまたは判断、不確実性の影響を独立評価する
+- 公開本数を増やす圧力から評価を分離し、根拠不足や新規性不足を正常な非公開終了として扱う
+- 後続Operationと人間が、判定理由と参照したPacket項目を追跡できるCandidate Decisionを作る
+
+### スコープ
+
+- O-05の`PACKET_READY / ADVANCE`成果物の契約検証
+- 5評価軸それぞれの`PASS`、`FAIL`、`UNCERTAIN`判定
+- 各評価軸の確信度、理由、参照Packet項目、不確実性の記録
+- 評価基準バージョンとJudge識別子の記録
+- `CANDIDATE_ACCEPTED / ADVANCE`、`NO_CANDIDATE`、`HOLD`の決定規則
+- 人間へ質問しない安全な非公開終了
+- `run_id`単位の冪等な保存
+- CLI、単体テスト、運用文書
+
+### スコープ外
+
+- 新しい情報の取得、Evidence Packetの補完・書き換え
+- 記事の中心メッセージ、対象読者、構成、本文の生成
+- 公開本数を確保するための評価閾値引き下げ
+- AI Judgeによる恒久方針と評価基準の自動変更
+- 人間による技術的事実や根拠不足の穴埋め
+- 最終公開判断
+- GitHub Actionsと定期実行
+
+### 完了条件
+
+- O-05の正常なEvidence Packetだけを入力できる
+- 5評価軸を独立に判定し、理由、確信度、参照項目を保存できる
+- 判定に使う参照項目がEvidence Packetに実在することを検証できる
+- 必須軸の`FAIL`を`NO_CANDIDATE`として正常終了できる
+- `FAIL`はないが`UNCERTAIN`または高影響の不確実性がある場合に`HOLD`できる
+- 全必須軸が`PASS`し、高影響の未解決不確実性がない場合だけ`CANDIDATE_ACCEPTED`へ進める
+- 確信度0.70未満の`PASS`を受け入れず、`UNCERTAIN`として扱える
+- 判定理由を空にできず、記事数を増やすために閾値を下げない
+- 同一入力と同一判定では不要な書き換えを行わない
+- CLI、単体テスト、既存Operationの回帰テストが成功する
+- Draft PRを人間が確認してマージする
