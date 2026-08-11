@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 11 / Operation実装
-- 状態: O-09 `Validate Draft`の実装をDraft PR #21でレビュー待ち
+- フェーズ: Phase 12 / Operation実装準備
+- 状態: O-10 `Prepare Review`の実装境界を文書化中
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #20](https://github.com/mtakagishi/note/pull/20)
-- レビュー対象: [GitHub Draft PR #21](https://github.com/mtakagishi/note/pull/21)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #21](https://github.com/mtakagishi/note/pull/21)
+- レビュー対象: なし（O-10境界確認用のDraft PRを作成予定）
 - ブロッカー: なし
 
 ## 完了
@@ -116,13 +116,18 @@
 - O-09のCLI、単体テスト、運用文書を追加
 - O-09実装を確認するDraft PR #21を作成
 - PR #21のValidation Reportへ、人間向けの日本語状態名、意味、判断要否、求める判断、無回答時の扱いを追加
+- 人間がPR #21をレビューしてマージ
+- Phase 11の完了条件をすべて達成
+- 十一番目の実装対象としてO-10 `Prepare Review`を採用
+- O-10の目的、スコープ、スコープ外、完了条件を確定
+- 日本語Review Packet、公開候補配置、Draft PR、O-11との判断境界を確定
 
 ## 次の一手
 
-人間がDraft PR #21のO-09実装を確認し、問題がなければマージする。
+O-10の実装境界を確認するDraft PRを作成し、人間のレビューへ渡す。
 
 ## 停止条件
 
-- O-10以降へ着手しない
-- O-09実装を確認するDraft PRを作成したら、人間のレビューまで停止する
+- O-10の実装へ着手しない
+- Phase 12の境界を確認するDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
