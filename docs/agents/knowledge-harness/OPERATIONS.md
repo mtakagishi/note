@@ -248,3 +248,61 @@ rye run python -m note.knowledge_harness.outcomes `
 ```
 
 O-13は数値MetricsをOperation別に合計する。初期上限の変更は自動採用せず、原則10実行分を人間が確認する。
+
+## O-05 Build Evidence Packetの実行
+
+O-05はSkill / AgentがEvidence Setを読んで作った整理案を、Programで出典検証してEvidence Packetへ保存する。意味整理と決定的な検証を分け、AIが存在しない根拠を追加できないようにする。
+
+```powershell
+rye run python -m note.knowledge_harness.build_evidence_packet `
+  --evidence-file _notes/knowledge_harness/evidence/run-20260811-002/evidence.json `
+  --draft-file packet-draft.json
+```
+
+`packet-draft.json`は次の形式にする。
+
+```json
+{
+  "summary_ja": "取得済み根拠を論点別に整理しました。",
+  "topics": [
+    {
+      "topic_id": "topic-001",
+      "title_ja": "仕様と利用者評価",
+      "items": [
+        {
+          "item_id": "item-001",
+          "kind": "fact",
+          "statement_ja": "公式仕様に対象機能が記載されています。",
+          "source_ids": ["source-001"],
+          "notes_ja": "対象バージョンを限定して扱います。"
+        },
+        {
+          "item_id": "item-002",
+          "kind": "contradiction",
+          "statement_ja": "公式仕様と利用者報告に差があります。",
+          "source_ids": ["source-001", "source-003"]
+        }
+      ]
+    }
+  ],
+  "past_articles": {
+    "article_refs": ["blog:2026-example"],
+    "known_items": [],
+    "difference_candidates": [],
+    "recheck_items": []
+  }
+}
+```
+
+既定では`_notes/knowledge_harness/packets/<run_id>/evidence_packet.json`へ保存する。
+
+- `kind`は`fact`、`inference`、`unconfirmed`、`community_reaction`、`contradiction`から選ぶ
+- すべての記述へEvidence Setに実在する`source_id`を一件以上指定する
+- `contradiction`には異なる根拠を二件以上指定する
+- `community_reaction`には`secondary`または`community`情報源を一件以上含める
+- `item_id`と`topic_id`はそれぞれPacket内で一意にする
+- 説明が空、出典が存在しない、分類条件を満たさない整理案は保存しない
+- 過去記事参照がない場合、既知事項と差分候補を作らず`UNCONFIRMED_NO_PAST_ARTICLE`とする
+- Evidence Setの取得失敗、不確実性、Metricsを欠落させずPacketへ継承する
+- 同じEvidence Setと整理案の再実行では成果物を書き換えない
+- O-05は新しい情報取得、矛盾の解消、根拠充足性や記事候補の採否判断を行わない
