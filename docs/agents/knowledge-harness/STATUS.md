@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 10 / Operation実装
-- 状態: O-08 `Draft Article`の実装と検証を完了
+- 状態: O-08 `Draft Article`の実装をDraft PR #19でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)、[GitHub PR #14](https://github.com/mtakagishi/note/pull/14)、[GitHub PR #15](https://github.com/mtakagishi/note/pull/15)、[GitHub PR #16](https://github.com/mtakagishi/note/pull/16)、[GitHub PR #17](https://github.com/mtakagishi/note/pull/17)、[GitHub PR #18](https://github.com/mtakagishi/note/pull/18)
-- レビュー対象: なし
+- レビュー対象: [GitHub Draft PR #19](https://github.com/mtakagishi/note/pull/19)
 - ブロッカー: なし
 
 ## 完了
@@ -101,10 +101,11 @@
 - 不確実性方針、危険なdirective、公開用ディレクトリへの出力を検証する処理を実装
 - 日本語`draft.rst`とブロック別SHA-256を持つ`draft_manifest.json`の生成を実装
 - Draft成果物の冪等な保存、CLI、単体テスト、運用文書を追加
+- O-08実装を確認するDraft PR #19を作成
 
 ## 次の一手
 
-O-08 `Draft Article`の実装を確認するDraft PRを作成する。
+人間がDraft PR #19のO-08実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
