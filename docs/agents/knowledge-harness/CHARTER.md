@@ -440,3 +440,46 @@ Phase 12では、O-10 `Prepare Review`を実装し、検証済みの日本語Dra
 - 同一入力では成果物やDraft PR準備情報を不要に書き換えない
 - CLI、単体テスト、既存Operationの回帰テストが成功する
 - Draft PRを人間が確認してマージする
+
+## Phase 13の境界
+
+Phase 13では、O-11 `Decide Publication`を実装し、日本語Review Packetに対する人間の最終公開判断を、推測せず監査可能なPublication Decisionへ変換する。
+
+### 目的
+
+- 公開候補のmerge、今回だけの修正要求、棄却、恒久方針候補を明確に区別する
+- 人間の自由文や英語コードの推測ではなく、日本語表示された選択とGitHub上の事実を記録する
+- 公開承認だけを`APPROVED`へ進め、無回答・曖昧・不整合時の公開を防ぐ
+
+### スコープ
+
+- O-10の`REVIEW_READY / ADVANCE`、Review Packet、公開候補、対象Draft PRの契約・SHA-256検証
+- 許可された人間による一つの構造化判断、または対象PRのmerge事実の受付
+- 判断者、判断日時、PR・comment・review・commit参照の保存
+- `APPROVED`、`REVISION`、`HOLD`の決定と日本語説明
+- 修正要求の具体的な日本語指示、対象箇所、今回だけの適用範囲の保存
+- 恒久方針候補の問題、選択肢、影響の分離記録
+- `run_id`単位の冪等なPublication Decision、CLI、単体テスト、運用文書
+
+### スコープ外
+
+- 自由文から人間の意図を推測して決定を補うこと
+- merge、close、コメント、reviewなどGitHub上の操作そのもの
+- 修正要求の本文反映、再検証、再レビュー
+- 恒久方針の自動採用と`DECISIONS.md`への自動追記
+- 公開後の配信確認、英訳、画像、GitHub Actions、定期実行
+
+### 完了条件
+
+- 同じ`run_id`の正常なReview Packet、公開候補、対象PRだけを入力できる
+- 対象PRのrepo、番号、head、base、公開候補commit・SHA-256を照合できる
+- 許可された人間の判断だけを受け付け、actorとGitHub参照を保存できる
+- merge済みの対象PRだけを「公開を承認しました」と日本語表示し、`APPROVED / ADVANCE`へ進める
+- 今回だけの具体的修正を`REVISION / ADVANCE`としてO-12へ渡せる
+- 棄却を「公開しません」と表示して`HOLD / HOLD`で終了できる
+- 恒久方針候補を今回の記事の承認と分離し、公開せず`HOLD / HOLD`にできる
+- 無回答、複数・矛盾判断、対象外actor、PR不整合では公開せず`HOLD / HOLD`にできる
+- 人間向けに現在の意味、次の処理、無回答時の扱いを日本語で保存できる
+- 同一判断の再実行では成果物を書き換えず、判断履歴を重複させない
+- CLI、単体テスト、既存Operationの回帰テストが成功する
+- Draft PRを人間が確認してマージする
