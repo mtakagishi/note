@@ -224,14 +224,20 @@ Programはmanifest整合性、reStructuredText構文、メタデータ、リン�
 
 ### O-11 Decide Publication
 
-人間は次のいずれか一つを選ぶ。
-
-- merge: 公開を承認する
-- 修正要求: 今回の記事だけに適用する具体的修正
-- 棄却: 公開しない
-- 方針変更候補: 今後も適用する判断として別途検討する
-
-指定がなければコメントは今回の記事だけに適用する。人間が応答しない場合は公開せず`HOLD`とする。
+- 同じ`run_id`の`REVIEW_READY / ADVANCE`、Review Packet、公開候補、対象Draft PRだけを受け付ける
+- PRのrepository、番号、base、head、公開候補commitとSHA-256をReview Packetの準備情報へ照合する
+- 人間には次の4選択肢を日本語で示し、内部コードを選ばせない
+  - 「公開を承認する」: 対象PRのmerge事実を確認し、`APPROVED / ADVANCE`とする
+  - 「今回だけ修正を求める」: 具体的な日本語指示、対象箇所、GitHubコメント参照を保存し、`REVISION / ADVANCE`とする
+  - 「公開しない」: 理由を保存し、`HOLD / HOLD`としてO-13へ渡す
+  - 「今後の方針として検討する」: 問題、2〜3選択肢、影響を候補として保存し、公開せず`HOLD / HOLD`とする
+- mergeはGitHub上の対象PRの事実を正本とし、merge以外は許可された人間の構造化判断一件を正本とする
+- 判断者、判断日時、PR URL、comment・review ID、対象commit SHAを保存する
+- 自由文だけから判断種別を推測せず、指定がないコメントは今回だけの修正候補としても自動採用しない
+- 無回答、複数・矛盾する判断、対象外actor、対象PRやSHAの不整合は公開せず`HOLD / HOLD`とする
+- 人間向けに「公開を承認しました」「修正後に再確認します」「公開しません」「方針判断のため保留します」を日本語表示する
+- 同一判断の再実行ではPublication Decisionと履歴を重複生成しない
+- O-11はGitHub操作、修正反映、再検証、恒久方針の採用、公開後確認を行わない
 
 ### O-12 Apply Feedback
 

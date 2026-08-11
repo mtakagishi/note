@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 12 / Operation実装
-- 状態: O-10 `Prepare Review`の実装をDraft PR #23でレビュー待ち
+- フェーズ: Phase 13 / Operation実装準備
+- 状態: O-11 `Decide Publication`の実装境界を文書化中
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #22](https://github.com/mtakagishi/note/pull/22)
-- レビュー対象: [GitHub Draft PR #23](https://github.com/mtakagishi/note/pull/23)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #23](https://github.com/mtakagishi/note/pull/23)
+- レビュー対象: なし（O-11境界確認用のDraft PRを作成予定）
 - ブロッカー: なし
 
 ## 完了
@@ -129,13 +129,18 @@
 - 4つの人間判断、無回答時の保留、Draft PR重複防止情報を実装
 - O-10のCLI、単体テスト、運用文書を追加
 - O-10実装を確認するDraft PR #23を作成
+- 人間がPR #23をレビューしてマージ
+- Phase 12の完了条件をすべて達成
+- 十二番目の実装対象としてO-11 `Decide Publication`を採用
+- O-11の目的、スコープ、スコープ外、完了条件を確定
+- 日本語の4選択肢、mergeによる承認、修正・棄却・方針候補・無回答の境界を確定
 
 ## 次の一手
 
-人間がDraft PR #23のO-10実装を確認し、問題がなければマージする。
+O-11の実装境界を確認するDraft PRを作成し、人間のレビューへ渡す。
 
 ## 停止条件
 
-- O-11以降へ着手しない
-- O-10実装を確認するDraft PRを作成したら、人間のレビューまで停止する
+- O-11の実装へ着手しない
+- Phase 13の境界を確認するDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
