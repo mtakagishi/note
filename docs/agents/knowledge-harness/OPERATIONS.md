@@ -306,3 +306,68 @@ rye run python -m note.knowledge_harness.build_evidence_packet `
 - Evidence Setの取得失敗、不確実性、Metricsを欠落させずPacketへ継承する
 - 同じEvidence Setと整理案の再実行では成果物を書き換えない
 - O-05は新しい情報取得、矛盾の解消、根拠充足性や記事候補の採否判断を行わない
+
+## O-06 Judge Candidateの実行
+
+O-06はAI JudgeがEvidence Packetを5軸で評価した判定案をProgramで検証し、記事候補の採否をCandidate Decisionへ保存する。
+
+```powershell
+rye run python -m note.knowledge_harness.judge_candidate `
+  --packet-file _notes/knowledge_harness/packets/run-20260811-002/evidence_packet.json `
+  --judgment-file candidate-judgment.json
+```
+
+`candidate-judgment.json`は次の形式にする。5評価軸すべてに、判定、確信度、理由、Evidence Packet内の参照項目を指定する。
+
+```json
+{
+  "rubric_version": "candidate-v1",
+  "judge_id": "judge-example",
+  "evaluations": {
+    "evidence_sufficiency": {
+      "verdict": "PASS",
+      "confidence": 0.9,
+      "reason_ja": "中心論点を一次情報が支えています。",
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    },
+    "novelty": {
+      "verdict": "PASS",
+      "confidence": 0.8,
+      "reason_ja": "過去記事との差分候補を確認できます。",
+      "packet_refs": ["past_articles/difference_candidates/item-002"]
+    },
+    "reader_value": {
+      "verdict": "PASS",
+      "confidence": 0.8,
+      "reason_ja": "外部読者が手順を転用できます。",
+      "packet_refs": ["summary_ja"]
+    },
+    "author_specific_question": {
+      "verdict": "PASS",
+      "confidence": 0.9,
+      "reason_ja": "著者の問いをRequestから復元できます。",
+      "packet_refs": ["screened_request"]
+    },
+    "uncertainty_impact": {
+      "verdict": "PASS",
+      "confidence": 0.8,
+      "impact": "MEDIUM",
+      "reason_ja": "未確認範囲は中心論点を覆しません。",
+      "packet_refs": ["uncertainties/0"]
+    }
+  }
+}
+```
+
+既定では`_notes/knowledge_harness/decisions/<run_id>/candidate_decision.json`へ保存する。
+
+- `verdict`は`PASS`、`FAIL`、`UNCERTAIN`、`impact`は`LOW`、`MEDIUM`、`HIGH`から選ぶ
+- Packet参照は`topics/<topic_id>/items/<item_id>`など、実在する項目だけを受け付ける
+- 必須4軸のいずれかが`FAIL`なら`NO_CANDIDATE / NO_CANDIDATE`として正常終了する
+- 必須軸に`UNCERTAIN`がある、または不確実性の影響が`HIGH`なら`HOLD / HOLD`とする
+- 確信度0.70未満の`PASS`はProgramが`UNCERTAIN`へ正規化する
+- 過去記事との比較がない場合、新規性の`PASS`は`UNCERTAIN`へ正規化する
+- 全必須軸が確信度0.70以上の`PASS`で、不確実性の影響が`LOW`または`MEDIUM`の場合だけ`CANDIDATE_ACCEPTED / ADVANCE`とする
+- 非採用と保留では人間へ質問せず、根拠不足を補完しない
+- 同じPacketと判定案の再実行では成果物を書き換えない
+- O-06はO-07以降の記事計画や本文生成を実行しない
