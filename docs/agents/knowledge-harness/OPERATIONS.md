@@ -650,3 +650,30 @@ rye run python -m note.knowledge_harness.prepare_review `
 - 正常時は`REVIEW_READY / ADVANCE`とし、`required_human_action`を`publication`とする
 - 同じ入力の再実行では公開候補とReview Packetを書き換えない
 - O-10は本文修正、新しい調査、英訳、画像、レビュー判断、公開承認を行わない
+
+## O-11 Decide Publicationの実行
+
+O-11は外側のGitHub実行主体が取得したPR snapshotと、人間が日本語表示から選んだ構造化判断を検証し、Publication Decisionを保存する。GitHub操作自体は行わない。
+
+```powershell
+rye run python -m note.knowledge_harness.decide_publication `
+  --review-packet-file _notes/knowledge_harness/reviews/run-20260811-002/review_packet.json `
+  --article-file docs/blog/posts/2026-08-12-safe-change-review.rst `
+  --pr-snapshot-file publication-pr.json `
+  --human-decision-file publication-decision-input.json `
+  --repository mtakagishi/note `
+  --pr-number 99 `
+  --base main `
+  --authorized-actor mtakagishi
+```
+
+PR snapshotには`repository`、`number`、`base`、`head`、`head_sha`、`url`、`merged`、`merged_by`、`merge_commit_sha`を含める。人間判断は`decisions`配列へ一件だけ指定し、`decision`は`revision`、`reject`、`policy_candidate`のいずれかとする。判断者、日時、理由、参照URL・ID、対象commit SHAを必須とする。
+
+- merge済みPRでは人間判断ファイルを渡さず、許可actorの`merged_by`と`merge_commit_sha`を確認して`APPROVED / ADVANCE`とする
+- 修正要求は`instruction_ja`、`target_ja`を必須とし、`REVISION / ADVANCE`でO-12へ渡す
+- 棄却は`HOLD / HOLD`でO-13へ渡し、追加の人間判断を要求しない
+- 恒久方針候補は問題と2〜3選択肢・影響を必須とし、公開せず`HOLD / HOLD`とする
+- 無回答、複数判断、mergeとの矛盾、対象外actor、対象commit不一致は公開せず`HOLD / HOLD`とする
+- 自由文を判断種別へ推測変換せず、対象PRのrepository、番号、base、head、記事SHA-256を照合する
+- 結果の意味と次の処理は`human_guidance_ja`へ日本語で保存する
+- 同一入力の再実行では`publication_decision.json`を書き換えない
