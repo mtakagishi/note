@@ -1,6 +1,6 @@
 # Knowledge Harness Status
 
-最終更新日: 2026-08-11
+最終更新日: 2026-08-12
 
 ## 現在地
 
@@ -161,10 +161,14 @@
 - 承認時にO-13 `Record Outcome`まで進む統合経路を実装
 - HOLD時の`stop_reason`と`resume_position`に対応する`next_action`契約を具体化
 - `tests/test_orchestrate_run.py`に停止系`next_action`回帰を追加し、契約を固定
+- 探索の起動条件を「利用者が明示した知りたい情報 + 承認済み実行ラベル」に統一
+- 探索上限の具体値と停止条件はO-04契約を正本とする方針を`PIPELINE.md`へ明記
+- 非目的の解釈ぶれを避けるため、`CHARTER.md`に「初期スコープ外」の明示を追加
+- 探索条件の判断を`DECISIONS.md`のD-025として記録
 
 ## 次の一手
 
-HOLD理由と`resume_position`の網羅性を点検し、必要な追加回帰テストを定義する。
+HOLD理由と`resume_position`の網羅性を点検し、必要な追加回帰テストを定義して実装する。
 
 ## 停止条件
 
