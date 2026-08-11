@@ -118,3 +118,23 @@ rye run python -m note.knowledge_harness.outcomes `
 rye run python -m unittest discover -s tests -p "test_*.py"
 rye run ruff check src/note/knowledge_harness tests/test_record_outcome.py
 ```
+
+## O-01 Capture Requestの実行
+
+O-01は公開可能な「知りたいこと」を共通形式のRequestへ変換する。公開Issueは公開可能と扱い、許可済みの別入力は`approved_input`を指定する。
+
+```powershell
+rye run python -m note.knowledge_harness.capture_request `
+  --run-id run-20260811-002 `
+  --question-ja "公開Issueから記事候補を安全に受け付けるには？" `
+  --source-ref issue:7 `
+  --source-kind public_issue
+```
+
+既定では`_notes/knowledge_harness/requests/<run_id>/request.json`へ保存する。
+
+- `public_issue`と`approved_input`は`CAPTURED / ADVANCE`とする
+- `unconfirmed_input`は`HOLD`とし、公開可能性だけを人間へ確認する
+- 問いが空の場合は、記事内容を推測せず入力エラーとする
+- 同じ`run_id`の再実行では重複させず、内容が変わった場合だけ更新する
+- O-01はO-02以降を自動実行しない
