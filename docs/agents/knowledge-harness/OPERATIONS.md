@@ -158,3 +158,23 @@ rye run python -m note.knowledge_harness.authorize_run `
 - ラベルがない場合は人間へ質問や催促を行わない
 - O-01が`HOLD`にしたRequestはラベルがあっても許可しない
 - 同じ`run_id`へラベルを追加して再実行した場合は、既存記録を更新する
+
+## O-03 Screen Safetyの実行
+
+O-03は許可済みRequestを決定的な規則で検査し、安全な情報だけを後続へ渡す。
+
+```powershell
+rye run python -m note.knowledge_harness.screen_safety `
+  --authorization-file _notes/knowledge_harness/authorized/run-20260811-002/authorization.json
+```
+
+既定では`_notes/knowledge_harness/screened/<run_id>/screening.json`へ保存する。
+
+- 秘密鍵、代表的なアクセストークン、秘密値の代入を検出した場合は`REJECTED`とする
+- `社外秘`、`部外秘`、`非公開会話`などの明確な非公開マーカーを検出した場合は`REJECTED`とする
+- 固有の非公開語は`--restricted-term`で追加できる
+- メールアドレスと電話番号はマスクし、マスク後のRequestだけを`SCREENED`として渡す
+- 拒否した入力本文は成果物へ複製しない
+- 自動判定不能と分かっている場合は`--assessment uncertain`で本文を保持せず`HOLD`とし、公開可能性だけを確認する
+- 明確に非公開と分かっている場合は`--assessment private`で質問せず`REJECTED`とする
+- O-02が待機中のAuthorizationは検査しない
