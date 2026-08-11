@@ -208,9 +208,19 @@ Programはmanifest整合性、reStructuredText構文、メタデータ、リン�
 
 ### O-10 Prepare Review
 
-- Draft PRを作成する
-- Review Packetに中心メッセージ、根拠、不確実性、AI担当範囲、検証結果をまとめる
-- 公開候補がない場合はPRを作らず、O-13へ進む
+- 同じ`run_id`の`VALIDATED / ADVANCE`、修正済みDraft、Article Plan、Evidence Packetだけを受け付ける
+- Skill / Agentが最終タイトル、slug、公開日、ablog metadata、PR説明案を作り、Programが形式と入力整合を検証する
+- 公開日はAsia/Tokyo基準で実行日より後の未使用日とし、既存記事とファイル名・日付が重複しない最初の日を選ぶ
+- 公開候補を`docs/blog/posts/YYYY-MM-DD-slug.rst`へ置き、`post` directiveの`language`を`ja`とする
+- O-09の修正済みDraft本文を意味変更せず、公開用metadataの付与とDraft表示の置換だけを行う
+- Review Packetに中心メッセージ、主要根拠、不確実性、検証結果、AI担当範囲、人間の確認範囲、変更ファイルを日本語でまとめる
+- 人間向けには「公開候補の確認待ち」と表示し、merge、今回だけの修正要求、棄却、恒久方針候補の4選択肢と影響を日本語で示す
+- 無回答時は公開せず`HOLD`を維持することをReview PacketとPR本文へ明記する
+- 公開候補と入力成果物のSHA-256、`run_id`、参照先をReview Packetへ保存する
+- 一実行につき一つのbranchとDraft PRだけを準備し、再実行で重複PRを作らない
+- O-10はmerge、公開承認、レビューコメントの解釈、本文修正、英訳、画像生成を行わない
+- 正常時は`REVIEW_READY / ADVANCE`としてO-11へ渡す
+- O-09以前で公開候補なしまたは`HOLD`の場合はO-10を実行せず、PRを作らずO-13へ進む
 
 ### O-11 Decide Publication
 

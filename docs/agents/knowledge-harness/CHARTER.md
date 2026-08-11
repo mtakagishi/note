@@ -397,3 +397,46 @@ Phase 11では、O-09 `Validate Draft`を実装し、O-08のDraftをProgramとAI
 - 同一入力では不要な書き換えを行わない
 - CLI、単体テスト、既存Operationの回帰テストが成功する
 - Draft PRを人間が確認してマージする
+
+## Phase 12の境界
+
+Phase 12では、O-10 `Prepare Review`を実装し、検証済みの日本語Draftを、人間が英語の状態コードを解読せず最終公開判断できる公開候補とReview Packetへ変換する。
+
+### 目的
+
+- O-09に合格したDraftだけを公開候補へ配置し、レビュー対象と検証済み入力を一意に対応付ける
+- 中心メッセージ、根拠、不確実性、検証結果、AIと人間の担当範囲を日本語で要約する
+- O-11で人間が「公開承認」「今回だけの修正要求」「棄却」「恒久方針候補」を判断できるDraft PRを準備する
+
+### スコープ
+
+- O-09の`VALIDATED / ADVANCE`成果物、修正済みDraft、Article Plan、Evidence Packetの契約検証
+- 公開候補の最終タイトル、slug、未使用の未来日、ablog `post` metadata案の受付と決定的な検証
+- `docs/blog/posts/YYYY-MM-DD-slug.rst`への日本語公開候補配置
+- 日本語Review Packetへの中心メッセージ、根拠、不確実性、検証結果、変更対象、人間の選択肢の保存
+- 公開候補と入力成果物のSHA-256による追跡
+- 一実行につき一つのDraft PRを準備するためのbranch、commit、PR title・body情報の生成
+- `run_id`単位の冪等な保存、CLI、単体テスト、運用文書
+
+### スコープ外
+
+- O-09で検証していない本文変更と、新しい情報取得・根拠補完
+- 英訳、画像生成、既存記事の書き換え
+- 人間に英語の状態コードだけを提示して判断させること
+- merge、公開承認、棄却、修正要求の解釈と適用
+- GitHub認証、保護ブランチ規則、CI結果を迂回すること
+- GitHub Actionsと定期実行
+
+### 完了条件
+
+- 同じ`run_id`の`VALIDATED / ADVANCE`と必要な上流成果物だけを入力できる
+- 最終タイトルと安全なslugを検証し、`YYYY-MM-DD-slug.rst`を未来の未使用日へ一意に配置できる
+- 公開候補へ有効な`post` directiveと日本語記事であることを示すmetadataを付与できる
+- O-09の修正済みDraft本文を意味変更せず公開候補へ移せる
+- Review Packetを日本語で読み、英語コードを解読せず判断内容と無回答時の扱いを理解できる
+- 公開候補、Validation Report、Article Plan、Evidence PacketをSHA-256と参照先で追跡できる
+- Draft PRのbranch、commit、title、bodyに必要な情報を生成できる
+- 人間の判断をO-11の一回に限定し、O-10自身は公開承認しない
+- 同一入力では成果物やDraft PR準備情報を不要に書き換えない
+- CLI、単体テスト、既存Operationの回帰テストが成功する
+- Draft PRを人間が確認してマージする
