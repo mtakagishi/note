@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 11 / Operation実装準備
-- 状態: O-09 `Validate Draft`の実装境界を確定
+- 状態: O-09 `Validate Draft`の実装境界をDraft PR #20でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)、[GitHub PR #13](https://github.com/mtakagishi/note/pull/13)、[GitHub PR #14](https://github.com/mtakagishi/note/pull/14)、[GitHub PR #15](https://github.com/mtakagishi/note/pull/15)、[GitHub PR #16](https://github.com/mtakagishi/note/pull/16)、[GitHub PR #17](https://github.com/mtakagishi/note/pull/17)、[GitHub PR #18](https://github.com/mtakagishi/note/pull/18)、[GitHub PR #19](https://github.com/mtakagishi/note/pull/19)
-- レビュー対象: なし
+- レビュー対象: [GitHub Draft PR #20](https://github.com/mtakagishi/note/pull/20)
 - ブロッカー: なし
 
 ## 完了
@@ -107,10 +107,11 @@
 - 十番目の実装対象としてO-09 `Validate Draft`を採用
 - O-09の目的、スコープ、スコープ外、完了条件、Program検査、5評価軸を確定
 - 自動修正、重複判定、合否、恒久方針候補の境界を確定
+- O-09の実装境界を確認するDraft PR #20を作成
 
 ## 次の一手
 
-O-09 `Validate Draft`の実装境界を確認するDraft PRを作成する。
+人間がDraft PR #20のO-09実装境界を確認し、問題がなければマージする。
 
 ## 停止条件
 
