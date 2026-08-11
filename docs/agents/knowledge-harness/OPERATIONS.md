@@ -84,3 +84,37 @@ mtakagishi/note のIssue #2を継続状態の正本として読み、最新のHA
 - この文書は、作業セッションの中断、再開、状態同期だけを扱う
 - 記事候補の受付から公開判断までの状態遷移とOperation契約は`PIPELINE.md`を正とする
 - パイプライン実行中の状態は成果物として保存し、会話履歴だけに保持しない
+
+## O-13 Record Outcomeの実行
+
+O-13はパイプラインの終了または引き継ぎ時に、状態、理由、成果物、検証結果、次の一手を保存する。次のように実行する。
+
+```powershell
+rye run python -m note.knowledge_harness.outcomes `
+  --run-id run-20260811-001 `
+  --state-before VALIDATED `
+  --state-after REVIEW_READY `
+  --result ADVANCE `
+  --reason-code DRAFT_PR_READY `
+  --summary-ja "Draft PRを作成し、公開判断を待てる状態になりました。" `
+  --producer program `
+  --input-ref issue:2 `
+  --artifact-ref pr:6 `
+  --verification-ref unittest:pass `
+  --next-action "人間がDraft PRを確認する" `
+  --human-action publication
+```
+
+既定では`_notes/knowledge_harness/outcomes/<run_id>/`に`outcome.json`と`HANDOFF.md`を保存し、`_notes/knowledge_harness/outcomes/metrics.json`を再集計する。このディレクトリは実行時成果物のためGit管理しない。
+
+- 同じ`run_id`の再実行では記録を重複させず、内容が変わった場合だけ更新する
+- `--created-at`を省略した再実行では既存の記録時刻を維持する
+- `--human-action`は`none`、`publication`、`policy`、`privacy`、`exception`から選ぶ
+- Metricsは反復する人間判断を見つける材料とし、`DECISIONS.md`を自動更新しない
+
+検証には次を使う。
+
+```powershell
+rye run python -m unittest discover -s tests -p "test_*.py"
+rye run ruff check src/note/knowledge_harness tests/test_record_outcome.py
+```

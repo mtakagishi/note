@@ -161,3 +161,6 @@ requirements*.lock
 
 # Copilot session export logs
 _notes/sessions/
+
+# Knowledge Harness runtime records
+_notes/knowledge_harness/outcomes/
