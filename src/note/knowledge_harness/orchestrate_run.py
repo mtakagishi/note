@@ -9,6 +9,12 @@ from typing import Any, Sequence
 
 from note.knowledge_harness.authorize_run import AuthorizationInput, authorize_run
 from note.knowledge_harness.capture_request import CaptureInput, capture_request
+from note.knowledge_harness.collect_evidence import (
+    CollectionLimits,
+    EvidenceInput,
+    Fetcher,
+    collect_evidence,
+)
 from note.knowledge_harness.screen_safety import SafetyInput, screen_safety
 from note.knowledge_harness.storage import json_text, write_if_changed
 
@@ -26,6 +32,8 @@ class OrchestrationInput:
     assessment: str
     restricted_terms: list[str]
     created_at: str
+    sources_path: Path | None = None
+    evidence_limits: CollectionLimits = CollectionLimits()
 
 
 @dataclass(frozen=True)
@@ -64,8 +72,13 @@ def _summary_record(
     }
 
 
-def orchestrate_run(orchestration_input: OrchestrationInput, output_dir: Path) -> OrchestrationResult:
-    """O-01〜O-03を順に実行し、停止条件に応じて要約を保存する。"""
+def orchestrate_run(
+    orchestration_input: OrchestrationInput,
+    output_dir: Path,
+    *,
+    fetcher: Fetcher | None = None,
+) -> OrchestrationResult:
+    """O-01〜O-04を順に実行し、停止条件に応じて要約を保存する。"""
 
     run_output_dir = output_dir / orchestration_input.run_id
     completed_operations: list[str] = []
@@ -144,8 +157,24 @@ def orchestrate_run(orchestration_input: OrchestrationInput, output_dir: Path) -
         stop_reason = "SCREENING_HOLD"
         resume_position = "O-03"
     else:
-        stop_reason = None
-        resume_position = None
+        if orchestration_input.sources_path is None:
+            stop_reason = "EVIDENCE_INPUT_MISSING"
+            resume_position = "O-04"
+            state_after = "SCREENED"
+            result = "HOLD"
+        else:
+            evidence_input = EvidenceInput(
+                screening_path=run_output_dir / "screening.json",
+                sources_path=orchestration_input.sources_path,
+                created_at=orchestration_input.created_at,
+                limits=orchestration_input.evidence_limits,
+            )
+            evidence_result = collect_evidence(evidence_input, output_dir, fetcher=fetcher)
+            completed_operations.append("O-04")
+            state_after = evidence_result.state_after
+            result = evidence_result.result
+            stop_reason = None
+            resume_position = None
 
     summary_path = run_output_dir / "orchestration-summary.json"
     record = _summary_record(
