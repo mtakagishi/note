@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 4 / Operation実装
-- 状態: O-02 `Authorize Run`の実装をDraft PR #8でレビュー待ち
+- フェーズ: Phase 5 / Operation実装
+- 状態: 四番目のOperationとしてO-03 `Screen Safety`を実装中
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)
-- レビュー対象: [GitHub Draft PR #8](https://github.com/mtakagishi/note/pull/8)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)
+- レビュー対象: O-03実装のDraft PR（作成予定）
 - ブロッカー: なし
 
 ## 完了
@@ -38,13 +38,15 @@
 - 三番目の実装対象としてO-02 `Authorize Run`を採用
 - O-02の許可判定、CLI、単体テスト、運用文書を実装
 - O-02実装を確認するDraft PR #8を作成
+- 人間がPR #8をレビューしてマージ
+- 四番目の実装対象としてO-03 `Screen Safety`を採用
 
 ## 次の一手
 
-人間がDraft PR #8のO-02実装を確認し、問題がなければマージする。
+O-03 `Screen Safety`を実装し、検証結果を添えたDraft PRを作成する。
 
 ## 停止条件
 
-- O-02以外のOperationを同じPRへ追加しない
-- O-02実装のDraft PRを作成したら、人間のレビューまで停止する
+- O-03以外のOperationを同じPRへ追加しない
+- O-03実装のDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
