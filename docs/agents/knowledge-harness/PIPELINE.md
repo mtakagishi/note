@@ -166,10 +166,19 @@ AI Judgeは次を独立に評価し、`PASS`、`FAIL`、`UNCERTAIN`、0から1�
 
 ### O-08 Draft Article
 
-- 日本語のreStructuredTextとして作成する
-- 原文、根拠、Article Planにない事実を追加しない
-- 公開日、情報基準日、対象バージョン、記事状態を区別する
-- AIの担当範囲と人間の確認範囲を明示する
+- O-07の`PLAN_READY / ADVANCE`と同じ`run_id`のEvidence Packetだけを入力する
+- Skill / AgentはArticle Planの節ごとに、一意なブロックID、reStructuredText本文、使用するPacket参照を持つ本文案を作る
+- ProgramはPlanの全節が同じIDと順序で一回ずつ存在し、本文参照がその節で許可されたPacket参照の範囲内であることを検証する
+- 各節の計画済みPacket参照を少なくとも一つの本文ブロックへ対応付ける
+- `DISCLOSE`と`LIMIT_CLAIM`の不確実性を本文へ反映し、`EXCLUDE`対象を本文参照へ含めない
+- `raw`、`include`、`literalinclude`など外部内容を取り込むreStructuredText directiveを拒否する
+- 仮題を用いた日本語reStructuredTextとして`draft.rst`を生成し、全ブロックのPlan節とPacket参照を`draft_manifest.json`へ保存する
+- 公開日、情報基準日、対象バージョン、記事状態を区別し、確認できない値は推測せず`未確認`または`未確定`とする
+- AIの担当範囲と人間の確認範囲を記事の早い位置に明示する
+- 公開用`post` directiveと最終公開日は生成せず、`docs/blog/posts/`へ配置しない
+- 原文、根拠、Article Planにない事実、節、著者意図を追加しない
+- 事実性、意味の飛躍、読者価値、構成品質、リンク、ビルド、秘密情報はO-09で検証する
+- 人間へ質問せず`DRAFT_READY / ADVANCE`とする
 
 ### O-09 Validate Draft
 
