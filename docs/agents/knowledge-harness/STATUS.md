@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 4 / Operation実装
-- 状態: 三番目のOperationとしてO-02 `Authorize Run`を実装中
+- 状態: O-02 `Authorize Run`の実装をDraft PR #8でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)
-- レビュー対象: O-02実装のDraft PR（作成予定）
+- レビュー対象: [GitHub Draft PR #8](https://github.com/mtakagishi/note/pull/8)
 - ブロッカー: なし
 
 ## 完了
@@ -36,10 +36,12 @@
 - O-01実装を確認するDraft PR #7を作成
 - 人間がPR #7をレビューしてマージ
 - 三番目の実装対象としてO-02 `Authorize Run`を採用
+- O-02の許可判定、CLI、単体テスト、運用文書を実装
+- O-02実装を確認するDraft PR #8を作成
 
 ## 次の一手
 
-O-02 `Authorize Run`を実装し、検証結果を添えたDraft PRを作成する。
+人間がDraft PR #8のO-02実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
