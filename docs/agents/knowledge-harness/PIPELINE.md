@@ -150,11 +150,19 @@ AI Judgeは次を独立に評価し、`PASS`、`FAIL`、`UNCERTAIN`、0から1�
 
 ### O-07 Plan Article
 
-- 中心メッセージを一文にする
-- 読者、検索動機、記事構成の型、含めない内容を決める
+- O-06の`CANDIDATE_ACCEPTED / ADVANCE`と同じ`run_id`のEvidence Packetだけを入力する
+- 仮題と、記事全体で伝える中心メッセージ一文を決める
+- 対象読者、検索動機、構成型、含めない内容と理由を決める
+- 構成型は`TUTORIAL`、`CONCEPT_EXPLANATION`、`CHANGE_ANALYSIS`、`TROUBLESHOOTING`、`DECISION_RECORD`から選ぶ
+- 各節に一意なID、見出し、目的、読者が得るもの、実在するEvidence Packet項目を対応付ける
 - ログ順ではなく読者に伝わる順序へ組み替える
-- 人間への質問は、回答がないと中心メッセージが成立しない場合に一回、最大3問までとする
-- 回答がなくても安全に書ける場合は、不確実性を残して続行する
+- 不確実性ごとに`DISCLOSE`、`LIMIT_CLAIM`、`EXCLUDE`の扱いと理由を記録する
+- Packetにない事実を追加せず、O-06の候補採否を再判定しない
+- 通常は`PLAN_READY / ADVANCE`とし、O-08がPlan外の主張を追加できない契約を作る
+- 人間への質問は、著者固有の動機が中心メッセージに不可欠で、Screened RequestとPacketから復元できない場合だけ一回、最大3問までとする
+- 質問は公開可能な著者の意図だけに限定し、技術的事実、根拠不足、構成の好みを補うために使わない
+- 質問が必要な場合は`HOLD / HOLD`とし、回答がなければ本文生成へ進まない
+- 回答がなくても安全に計画できる場合は、不確実性を残して続行する
 
 ### O-08 Draft Article
 
