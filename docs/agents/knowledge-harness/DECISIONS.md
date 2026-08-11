@@ -155,3 +155,16 @@
 - 質問境界: 著者固有の動機が中心メッセージに不可欠で復元不能な場合だけ、一回、最大3問の公開可能な質問で`HOLD`する
 - 判断境界: O-07はArticle Planまでを担当し、本文、reStructuredText、英訳、画像、最終タイトル、公開日を生成・確定しない
 - 制約: 新しい調査、候補採否の再判定、技術的事実や根拠不足の人間による穴埋めを行わない
+
+## D-017: O-07の次にO-08 Draft Articleを実装する
+
+- 日付: 2026-08-11
+- 状態: 採用
+- 決定: 九番目の実装対象をO-08 `Draft Article`とし、節別本文案を検証して日本語reStructuredTextと追跡manifestを生成するSkill / AgentとProgramとして実装する
+- 理由: 自由形式の本文を直接公開用ディレクトリへ置かず、Article Planの節、Packet参照、不確実性の扱いを機械検証できる中間成果物にするため
+- 入力案: Plan節ごとの一意な本文ブロックID、reStructuredText本文、Packet参照
+- 成果物: `_notes/knowledge_harness/drafts/<run_id>/draft.rst`と`draft_manifest.json`
+- 安全境界: 外部内容を取り込むdirectiveを拒否し、Plan外参照、未計画の節、除外対象の不確実性参照を許可しない
+- 判断境界: O-08は検証前Draftまでを担当し、事実性、意味の飛躍、読者価値、構成品質、リンク、ビルド、秘密情報の判定をO-09へ残す
+- 公開境界: 公開用`post` directive、最終タイトル、公開日、`docs/blog/posts/`への配置、Draft PRを生成しない
+- 制約: 新しい調査、上流成果物の変更、英訳、画像生成、人間への質問を行わない

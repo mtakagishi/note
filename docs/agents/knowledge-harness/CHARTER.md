@@ -298,3 +298,51 @@ Phase 9では、O-07 `Plan Article`を実装し、採用済みCandidateとEviden
 - 同一入力では不要な書き換えを行わない
 - CLI、単体テスト、既存Operationの回帰テストが成功する
 - Draft PRを人間が確認してマージする
+
+## Phase 10の境界
+
+Phase 10では、O-08 `Draft Article`を実装し、Article PlanとEvidence Packetを、O-09が形式と内容を再検証できる日本語reStructuredTextのDraftと追跡用manifestへ変換する。
+
+### 目的
+
+- Article Planの中心メッセージ、節順、除外事項、不確実性の扱いを崩さず本文へ展開する
+- 本文ブロックをEvidence Packet項目まで追跡可能にし、Planにない事実や意図の追加を防ぐ
+- 公開用ファイルへ配置する前に、AI担当範囲、人間の確認範囲、情報基準を明示した検証可能なDraftを作る
+
+### スコープ
+
+- O-07の`PLAN_READY / ADVANCE`成果物と対応するEvidence Packetの契約検証
+- Skill / Agentが作る節別本文ブロック案の受付
+- Article Planの節ID・順序・Packet参照範囲の決定的な検証
+- 不確実性の`DISCLOSE`、`LIMIT_CLAIM`、`EXCLUDE`方針と本文参照の整合検証
+- 危険なreStructuredText directiveの拒否
+- 日本語reStructuredTextの`draft.rst`と出典追跡用`draft_manifest.json`の生成
+- 情報基準日、対象バージョン、Draft状態、生成動機、AI担当範囲、人間の確認範囲の表示
+- `run_id`単位の冪等な保存
+- CLI、単体テスト、運用文書
+
+### スコープ外
+
+- 新しい情報の検索と上流成果物の補完・書き換え
+- Article Planにない事実、節、著者意図の追加
+- 事実性、意味の飛躍、読者価値、構成品質の最終判定
+- サイト全体のビルド、リンク検査、重複検査、秘密情報検査
+- 英訳、画像生成、最終タイトル、公開日の確定
+- `docs/blog/posts/`への配置と既存記事の変更
+- Draft PR、公開判断、GitHub Actionsと定期実行
+
+### 完了条件
+
+- 同じ`run_id`の正常なArticle PlanとEvidence Packetだけを入力できる
+- Planの全節を同じIDと順序で一回ずつDraftへ展開できる
+- 本文ブロックごとに一意なID、空でないreStructuredText、Plan内の実在するPacket参照を要求できる
+- 各節の計画済みPacket参照が少なくとも一つの本文ブロックから追跡できる
+- `DISCLOSE`と`LIMIT_CLAIM`の不確実性を本文に反映し、`EXCLUDE`対象を本文参照へ含めない
+- `raw`、`include`、`literalinclude`など外部内容を取り込むdirectiveを拒否できる
+- 仮題、情報基準日、対象バージョン、Draft状態、生成動機、AI担当範囲、人間の確認範囲を表示できる
+- 公開日が未確定であることを維持し、公開用`post` directiveを生成しない
+- `draft.rst`と全ブロックの追跡情報を持つ`draft_manifest.json`を保存できる
+- 人間へ質問せず`DRAFT_READY / ADVANCE`へ進める
+- 同一入力では不要な書き換えを行わない
+- CLI、単体テスト、既存Operationの回帰テストが成功する
+- Draft PRを人間が確認してマージする
