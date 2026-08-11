@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 13 / Operation実装
-- 状態: O-11 `Decide Publication`の実装と検証を進行中
+- 状態: O-11 `Decide Publication`実装PRのレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #24](https://github.com/mtakagishi/note/pull/24)
-- レビュー対象: なし（O-11実装用のDraft PRを作成予定）
+- レビュー対象: [GitHub PR #25](https://github.com/mtakagishi/note/pull/25)
 - ブロッカー: なし
 
 ## 完了
@@ -140,13 +140,14 @@
 - merge、今回だけの修正、棄却、恒久方針候補のPublication Decisionを実装
 - 無回答、複数・矛盾判断、actor・commit不整合の安全な保留を実装
 - 日本語判断案内、冪等保存、CLI、単体テスト、運用文書を追加
+- O-11実装を確認するDraft PR #25を作成
 
 ## 次の一手
 
-O-11実装を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がPR #25をレビューし、問題がなければ承認してマージする。
 
 ## 停止条件
 
 - O-12以降へ着手しない
-- O-11実装を確認するDraft PRを作成したら、人間のレビューまで停止する
+- PR #25がマージされるまでO-12以降へ着手しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
