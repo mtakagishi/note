@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 14 / Operation設計
-- 状態: O-12 `Apply Feedback`の実装と検証を進行中
+- 状態: O-12 `Apply Feedback`実装PRのレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #25](https://github.com/mtakagishi/note/pull/25)
-- レビュー対象: なし（O-12実装用のDraft PRを作成予定）
+- レビュー対象: [GitHub PR #27](https://github.com/mtakagishi/note/pull/27)
 - ブロッカー: なし
 
 ## 完了
@@ -152,13 +152,14 @@
 - 指定ブロックだけの修正、Packet参照不変、変更追跡を実装
 - 2回上限、3回目の保留、O-09への再検証接続を実装
 - 日本語案内、冪等保存、CLI、単体テスト、運用文書を追加
+- O-12実装を確認するDraft PR #27を作成
 
 ## 次の一手
 
-O-12実装を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がPR #27のO-12実装を確認し、問題がなければ承認してマージする。
 
 ## 停止条件
 
 - O-13や横断的な統合へ着手しない
-- O-12実装を確認するDraft PRを作成したら、人間のレビューまで停止する
+- PR #27がマージされるまで次の作業へ進まない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
