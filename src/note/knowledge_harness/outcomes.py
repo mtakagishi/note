@@ -5,12 +5,18 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import tempfile
 from collections import Counter
 from dataclasses import asdict, dataclass, field
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Sequence
+
+from note.knowledge_harness.storage import (
+    json_text,
+    read_created_at,
+    validate_run_id,
+    write_if_changed,
+)
 
 RESULTS = (
     "ADVANCE",
@@ -21,7 +27,6 @@ RESULTS = (
 )
 PRODUCERS = ("program", "skill_agent", "ai_judge", "human")
 HUMAN_ACTIONS = ("none", "publication", "policy", "privacy", "exception")
-RUN_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
 STATE_PATTERN = re.compile(r"^[A-Z][A-Z0-9_]{0,63}$")
 
 
@@ -57,8 +62,7 @@ class RecordResult:
 
 
 def _validate(outcome: Outcome) -> None:
-    if not RUN_ID_PATTERN.fullmatch(outcome.run_id):
-        raise ValueError("run_idは英数字で始まる128文字以内の英数字・._-にしてください")
+    validate_run_id(outcome.run_id)
     if not STATE_PATTERN.fullmatch(outcome.state_before):
         raise ValueError("state_beforeは大文字英数字とアンダースコアで指定してください")
     if not STATE_PATTERN.fullmatch(outcome.state_after):
@@ -75,24 +79,6 @@ def _validate(outcome: Outcome) -> None:
         raise ValueError("summary_jaを指定してください")
     if not outcome.created_at.strip():
         raise ValueError("created_atを指定してください")
-
-
-def _json_text(data: Any) -> str:
-    return json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
-
-
-def _write_if_changed(path: Path, content: str) -> bool:
-    if path.exists() and path.read_text(encoding="utf-8") == content:
-        return False
-
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(
-        "w", encoding="utf-8", newline="\n", dir=path.parent, delete=False
-    ) as temporary:
-        temporary.write(content)
-        temporary_path = Path(temporary.name)
-    temporary_path.replace(path)
-    return True
 
 
 def _list_items(values: Sequence[str]) -> str:
@@ -183,10 +169,10 @@ def record_outcome(outcome: Outcome, output_dir: Path) -> RecordResult:
     handoff_path = run_dir / "HANDOFF.md"
     metrics_path = output_dir / "metrics.json"
 
-    outcome_changed = _write_if_changed(outcome_path, _json_text(asdict(outcome)))
-    handoff_changed = _write_if_changed(handoff_path, _handoff_text(outcome))
-    metrics_changed = _write_if_changed(
-        metrics_path, _json_text(_metrics(_read_outcomes(output_dir)))
+    outcome_changed = write_if_changed(outcome_path, json_text(asdict(outcome)))
+    handoff_changed = write_if_changed(handoff_path, _handoff_text(outcome))
+    metrics_changed = write_if_changed(
+        metrics_path, json_text(_metrics(_read_outcomes(output_dir)))
     )
     return RecordResult(
         outcome_path=outcome_path,
@@ -194,17 +180,6 @@ def record_outcome(outcome: Outcome, output_dir: Path) -> RecordResult:
         metrics_path=metrics_path,
         changed=outcome_changed or handoff_changed or metrics_changed,
     )
-
-
-def _existing_created_at(output_dir: Path, run_id: str) -> str | None:
-    path = output_dir / run_id / "outcome.json"
-    if not path.exists():
-        return None
-    try:
-        value = json.loads(path.read_text(encoding="utf-8")).get("created_at")
-    except (OSError, json.JSONDecodeError, AttributeError):
-        return None
-    return value if isinstance(value, str) and value else None
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -233,7 +208,9 @@ def _parser() -> argparse.ArgumentParser:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = _parser().parse_args(argv)
-    created_at = args.created_at or _existing_created_at(args.output_dir, args.run_id)
+    created_at = args.created_at or read_created_at(
+        args.output_dir / args.run_id / "outcome.json"
+    )
     if created_at is None:
         created_at = datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
 

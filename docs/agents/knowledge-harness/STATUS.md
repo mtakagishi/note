@@ -4,11 +4,11 @@
 
 ## 現在地
 
-- フェーズ: Phase 2 / Operation実装
-- 状態: O-13 `Record Outcome`の実装をDraft PR #6でレビュー待ち
+- フェーズ: Phase 3 / Operation実装
+- 状態: O-01 `Capture Request`の実装をDraft PR #7でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
-- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)
-- レビュー対象: [GitHub Draft PR #6](https://github.com/mtakagishi/note/pull/6)
+- 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)
+- レビュー対象: [GitHub Draft PR #7](https://github.com/mtakagishi/note/pull/7)
 - ブロッカー: なし
 
 ## 完了
@@ -30,13 +30,17 @@
 - 最初の実装対象としてO-13 `Record Outcome`を採用
 - O-13の記録処理、CLI、単体テスト、運用文書を実装
 - O-13実装を確認するDraft PR #6を作成
+- 人間がPR #6をレビューしてマージ
+- 二番目の実装対象としてO-01 `Capture Request`を採用
+- O-01の受付処理、CLI、単体テスト、運用文書を実装
+- O-01実装を確認するDraft PR #7を作成
 
 ## 次の一手
 
-人間がDraft PR #6のO-13実装を確認し、問題がなければマージする。
+人間がDraft PR #7のO-01実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
-- O-13以外のOperationを同じPRへ追加しない
-- O-13実装のDraft PRを作成したら、人間のレビューまで停止する
+- O-01以外のOperationを同じPRへ追加しない
+- O-01実装のDraft PRを作成したら、人間のレビューまで停止する
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
