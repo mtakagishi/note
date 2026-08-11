@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 7 / Operation実装準備
-- 状態: O-05 `Build Evidence Packet`を実装中
+- 状態: O-05 `Build Evidence Packet`の実装をDraft PR #13でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)、[GitHub PR #4](https://github.com/mtakagishi/note/pull/4)、[GitHub PR #5](https://github.com/mtakagishi/note/pull/5)、[GitHub PR #6](https://github.com/mtakagishi/note/pull/6)、[GitHub PR #7](https://github.com/mtakagishi/note/pull/7)、[GitHub PR #8](https://github.com/mtakagishi/note/pull/8)、[GitHub PR #9](https://github.com/mtakagishi/note/pull/9)、[GitHub PR #10](https://github.com/mtakagishi/note/pull/10)、[GitHub PR #11](https://github.com/mtakagishi/note/pull/11)、[GitHub PR #12](https://github.com/mtakagishi/note/pull/12)
-- レビュー対象: なし
+- レビュー対象: [GitHub Draft PR #13](https://github.com/mtakagishi/note/pull/13)
 - ブロッカー: なし
 
 ## 完了
@@ -65,10 +65,11 @@
 - O-05の整理案検証、出典追跡、分類、冪等な保存を実装
 - 取得失敗、不確実性、Metrics、過去記事との差分候補をEvidence Packetへ継承する処理を実装
 - O-05のCLI、単体テスト、運用文書を追加
+- O-05実装を確認するDraft PR #13を作成
 
 ## 次の一手
 
-O-05実装を確認するDraft PRを作成する。
+人間がDraft PR #13のO-05実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
