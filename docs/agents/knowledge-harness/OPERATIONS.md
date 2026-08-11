@@ -371,3 +371,87 @@ rye run python -m note.knowledge_harness.judge_candidate `
 - 非採用と保留では人間へ質問せず、根拠不足を補完しない
 - 同じPacketと判定案の再実行では成果物を書き換えない
 - O-06はO-07以降の記事計画や本文生成を実行しない
+
+## O-07 Plan Articleの実行
+
+O-07はSkill / Agentが作る計画案をProgramで検証し、O-08が新しい事実や意図を追加せず展開できるArticle Planへ保存する。
+
+```powershell
+rye run python -m note.knowledge_harness.plan_article `
+  --decision-file _notes/knowledge_harness/decisions/run-20260811-002/candidate_decision.json `
+  --packet-file _notes/knowledge_harness/packets/run-20260811-002/evidence_packet.json `
+  --draft-file article-plan-draft.json
+```
+
+通常の`article-plan-draft.json`は次の形式にする。
+
+```json
+{
+  "mode": "PLAN",
+  "plan_version": "article-plan-v1",
+  "planner_id": "planner-example",
+  "working_title_ja": "変更を安全に運用する方法",
+  "central_message_ja": "根拠と不確実性を分けると変更を安全に運用できます。",
+  "target_readers": ["変更を導入する技術者"],
+  "search_intents": ["変更の安全な運用方法を知りたい"],
+  "structure_pattern": "TUTORIAL",
+  "sections": [
+    {
+      "section_id": "section-001",
+      "heading_ja": "変更点を確認する",
+      "purpose_ja": "確認すべき差分を示します。",
+      "reader_takeaway_ja": "差分を根拠まで追跡できます。",
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    }
+  ],
+  "excluded_topics": [
+    {
+      "topic_ja": "対象外の版",
+      "reason_ja": "根拠を確認できないためです。"
+    }
+  ],
+  "uncertainty_treatments": [
+    {
+      "packet_ref": "uncertainties/0",
+      "action": "DISCLOSE",
+      "reason_ja": "適用範囲を読者へ明示するためです。"
+    }
+  ]
+}
+```
+
+既定では`_notes/knowledge_harness/plans/<run_id>/article_plan.json`へ保存する。
+
+- 同じ`run_id`の`CANDIDATE_ACCEPTED / ADVANCE`と`PACKET_READY / ADVANCE`だけを受け付ける
+- 構成型は`TUTORIAL`、`CONCEPT_EXPLANATION`、`CHANGE_ANALYSIS`、`TROUBLESHOOTING`、`DECISION_RECORD`から選ぶ
+- 各節に一意なID、見出し、目的、読者が得るもの、実在するPacket参照を指定する
+- Evidence Packetのすべての不確実性に`DISCLOSE`、`LIMIT_CLAIM`、`EXCLUDE`の扱いと理由を指定する
+- 正常な計画は`PLAN_READY / ADVANCE`とし、人間へ質問しない
+- 同じ入力の再実行では成果物を書き換えない
+
+著者固有の動機が中心メッセージに不可欠で、Packetから復元できない場合だけ`mode`を`AUTHOR_QUESTION`にする。
+
+```json
+{
+  "mode": "AUTHOR_QUESTION",
+  "plan_version": "article-plan-v1",
+  "planner_id": "planner-example",
+  "question_reason_ja": "著者固有の動機を中心メッセージに反映するためです。",
+  "questions": [
+    {
+      "question_id": "question-001",
+      "question_kind": "AUTHOR_MOTIVATION",
+      "question_ja": "この変更を調べたきっかけは何ですか？",
+      "purpose_ja": "記事の中心となる著者の動機を確認します。",
+      "packet_refs": ["screened_request"]
+    }
+  ]
+}
+```
+
+- 質問は一回、最大3問、`AUTHOR_MOTIVATION`だけに限定し、`HOLD / HOLD`とする
+- 技術的事実、根拠不足、構成の好みを質問しない
+- 保存後に質問を別内容へ差し替えない
+- 回答後に`PLAN`へ進む場合は、公開可能な回答の参照を`author_context_ref`へ指定する
+- 回答がなくても安全な計画を作れる場合は質問せず、不確実性の扱いを指定して進める
+- O-07は記事本文、reStructuredText、英訳、画像、最終タイトル、公開日を生成・確定しない
