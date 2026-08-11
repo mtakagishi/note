@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 11 / Operation実装
-- 状態: O-09 `Validate Draft`の実装と検証が完了し、Draft PR作成準備中
+- 状態: O-09 `Validate Draft`の実装をDraft PR #21でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #20](https://github.com/mtakagishi/note/pull/20)
-- レビュー対象: なし（O-09実装のDraft PRを作成予定）
+- レビュー対象: [GitHub Draft PR #21](https://github.com/mtakagishi/note/pull/21)
 - ブロッカー: なし
 
 ## 完了
@@ -114,10 +114,11 @@
 - AI Judgeの5評価軸、確信度、Draft・Packet参照、恒久方針候補を検証する処理を実装
 - 一回限りの機械的修正、合否判定、Validation Reportと修正済みDraftの冪等な保存を実装
 - O-09のCLI、単体テスト、運用文書を追加
+- O-09実装を確認するDraft PR #21を作成
 
 ## 次の一手
 
-O-09実装を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がDraft PR #21のO-09実装を確認し、問題がなければマージする。
 
 ## 停止条件
 
