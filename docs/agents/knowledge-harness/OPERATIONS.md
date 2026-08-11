@@ -677,3 +677,49 @@ PR snapshotには`repository`、`number`、`base`、`head`、`head_sha`、`url`�
 - 自由文を判断種別へ推測変換せず、対象PRのrepository、番号、base、head、記事SHA-256を照合する
 - 結果の意味と次の処理は`human_guidance_ja`へ日本語で保存する
 - 同一入力の再実行では`publication_decision.json`を書き換えない
+
+## O-12 Apply Feedbackの実行
+
+O-12はO-11で明示された今回限りの修正要求だけを、指定されたDraftブロックへ反映する。自由文から対象を推測せず、新しい調査や根拠追加は行わない。
+
+```powershell
+rye run python -m note.knowledge_harness.apply_feedback `
+  --decision-file _notes/knowledge_harness/decisions/run-20260811-002/publication_decision.json `
+  --draft-file _notes/knowledge_harness/drafts/run-20260811-002/draft.rst `
+  --manifest-file _notes/knowledge_harness/drafts/run-20260811-002/draft_manifest.json `
+  --proposal-file feedback-proposal.json
+```
+
+`feedback-proposal.json`はPublication Decisionの指示・対象をそのまま指定し、変更するブロックだけを列挙する。
+
+```json
+{
+  "instruction_ja": "冒頭を簡潔にしてください。",
+  "target_ja": "冒頭段落",
+  "changes": [
+    {
+      "block_id": "block-001",
+      "body_rst": "要点を簡潔に示す冒頭です。",
+      "packet_refs": ["topics/topic-001/items/item-001"]
+    }
+  ]
+}
+```
+
+既定では次の成果物を保存する。
+
+- `_notes/knowledge_harness/revisions/<run_id>/revised_draft.rst`
+- `_notes/knowledge_harness/revisions/<run_id>/revision_manifest.json`
+
+検証と生成の規則は次のとおり。
+
+- 同じ`run_id`の`REVISION / ADVANCE`、正常なO-08初稿またはO-12改稿だけを受け付ける
+- DraftのSHA-256、今回限りの適用範囲、修正指示、対象、GitHub参照を照合する
+- 修正文案に明示された既存`block_id`だけを変更し、本文をDraft内で一意に特定する
+- 未指定ブロックと既存Packet参照は変更せず、新しい節、主張、根拠、危険なdirectiveを追加しない
+- 変更ごとに修正前後SHA-256、指示、対象、Packet参照、GitHub参照を保存する
+- AI修正は同一記事2回までとし、3回目は実行せず`HOLD / HOLD`とする
+- 正常時は`REVISED / ADVANCE`と「修正しました。再検証します」を保存し、O-09へ戻す
+- O-09はO-08の`DRAFT_READY`とO-12の`REVISED`を同じ検査基準で再検証する
+- 同一入力の再実行ではRevised Draftとrevision manifestを書き換えない
+- O-12は公開候補への再配置、GitHub操作、公開承認、恒久方針採用を行わない
