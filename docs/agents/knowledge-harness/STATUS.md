@@ -5,10 +5,10 @@
 ## 現在地
 
 - フェーズ: Phase 14 / Operation設計
-- 状態: O-12 `Apply Feedback`の実装境界を定義中
+- 状態: O-12 `Apply Feedback`の実装境界をDraft PR #26でレビュー待ち
 - 継続状態の正本: [GitHub Issue #2](https://github.com/mtakagishi/note/issues/2)
 - 完了PR: [GitHub PR #3](https://github.com/mtakagishi/note/pull/3)〜[GitHub PR #25](https://github.com/mtakagishi/note/pull/25)
-- レビュー対象: なし（O-12境界確認用のDraft PRを作成予定）
+- レビュー対象: [GitHub PR #26](https://github.com/mtakagishi/note/pull/26)
 - ブロッカー: なし
 
 ## 完了
@@ -146,14 +146,15 @@
 - 十三番目の実装対象としてO-12 `Apply Feedback`を採用
 - O-12の目的、スコープ、スコープ外、完了条件を確定
 - 指定箇所だけの修正、2回上限、安全な保留、O-09への再検証境界を確定
+- O-12の実装境界を確認するDraft PR #26を作成
 
 ## 次の一手
 
-O-12の実装境界を確認するDraft PRを作成し、人間のレビューへ渡す。
+人間がPR #26のO-12実装境界を確認し、問題がなければ承認してマージする。
 
 ## 停止条件
 
 - O-12の実装へ着手しない
 - O-13や横断的な統合へ着手しない
-- O-12境界確認用のDraft PRを作成したら、人間のレビューまで停止する
+- PR #26がマージされるまでO-12の実装へ着手しない
 - 新しい依存関係や恒久方針が必要になった場合は、影響を示して人間の判断を待つ
