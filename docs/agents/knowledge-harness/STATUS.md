@@ -183,10 +183,12 @@
 - 実行ログを`resume-handoff-latest.md`へ同期する運用を`OPERATIONS.md`と`resume-minimal-checklist.md`へ反映
 - 実行ログテンプレートで3回分の再開確認を記録し、記入揺れ補正ルールを定義
 - ループモード再開（時間指定）パターンを`resume-minimal-checklist.md`へ追記
+- HANDOFFコメント投稿の最短テンプレートを7セクション固定フォーマットに統一
+- stop_reason とnext_actionチェーンの回帰防止テスト2つを追加（test_hold_at_capture_then_screening_with_auto_assessment, test_hold_resume_position_matches_next_action_operation）
 
 ## 次の一手
 
-HANDOFFコメント投稿の最短テンプレートを1つに固定する。
+記事側の残課題から選択する。または、実行ログ記録頻度（毎回 vs. 変更時のみ）を決定する。
 
 ## 停止条件
 
