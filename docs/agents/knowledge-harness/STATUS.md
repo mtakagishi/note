@@ -182,10 +182,11 @@
 - 再開チェックの実行ログ項目（時刻、議題種別、確認結果5点、停止有無、次の一手）を定義
 - 実行ログを`resume-handoff-latest.md`へ同期する運用を`OPERATIONS.md`と`resume-minimal-checklist.md`へ反映
 - 実行ログテンプレートで3回分の再開確認を記録し、記入揺れ補正ルールを定義
+- ループモード再開（時間指定）パターンを`resume-minimal-checklist.md`へ追記
 
 ## 次の一手
 
-Issue #2へHANDOFFコメントを1件投稿する1手順を定義する。
+HANDOFFコメント投稿の最短テンプレートを1つに固定する。
 
 ## 停止条件
 

@@ -69,41 +69,43 @@ Issue #2のHANDOFFコメントへ実行ログ要約を転記する場合は、�
 
 ### Issueコメントの最短テンプレート
 
-Issue #2へ実際に1件だけHANDOFFコメントを追加する場合は、次の本文をそのまま使う。
+Issue #2へHANDOFFコメントを1件投稿する場合は、次の本文をそのまま使い、各セクションの内容を実行ログ要約で埋める。項目構成は固定し、追加・削除・並び替えない。
 
 ```markdown
-## HANDOFF YYYY-MM-DD
+## HANDOFF YYYY-MM-DD HH:MM JST
 
 ### 完了
 
-- 実行ログ要約を転記しました。
+[実行時刻から前回までの完了タスク、1行で複数可]
 
 ### 決定
 
-- 再開時は実行ログ形式、終了時はIssue HANDOFFへ転記する責務分離を固定しました。
+[今回新しく決定した判断・方針・境界、1行で複数可]
 
 ### 検証
 
-- 再開確認テンプレートを3回実行し、記入揺れ補正ルールを定義しました。
+[今回検証・確認した内容と結果、1行で複数可]
 
 ### 未完了
 
-- 実行ログ要約の定期記録頻度を決める必要があります。
+[進捗中で次回に持ち越すタスク、1行で複数可]
 
 ### 次の一手
 
-- 再開時と終了時の記録責務を分離し、HANDOFF転記の3手順を公開可能な項目へ絞り込む。
+[次のセッションで最初に取り組むタスク、1つだけ、1行]
 
 ### ブロッカー
 
-- なし
+[作業継続を妨げている状態・情報・判断、なければ「なし」]
 
 ### 関連
 
-- Issue #2 / branch: agent/implement-feedback-application / commit: 64de53d / files: docs/agents/knowledge-harness/OPERATIONS.md, docs/agents/knowledge-harness/STATUS.md, docs/agents/resume-minimal-checklist.md
+Issue #2 / branch: agent/implement-feedback-application / commit: [最新コミットハッシュ] / files: [変更したファイル最大3つ]
 ```
 
-このテンプレートは、再開時の要約を終了時のHANDOFFへ移すための正本であり、項目を増やさない。
+本文テンプレートの形式は変更不可。毎回このセクション構成で転記し、実行ログ形式から機械的に埋める。
+
+このテンプレートは、再開時の要約を終了時のHANDOFFへ転記する際の正本である。
 
 ### Issueコメント投稿の1手順
 
