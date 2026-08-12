@@ -181,10 +181,11 @@
 - `python -m unittest tests.test_orchestrate_run`で停止系追加後の回帰なしを確認
 - 再開チェックの実行ログ項目（時刻、議題種別、確認結果5点、停止有無、次の一手）を定義
 - 実行ログを`resume-handoff-latest.md`へ同期する運用を`OPERATIONS.md`と`resume-minimal-checklist.md`へ反映
+- 実行ログテンプレートで3回分の再開確認を記録し、記入揺れ補正ルールを定義
 
 ## 次の一手
 
-実行ログテンプレートで3回分の再開確認を記録し、記入揺れを洗い出して補正する。
+実行ログ要約をIssue #2のHANDOFFコメント形式へ転記する短縮手順を定義する。
 
 ## 停止条件
 
