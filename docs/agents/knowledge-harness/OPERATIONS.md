@@ -125,6 +125,28 @@ Issue #2へHANDOFFコメントを1件だけ追加する場合は、次の順で�
 - 再開時の記録は探索と確認の証跡、終了時の記録は引き継ぎと次回再開の起点として扱う
 - 再開時に記録した要約を、終了時のHANDOFFへそのまま再利用してよい
 
+### 記事側HOLD理由の記録例（run_id成果物）
+
+記事側のHOLD理由は`STATUS.md`へ書かず、`run_id`成果物へ記録する。最低限、理由コード、要約、再開条件、次の一手を残す。
+
+1. O-09で検証不合格になった場合
+  - 記録先: `_notes/knowledge_harness/outcomes/<run_id>/outcome.json`
+  - 必須項目: `result=HOLD`、`reason_code=VALIDATION_HOLD`、`summary_ja`、`next_action`
+2. O-11で人間判断が無回答または矛盾した場合
+  - 記録先: `_notes/knowledge_harness/outcomes/<run_id>/outcome.json`
+  - 必須項目: `result=HOLD`、`reason_code=PUBLICATION_DECISION_HOLD`、`summary_ja`、`next_action`
+3. O-12で修正上限に到達した場合
+  - 記録先: `_notes/knowledge_harness/outcomes/<run_id>/outcome.json`
+  - 必須項目: `result=HOLD`、`reason_code=APPLY_FEEDBACK_HOLD`、`summary_ja`、`next_action`
+
+運用メモとして、終了時HANDOFFには次の形式で1行要約を転記してよい。
+
+```markdown
+- run_id: run-YYYYMMDD-XXX / HOLD理由: <reason_code> / 再開条件: <再開条件> / 次の一手: <next_action>
+```
+
+この要約は引き継ぎ用であり、正本は`run_id`成果物とする。
+
 確認専用の機械実行テンプレートは次を使う。
 
 ```powershell

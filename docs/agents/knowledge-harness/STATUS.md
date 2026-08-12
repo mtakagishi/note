@@ -186,10 +186,11 @@
 - HANDOFFコメント投稿の最短テンプレートを7セクション固定フォーマットに統一
 - stop_reason とnext_actionチェーンの回帰防止テスト2つを追加（test_hold_at_capture_then_screening_with_auto_assessment, test_hold_resume_position_matches_next_action_operation）
 - 実行ログ記録頻度を「毎回（差分なし回も記録）」へ固定し、`DECISIONS.md`と`OPERATIONS.md`へ反映
+- run_id成果物における記事HOLD理由の記録例を`OPERATIONS.md`へ運用メモ化
 
 ## 次の一手
 
-記事側の残課題1「run_id成果物における記事HOLD理由の記録例を運用メモ化する」を実施する。
+記事側の残課題2「Review Packetで記事側判断の観点を再確認する」を実施する。
 
 ## 停止条件
 
