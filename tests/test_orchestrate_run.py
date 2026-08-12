@@ -1675,6 +1675,58 @@ class OrchestrateRunTest(unittest.TestCase):
         self.assertFalse(second.changed)
         self.assertEqual(second.summary_path.stat().st_mtime_ns, first.summary_path.stat().st_mtime_ns)
 
+    def test_hold_at_capture_then_screening_with_auto_assessment(self) -> None:
+        """HOLD止まりの回帰防止: SCREENING_HOLDで停止時にnext_actionがscreenに関連していることを検証"""
+        uncertain_input = self.orchestration_input.__class__(
+            run_id=self.orchestration_input.run_id,
+            question_ja=self.orchestration_input.question_ja,
+            source_ref=self.orchestration_input.source_ref,
+            source_kind=self.orchestration_input.source_kind,
+            labels=self.orchestration_input.labels,
+            required_label=self.orchestration_input.required_label,
+            assessment="uncertain",
+            restricted_terms=self.orchestration_input.restricted_terms,
+            created_at=self.orchestration_input.created_at,
+            sources_path=self.orchestration_input.sources_path,
+            packet_draft_path=self.orchestration_input.packet_draft_path,
+            evidence_limits=self.orchestration_input.evidence_limits,
+        )
+        result = orchestrate_run(uncertain_input, self.output_dir)
+        saved = json.loads(result.summary_path.read_text(encoding="utf-8"))
+        
+        # SCREENING_HOLDで停止したときのnext_actionが妥当であることを確認
+        if saved.get("stop_reason") == "SCREENING_HOLD":
+            next_action_lower = saved.get("next_action", "").lower()
+            self.assertTrue(
+                "screen" in next_action_lower or "o-03" in next_action_lower,
+                f"Expected next_action to reference screening/o-03, got: {saved.get('next_action')}"
+            )
+
+    def test_hold_resume_position_matches_next_action_operation(self) -> None:
+        """回帰防止: REQUEST_HOLDで停止したときの完了操作とnext_actionが対応していることを検証"""
+        unconfirmed_input = self.orchestration_input.__class__(
+            run_id=self.orchestration_input.run_id,
+            question_ja=self.orchestration_input.question_ja,
+            source_ref=self.orchestration_input.source_ref,
+            source_kind=self.orchestration_input.source_kind,
+            labels=self.orchestration_input.labels,
+            required_label=self.orchestration_input.required_label,
+            assessment="auto",
+            restricted_terms=self.orchestration_input.restricted_terms,
+            created_at=self.orchestration_input.created_at,
+            sources_path=self.orchestration_input.sources_path,
+            packet_draft_path=self.orchestration_input.packet_draft_path,
+            evidence_limits=self.orchestration_input.evidence_limits,
+        )
+
+        result = orchestrate_run(unconfirmed_input, self.output_dir)
+        saved = json.loads(result.summary_path.read_text(encoding="utf-8"))
+
+        # REQUEST_HOLDで停止した場合、resume_positionとnext_actionが対応していることを確認
+        if saved.get("stop_reason") == "REQUEST_HOLD":
+            self.assertEqual(saved.get("resume_position"), "O-01")
+            self.assertIn("capture_request", saved.get("next_action", "").lower())
+
 
 if __name__ == "__main__":
     unittest.main()
