@@ -24,6 +24,63 @@
 
 同一セッションで①と②を同時に扱わない。途中で混在が発生した場合は、その時点で作業を分割し、今回の一件を完了または中断記録してから次の議題へ移る。
 
+分割の基準は、対象が記事1本の状態遷移か、方法論の定義・運用・回帰テストかで区別する。記事関連の判断は`PIPELINE.md`と`run_id`成果物を正本にして本文を変えず、方法論改善のみを`STATUS.md`と`OPERATIONS.md`で管理する。
+
+## 再開時の半自動化境界
+
+- 中レベル半自動化では、状態収集、差分有無確認、次の一手の提案までを自動化対象とする
+- 議題種別の暗黙決定、公開承認、恒久方針の採用は自動化対象に含めない
+- 公開可否に関わる操作は必ず人間判断を通し、無回答または曖昧な場合は`HOLD`を優先する
+- 必須情報欠落、Issueと`STATUS.md`の不一致、議題種別不一致を検出した場合は処理を停止し、人間確認へ切り替える
+
+### 半自動化I/O契約
+
+- 入力は、議題種別、`_notes/sessions/resume-handoff-latest.md`、最小確認の参照範囲5点に限定する
+- 出力は、確認結果5点、不一致または不足の有無、次の最初の作業1件に限定する
+- 半自動化の出力は提案であり、公開承認、恒久方針採用、議題種別決定を代替しない
+- 停止時は、停止理由、不足情報、再開条件を日本語で記録し、手動最小確認へ戻す
+- 停止理由が同一で再発する場合は、再発防止の回帰観点を`STATUS.md`の次の一手に反映する
+
+確認専用の機械実行テンプレートは次を使う。
+
+```powershell
+git status --short --branch
+gh issue list --state open --limit 20
+gh pr list --state merged --limit 5
+git rev-list --left-right --count main...HEAD
+git branch --show-current
+```
+
+### 停止系の回帰観点
+
+`stop_reason`と`next_action`の正本は`src/note/knowledge_harness/orchestrate_run.py`とし、この文書は運用時の確認観点だけを保持する。
+
+| stop_reason | resume_position | 回帰観点 | 期待される次の一手 |
+| --- | --- | --- | --- |
+| REQUEST_HOLD | O-01 | 問いの必須情報不足時に停止し、推測補完しない | O-01入力を補完して再開 |
+| RUN_LABEL_MISSING | O-02 | 実行ラベル不足時に停止し、催促しない | O-02入力を補完して再開 |
+| SCREENING_HOLD | O-03 | 公開可否が自動判定不能なら停止し、人間確認へ回す | O-03再実行で再開 |
+| EVIDENCE_INPUT_MISSING | O-04 | sources入力不足時に停止し、探索を拡大しない | O-04入力を補完して再開 |
+| EVIDENCE_COLLECTION_HOLD | O-04 | 収集不能や根拠不足で停止し、仮説で埋めない | O-04再実行で再開 |
+| PACKET_DRAFT_MISSING | O-05 | Evidence Set欠落時に停止し、新規取得で穴埋めしない | O-05入力を補完して再開 |
+| PACKET_BUILD_HOLD | O-05 | 整理不能時に停止し、採否判定へ進めない | O-05再実行で再開 |
+| JUDGMENT_INPUT_MISSING | O-06 | 候補判定入力不足時に停止し、閾値を変更しない | O-06入力を補完して再開 |
+| CANDIDATE_DECISION_HOLD | O-06 | 評価が確定不能なら停止し、公開側へ進めない | O-06再実行で再開 |
+| PLAN_DRAFT_MISSING | O-07 | 計画入力不足時に停止し、本文生成へ進めない | O-07入力を補完して再開 |
+| PLAN_ARTICLE_HOLD | O-07 | 著者判断不足で停止し、推測で主旨確定しない | O-07再実行で再開 |
+| DRAFT_PROPOSAL_MISSING | O-08 | 下書き入力不足時に停止し、未計画節を追加しない | O-08入力を補完して再開 |
+| DRAFT_ARTICLE_HOLD | O-08 | Draft生成条件未達で停止し、公開配置しない | O-08再実行で再開 |
+| VALIDATION_JUDGMENT_MISSING | O-09 | 検証入力不足時に停止し、意味改稿で誤魔化さない | O-09入力を補完して再開 |
+| VALIDATION_HOLD | O-09 | ProgramまたはJudgeで不合格なら停止し、公開へ進めない | O-09再実行で再開 |
+| REVIEW_PROPOSAL_MISSING | O-10 | Review入力不足時に停止し、判断選択肢を欠落させない | O-10入力を補完して再開 |
+| PREPARE_REVIEW_HOLD | O-10 | Review準備不能時に停止し、最終判断へ進めない | O-10再実行で再開 |
+| PUBLICATION_DECISION_INPUT_MISSING | O-11 | 公開判断入力不足時に停止し、承認を推定しない | O-11入力を補完して再開 |
+| PUBLICATION_DECISION_HOLD | O-11 | 判断矛盾・無回答時に停止し、公開しない | O-11再実行で再開 |
+| FEEDBACK_PROPOSAL_MISSING | O-12 | 修正指示不足時に停止し、未指定改稿しない | O-12入力を補完して再開 |
+| APPLY_FEEDBACK_HOLD | O-12 | 修正上限超過または境界違反で停止し、無限改稿しない | O-12再実行で再開 |
+
+回帰観点を更新する場合は、`tests/test_orchestrate_run.py`の停止系テストを同時更新し、文言だけの変更で挙動を変えない。
+
 ## 状態更新
 
 - 完了後、検証結果を記録してから次の一手を一件だけ設定する
@@ -95,6 +152,7 @@ mtakagishi/note のIssue #2を継続状態の正本として読み、最新のHA
 - Issue、最新HANDOFF、`STATUS.md`に不一致がある場合は変更を始めない
 - 新しい判断が必要な場合は、選択肢と影響を示して人間の判断を待つ
 - 人間が応答しない場合は公開せず保留し、許可された他の処理だけを継続する
+- 半自動化の再開補助が失敗した場合は、手動の最小確認手順へ戻して確認結果を残す
 
 ## 記事処理パイプラインとの境界
 

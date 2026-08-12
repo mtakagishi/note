@@ -1615,6 +1615,58 @@ class OrchestrateRunTest(unittest.TestCase):
         self.assertEqual(saved["next_action"], "O-02 Authorize Runの入力を補完して再開する")
         self.assertFalse((self.output_dir / self.orchestration_input.run_id / "screening.json").exists())
 
+    def test_unconfirmed_input_stops_at_capture_request(self) -> None:
+        input_unconfirmed = self.orchestration_input.__class__(
+            run_id=self.orchestration_input.run_id,
+            question_ja=self.orchestration_input.question_ja,
+            source_ref=self.orchestration_input.source_ref,
+            source_kind="unconfirmed_input",
+            labels=self.orchestration_input.labels,
+            required_label=self.orchestration_input.required_label,
+            assessment=self.orchestration_input.assessment,
+            restricted_terms=self.orchestration_input.restricted_terms,
+            created_at=self.orchestration_input.created_at,
+            sources_path=self.orchestration_input.sources_path,
+            packet_draft_path=self.orchestration_input.packet_draft_path,
+            evidence_limits=self.orchestration_input.evidence_limits,
+        )
+
+        result = orchestrate_run(input_unconfirmed, self.output_dir)
+        saved = json.loads(result.summary_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(result.state_after, "HOLD")
+        self.assertEqual(result.result, "HOLD")
+        self.assertEqual(saved["completed_operations"], ["O-01"])
+        self.assertEqual(saved["stop_reason"], "REQUEST_HOLD")
+        self.assertEqual(saved["resume_position"], "O-01")
+        self.assertEqual(saved["next_action"], "O-01 Capture Requestの入力を補完して再開する")
+
+    def test_uncertain_assessment_stops_at_screening(self) -> None:
+        input_uncertain = self.orchestration_input.__class__(
+            run_id=self.orchestration_input.run_id,
+            question_ja=self.orchestration_input.question_ja,
+            source_ref=self.orchestration_input.source_ref,
+            source_kind=self.orchestration_input.source_kind,
+            labels=self.orchestration_input.labels,
+            required_label=self.orchestration_input.required_label,
+            assessment="uncertain",
+            restricted_terms=self.orchestration_input.restricted_terms,
+            created_at=self.orchestration_input.created_at,
+            sources_path=self.orchestration_input.sources_path,
+            packet_draft_path=self.orchestration_input.packet_draft_path,
+            evidence_limits=self.orchestration_input.evidence_limits,
+        )
+
+        result = orchestrate_run(input_uncertain, self.output_dir)
+        saved = json.loads(result.summary_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(result.state_after, "HOLD")
+        self.assertEqual(result.result, "HOLD")
+        self.assertEqual(saved["completed_operations"], ["O-01", "O-02", "O-03"])
+        self.assertEqual(saved["stop_reason"], "SCREENING_HOLD")
+        self.assertEqual(saved["resume_position"], "O-03")
+        self.assertEqual(saved["next_action"], "O-03 Safety Screenを再実行して再開する")
+
     def test_repeated_run_is_idempotent(self) -> None:
         first = orchestrate_run(self.orchestration_input, self.output_dir)
         second = orchestrate_run(self.orchestration_input, self.output_dir)
