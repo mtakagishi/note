@@ -105,6 +105,16 @@ Issue #2へ実際に1件だけHANDOFFコメントを追加する場合は、次�
 
 このテンプレートは、再開時の要約を終了時のHANDOFFへ移すための正本であり、項目を増やさない。
 
+### Issueコメント投稿の1手順
+
+Issue #2へHANDOFFコメントを1件だけ追加する場合は、次の順で実行する。
+
+1. `resume-minimal-checklist.md`の実行ログ要約と、Issueコメントの最短テンプレートを突き合わせる。
+2. コメント本文を`_notes/sessions/resume-handoff-latest.md`の次の一手と一致させる。
+3. `gh issue comment 2 --body-file <本文ファイル>`で投稿する。
+
+本文ファイルを使う場合は、再開時の要約から手で転記せず、テンプレート本文をそのまま保存して使う。
+
 ### 記録責務の分離
 
 - 再開時は、`resume-minimal-checklist.md`の実行ログ形式に沿って確認結果と次の一手を残す
