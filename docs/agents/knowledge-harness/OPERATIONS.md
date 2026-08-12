@@ -57,6 +57,16 @@
 4. open issueは起点issue番号を必須記録にする
 5. 停止なしの場合は`再開条件: 不要`を記録する
 
+### HANDOFF転記の短縮手順
+
+Issue #2のHANDOFFコメントへ実行ログ要約を転記する場合は、次の3手順に固定する。
+
+1. `resume-minimal-checklist.md`の実行ログ要約から、議題種別・確認結果5点・停止有無・次の一手を抜き出す。
+2. `resume-handoff-latest.md`の「次に着手する作業」「方法論側の残課題」「懸念点」を、要約に合わせて1件ずつ更新する。
+3. Issue #2へ`HANDOFF YYYY-MM-DD`形式で貼る前に、公開可能な情報だけで構成されているか確認する。
+
+短縮手順を使う場合も、`STATUS.md`と`resume-handoff-latest.md`の次の一手は同じ文言に揃える。
+
 確認専用の機械実行テンプレートは次を使う。
 
 ```powershell
