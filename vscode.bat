@@ -1,4 +1,4 @@
 git pull
 git remote prune origin
-poetry update
+rem poetry update
 code .
