@@ -179,10 +179,12 @@
 - 停止理由ごとの回帰観点を`OPERATIONS.md`へ追加し、`stop_reason`正本を実装側へ固定
 - `tests/test_orchestrate_run.py`へ`REQUEST_HOLD`と`SCREENING_HOLD`の停止系回帰テストを追加
 - `python -m unittest tests.test_orchestrate_run`で停止系追加後の回帰なしを確認
+- 再開チェックの実行ログ項目（時刻、議題種別、確認結果5点、停止有無、次の一手）を定義
+- 実行ログを`resume-handoff-latest.md`へ同期する運用を`OPERATIONS.md`と`resume-minimal-checklist.md`へ反映
 
 ## 次の一手
 
-確認専用コマンドテンプレートの実行ログ運用を定義し、再開時の記録形式を固定する。
+実行ログテンプレートで3回分の再開確認を記録し、記入揺れを洗い出して補正する。
 
 ## 停止条件
 
