@@ -67,6 +67,44 @@ Issue #2のHANDOFFコメントへ実行ログ要約を転記する場合は、�
 
 短縮手順を使う場合も、`STATUS.md`と`resume-handoff-latest.md`の次の一手は同じ文言に揃える。
 
+### Issueコメントの最短テンプレート
+
+Issue #2へ実際に1件だけHANDOFFコメントを追加する場合は、次の本文をそのまま使う。
+
+```markdown
+## HANDOFF YYYY-MM-DD
+
+### 完了
+
+- 実行ログ要約を転記しました。
+
+### 決定
+
+- 再開時は実行ログ形式、終了時はIssue HANDOFFへ転記する責務分離を固定しました。
+
+### 検証
+
+- 再開確認テンプレートを3回実行し、記入揺れ補正ルールを定義しました。
+
+### 未完了
+
+- 実行ログ要約の定期記録頻度を決める必要があります。
+
+### 次の一手
+
+- 再開時と終了時の記録責務を分離し、HANDOFF転記の3手順を公開可能な項目へ絞り込む。
+
+### ブロッカー
+
+- なし
+
+### 関連
+
+- Issue #2 / branch: agent/implement-feedback-application / commit: 64de53d / files: docs/agents/knowledge-harness/OPERATIONS.md, docs/agents/knowledge-harness/STATUS.md, docs/agents/resume-minimal-checklist.md
+```
+
+このテンプレートは、再開時の要約を終了時のHANDOFFへ移すための正本であり、項目を増やさない。
+
 ### 記録責務の分離
 
 - 再開時は、`resume-minimal-checklist.md`の実行ログ形式に沿って確認結果と次の一手を残す
